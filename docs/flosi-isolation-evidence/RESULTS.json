@@ -1,0 +1,491 @@
+{
+  "source_commit": "ca04c5b305175e8684f45d5a883cdd2c65b81a9c",
+  "baseline": "323923f963987a50913fbd3ba21f4fdf7b122cbc",
+  "full_suite_implementation_commit": "26eaf319606d64f66379b54ef5a224de97cef1f5",
+  "final_input_and_applied_path_guards_verified_separately": true,
+  "environment": {
+    "os": "Linux x64",
+    "node": "24.19.0",
+    "npm": "11.9.0",
+    "memory_limit_bytes": 8589934592,
+    "cpu_quota": "2 CPUs",
+    "windows_native_functional_qa": "NOT EXECUTED"
+  },
+  "baseline_pass_count": 8713,
+  "first_complete_suite": {
+    "tests": 8813,
+    "suites": 8,
+    "pass": 8780,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 32,
+    "todo": 1,
+    "duration_ms": 1398760.942885,
+    "skip_entries": [
+      "ok 1375 - darwin: native snapshots exclude background speech while preserving meeting capture # SKIP the native microphone listener requires macOS",
+      "ok 3259 - extractArchive PowerShell fallback extracts a zip under apostrophe paths # SKIP",
+      "ok 3808 - native input regions scale, clip and route clicks without changing the visible window # SKIP Xvfb is not installed",
+      "ok 3828 - native modifier gate waits for a held modifier, ignores locked ones, and reports an unreadable XKB state as unknown # SKIP Xvfb is not installed",
+      "ok 3829 - native evdev modifier gate sees a held key on a keyboard and ignores ydotoold's virtual one # SKIP /dev/uinput is not writable",
+      "ok 4045 - macOS shortcuts follow the active layout and fall back only without layout data # SKIP",
+      "ok 6035 - --app-context output becomes the app's name, bundle id, title and host # SKIP",
+      "ok 6036 - a failed --app-context run keeps what it printed before failing # SKIP",
+      "ok 6037 - concurrent captures share one frontmost lookup # SKIP",
+      "ok 6038 - a just-completed capture is reused instead of respawning osascript # SKIP",
+      "ok 6039 - a failed capture is retried, not reused # SKIP",
+      "ok 6040 - captures refresh once the reuse window has passed # SKIP",
+      "ok 6045 - startMonitoring stops immediately without a target PID # SKIP",
+      "ok 6046 - startMonitoring self-terminates when the target has no accessible focused element # SKIP",
+      "ok 6047 - getSelectedText caches a -25212 native failure per PID # SKIP",
+      "ok 6048 - getSelectedText skips the native binary for a cached PID # SKIP",
+      "ok 6049 - getSelectedText identifies an empty writable field # SKIP",
+      "ok 6050 - isFocusedEditable maps the native verdicts, including the dormant-tree UNKNOWN # SKIP",
+      "ok 6051 - isFocusedEditable answers from a stale binary's first monitor line # SKIP",
+      "ok 6055 - getSelectedText surfaces the native UNKNOWN verdict # SKIP",
+      "ok 6056 - a non--25212 native failure is not cached # SKIP",
+      "ok 6057 - a run where the AX tree woke mid-retry is not cached # SKIP",
+      "ok 6058 - a monitor run ending in NO_ELEMENT with uniform -25212 teaches the cache # SKIP",
+      "ok 6059 - a timeout-killed selection read is not cached # SKIP",
+      "ok 6060 - startMonitoring skips the native monitor for a cached PID # SKIP",
+      "ok 6061 - a reported window rect is parsed # SKIP",
+      "ok 6062 - an app with no ordinary window resolves to null # SKIP",
+      "ok 6063 - a failing read resolves to null rather than throwing # SKIP",
+      "ok 6064 - reads are cached per pid for one press, then re-read # SKIP",
+      "ok 6065 - no target pid means no spawn at all # SKIP",
+      "ok 6912 - live helper probe succeeds on this machine when the binary is present # SKIP Windows-only probe",
+      "ok 7271 - a macOS marker written before the arm64 ONNX Runtime slice is not a complete install # SKIP the slice is only replaced on macOS hosts"
+    ],
+    "todo_entries": [
+      "ok 5974 - S5 a full delta page tied on updated_at must not abandon the rest of the pull # TODO"
+    ]
+  },
+  "eight_worker_failed_attempt": {
+    "tests": 8813,
+    "suites": 8,
+    "pass": 8779,
+    "fail": 1,
+    "cancelled": 0,
+    "skipped": 32,
+    "todo": 1,
+    "duration_ms": 1460249.791981,
+    "skip_entries": [
+      "ok 1372 - darwin: native snapshots exclude background speech while preserving meeting capture # SKIP the native microphone listener requires macOS",
+      "ok 3256 - extractArchive PowerShell fallback extracts a zip under apostrophe paths # SKIP",
+      "ok 3808 - native input regions scale, clip and route clicks without changing the visible window # SKIP Xvfb is not installed",
+      "ok 3828 - native modifier gate waits for a held modifier, ignores locked ones, and reports an unreadable XKB state as unknown # SKIP Xvfb is not installed",
+      "ok 3829 - native evdev modifier gate sees a held key on a keyboard and ignores ydotoold's virtual one # SKIP /dev/uinput is not writable",
+      "ok 4045 - macOS shortcuts follow the active layout and fall back only without layout data # SKIP",
+      "ok 6035 - --app-context output becomes the app's name, bundle id, title and host # SKIP",
+      "ok 6036 - a failed --app-context run keeps what it printed before failing # SKIP",
+      "ok 6037 - concurrent captures share one frontmost lookup # SKIP",
+      "ok 6038 - a just-completed capture is reused instead of respawning osascript # SKIP",
+      "ok 6039 - a failed capture is retried, not reused # SKIP",
+      "ok 6040 - captures refresh once the reuse window has passed # SKIP",
+      "ok 6045 - startMonitoring stops immediately without a target PID # SKIP",
+      "ok 6046 - startMonitoring self-terminates when the target has no accessible focused element # SKIP",
+      "ok 6047 - getSelectedText caches a -25212 native failure per PID # SKIP",
+      "ok 6048 - getSelectedText skips the native binary for a cached PID # SKIP",
+      "ok 6049 - getSelectedText identifies an empty writable field # SKIP",
+      "ok 6050 - isFocusedEditable maps the native verdicts, including the dormant-tree UNKNOWN # SKIP",
+      "ok 6051 - isFocusedEditable answers from a stale binary's first monitor line # SKIP",
+      "ok 6055 - getSelectedText surfaces the native UNKNOWN verdict # SKIP",
+      "ok 6056 - a non--25212 native failure is not cached # SKIP",
+      "ok 6057 - a run where the AX tree woke mid-retry is not cached # SKIP",
+      "ok 6058 - a monitor run ending in NO_ELEMENT with uniform -25212 teaches the cache # SKIP",
+      "ok 6059 - a timeout-killed selection read is not cached # SKIP",
+      "ok 6060 - startMonitoring skips the native monitor for a cached PID # SKIP",
+      "ok 6061 - a reported window rect is parsed # SKIP",
+      "ok 6062 - an app with no ordinary window resolves to null # SKIP",
+      "ok 6063 - a failing read resolves to null rather than throwing # SKIP",
+      "ok 6064 - reads are cached per pid for one press, then re-read # SKIP",
+      "ok 6065 - no target pid means no spawn at all # SKIP",
+      "ok 6912 - live helper probe succeeds on this machine when the binary is present # SKIP Windows-only probe",
+      "ok 7271 - a macOS marker written before the arm64 ONNX Runtime slice is not a complete install # SKIP the slice is only replaced on macOS hosts"
+    ],
+    "todo_entries": [
+      "ok 5974 - S5 a full delta page tied on updated_at must not abandon the rest of the pull # TODO"
+    ]
+  },
+  "final_four_worker_suite": {
+    "tests": 8819,
+    "suites": 8,
+    "pass": 8786,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 32,
+    "todo": 1,
+    "duration_ms": 1352655.760239,
+    "skip_entries": [
+      "ok 1375 - darwin: native snapshots exclude background speech while preserving meeting capture # SKIP the native microphone listener requires macOS",
+      "ok 3259 - extractArchive PowerShell fallback extracts a zip under apostrophe paths # SKIP",
+      "ok 3814 - native input regions scale, clip and route clicks without changing the visible window # SKIP Xvfb is not installed",
+      "ok 3834 - native modifier gate waits for a held modifier, ignores locked ones, and reports an unreadable XKB state as unknown # SKIP Xvfb is not installed",
+      "ok 3835 - native evdev modifier gate sees a held key on a keyboard and ignores ydotoold's virtual one # SKIP /dev/uinput is not writable",
+      "ok 4051 - macOS shortcuts follow the active layout and fall back only without layout data # SKIP",
+      "ok 6041 - --app-context output becomes the app's name, bundle id, title and host # SKIP",
+      "ok 6042 - a failed --app-context run keeps what it printed before failing # SKIP",
+      "ok 6043 - concurrent captures share one frontmost lookup # SKIP",
+      "ok 6044 - a just-completed capture is reused instead of respawning osascript # SKIP",
+      "ok 6045 - a failed capture is retried, not reused # SKIP",
+      "ok 6046 - captures refresh once the reuse window has passed # SKIP",
+      "ok 6051 - startMonitoring stops immediately without a target PID # SKIP",
+      "ok 6052 - startMonitoring self-terminates when the target has no accessible focused element # SKIP",
+      "ok 6053 - getSelectedText caches a -25212 native failure per PID # SKIP",
+      "ok 6054 - getSelectedText skips the native binary for a cached PID # SKIP",
+      "ok 6055 - getSelectedText identifies an empty writable field # SKIP",
+      "ok 6056 - isFocusedEditable maps the native verdicts, including the dormant-tree UNKNOWN # SKIP",
+      "ok 6057 - isFocusedEditable answers from a stale binary's first monitor line # SKIP",
+      "ok 6061 - getSelectedText surfaces the native UNKNOWN verdict # SKIP",
+      "ok 6062 - a non--25212 native failure is not cached # SKIP",
+      "ok 6063 - a run where the AX tree woke mid-retry is not cached # SKIP",
+      "ok 6064 - a monitor run ending in NO_ELEMENT with uniform -25212 teaches the cache # SKIP",
+      "ok 6065 - a timeout-killed selection read is not cached # SKIP",
+      "ok 6066 - startMonitoring skips the native monitor for a cached PID # SKIP",
+      "ok 6067 - a reported window rect is parsed # SKIP",
+      "ok 6068 - an app with no ordinary window resolves to null # SKIP",
+      "ok 6069 - a failing read resolves to null rather than throwing # SKIP",
+      "ok 6070 - reads are cached per pid for one press, then re-read # SKIP",
+      "ok 6071 - no target pid means no spawn at all # SKIP",
+      "ok 6918 - live helper probe succeeds on this machine when the binary is present # SKIP Windows-only probe",
+      "ok 7277 - a macOS marker written before the arm64 ONNX Runtime slice is not a complete install # SKIP the slice is only replaced on macOS hosts"
+    ],
+    "todo_entries": [
+      "ok 5980 - S5 a full delta page tied on updated_at must not abandon the rest of the pull # TODO"
+    ]
+  },
+  "final_isolation_suite": {
+    "tests": 73,
+    "suites": 0,
+    "pass": 73,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "duration_ms": 960.60103,
+    "skip_entries": [],
+    "todo_entries": []
+  },
+  "commands": [
+    {
+      "name": "npm-ci",
+      "command": "NODE_USE_ENV_PROXY=1 XDG_CACHE_HOME=/workspace/.cache npm_config_devdir=/workspace/work/flosi-phase3/node-gyp npm ci --cache /workspace/.cache/npm --no-audit --no-fund --fetch-retries=0 --fetch-timeout=30000",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T17:57:48.342257+00:00",
+      "seconds": 24.41,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/npm-ci.log"
+    },
+    {
+      "name": "sqlite-node",
+      "command": "npm rebuild better-sqlite3 --cache /workspace/.cache/npm",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:03:04.489729+00:00",
+      "seconds": 0.66,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/sqlite-node.log"
+    },
+    {
+      "name": "early-regression",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-concurrency=4 test/helpers/modelDirUtils.test.js test/helpers/qdrantManager.test.js test/helpers/localEmbeddingsLifecycle.test.js test/helpers/mainProcessEsmEntries.test.js test/helpers/hotkeyStartup.test.js",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:05:05.556875+00:00",
+      "seconds": 0.85,
+      "exit_code": 1,
+      "log": "/workspace/work/flosi-phase3/logs/early-regression.log"
+    },
+    {
+      "name": "isolation-targeted",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-reporter=tap test/helpers/flosiQaIsolation.test.js",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:08:13.153391+00:00",
+      "seconds": 0.59,
+      "exit_code": 1,
+      "log": "/workspace/work/flosi-phase3/logs/isolation-targeted.log"
+    },
+    {
+      "name": "quality",
+      "command": "npm run quality-check",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:08:13.769765+00:00",
+      "seconds": 8.21,
+      "exit_code": 1,
+      "log": "/workspace/work/flosi-phase3/logs/quality.log"
+    },
+    {
+      "name": "isolation-targeted-final",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-reporter=tap test/helpers/flosiQaIsolation.test.js",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:08:28.852733+00:00",
+      "seconds": 0.51,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/isolation-targeted-final.log"
+    },
+    {
+      "name": "isolation-policy-recheck",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-reporter=tap test/helpers/flosiQaIsolation.test.js",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:12:41.720302+00:00",
+      "seconds": 3.06,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/isolation-policy-recheck.log"
+    },
+    {
+      "name": "quality-retry",
+      "command": "npm run quality-check",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:10:56.036132+00:00",
+      "seconds": 177.78,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/quality-retry.log"
+    },
+    {
+      "name": "renderer",
+      "command": "npm run build:renderer",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:13:53.941353+00:00",
+      "seconds": 8.38,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/renderer.log"
+    },
+    {
+      "name": "isolation-expanded",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-reporter=tap test/helpers/flosiQaIsolation.test.js",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:16:20.388478+00:00",
+      "seconds": 2.9,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/isolation-expanded.log"
+    },
+    {
+      "name": "isolation-final",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-reporter=tap test/helpers/flosiQaIsolation.test.js",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:21:28.075841+00:00",
+      "seconds": 1.63,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/isolation-final.log"
+    },
+    {
+      "name": "verified-native-archives",
+      "command": "NODE_USE_ENV_PROXY=1 node - <<'JS'\nconst fs=require(\"node:fs\"),path=require(\"node:path\");\nconst {downloadPinned,extractPinnedZip,hashFile}=require(\"./scripts/flosi-qa-download\");\nconst pins=require(\"./scripts/flosi-qa-artifacts.json\");\n(async()=>{const records=[];for(const pack of [...pins.assets,pins.llama]){const root=path.join(\"/workspace/work/flosi-phase3/artifact-validation\",pack.id);const archive=path.join(root,\"archive.zip\"),dest=path.join(root,\"extracted\");await downloadPinned(pack,archive);await extractPinnedZip(archive,dest);const files=require(\"./scripts/flosi-qa\").walkFiles(dest);if(!files.some(f=>path.basename(f)===pack.sourceBinary))throw Error(\"Missing pinned binary\");records.push({id:pack.id,url:pack.url,sha256:hashFile(archive),bytes:fs.statSync(archive).size,files:files.map(f=>({path:path.relative(dest,f),sha256:hashFile(f),size:fs.statSync(f).size})),executed:false});console.log(pack.id,\"verified archive, no Windows execution\");}fs.writeFileSync(\"/workspace/work/flosi-phase3/native-archives.json\",JSON.stringify(records,null,2));})().catch(e=>{console.error(e);process.exitCode=1});\nJS",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:21:29.742249+00:00",
+      "seconds": 4.49,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/verified-native-archives.log"
+    },
+    {
+      "name": "powershell-parse",
+      "command": "XDG_CACHE_HOME=/workspace/work/flosi-phase3/ps-cache XDG_CONFIG_HOME=/workspace/work/flosi-phase3/ps-config XDG_DATA_HOME=/workspace/work/flosi-phase3/ps-data /workspace/work/flosi-phase2/pwsh/pwsh -NoProfile -NonInteractive -File /workspace/work/flosi-phase3/parse-powershell.ps1",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:28:02.282015+00:00",
+      "seconds": 2.3,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/powershell-parse.log"
+    },
+    {
+      "name": "qa-postreview",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-reporter=tap test/helpers/flosiQaIsolation.test.js test/helpers/preloadAuthBridge.test.js test/helpers/preloadOnboardingBridge.test.js test/helpers/preloadConnectorProgress.test.js test/helpers/modelDirUtils.test.js test/helpers/localEmbeddingsLifecycle.test.js",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:29:56.511042+00:00",
+      "seconds": 7.87,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/qa-postreview.log"
+    },
+    {
+      "name": "quality-final",
+      "command": "npm run quality-check",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:28:04.692667+00:00",
+      "seconds": 175.22,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/quality-final.log"
+    },
+    {
+      "name": "full-regression",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-concurrency=4 --test-reporter=tap \"test/**/*.test.js\"",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:08:29.394291+00:00",
+      "seconds": 1398.82,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/full-regression.log"
+    },
+    {
+      "name": "isolation-entry-guards",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-reporter=tap test/helpers/flosiQaIsolation.test.js",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:32:51.503022+00:00",
+      "seconds": 0.82,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/isolation-entry-guards.log"
+    },
+    {
+      "name": "isolation-canonical",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-reporter=tap test/helpers/flosiQaIsolation.test.js",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:34:55.832145+00:00",
+      "seconds": 5.14,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/isolation-canonical.log"
+    },
+    {
+      "name": "isolation-prefs",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-reporter=tap test/helpers/flosiQaIsolation.test.js",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:37:08.536114+00:00",
+      "seconds": 5.95,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/isolation-prefs.log"
+    },
+    {
+      "name": "renderer-final",
+      "command": "npm run build:renderer",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:38:55.829703+00:00",
+      "seconds": 17.66,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/renderer-final.log"
+    },
+    {
+      "name": "qa-entry-negative",
+      "command": "node scripts/require-safe-entry.js",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:39:13.723871+00:00",
+      "seconds": 0.26,
+      "exit_code": 1,
+      "log": "/workspace/work/flosi-phase3/logs/qa-entry-negative.log"
+    },
+    {
+      "name": "platform-negative",
+      "command": "node scripts/flosi-qa.js check",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:39:14.193296+00:00",
+      "seconds": 0.33,
+      "exit_code": 1,
+      "log": "/workspace/work/flosi-phase3/logs/platform-negative.log"
+    },
+    {
+      "name": "quality-freeze",
+      "command": "npm run quality-check",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:35:01.092420+00:00",
+      "seconds": 344.7,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/quality-freeze.log"
+    },
+    {
+      "name": "native-egress-guards",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-reporter=tap test/helpers/flosiQaIsolation.test.js",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:47:17.319341+00:00",
+      "seconds": 6.57,
+      "exit_code": 1,
+      "log": "/workspace/work/flosi-phase3/logs/native-egress-guards.log"
+    },
+    {
+      "name": "native-egress-recheck",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-reporter=tap test/helpers/flosiQaIsolation.test.js",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:48:41.310590+00:00",
+      "seconds": 7.48,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/native-egress-recheck.log"
+    },
+    {
+      "name": "full-final",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-concurrency=8 --test-reporter=tap \"test/**/*.test.js\"",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T18:32:52.347113+00:00",
+      "seconds": 1460.31,
+      "exit_code": 1,
+      "log": "/workspace/work/flosi-phase3/logs/full-final.log"
+    },
+    {
+      "name": "isolation-release-candidate",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-reporter=tap test/helpers/flosiQaIsolation.test.js",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T19:00:46.294828+00:00",
+      "seconds": 0.92,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/isolation-release-candidate.log"
+    },
+    {
+      "name": "powershell-final",
+      "command": "XDG_CACHE_HOME=/workspace/work/flosi-phase3/ps-cache XDG_CONFIG_HOME=/workspace/work/flosi-phase3/ps-config XDG_DATA_HOME=/workspace/work/flosi-phase3/ps-data /workspace/work/flosi-phase2/pwsh/pwsh -NoProfile -NonInteractive -File /workspace/work/flosi-phase3/parse-powershell-final.ps1",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T19:02:12.984440+00:00",
+      "seconds": 1.98,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/powershell-final.log"
+    },
+    {
+      "name": "proof-synthetic",
+      "command": "XDG_CACHE_HOME=/workspace/work/flosi-phase3/ps-cache XDG_CONFIG_HOME=/workspace/work/flosi-phase3/ps-config XDG_DATA_HOME=/workspace/work/flosi-phase3/ps-data /workspace/work/flosi-phase2/pwsh/pwsh -NoProfile -NonInteractive -File /workspace/work/flosi-phase3/proof-exercise.ps1",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T19:02:15.120459+00:00",
+      "seconds": 2.05,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/proof-synthetic.log"
+    },
+    {
+      "name": "isolation-final-tree",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-reporter=tap test/helpers/flosiQaIsolation.test.js",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T19:10:33.399787+00:00",
+      "seconds": 2.51,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/isolation-final-tree.log"
+    },
+    {
+      "name": "quality-final-tree",
+      "command": "npm run quality-check",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T19:10:36.004465+00:00",
+      "seconds": 199.8,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/quality-final-tree.log"
+    },
+    {
+      "name": "full-stable",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-concurrency=4 --test-reporter=tap \"test/**/*.test.js\"",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T19:00:47.248318+00:00",
+      "seconds": 1352.71,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/full-stable.log"
+    },
+    {
+      "name": "inherited-config-final",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-reporter=tap test/helpers/flosiQaIsolation.test.js",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T19:30:40.276686+00:00",
+      "seconds": 0.96,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/inherited-config-final.log"
+    },
+    {
+      "name": "applied-paths-final",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-reporter=tap test/helpers/flosiQaIsolation.test.js",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T19:37:04.307743+00:00",
+      "seconds": 1.01,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/applied-paths-final.log"
+    },
+    {
+      "name": "powershell-code-final",
+      "command": "XDG_CACHE_HOME=/workspace/work/flosi-phase3/ps-cache XDG_CONFIG_HOME=/workspace/work/flosi-phase3/ps-config XDG_DATA_HOME=/workspace/work/flosi-phase3/ps-data /workspace/work/flosi-phase2/pwsh/pwsh -NoProfile -NonInteractive -File /workspace/work/flosi-phase3/parse-powershell-final.ps1",
+      "cwd": "/workspace/work/flosi-isolation",
+      "started_utc": "2026-10-29T19:40:42.722634+00:00",
+      "seconds": 0.41,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase3/logs/powershell-code-final.log"
+    }
+  ],
+  "limitations": [
+    "No Windows native APIs executed",
+    "No microphone, WASAPI, NVIDIA/CUDA or real desktop interaction tested",
+    "No installer, signing or public binary distribution",
+    "Remaining security and license risks unchanged from phase 2"
+  ]
+}
