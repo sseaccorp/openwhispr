@@ -93,7 +93,7 @@ Tras cerrar QA, repetir `Get-NetTCPConnection`; no debe quedar su listener ni su
 
 Guardar `Check`/logs privados, SHA del commit, `Q/orukeet.json`, `Q/artifacts.json`, hashes del corpus y ajustes. Probar ES/EN, silencio, nombres, puntuación y audio largo; cancelación durante captura/inferencia, dictado posterior, cierre y reinicio. Probar inserción solicitada en ChatGPT **web**, otro campo del navegador, Bloc de notas y una app de escritorio, con foco/selección conocidos. Medir cada capa, CPU/RAM y uso real de GPU sin inferirlo por su presencia. Mantener las claves reales/cuentas deshabilitadas.
 
-Seguir [FLOSI_VERSION_COMPARISON.md](FLOSI_VERSION_COMPARISON.md): mismo modelo, hashes, configuración y entrada; primero ASR sin cleanup. **Qwen3.5 2B sigue pendiente de preparación fijada y validación**: no usar el `-LocalAI` anterior (Qwen2.5 1.5B) como sustituto equivalente.
+Seguir [FLOSI_VERSION_COMPARISON.md](FLOSI_VERSION_COMPARISON.md): mismo modelo, hashes, configuración y entrada; primero ASR bruto sin cleanup en QA, usando la salida bruta oficial si está disponible sin cambiar su configuración. No reconfigurar la oficial desde este procedimiento; si no hay una entrada/salida equivalente, registrar la comparación pendiente. **Qwen3.5 2B sigue pendiente de preparación fijada y validación**: no usar el `-LocalAI` anterior (Qwen2.5 1.5B) como sustituto equivalente.
 
 ## Preservación y vuelta atrás
 
