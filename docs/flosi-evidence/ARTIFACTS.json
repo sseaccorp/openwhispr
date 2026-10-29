@@ -1,0 +1,347 @@
+[
+  {
+    "path": "resources/bin/.linux-fast-paste.hash",
+    "bytes": 64,
+    "sha256": "8e5f439c3e8e3aff3011fc4088e7a91d7047d209080034b1ecff77b4ad9dc019"
+  },
+  {
+    "path": "resources/bin/.linux-key-listener.x64.hash",
+    "bytes": 64,
+    "sha256": "b3b6bf68d33c3923df386da66204c7df37201f82f103ac904648f189815179ec"
+  },
+  {
+    "path": "resources/bin/.linux-system-audio-helper.hash",
+    "bytes": 64,
+    "sha256": "6ca8365625ffb709a5904d9dd14445e521d5fa79c70a0406a68ca2ddbd2a3dc6"
+  },
+  {
+    "path": "resources/bin/.linux-text-monitor.hash",
+    "bytes": 64,
+    "sha256": "8e23f5e687354da0c6de57797672a275cffc76bf9ec30846655b4281b95f6e02"
+  },
+  {
+    "path": "resources/bin/.qdrant-linux-x64.json",
+    "bytes": 21,
+    "sha256": "6d6918b6c0ff6c5d2d5d29869e67752f2847def840204b933d14bf8ba4ea04ce"
+  },
+  {
+    "path": "resources/bin/.sherpa-onnx-linux-x64.json",
+    "bytes": 118,
+    "sha256": "cda367db0cc243f0f3e1798ef38fe67b81ac88454da01cc8b4bcc1e24a09eb8a"
+  },
+  {
+    "path": "resources/bin/.whisper-cpp-linux-x64.json",
+    "bytes": 35,
+    "sha256": "cbeebe5491d0de2b36d34e3d2fd787e60e24f9edede6073750cfd7857968ffc8"
+  },
+  {
+    "path": "resources/bin/all-MiniLM-L6-v2/model.onnx",
+    "bytes": 90405214,
+    "sha256": "6fd5d72fe4589f189f8ebc006442dbb529bb7ce38f8082112682524616046452"
+  },
+  {
+    "path": "resources/bin/all-MiniLM-L6-v2/tokenizer.json",
+    "bytes": 466247,
+    "sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037"
+  },
+  {
+    "path": "resources/bin/diarization-models/3dspeaker_speech_campplus_sv_en_voxceleb_16k.onnx",
+    "bytes": 29596978,
+    "sha256": "357a834f702b80161e5b981182c038e18553c1f2ca752ed6cec2052365d4129b"
+  },
+  {
+    "path": "resources/bin/diarization-models/sherpa-onnx-pyannote-segmentation-3-0/model.onnx",
+    "bytes": 5992913,
+    "sha256": "220ad67ca923bef2fa91f2390c786097bf305bceb5e261d4af67b38e938e1079"
+  },
+  {
+    "path": "resources/bin/diarization-models/silero_vad.onnx",
+    "bytes": 643854,
+    "sha256": "9e2449e1087496d8d4caba907f23e0bd3f78d91fa552479bb9c23ac09cbb1fd6"
+  },
+  {
+    "path": "resources/bin/libggml-base.so",
+    "bytes": 901704,
+    "sha256": "a325be81f88c2da16f34ef9b44093835e19814ba2287910ac093b9db3ad3e60b"
+  },
+  {
+    "path": "resources/bin/libggml-base.so.0",
+    "bytes": 901704,
+    "sha256": "a325be81f88c2da16f34ef9b44093835e19814ba2287910ac093b9db3ad3e60b"
+  },
+  {
+    "path": "resources/bin/libggml-base.so.0.15.2",
+    "bytes": 901704,
+    "sha256": "a325be81f88c2da16f34ef9b44093835e19814ba2287910ac093b9db3ad3e60b"
+  },
+  {
+    "path": "resources/bin/libggml-cpu-alderlake.so",
+    "bytes": 1124296,
+    "sha256": "e68909a8eece33ddc0ebd5c400555ceb0aeee2742a6ba201311bf27ed76aaf16"
+  },
+  {
+    "path": "resources/bin/libggml-cpu-cannonlake.so",
+    "bytes": 1269288,
+    "sha256": "8f30ceed95a603b2a005fb12bbc5487be7572ebf8c4474f932a56e9482e5b546"
+  },
+  {
+    "path": "resources/bin/libggml-cpu-cascadelake.so",
+    "bytes": 1265192,
+    "sha256": "09d522bcd22a2d1b2af1d2348b07b79fd527b35efa0051d7d7c6548df6117d69"
+  },
+  {
+    "path": "resources/bin/libggml-cpu-cooperlake.so",
+    "bytes": 1265256,
+    "sha256": "c7255b1db8d7a49734b83562036a79b45132ce2e8cdba34a91579f230eb19346"
+  },
+  {
+    "path": "resources/bin/libggml-cpu-haswell.so",
+    "bytes": 1128392,
+    "sha256": "069a842fbf93af33b4f9bfb40c9c236e8ac6de28475a3e278018a30b676930b9"
+  },
+  {
+    "path": "resources/bin/libggml-cpu-icelake.so",
+    "bytes": 1265192,
+    "sha256": "0f8e7d66f9dd17b0e5977354f52ddcb1a5a5881817297e003e3acc50a92f58de"
+  },
+  {
+    "path": "resources/bin/libggml-cpu-ivybridge.so",
+    "bytes": 1073672,
+    "sha256": "65776601d168aa441fcc1f9b0011b57cd074f9173ef14702ce6c94576635ae43"
+  },
+  {
+    "path": "resources/bin/libggml-cpu-piledriver.so",
+    "bytes": 1069576,
+    "sha256": "4904c6a181ca5ef52854ad11dab34ed73cfb73a1234fc033de7d6336cb8b7d2b"
+  },
+  {
+    "path": "resources/bin/libggml-cpu-sandybridge.so",
+    "bytes": 1064360,
+    "sha256": "26917caf2a728b54ca12b3de1331f7b796fb83f81c06ce695d69b30a92ee437d"
+  },
+  {
+    "path": "resources/bin/libggml-cpu-sapphirerapids.so",
+    "bytes": 1531624,
+    "sha256": "8793bf46c59dbddd3ea3b27b2dab317fc2151d90d744e59ca239f3dd2812e670"
+  },
+  {
+    "path": "resources/bin/libggml-cpu-skylakex.so",
+    "bytes": 1269288,
+    "sha256": "597da0588a698c96d7e02cbf87d1a81967ee56c196819078c09c43bb8ac35c23"
+  },
+  {
+    "path": "resources/bin/libggml-cpu-sse42.so",
+    "bytes": 865168,
+    "sha256": "cd412b3bd7e72fcbcf87a51b541cce1debbda3529deaf46e608af833d869b2b9"
+  },
+  {
+    "path": "resources/bin/libggml-cpu-x64.so",
+    "bytes": 861240,
+    "sha256": "3f218adf0cf76faebe58f12275a1f4121b0042e7a71415a1c5232634cb60f2b4"
+  },
+  {
+    "path": "resources/bin/libggml-cpu-zen4.so",
+    "bytes": 1265256,
+    "sha256": "29058a4f79f3e2c0be729cb499ce5fe959c4c1dca5ffcff498904e58b9412047"
+  },
+  {
+    "path": "resources/bin/libggml-rpc.so",
+    "bytes": 158640,
+    "sha256": "ef7d487e35149f506d94deb1e9637ace289924b75d112480858383679d55bc78"
+  },
+  {
+    "path": "resources/bin/libggml.so",
+    "bytes": 54936,
+    "sha256": "18f9bc407572a54d8a2d53b9d0d47795ee680c5543bd59b6b161ee3044b08a75"
+  },
+  {
+    "path": "resources/bin/libggml.so.0",
+    "bytes": 54936,
+    "sha256": "18f9bc407572a54d8a2d53b9d0d47795ee680c5543bd59b6b161ee3044b08a75"
+  },
+  {
+    "path": "resources/bin/libggml.so.0.15.2",
+    "bytes": 54936,
+    "sha256": "18f9bc407572a54d8a2d53b9d0d47795ee680c5543bd59b6b161ee3044b08a75"
+  },
+  {
+    "path": "resources/bin/libllama-batched-bench-impl.so",
+    "bytes": 48848,
+    "sha256": "5a466b57646ced8a93851a09e97c9fb9532e3e2bb032e92780c2c3cda58b0834"
+  },
+  {
+    "path": "resources/bin/libllama-bench-impl.so",
+    "bytes": 454944,
+    "sha256": "87029fc53a231496c4ee04bea047a0fa6b04cb7c44503c954d66581f84af54f3"
+  },
+  {
+    "path": "resources/bin/libllama-cli-impl.so",
+    "bytes": 1873296,
+    "sha256": "6df1835dc4af8e8dbb0739141dc8f60dec203127b9a0e49e39dc245c5affe48c"
+  },
+  {
+    "path": "resources/bin/libllama-common.so",
+    "bytes": 5918184,
+    "sha256": "b505269e379c408024e73108b13e6c5f1bad0a4f257f5bcab21d1423ad95e43c"
+  },
+  {
+    "path": "resources/bin/libllama-common.so.0",
+    "bytes": 5918184,
+    "sha256": "b505269e379c408024e73108b13e6c5f1bad0a4f257f5bcab21d1423ad95e43c"
+  },
+  {
+    "path": "resources/bin/libllama-common.so.0.0.9763",
+    "bytes": 5918184,
+    "sha256": "b505269e379c408024e73108b13e6c5f1bad0a4f257f5bcab21d1423ad95e43c"
+  },
+  {
+    "path": "resources/bin/libllama-completion-impl.so",
+    "bytes": 118560,
+    "sha256": "ac891e9afa319b9f39d7ca1f0a11b86fe50a851754a2455abaf8c14ebd6b580e"
+  },
+  {
+    "path": "resources/bin/libllama-fit-params-impl.so",
+    "bytes": 39728,
+    "sha256": "35b2b338052ffe20013b2fba1f685953d6f35d72b9a1953c593f1739eca050c9"
+  },
+  {
+    "path": "resources/bin/libllama-perplexity-impl.so",
+    "bytes": 171520,
+    "sha256": "71f11080834c72b3d31e04ef881c7afa47a742be71089d69404923ee94f74ebf"
+  },
+  {
+    "path": "resources/bin/libllama-quantize-impl.so",
+    "bytes": 85880,
+    "sha256": "fd889e9128195ce339b060803945e80ffba20bd0162814d370fc9d173ef836b6"
+  },
+  {
+    "path": "resources/bin/libllama-server-impl.so",
+    "bytes": 6702136,
+    "sha256": "34f18fa26db673960844fb390f8c2701cc0fa12506b4d2a2ba90bc1e911d71d0"
+  },
+  {
+    "path": "resources/bin/libllama.so",
+    "bytes": 3729296,
+    "sha256": "8c799d5035b0a98ff8803918bc9a8a85af088f80995635efe12cc190fdbb3c12"
+  },
+  {
+    "path": "resources/bin/libllama.so.0",
+    "bytes": 3729296,
+    "sha256": "8c799d5035b0a98ff8803918bc9a8a85af088f80995635efe12cc190fdbb3c12"
+  },
+  {
+    "path": "resources/bin/libllama.so.0.0.9763",
+    "bytes": 3729296,
+    "sha256": "8c799d5035b0a98ff8803918bc9a8a85af088f80995635efe12cc190fdbb3c12"
+  },
+  {
+    "path": "resources/bin/libmtmd.so",
+    "bytes": 1362416,
+    "sha256": "e160a7d9e68021f094c234673918c5d3d93a650f79cb6cd87a7b499ba2b64edd"
+  },
+  {
+    "path": "resources/bin/libmtmd.so.0",
+    "bytes": 1362416,
+    "sha256": "e160a7d9e68021f094c234673918c5d3d93a650f79cb6cd87a7b499ba2b64edd"
+  },
+  {
+    "path": "resources/bin/libmtmd.so.0.0.9763",
+    "bytes": 1362416,
+    "sha256": "e160a7d9e68021f094c234673918c5d3d93a650f79cb6cd87a7b499ba2b64edd"
+  },
+  {
+    "path": "resources/bin/libonnxruntime.so",
+    "bytes": 27026609,
+    "sha256": "4b3607aebd1784b26b6f9b20e4bd974c7ab8287043e4d095cb7d2cb40b5e566e"
+  },
+  {
+    "path": "resources/bin/linux-fast-paste",
+    "bytes": 46944,
+    "sha256": "b92a1760318db28e11ebdd4dba8206dc89643c3a889436cdc2422c844ba991e8"
+  },
+  {
+    "path": "resources/bin/linux-key-listener-x64",
+    "bytes": 22352,
+    "sha256": "5b9618a4e35d046373c2e63ca906c522f2d26e4ecc5a69a0391dc58c90a87ccd"
+  },
+  {
+    "path": "resources/bin/linux-system-audio-helper",
+    "bytes": 57096,
+    "sha256": "2ee523b1b08107f5e67fac713d99382143e0df746bfc8394711523eae120f0e6"
+  },
+  {
+    "path": "resources/bin/linux-text-monitor",
+    "bytes": 17888,
+    "sha256": "c26c78022078daee488092f0c5347f760e85ee83b6db21a3ae300970e229bf2b"
+  },
+  {
+    "path": "resources/bin/llama-server-linux-x64-cpu",
+    "bytes": 17896,
+    "sha256": "c8e004b04fa72b9f261a76f0bdb0ba3da69fe9158428deefd6141dc34c396a61"
+  },
+  {
+    "path": "resources/bin/meeting-aec-helper-linux-x64",
+    "bytes": 1402432,
+    "sha256": "1d3001e6c70d06fb051115e9782fe010932bf82ad6072f126e348f1f141ea725"
+  },
+  {
+    "path": "resources/bin/qdrant-linux-x64",
+    "bytes": 92812720,
+    "sha256": "5081acd073ef29701415dc2d1655d98750be8c08008541febc20cf2935800f2f"
+  },
+  {
+    "path": "resources/bin/sherpa-onnx-diarize-linux-x64",
+    "bytes": 497136,
+    "sha256": "d9aec1fc39b7a36a7e0d893acc6e83299d70b3cbe4f6bff5bf494c81dab979c4"
+  },
+  {
+    "path": "resources/bin/sherpa-onnx-online-ws-linux-x64",
+    "bytes": 2770096,
+    "sha256": "1e04fb013fe3a56667b124f123e8a93ede84360b263ed60f7189367b4a0261dd"
+  },
+  {
+    "path": "resources/bin/sherpa-onnx-ws-linux-x64",
+    "bytes": 3071832,
+    "sha256": "a119ec9d7b156164ef02f097734f736932763ee3f8c1c8f975ea558b51b33dae"
+  },
+  {
+    "path": "resources/bin/whisper-server-linux-x64",
+    "bytes": 3219648,
+    "sha256": "47f6d37417cd9acde262f6d4bbebb09834f9cdb7f3f05fa71cd94c235eadb970"
+  },
+  {
+    "path": "resources/bin/whisper-vad/ggml-silero-v5.1.2.bin",
+    "bytes": 885098,
+    "sha256": "29940d98d42b91fbd05ce489f3ecf7c72f0a42f027e4875919a28fb4c04ea2cf"
+  },
+  {
+    "path": "package-lock.json",
+    "bytes": 513204,
+    "sha256": "60396a350b1e3dc263bd9ec305787aca270b25e4799cb3b817580bc166e66816"
+  },
+  {
+    "path": "node_modules/ffmpeg-static/ffmpeg",
+    "bytes": 79826272,
+    "sha256": "e7e7fb30477f717e6f55f9180a70386c62677ef8a4d4d1a5d948f4098aa3eb99"
+  },
+  {
+    "path": "node_modules/electron/dist/electron",
+    "bytes": 207289560,
+    "sha256": "09f76150ca151b0d8eec9d984ef290393ae73583bf6508655799a61a351086d2"
+  },
+  {
+    "path": "node_modules/better-sqlite3/build/Release/better_sqlite3.node",
+    "bytes": 2113616,
+    "sha256": "ec599358a4c58d528278fccd189357975d33debc587bc1e2b6cd8fb3904e25b1"
+  },
+  {
+    "path": "/workspace/work/flosi-audit/ggml-tiny.bin",
+    "bytes": 77691713,
+    "sha256": "be07e048e1e599ad46341c8d2a135645097a538221678b7acdd1b1919c6e1b21"
+  },
+  {
+    "path": "/workspace/work/flosi-audit/silence-2s.wav",
+    "bytes": 64044,
+    "sha256": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa"
+  }
+]

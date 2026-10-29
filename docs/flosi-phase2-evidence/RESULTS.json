@@ -1,0 +1,215 @@
+{
+  "source_base": "ba6d61820b4c56d7b08012c61c2ae6b43f3152f3",
+  "audit_commit": "300375424f8a2f8e0c8a602a27cab9ca9637620a",
+  "candidate_lock_sha256": "9dfb56d340c4e7490ea88a0d819dd38ad273a788ea10ab0431d913369ea97a92",
+  "regression": {
+    "tests": 8746,
+    "suites": 8,
+    "pass": 8713,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 32,
+    "todo": 1,
+    "duration_ms": 1293605.065796
+  },
+  "skip_lines": [
+    "﹣ darwin: native snapshots exclude background speech while preserving meeting capture (0.563464ms) # the native microphone listener requires macOS",
+    "﹣ extractArchive PowerShell fallback extracts a zip under apostrophe paths (0.122024ms) # SKIP",
+    "﹣ native input regions scale, clip and route clicks without changing the visible window (3.62204ms) # Xvfb is not installed",
+    "﹣ native modifier gate waits for a held modifier, ignores locked ones, and reports an unreadable XKB state as unknown (3.336341ms) # Xvfb is not installed",
+    "﹣ native evdev modifier gate sees a held key on a keyboard and ignores ydotoold's virtual one (0.111749ms) # /dev/uinput is not writable",
+    "﹣ macOS shortcuts follow the active layout and fall back only without layout data (0.801155ms) # SKIP",
+    "﹣ --app-context output becomes the app's name, bundle id, title and host (5.046739ms) # SKIP",
+    "﹣ a failed --app-context run keeps what it printed before failing (0.153209ms) # SKIP",
+    "﹣ concurrent captures share one frontmost lookup (0.790691ms) # SKIP",
+    "﹣ a just-completed capture is reused instead of respawning osascript (0.502821ms) # SKIP",
+    "﹣ a failed capture is retried, not reused (0.081371ms) # SKIP",
+    "﹣ captures refresh once the reuse window has passed (0.074942ms) # SKIP",
+    "﹣ startMonitoring stops immediately without a target PID (1.315515ms) # SKIP",
+    "﹣ startMonitoring self-terminates when the target has no accessible focused element (0.246789ms) # SKIP",
+    "﹣ getSelectedText caches a -25212 native failure per PID (0.089504ms) # SKIP",
+    "﹣ getSelectedText skips the native binary for a cached PID (0.063746ms) # SKIP",
+    "﹣ getSelectedText identifies an empty writable field (0.091367ms) # SKIP",
+    "﹣ isFocusedEditable maps the native verdicts, including the dormant-tree UNKNOWN (0.127491ms) # SKIP",
+    "﹣ isFocusedEditable answers from a stale binary's first monitor line (0.131096ms) # SKIP",
+    "﹣ getSelectedText surfaces the native UNKNOWN verdict (0.161852ms) # SKIP",
+    "﹣ a non--25212 native failure is not cached (0.152317ms) # SKIP",
+    "﹣ a run where the AX tree woke mid-retry is not cached (0.042042ms) # SKIP",
+    "﹣ a monitor run ending in NO_ELEMENT with uniform -25212 teaches the cache (0.126148ms) # SKIP",
+    "﹣ a timeout-killed selection read is not cached (0.047081ms) # SKIP",
+    "﹣ startMonitoring skips the native monitor for a cached PID (0.025809ms) # SKIP",
+    "﹣ a reported window rect is parsed (2.822136ms) # SKIP",
+    "﹣ an app with no ordinary window resolves to null (0.137495ms) # SKIP",
+    "﹣ a failing read resolves to null rather than throwing (0.074541ms) # SKIP",
+    "﹣ reads are cached per pid for one press, then re-read (0.08745ms) # SKIP",
+    "﹣ no target pid means no spawn at all (0.075393ms) # SKIP",
+    "﹣ live helper probe succeeds on this machine when the binary is present (1.56142ms) # Windows-only probe",
+    "﹣ a macOS marker written before the arm64 ONNX Runtime slice is not a complete install (0.097629ms) # the slice is only replaced on macOS hosts"
+  ],
+  "todo_lines": [
+    "✔ S5 a full delta page tied on updated_at must not abandon the rest of the pull (0.104387ms) # TODO"
+  ],
+  "windows_native": "not_executed",
+  "code_changes": "package.json and package-lock.json only; application source/engines/prompts/native code unchanged",
+  "commands": [
+    {
+      "name": "audit-before",
+      "command": "NODE_USE_ENV_PROXY=1 npm audit --json --cache /workspace/.cache/npm",
+      "cwd": "/workspace/work/flosi-baseline",
+      "started_utc": "2026-10-29T12:33:29.529963+00:00",
+      "seconds": 1.91,
+      "exit_code": 1,
+      "log": "/workspace/work/flosi-phase2/logs/audit-before.log"
+    },
+    {
+      "name": "advisory-research",
+      "command": "python /workspace/work/flosi-phase2/research.py",
+      "cwd": "/workspace/work/flosi-baseline",
+      "started_utc": "2026-10-29T12:34:24.696073+00:00",
+      "seconds": 11.1,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase2/logs/advisory-research.log"
+    },
+    {
+      "name": "lock-update",
+      "command": "NODE_USE_ENV_PROXY=1 npm install --package-lock-only --ignore-scripts --no-audit --no-fund --cache /workspace/.cache/npm",
+      "cwd": "/workspace/work/flosi-baseline",
+      "started_utc": "2026-10-29T12:36:55.939232+00:00",
+      "seconds": 0.92,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase2/logs/lock-update.log"
+    },
+    {
+      "name": "npm-ci-candidate",
+      "command": "NODE_USE_ENV_PROXY=1 XDG_CACHE_HOME=/workspace/.cache npm_config_devdir=/workspace/work/flosi-phase2/node-gyp npm ci --cache /workspace/.cache/npm --no-audit --no-fund",
+      "cwd": "/workspace/work/flosi-baseline",
+      "started_utc": "2026-10-29T12:37:31.004407+00:00",
+      "seconds": 25.17,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase2/logs/npm-ci-candidate.log"
+    },
+    {
+      "name": "sqlite-node",
+      "command": "NODE_USE_ENV_PROXY=1 XDG_CACHE_HOME=/workspace/.cache npm_config_devdir=/workspace/work/flosi-phase2/node-gyp npm rebuild better-sqlite3 --cache /workspace/.cache/npm",
+      "cwd": "/workspace/work/flosi-baseline",
+      "started_utc": "2026-10-29T12:37:56.199692+00:00",
+      "seconds": 0.62,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase2/logs/sqlite-node.log"
+    },
+    {
+      "name": "audit-after",
+      "command": "NODE_USE_ENV_PROXY=1 npm audit --audit-level=high --json --cache /workspace/.cache/npm",
+      "cwd": "/workspace/work/flosi-baseline",
+      "started_utc": "2026-10-29T12:38:05.492360+00:00",
+      "seconds": 5.59,
+      "exit_code": 1,
+      "log": "/workspace/work/flosi-phase2/logs/audit-after.log"
+    },
+    {
+      "name": "audit-production",
+      "command": "NODE_USE_ENV_PROXY=1 npm audit --omit=dev --audit-level=high --json --cache /workspace/.cache/npm",
+      "cwd": "/workspace/work/flosi-baseline",
+      "started_utc": "2026-10-29T12:38:11.228117+00:00",
+      "seconds": 3.37,
+      "exit_code": 1,
+      "log": "/workspace/work/flosi-phase2/logs/audit-production.log"
+    },
+    {
+      "name": "quality",
+      "command": "npm run quality-check",
+      "cwd": "/workspace/work/flosi-baseline",
+      "started_utc": "2026-10-29T12:38:03.288985+00:00",
+      "seconds": 173.41,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase2/logs/quality.log"
+    },
+    {
+      "name": "renderer",
+      "command": "npm run build:renderer",
+      "cwd": "/workspace/work/flosi-baseline",
+      "started_utc": "2026-10-29T12:40:56.804037+00:00",
+      "seconds": 7.81,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase2/logs/renderer.log"
+    },
+    {
+      "name": "license-sources",
+      "command": "python /workspace/work/flosi-phase2/licenses_research.py",
+      "cwd": "/workspace/work/flosi-baseline",
+      "started_utc": "2026-10-29T12:41:08.703724+00:00",
+      "seconds": 2.9,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase2/logs/license-sources.log"
+    },
+    {
+      "name": "frozen-lock-install",
+      "command": "NODE_USE_ENV_PROXY=1 npm ci --ignore-scripts --cache /workspace/.cache/npm --no-audit --no-fund",
+      "cwd": "/workspace/work/flosi-phase2/install-check",
+      "started_utc": "2026-10-29T12:42:53.119239+00:00",
+      "seconds": 32.96,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase2/logs/frozen-lock-install.log"
+    },
+    {
+      "name": "regression",
+      "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-concurrency=4 \"test/**/*.test.js\"",
+      "cwd": "/workspace/work/flosi-baseline",
+      "started_utc": "2026-10-29T12:38:05.029757+00:00",
+      "seconds": 1293.69,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase2/logs/regression.log"
+    },
+    {
+      "name": "gguf-license-metadata",
+      "command": "python /workspace/work/flosi-phase2/gguf_licenses.py",
+      "cwd": "/workspace/work/flosi-baseline",
+      "started_utc": "2026-10-29T12:59:45.621848+00:00",
+      "seconds": 1.46,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase2/logs/gguf-license-metadata.log"
+    },
+    {
+      "name": "powershell-parse",
+      "command": "XDG_CACHE_HOME=/workspace/.cache XDG_CONFIG_HOME=/workspace/work/flosi-phase2/pwsh-config /workspace/work/flosi-phase2/pwsh/pwsh -NoLogo -NoProfile -File /workspace/work/flosi-phase2/parse-powershell.ps1",
+      "cwd": "/workspace/work/flosi-baseline",
+      "started_utc": "2026-10-29T13:03:55.378925+00:00",
+      "seconds": 0.17,
+      "exit_code": 70,
+      "log": "/workspace/work/flosi-phase2/logs/powershell-parse.log"
+    },
+    {
+      "name": "powershell-forwarding-simulated",
+      "command": "XDG_CACHE_HOME=/workspace/.cache XDG_CONFIG_HOME=/workspace/work/flosi-phase2/pwsh-config /workspace/work/flosi-phase2/pwsh/pwsh -NoLogo -NoProfile -File /workspace/work/flosi-phase2/powershell-blocks/forwarding.ps1",
+      "cwd": "/workspace/work/flosi-baseline",
+      "started_utc": "2026-10-29T13:03:55.579627+00:00",
+      "seconds": 0.17,
+      "exit_code": 70,
+      "log": "/workspace/work/flosi-phase2/logs/powershell-forwarding-simulated.log"
+    },
+    {
+      "name": "powershell-parse-scoped",
+      "command": "XDG_CACHE_HOME=/workspace/.cache XDG_CONFIG_HOME=/workspace/work/flosi-phase2/pwsh-config XDG_DATA_HOME=/workspace/work/flosi-phase2/pwsh-data /workspace/work/flosi-phase2/pwsh/pwsh -NoLogo -NoProfile -File /workspace/work/flosi-phase2/parse-powershell.ps1",
+      "cwd": "/workspace/work/flosi-baseline",
+      "started_utc": "2026-10-29T13:04:05.061031+00:00",
+      "seconds": 0.49,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase2/logs/powershell-parse-scoped.log"
+    },
+    {
+      "name": "powershell-forwarding-scoped",
+      "command": "XDG_CACHE_HOME=/workspace/.cache XDG_CONFIG_HOME=/workspace/work/flosi-phase2/pwsh-config XDG_DATA_HOME=/workspace/work/flosi-phase2/pwsh-data /workspace/work/flosi-phase2/pwsh/pwsh -NoLogo -NoProfile -File /workspace/work/flosi-phase2/powershell-blocks/forwarding.ps1",
+      "cwd": "/workspace/work/flosi-baseline",
+      "started_utc": "2026-10-29T13:04:05.577814+00:00",
+      "seconds": 0.38,
+      "exit_code": 0,
+      "log": "/workspace/work/flosi-phase2/logs/powershell-forwarding-scoped.log"
+    }
+  ],
+  "powershell_checks": {
+    "runtime": "PowerShell 7.6.0 Linux x64",
+    "archive_sha256": "04517472cf57d7f9cbd93897da9bed467c73ca6063c29d7655ebc20aa1d6023f",
+    "checks": "syntax parser of five blocks and npm argument forwarding simulation",
+    "windows_execution": false
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "gitHead": "3ae20e9cd4cdd8a53914fa30d0e9811a99d286b4",
+  "repository": {
+    "url": "git+https://github.com/tinfoilsh/tinfoil-js.git",
+    "type": "git"
+  },
+  "license": "AGPL-3.0-or-later"
+}

@@ -1,0 +1,554 @@
+[
+  {
+    "repo": "LiquidAI/LFM2-2.6B-GGUF",
+    "models": [
+      {
+        "model_id": "lfm2-2.6b-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/LiquidAI/LFM2-2.6B-GGUF",
+    "sha": "a759abdc5955d4ca97763e5cb7ff3940589ba898",
+    "gated": false,
+    "license": "other",
+    "license_name": "lfm1.0",
+    "license_link": "LICENSE"
+  },
+  {
+    "repo": "LiquidAI/LFM2.5-1.2B-Instruct-GGUF",
+    "models": [
+      {
+        "model_id": "lfm2.5-1.2b-instruct-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/LiquidAI/LFM2.5-1.2B-Instruct-GGUF",
+    "sha": "8ed288026e23958ad9dfa92d53ed773a8eee7125",
+    "gated": false,
+    "license": "other",
+    "license_name": "lfm1.0",
+    "license_link": "LICENSE"
+  },
+  {
+    "repo": "LiquidAI/LFM2.5-230M-GGUF",
+    "models": [
+      {
+        "model_id": "lfm2.5-230m-q8_0",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/LiquidAI/LFM2.5-230M-GGUF",
+    "sha": "03502067c64ce32ac4fe87b0cec0310a1a13d3e9",
+    "gated": false,
+    "license": "other",
+    "license_name": "lfm1.0",
+    "license_link": "LICENSE"
+  },
+  {
+    "repo": "LiquidAI/LFM2.5-350M-GGUF",
+    "models": [
+      {
+        "model_id": "lfm2.5-350m-q8_0",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/LiquidAI/LFM2.5-350M-GGUF",
+    "sha": "657e078c94084481950a2d555a941481f715536b",
+    "gated": false,
+    "license": "other",
+    "license_name": "lfm1.0",
+    "license_link": "LICENSE"
+  },
+  {
+    "repo": "LiquidAI/LFM2.5-8B-A1B-GGUF",
+    "models": [
+      {
+        "model_id": "lfm2.5-8b-a1b-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/LiquidAI/LFM2.5-8B-A1B-GGUF",
+    "sha": "49c14831707011e64d70b2ebd8462ba08d608434",
+    "gated": false,
+    "license": "other",
+    "license_name": "lfm1.0",
+    "license_link": "LICENSE"
+  },
+  {
+    "repo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+    "models": [
+      {
+        "model_id": "qwen2.5-1.5b-instruct-q5_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+    "sha": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/blob/main/LICENSE"
+  },
+  {
+    "repo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+    "models": [
+      {
+        "model_id": "qwen2.5-3b-instruct-q5_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct-GGUF",
+    "sha": "7dabda4d13d513e3e842b20f0d435c732f172cbe",
+    "gated": false,
+    "license": "other",
+    "license_name": "qwen-research",
+    "license_link": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/blob/main/LICENSE"
+  },
+  {
+    "repo": "Qwen/Qwen3-1.7B-GGUF",
+    "models": [
+      {
+        "model_id": "qwen3-1.7b-q8_0",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/Qwen/Qwen3-1.7B-GGUF",
+    "sha": "90862c4b9d2787eaed51d12237eafdfe7c5f6077",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://huggingface.co/Qwen/Qwen3-1.7B-GGUF/blob/main/LICENSE"
+  },
+  {
+    "repo": "Qwen/Qwen3-32B-GGUF",
+    "models": [
+      {
+        "model_id": "qwen3-32b-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/Qwen/Qwen3-32B-GGUF",
+    "sha": "938a7432affaec9157f883a87164e2646ae17555",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://huggingface.co/Qwen/Qwen3-32B-GGUF/blob/main/LICENSE"
+  },
+  {
+    "repo": "Qwen/Qwen3-4B-GGUF",
+    "models": [
+      {
+        "model_id": "qwen3-4b-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/Qwen/Qwen3-4B-GGUF",
+    "sha": "bc640142c66e1fdd12af0bd68f40445458f3869b",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://huggingface.co/Qwen/Qwen3-4B-GGUF/blob/main/LICENSE"
+  },
+  {
+    "repo": "Qwen/Qwen3-8B-GGUF",
+    "models": [
+      {
+        "model_id": "qwen3-8b-q4_k_m",
+        "field": "hfRepo"
+      },
+      {
+        "model_id": "qwen3-8b-q5_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/Qwen/Qwen3-8B-GGUF",
+    "sha": "7c41481f57cb95916b40956ab2f0b139b296d974",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://huggingface.co/Qwen/Qwen3-8B-GGUF/blob/main/LICENSE"
+  },
+  {
+    "repo": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+    "models": [
+      {
+        "model_id": "llama-3.2-1b-instruct-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/bartowski/Llama-3.2-1B-Instruct-GGUF",
+    "sha": "067b946cf014b7c697f3654f621d577a3e3afd1c",
+    "gated": false,
+    "license": "llama3.2",
+    "license_name": null,
+    "license_link": null
+  },
+  {
+    "repo": "bartowski/Llama-3.2-3B-Instruct-GGUF",
+    "models": [
+      {
+        "model_id": "llama-3.2-3b-instruct-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/bartowski/Llama-3.2-3B-Instruct-GGUF",
+    "sha": "5ab33fa94d1d04e903623ae72c95d1696f09f9e8",
+    "gated": false,
+    "license": "llama3.2",
+    "license_name": null,
+    "license_link": null
+  },
+  {
+    "repo": "bartowski/Meta-Llama-3.1-8B-Instruct-GGUF",
+    "models": [
+      {
+        "model_id": "llama-3.1-8b-instruct-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF",
+    "sha": "bf5b95e96dac0462e2a09145ec66cae9a3f12067",
+    "gated": false,
+    "license": "llama3.1",
+    "license_name": null,
+    "license_link": null
+  },
+  {
+    "repo": "bartowski/Mistral-7B-Instruct-v0.3-GGUF",
+    "models": [
+      {
+        "model_id": "mistral-7b-instruct-v0.3-q4_k_m",
+        "field": "hfRepo"
+      },
+      {
+        "model_id": "mistral-7b-instruct-v0.3-q5_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/bartowski/Mistral-7B-Instruct-v0.3-GGUF",
+    "sha": "61fd4167fff3ab01ee1cfe0da183fa27a944db48",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": null
+  },
+  {
+    "repo": "bartowski/Qwen2.5-7B-Instruct-GGUF",
+    "models": [
+      {
+        "model_id": "qwen2.5-7b-instruct-q4_k_m",
+        "field": "hfRepo"
+      },
+      {
+        "model_id": "qwen2.5-7b-instruct-q5_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/bartowski/Qwen2.5-7B-Instruct-GGUF",
+    "sha": "8911e8a47f92bac19d6f5c64a2e2095bd2f7d031",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct/blob/main/LICENSE"
+  },
+  {
+    "repo": "bartowski/Qwen_Qwen3.5-2B-GGUF",
+    "models": [
+      {
+        "model_id": "qwen3.5-2b-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/bartowski/Qwen_Qwen3.5-2B-GGUF",
+    "sha": "7d26695454df6de5fbcce2e58681e62dae06ce43",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://huggingface.co/Qwen/Qwen3.5-2B/blob/main/LICENSE"
+  },
+  {
+    "repo": "bartowski/Qwen_Qwen3.5-4B-GGUF",
+    "models": [
+      {
+        "model_id": "qwen3.5-4b-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/bartowski/Qwen_Qwen3.5-4B-GGUF",
+    "sha": "4168f45a16a1290d65a4ec0fa312ae917a4c15d6",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://huggingface.co/Qwen/Qwen3.5-4B/blob/main/LICENSE"
+  },
+  {
+    "repo": "bartowski/Qwen_Qwen3.5-9B-GGUF",
+    "models": [
+      {
+        "model_id": "qwen3.5-9b-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/bartowski/Qwen_Qwen3.5-9B-GGUF",
+    "sha": "182be2fd6c7bc44887d88a91cb03ff009cc9f549",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://huggingface.co/Qwen/Qwen3.5-9B/blob/main/LICENSE"
+  },
+  {
+    "repo": "bartowski/google_gemma-3-12b-it-GGUF",
+    "models": [
+      {
+        "model_id": "gemma-3-12b-it-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/bartowski/google_gemma-3-12b-it-GGUF",
+    "sha": "648e3a36a77c8a9f12d86e741f9dcb9089c769c4",
+    "gated": false,
+    "license": "gemma",
+    "license_name": null,
+    "license_link": null
+  },
+  {
+    "repo": "bartowski/google_gemma-3-1b-it-GGUF",
+    "models": [
+      {
+        "model_id": "gemma-3-1b-it-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/bartowski/google_gemma-3-1b-it-GGUF",
+    "sha": "116f76234503685a98f572982177b11d44ec8ff1",
+    "gated": false,
+    "license": "gemma",
+    "license_name": null,
+    "license_link": null
+  },
+  {
+    "repo": "bartowski/google_gemma-3-4b-it-GGUF",
+    "models": [
+      {
+        "model_id": "gemma-3-4b-it-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/bartowski/google_gemma-3-4b-it-GGUF",
+    "sha": "71506238f970075ca85125cd749c28b1b0eee84e",
+    "gated": false,
+    "license": null,
+    "license_name": null,
+    "license_link": null
+  },
+  {
+    "repo": "bartowski/google_gemma-4-26B-A4B-it-GGUF",
+    "models": [
+      {
+        "model_id": "gemma-4-26b-a4b-it-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/bartowski/google_gemma-4-26B-A4B-it-GGUF",
+    "sha": "10f3b41bcf8d3047f4e136e7197ffc2dd1654c9d",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://ai.google.dev/gemma/docs/gemma_4_license"
+  },
+  {
+    "repo": "bartowski/google_gemma-4-31B-it-GGUF",
+    "models": [
+      {
+        "model_id": "gemma-4-31b-it-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/bartowski/google_gemma-4-31B-it-GGUF",
+    "sha": "619aca7589c72be65dd968de8602ad23d68b5c14",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://ai.google.dev/gemma/docs/gemma_4_license"
+  },
+  {
+    "repo": "bartowski/google_gemma-4-E2B-it-GGUF",
+    "models": [
+      {
+        "model_id": "gemma-4-e2b-it-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/bartowski/google_gemma-4-E2B-it-GGUF",
+    "sha": "81012ba3538e061d5ee003f11f25335b17f82e2d",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://ai.google.dev/gemma/docs/gemma_4_license"
+  },
+  {
+    "repo": "bartowski/google_gemma-4-E4B-it-GGUF",
+    "models": [
+      {
+        "model_id": "gemma-4-e4b-it-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/bartowski/google_gemma-4-E4B-it-GGUF",
+    "sha": "029e94146666900b08caf49a3b47b413dfa8ec66",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://ai.google.dev/gemma/docs/gemma_4_license"
+  },
+  {
+    "repo": "ggml-org/gpt-oss-20b-GGUF",
+    "models": [
+      {
+        "model_id": "gpt-oss-20b-mxfp4",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/ggml-org/gpt-oss-20b-GGUF",
+    "sha": "15dcfc7e7c608c6161507211ed43c5b590801b4b",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": null
+  },
+  {
+    "repo": "google/gemma-4-26B-A4B-it-qat-q4_0-gguf",
+    "models": [
+      {
+        "model_id": "gemma-4-26b-a4b-it-qat-q4_0",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/google/gemma-4-26B-A4B-it-qat-q4_0-gguf",
+    "sha": "d1c082be9cf3c8a514acf63b8761f4b41935842e",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://ai.google.dev/gemma/docs/gemma_4_license"
+  },
+  {
+    "repo": "google/gemma-4-31B-it-qat-q4_0-gguf",
+    "models": [
+      {
+        "model_id": "gemma-4-31b-it-qat-q4_0",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/google/gemma-4-31B-it-qat-q4_0-gguf",
+    "sha": "59dde24573e7e61570dba08b18a2e1fe246955ed",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://ai.google.dev/gemma/docs/gemma_4_license"
+  },
+  {
+    "repo": "google/gemma-4-E2B-it-qat-q4_0-gguf",
+    "models": [
+      {
+        "model_id": "gemma-4-e2b-it-qat-q4_0",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/google/gemma-4-E2B-it-qat-q4_0-gguf",
+    "sha": "675cff42a74c774d6cb76f76d8eacb49b48c9b93",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://ai.google.dev/gemma/docs/gemma_4_license"
+  },
+  {
+    "repo": "google/gemma-4-E4B-it-qat-q4_0-gguf",
+    "models": [
+      {
+        "model_id": "gemma-4-e4b-it-qat-q4_0",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/google/gemma-4-E4B-it-qat-q4_0-gguf",
+    "sha": "4b4a2c1d584be7264f87aac328a1bc739ce81b6c",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://ai.google.dev/gemma/docs/gemma_4_license"
+  },
+  {
+    "repo": "mradermacher/Mistral-Nemo-12B-Instruct-GGUF",
+    "models": [
+      {
+        "model_id": "mistral-nemo-12b-instruct-q4_k_m",
+        "field": "hfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/mradermacher/Mistral-Nemo-12B-Instruct-GGUF",
+    "sha": "308fe5820f484b70e0169aad5b5553e15aabd5b9",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": null
+  },
+  {
+    "repo": "unsloth/gemma-4-26B-A4B-it-qat-GGUF",
+    "models": [
+      {
+        "model_id": "gemma-4-26b-a4b-it-qat-q4_0",
+        "field": "draftHfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/unsloth/gemma-4-26B-A4B-it-qat-GGUF",
+    "sha": "7b92b5b28818151e8669af2e45e88d6086f490dd",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://ai.google.dev/gemma/docs/gemma_4_license"
+  },
+  {
+    "repo": "unsloth/gemma-4-31B-it-qat-GGUF",
+    "models": [
+      {
+        "model_id": "gemma-4-31b-it-qat-q4_0",
+        "field": "draftHfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/unsloth/gemma-4-31B-it-qat-GGUF",
+    "sha": "43cc1aeb31adf47ec06a854507ce552cd9862e6f",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://ai.google.dev/gemma/docs/gemma_4_license"
+  },
+  {
+    "repo": "unsloth/gemma-4-E2B-it-qat-GGUF",
+    "models": [
+      {
+        "model_id": "gemma-4-e2b-it-qat-q4_0",
+        "field": "draftHfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/unsloth/gemma-4-E2B-it-qat-GGUF",
+    "sha": "66a399f68ddd113b06dff02fca9523e55465d11d",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://ai.google.dev/gemma/docs/gemma_4_license"
+  },
+  {
+    "repo": "unsloth/gemma-4-E4B-it-qat-GGUF",
+    "models": [
+      {
+        "model_id": "gemma-4-e4b-it-qat-q4_0",
+        "field": "draftHfRepo"
+      }
+    ],
+    "url": "https://huggingface.co/api/models/unsloth/gemma-4-E4B-it-qat-GGUF",
+    "sha": "8c5a9e4fd5482e2be20fe0bf013b4c262a8f4265",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": "https://ai.google.dev/gemma/docs/gemma_4_license"
+  }
+]

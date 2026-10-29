@@ -1,0 +1,1328 @@
+[
+  {
+    "ghsa_id": "GHSA-2m5v-pch6-74hx",
+    "cve_id": "CVE-2026-109383",
+    "summary": "undici vulnerable to TLS certificate validation bypass via dropped tls options in Agent",
+    "severity": "high",
+    "html_url": "https://github.com/advisories/GHSA-2m5v-pch6-74hx",
+    "published_at": "2026-10-27T19:02:26Z",
+    "updated_at": "2026-10-27T19:02:27Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 6.29.1",
+        "first_patched_version": "6.29.1",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 7.0.0, < 7.30.1",
+        "first_patched_version": "7.30.1",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 8.0.0, < 8.12.2",
+        "first_patched_version": "8.12.2",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/nodejs/undici/security/advisories/GHSA-2m5v-pch6-74hx",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-109383",
+      "https://github.com/nodejs/undici/commit/04cb74b1db131ff8f5b4557dce811cbf5f4664b4",
+      "https://github.com/nodejs/undici/commit/8c59f6b302898cb2e9b0f7962cd7212b6e597c9f",
+      "https://github.com/nodejs/undici/commit/f75eac00ac177f7b2e6c8bfbd52d4113164286e6",
+      "https://cna.openjsf.org/security-advisories.html",
+      "https://github.com/nodejs/undici/releases/tag/v6.29.1",
+      "https://github.com/nodejs/undici/releases/tag/v7.30.1",
+      "https://github.com/nodejs/undici/releases/tag/v8.12.2",
+      "https://github.com/advisories/GHSA-2m5v-pch6-74hx"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-2p8c-gr87-2676",
+    "cve_id": "CVE-2026-113796",
+    "summary": "Electron: SameSite cookie restrictions are not applied to windows opened from links",
+    "severity": "medium",
+    "html_url": "https://github.com/advisories/GHSA-2p8c-gr87-2676",
+    "published_at": "2026-10-22T16:47:54Z",
+    "updated_at": "2026-10-22T16:47:55Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 45.0.0-alpha.1, < 45.0.0-alpha.6",
+        "first_patched_version": "45.0.0-alpha.6",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 44.0.0-alpha.1, < 44.3.0",
+        "first_patched_version": "44.3.0",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 43.0.0-alpha.1, < 43.7.0",
+        "first_patched_version": "43.7.0",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": "< 42.11.3",
+        "first_patched_version": "42.11.3",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/electron/electron/security/advisories/GHSA-2p8c-gr87-2676",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-113796",
+      "https://github.com/electron/electron/pull/53683",
+      "https://github.com/electron/electron/pull/53717",
+      "https://github.com/electron/electron/pull/53718",
+      "https://github.com/electron/electron/pull/53719",
+      "https://github.com/electron/electron/pull/53721",
+      "https://github.com/electron/electron/commit/079b9b1594ee62c336adc3aa430d4c1cf62bd51e",
+      "https://github.com/electron/electron/commit/0e6aca0618eeae50a18cfd50548b8688820629ed",
+      "https://github.com/electron/electron/commit/652ef79ac79c6767b31e59b2f28d0d46114645e5",
+      "https://github.com/electron/electron/commit/98940cb274bb6adcb7cdb2da2d4495ac83119670",
+      "https://github.com/electron/electron/commit/a86ae4205ba2ba7ae60a6caa9d5d3a44321f2f9b",
+      "https://github.com/electron/electron/releases/tag/v42.11.3",
+      "https://github.com/electron/electron/releases/tag/v43.7.0",
+      "https://github.com/electron/electron/releases/tag/v44.3.0",
+      "https://github.com/electron/electron/releases/tag/v45.0.0-alpha.6",
+      "https://github.com/advisories/GHSA-2p8c-gr87-2676"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-333x-w4r6-6crp",
+    "cve_id": "CVE-2026-110725",
+    "summary": "fast-uri vulnerable to scheme injection via an unescaped first-segment colon in suffix references",
+    "severity": "low",
+    "html_url": "https://github.com/advisories/GHSA-333x-w4r6-6crp",
+    "published_at": "2026-10-23T21:36:40Z",
+    "updated_at": "2026-10-23T21:36:41Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "fast-uri"
+        },
+        "vulnerable_version_range": "< 2.4.8",
+        "first_patched_version": "2.4.8",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "fast-uri"
+        },
+        "vulnerable_version_range": ">= 3.0.0, < 3.1.9",
+        "first_patched_version": "3.1.9",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "fast-uri"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.2.3",
+        "first_patched_version": "4.2.3",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/fastify/fast-uri/security/advisories/GHSA-333x-w4r6-6crp",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-110725",
+      "https://github.com/fastify/fast-uri/commit/39e6493c1356f30a0084171627eb266786e1620e",
+      "https://github.com/fastify/fast-uri/commit/a9b8d67353630aab053cd727cf629023dd018d2b",
+      "https://cna.openjsf.org/security-advisories.html",
+      "https://github.com/fastify/fast-uri/releases/tag/v2.4.8",
+      "https://github.com/fastify/fast-uri/releases/tag/v3.1.9",
+      "https://github.com/fastify/fast-uri/releases/tag/v4.2.3",
+      "https://github.com/advisories/GHSA-333x-w4r6-6crp"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-3qxv-5xgr-q7w9",
+    "cve_id": "CVE-2026-114122",
+    "summary": "Electron: Frame subscription trusts GPU-supplied frame geometry",
+    "severity": "low",
+    "html_url": "https://github.com/advisories/GHSA-3qxv-5xgr-q7w9",
+    "published_at": "2026-10-22T16:46:06Z",
+    "updated_at": "2026-10-22T16:46:07Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": "< 42.11.6",
+        "first_patched_version": "42.11.6",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 43.0.0-alpha.1, < 43.7.3",
+        "first_patched_version": "43.7.3",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 44.0.0-alpha.1, < 44.4.3",
+        "first_patched_version": "44.4.3",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 45.0.0-alpha.1, < 45.0.0-alpha.9",
+        "first_patched_version": "45.0.0-alpha.9",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/electron/electron/security/advisories/GHSA-3qxv-5xgr-q7w9",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-114122",
+      "https://github.com/electron/electron/pull/54033",
+      "https://github.com/electron/electron/pull/54036",
+      "https://github.com/electron/electron/pull/54037",
+      "https://github.com/electron/electron/pull/54038",
+      "https://github.com/electron/electron/pull/54047",
+      "https://github.com/electron/electron/commit/24d8dbc661c6a109476ae59e9a2740b35d005cf4",
+      "https://github.com/electron/electron/commit/64ae597deda8956037387b439e6361f0fe936c86",
+      "https://github.com/electron/electron/commit/8d48be150c3fd53b0d02854124bdb7858598799c",
+      "https://github.com/electron/electron/commit/d496507ffa1693edaa704a4be130fbcb8ecb4ada",
+      "https://github.com/electron/electron/commit/d7f87070a8d738e561245d1ade4d6fbb082db80a",
+      "https://github.com/electron/electron/releases/tag/v42.11.6",
+      "https://github.com/electron/electron/releases/tag/v43.7.3",
+      "https://github.com/electron/electron/releases/tag/v44.4.3",
+      "https://github.com/electron/electron/releases/tag/v45.0.0-alpha.9",
+      "https://github.com/advisories/GHSA-3qxv-5xgr-q7w9"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-44jh-23m7-hpcf",
+    "summary": "@better-auth/drizzle-adapter: Concurrent requests can exceed rate limits on PostgreSQL",
+    "severity": "low",
+    "html_url": "https://github.com/advisories/GHSA-44jh-23m7-hpcf",
+    "published_at": "2026-10-27T15:32:25Z",
+    "updated_at": "2026-10-27T15:32:27Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "@better-auth/drizzle-adapter"
+        },
+        "vulnerable_version_range": ">= 1.6.17, < 1.7.7",
+        "first_patched_version": "1.7.7",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "@better-auth/kysely-adapter"
+        },
+        "vulnerable_version_range": ">= 1.6.17, < 1.7.0",
+        "first_patched_version": "1.7.0",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "better-auth"
+        },
+        "vulnerable_version_range": ">= 1.6.17, < 1.7.7",
+        "first_patched_version": "1.7.7",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/better-auth/better-auth/security/advisories/GHSA-44jh-23m7-hpcf",
+      "https://github.com/better-auth/better-auth/pull/11331",
+      "https://github.com/better-auth/better-auth/commit/35d7cd389220f99cfc98ac699e6a42b48313a740",
+      "https://github.com/better-auth/better-auth/releases/tag/v1.7.7",
+      "https://github.com/advisories/GHSA-44jh-23m7-hpcf"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-4qv8-2p9j-2685",
+    "cve_id": "CVE-2026-109924",
+    "summary": "undici vulnerable to Denial of Service via unbounded memory in the EventSource parser",
+    "severity": "medium",
+    "html_url": "https://github.com/advisories/GHSA-4qv8-2p9j-2685",
+    "published_at": "2026-10-23T22:13:29Z",
+    "updated_at": "2026-10-23T22:13:31Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 6.5.0, < 6.29.1",
+        "first_patched_version": "6.29.1",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 7.0.0, < 7.30.1",
+        "first_patched_version": "7.30.1",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 8.0.0, < 8.12.2",
+        "first_patched_version": "8.12.2",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/nodejs/undici/security/advisories/GHSA-4qv8-2p9j-2685",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-109924",
+      "https://github.com/nodejs/undici/commit/299162740d5f39120092277e70efacb4d151c1c6",
+      "https://github.com/nodejs/undici/commit/789ef26461c648480433846607154f52d74ec9ab",
+      "https://github.com/nodejs/undici/commit/c43b23fdc6b37e1283d4347408bb16800f867d9e",
+      "https://cna.openjsf.org/security-advisories.html",
+      "https://github.com/nodejs/undici/releases/tag/v6.29.1",
+      "https://github.com/nodejs/undici/releases/tag/v7.30.1",
+      "https://github.com/nodejs/undici/releases/tag/v8.12.2",
+      "https://github.com/advisories/GHSA-4qv8-2p9j-2685"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-4w7w-5xrc-9h26",
+    "cve_id": "CVE-2026-109829",
+    "summary": "undici vulnerable to cache poisoning and cross-user disclosure via cross-origin redirects",
+    "severity": "high",
+    "html_url": "https://github.com/advisories/GHSA-4w7w-5xrc-9h26",
+    "published_at": "2026-10-27T19:02:31Z",
+    "updated_at": "2026-10-27T19:02:32Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 7.0.0, < 7.30.1",
+        "first_patched_version": "7.30.1",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 8.0.0, < 8.12.2",
+        "first_patched_version": "8.12.2",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/nodejs/undici/security/advisories/GHSA-4w7w-5xrc-9h26",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-109829",
+      "https://github.com/nodejs/undici/commit/26c2bfb3def0b67241ce878e80657ed5d6c3efa8",
+      "https://github.com/nodejs/undici/commit/b20b82ad80a405a12b6ce1f341bcd418de390aa0",
+      "https://cna.openjsf.org/security-advisories.html",
+      "https://github.com/nodejs/undici/releases/tag/v7.30.1",
+      "https://github.com/nodejs/undici/releases/tag/v8.12.2",
+      "https://github.com/advisories/GHSA-4w7w-5xrc-9h26"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-55wc-3pg8-jfw6",
+    "cve_id": "CVE-2026-87029",
+    "summary": "undici vulnerable to Denial of Service via unhandled exception in the decompress interceptor",
+    "severity": "medium",
+    "html_url": "https://github.com/advisories/GHSA-55wc-3pg8-jfw6",
+    "published_at": "2026-10-27T19:02:10Z",
+    "updated_at": "2026-10-27T19:02:12Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 7.15.0, < 7.30.1",
+        "first_patched_version": "7.30.1",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 8.0.0, < 8.12.2",
+        "first_patched_version": "8.12.2",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/nodejs/undici/security/advisories/GHSA-55wc-3pg8-jfw6",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-87029",
+      "https://github.com/nodejs/undici/commit/63cba7712ca012b2603c6aeeb4c72d8692332cd0",
+      "https://github.com/nodejs/undici/commit/f851f315db1f2acce0ea668f88d9d0fa61c8420c",
+      "https://cna.openjsf.org/security-advisories.html",
+      "https://github.com/nodejs/undici/releases/tag/v7.30.1",
+      "https://github.com/nodejs/undici/releases/tag/v8.12.2",
+      "https://github.com/advisories/GHSA-55wc-3pg8-jfw6"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-5fpq-26gf-qwcr",
+    "cve_id": "CVE-2026-118661",
+    "summary": "Happy DOM has cookie scope forgery: no DNS-label boundary on Domain= matching , attacker origin sets victim cookies",
+    "severity": "medium",
+    "html_url": "https://github.com/advisories/GHSA-5fpq-26gf-qwcr",
+    "published_at": "2026-10-28T21:06:13Z",
+    "updated_at": "2026-10-28T21:06:14Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "happy-dom"
+        },
+        "vulnerable_version_range": "<= 20.14.5",
+        "first_patched_version": "20.14.6",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/capricorn86/happy-dom/security/advisories/GHSA-5fpq-26gf-qwcr",
+      "https://github.com/capricorn86/happy-dom/pull/2477",
+      "https://github.com/capricorn86/happy-dom/commit/f21dbd7d0a0c63cdd41954ba5d0f05def4e0f2b3",
+      "https://github.com/capricorn86/happy-dom/releases/tag/v20.14.6",
+      "https://github.com/advisories/GHSA-5fpq-26gf-qwcr"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-834v-8h66-3h79",
+    "cve_id": "CVE-2026-115895",
+    "summary": "Happy DOM: Incomplete fix for CVE-2026-33943: unsanitized import alias leads to host code execution",
+    "severity": "high",
+    "html_url": "https://github.com/advisories/GHSA-834v-8h66-3h79",
+    "published_at": "2026-10-23T22:06:13Z",
+    "updated_at": "2026-10-23T22:06:14Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "happy-dom"
+        },
+        "vulnerable_version_range": ">= 17.0.0, <= 21.0.3",
+        "first_patched_version": "21.0.4",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/capricorn86/happy-dom/security/advisories/GHSA-834v-8h66-3h79",
+      "https://github.com/capricorn86/happy-dom/pull/2537",
+      "https://github.com/capricorn86/happy-dom/commit/fd163520b74d9fa146be91f7b4e4f46d6cccbe13",
+      "https://github.com/capricorn86/happy-dom/releases/tag/v21.0.4",
+      "https://github.com/advisories/GHSA-834v-8h66-3h79"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-965c-763c-88jm",
+    "cve_id": "CVE-2026-114607",
+    "summary": "better-auth: OAuth state can be used as a Magic Link to sign in as another user",
+    "severity": "critical",
+    "html_url": "https://github.com/advisories/GHSA-965c-763c-88jm",
+    "published_at": "2026-10-27T15:32:05Z",
+    "updated_at": "2026-10-27T15:32:09Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "better-auth"
+        },
+        "vulnerable_version_range": ">= 1.4.0-beta.18, < 1.7.7",
+        "first_patched_version": "1.7.7",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/better-auth/better-auth/security/advisories/GHSA-965c-763c-88jm",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-114607",
+      "https://github.com/better-auth/better-auth/pull/11494",
+      "https://github.com/better-auth/better-auth/commit/ac54bfd67821a7607533af2059858b12bc54e26a",
+      "https://github.com/better-auth/better-auth/releases/tag/v1.7.7",
+      "https://github.com/advisories/GHSA-965c-763c-88jm"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-98mx-cjp9-gchm",
+    "cve_id": "CVE-2026-113797",
+    "summary": "Electron: Extension tabs.query returns tab URLs and titles without the tabs permission",
+    "severity": "low",
+    "html_url": "https://github.com/advisories/GHSA-98mx-cjp9-gchm",
+    "published_at": "2026-10-22T16:46:33Z",
+    "updated_at": "2026-10-22T16:46:35Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 45.0.0-alpha.1, < 45.0.0-alpha.4",
+        "first_patched_version": "45.0.0-alpha.4",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 44.0.0-alpha.1, < 44.1.1",
+        "first_patched_version": "44.1.1",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 43.0.0-alpha.1, < 43.5.1",
+        "first_patched_version": "43.5.1",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": "< 42.11.1",
+        "first_patched_version": "42.11.1",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/electron/electron/security/advisories/GHSA-98mx-cjp9-gchm",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-113797",
+      "https://github.com/electron/electron/pull/52597",
+      "https://github.com/electron/electron/pull/53353",
+      "https://github.com/electron/electron/pull/53354",
+      "https://github.com/electron/electron/pull/53355",
+      "https://github.com/electron/electron/pull/53356",
+      "https://github.com/electron/electron/commit/16e6103c1d84cd1c46336647b55e96414da501a4",
+      "https://github.com/electron/electron/commit/5acc76667d32ff310d04f965b47983412ab6553c",
+      "https://github.com/electron/electron/commit/b1eb86ca8f6fa39fe9d5fee21bb9a0bf591a6a3f",
+      "https://github.com/electron/electron/commit/d6529d65e5f096cd45bbb2828febb2c6baa53921",
+      "https://github.com/electron/electron/commit/f3ae30fab9aabfd445eedff4dd7a2f003eb1ff2f",
+      "https://github.com/electron/electron/releases/tag/v42.11.1",
+      "https://github.com/electron/electron/releases/tag/v43.5.1",
+      "https://github.com/electron/electron/releases/tag/v44.1.1",
+      "https://github.com/electron/electron/releases/tag/v45.0.0-alpha.4",
+      "https://github.com/advisories/GHSA-98mx-cjp9-gchm"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-997q-gvvc-jwmx",
+    "cve_id": "CVE-2026-114121",
+    "summary": "Electron: openExternal permission requests can be attributed to the wrong origin",
+    "severity": "medium",
+    "html_url": "https://github.com/advisories/GHSA-997q-gvvc-jwmx",
+    "published_at": "2026-10-22T16:43:59Z",
+    "updated_at": "2026-10-22T16:44:01Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": "< 42.11.3",
+        "first_patched_version": "42.11.3",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 43.0.0-alpha.1, < 43.7.0",
+        "first_patched_version": "43.7.0",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 44.0.0-alpha.1, < 44.3.0",
+        "first_patched_version": "44.3.0",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 45.0.0-alpha.1, < 45.0.0-alpha.5",
+        "first_patched_version": "45.0.0-alpha.5",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/electron/electron/security/advisories/GHSA-997q-gvvc-jwmx",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-114121",
+      "https://github.com/electron/electron/pull/53682",
+      "https://github.com/electron/electron/pull/53696",
+      "https://github.com/electron/electron/pull/53697",
+      "https://github.com/electron/electron/pull/53698",
+      "https://github.com/electron/electron/pull/53699",
+      "https://github.com/electron/electron/commit/25057643bf6d9a20bad69e45707551ccf546f5ce",
+      "https://github.com/electron/electron/commit/8aa5414f73792ed3b2e3f9ab6391b1832e6dc2c3",
+      "https://github.com/electron/electron/commit/92a783952891805f2f82f344c40a6917b98a7d98",
+      "https://github.com/electron/electron/commit/e0a20d5277b567aea8603f8e9852a4341407a586",
+      "https://github.com/electron/electron/commit/e3a400911084537bce7380ffea8af939572ce8dd",
+      "https://github.com/electron/electron/releases/tag/v42.11.3",
+      "https://github.com/electron/electron/releases/tag/v43.7.0",
+      "https://github.com/electron/electron/releases/tag/v44.3.0",
+      "https://github.com/electron/electron/releases/tag/v45.0.0-alpha.5",
+      "https://github.com/advisories/GHSA-997q-gvvc-jwmx"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-9fm3-97px-rjf6",
+    "cve_id": "CVE-2026-109932",
+    "summary": "undici WebSocket client vulnerable to Denial of Service via unbounded automatic PONG buffering",
+    "severity": "medium",
+    "html_url": "https://github.com/advisories/GHSA-9fm3-97px-rjf6",
+    "published_at": "2026-10-27T19:02:15Z",
+    "updated_at": "2026-10-27T19:02:17Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 5.15.0, < 6.29.1",
+        "first_patched_version": "6.29.1",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 7.0.0, < 7.30.1",
+        "first_patched_version": "7.30.1",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 8.0.0, < 8.12.2",
+        "first_patched_version": "8.12.2",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/nodejs/undici/security/advisories/GHSA-9fm3-97px-rjf6",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-109932",
+      "https://github.com/nodejs/undici/commit/39f93e142df03e559fe7c3d1fc7fba9beee2c185",
+      "https://github.com/nodejs/undici/commit/53944624462b6797560288c55dbd8c66857bb495",
+      "https://github.com/nodejs/undici/commit/b217373bb024cd93f85eb5b3ffd25684855f60f8",
+      "https://cna.openjsf.org/security-advisories.html",
+      "https://github.com/nodejs/undici/releases/tag/v6.29.1",
+      "https://github.com/nodejs/undici/releases/tag/v7.30.1",
+      "https://github.com/nodejs/undici/releases/tag/v8.12.2",
+      "https://github.com/advisories/GHSA-9fm3-97px-rjf6"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-c8p4-j97h-3vg8",
+    "cve_id": "CVE-2026-118660",
+    "summary": "Happy DOM: SSRF via iframe and link stylesheet when parsing untrusted HTML",
+    "severity": "high",
+    "html_url": "https://github.com/advisories/GHSA-c8p4-j97h-3vg8",
+    "published_at": "2026-10-28T21:06:42Z",
+    "updated_at": "2026-10-28T21:06:43Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "happy-dom"
+        },
+        "vulnerable_version_range": "<= 20.14.6",
+        "first_patched_version": "21.0.0",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/capricorn86/happy-dom/security/advisories/GHSA-c8p4-j97h-3vg8",
+      "https://github.com/capricorn86/happy-dom/pull/2502",
+      "https://github.com/capricorn86/happy-dom/commit/0a99c7525a1d0043e3182843ae33466ab7b19e74",
+      "https://github.com/capricorn86/happy-dom/releases/tag/v21.0.0",
+      "https://github.com/advisories/GHSA-c8p4-j97h-3vg8"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-f72v-6w45-q472",
+    "cve_id": "CVE-2026-109841",
+    "summary": "undici vulnerable to Subresource Integrity bypass via non-lowercase algorithm tokens",
+    "severity": "medium",
+    "html_url": "https://github.com/advisories/GHSA-f72v-6w45-q472",
+    "published_at": "2026-10-23T22:12:57Z",
+    "updated_at": "2026-10-23T22:13:18Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 7.15.0, < 7.30.1",
+        "first_patched_version": "7.30.1",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 8.0.0, < 8.12.2",
+        "first_patched_version": "8.12.2",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/nodejs/undici/security/advisories/GHSA-f72v-6w45-q472",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-109841",
+      "https://github.com/nodejs/undici/commit/18bc8a1e09d15bc45815154a289dcf6fd5254d00",
+      "https://github.com/nodejs/undici/commit/4f7ef6806e532ab9e29ccd6229b1b9d241e1b1f0",
+      "https://cna.openjsf.org/security-advisories.html",
+      "https://github.com/nodejs/undici/releases/tag/v7.30.1",
+      "https://github.com/nodejs/undici/releases/tag/v8.12.2",
+      "https://github.com/advisories/GHSA-f72v-6w45-q472"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-fw47-9c62-h3vw",
+    "cve_id": "CVE-2026-113800",
+    "summary": "Electron: HID and USB permission checks can be attributed to the wrong origin",
+    "severity": "medium",
+    "html_url": "https://github.com/advisories/GHSA-fw47-9c62-h3vw",
+    "published_at": "2026-10-21T17:21:51Z",
+    "updated_at": "2026-10-21T17:21:53Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 45.0.0-alpha.1, < 45.0.0-alpha.5",
+        "first_patched_version": "45.0.0-alpha.5",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 44.0.0-alpha.1, < 44.3.0",
+        "first_patched_version": "44.3.0",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 43.0.0-alpha.1, < 43.7.0",
+        "first_patched_version": "43.7.0",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": "< 42.11.3",
+        "first_patched_version": "42.11.3",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/electron/electron/security/advisories/GHSA-fw47-9c62-h3vw",
+      "https://github.com/electron/electron/pull/53656",
+      "https://github.com/electron/electron/pull/53679",
+      "https://github.com/electron/electron/pull/53688",
+      "https://github.com/electron/electron/pull/53689",
+      "https://github.com/electron/electron/pull/53736",
+      "https://github.com/electron/electron/commit/22de0a3a06cfd3174fc6c59c3810ab5e1c91bf1a",
+      "https://github.com/electron/electron/commit/36042b2e1b1c60c67b05ba0e95d1a34f608b9742",
+      "https://github.com/electron/electron/commit/56cc43eb677d46b86b0d3f49b5fba71404ab1ff0",
+      "https://github.com/electron/electron/commit/922073f8601479e93071f56f0745041291b206fd",
+      "https://github.com/electron/electron/commit/c965cee73284c4b230a81d51a7db6115e55da8c0",
+      "https://github.com/electron/electron/releases/tag/v42.11.3",
+      "https://github.com/electron/electron/releases/tag/v43.7.0",
+      "https://github.com/electron/electron/releases/tag/v44.3.0",
+      "https://github.com/electron/electron/releases/tag/v45.0.0-alpha.5",
+      "https://github.com/advisories/GHSA-fw47-9c62-h3vw"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-h3v5-h239-pg29",
+    "cve_id": "CVE-2026-114124",
+    "summary": "Electron: Off-screen rendering on macOS trusts GPU-supplied frame geometry",
+    "severity": "low",
+    "html_url": "https://github.com/advisories/GHSA-h3v5-h239-pg29",
+    "published_at": "2026-10-22T16:44:33Z",
+    "updated_at": "2026-10-22T16:44:34Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": "< 42.11.6",
+        "first_patched_version": "42.11.6",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 43.0.0-alpha.1, < 43.7.3",
+        "first_patched_version": "43.7.3",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 44.0.0-alpha.1, < 44.4.3",
+        "first_patched_version": "44.4.3",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 45.0.0-alpha.1, < 45.0.0-alpha.9",
+        "first_patched_version": "45.0.0-alpha.9",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/electron/electron/security/advisories/GHSA-h3v5-h239-pg29",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-114124",
+      "https://github.com/electron/electron/pull/54033",
+      "https://github.com/electron/electron/pull/54036",
+      "https://github.com/electron/electron/pull/54037",
+      "https://github.com/electron/electron/pull/54038",
+      "https://github.com/electron/electron/pull/54047",
+      "https://github.com/electron/electron/commit/24d8dbc661c6a109476ae59e9a2740b35d005cf4",
+      "https://github.com/electron/electron/commit/64ae597deda8956037387b439e6361f0fe936c86",
+      "https://github.com/electron/electron/commit/8d48be150c3fd53b0d02854124bdb7858598799c",
+      "https://github.com/electron/electron/commit/d496507ffa1693edaa704a4be130fbcb8ecb4ada",
+      "https://github.com/electron/electron/commit/d7f87070a8d738e561245d1ade4d6fbb082db80a",
+      "https://github.com/electron/electron/releases/tag/v42.11.6",
+      "https://github.com/electron/electron/releases/tag/v43.7.3",
+      "https://github.com/electron/electron/releases/tag/v44.4.3",
+      "https://github.com/electron/electron/releases/tag/v45.0.0-alpha.9",
+      "https://github.com/advisories/GHSA-h3v5-h239-pg29"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-jr5w-w6x2-84p9",
+    "cve_id": "CVE-2026-115570",
+    "summary": "Electron: Mitigation for compromised eMudhra intermediate certificates",
+    "severity": "high",
+    "html_url": "https://github.com/advisories/GHSA-jr5w-w6x2-84p9",
+    "published_at": "2026-10-23T20:53:41Z",
+    "updated_at": "2026-10-23T20:53:43Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 45.0.0-alpha.1, < 45.0.0-beta.6",
+        "first_patched_version": "45.0.0-beta.6",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 44.0.0-alpha.1, < 44.9.1",
+        "first_patched_version": "44.9.1",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 43.0.0-alpha.1, < 43.8.1",
+        "first_patched_version": "43.8.1",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": "< 42.11.16",
+        "first_patched_version": "42.11.16",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/electron/electron/security/advisories/GHSA-jr5w-w6x2-84p9",
+      "https://github.com/electron/electron/pull/55127",
+      "https://github.com/electron/electron/pull/55128",
+      "https://github.com/electron/electron/pull/55129",
+      "https://github.com/electron/electron/pull/55130",
+      "https://github.com/electron/electron/commit/093583c71be71c85453e6e225137bf2af755fbcc",
+      "https://github.com/electron/electron/commit/1d2f13b1985444a38abf389db38228ac42f5bcad",
+      "https://github.com/electron/electron/commit/817c43f925677eb88034bfba4f0b8dfd28e7ad20",
+      "https://github.com/electron/electron/commit/e02265be96c5e13ae43644ef482b718e1e800499",
+      "https://github.com/electron/electron/releases/tag/v42.11.16",
+      "https://github.com/electron/electron/releases/tag/v43.8.1",
+      "https://github.com/electron/electron/releases/tag/v44.9.1",
+      "https://github.com/electron/electron/releases/tag/v45.0.0-beta.6",
+      "https://github.com/advisories/GHSA-jr5w-w6x2-84p9"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-mrhx-c7xc-m3w5",
+    "cve_id": "CVE-2023-54404",
+    "summary": "Zod can exhaust memory while validating oversized constrained collections",
+    "severity": "high",
+    "html_url": "https://github.com/advisories/GHSA-mrhx-c7xc-m3w5",
+    "published_at": "2026-10-01T18:32:46Z",
+    "updated_at": "2026-10-23T18:26:52Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "zod"
+        },
+        "vulnerable_version_range": "< 4.6.6",
+        "first_patched_version": "4.6.6",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2023-54404",
+      "https://github.com/colinhacks/zod/issues/1872",
+      "https://github.com/colinhacks/zod/pull/6475",
+      "https://www.vulncheck.com/advisories/zod-uncontrolled-resource-consumption-via-array-validation",
+      "https://github.com/colinhacks/zod/pull/6652",
+      "https://github.com/colinhacks/zod/commit/a0ebf970f2d752e5f58527cd2942ff48be4f46bd",
+      "https://github.com/advisories/GHSA-mrhx-c7xc-m3w5"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-q84f-53jg-9ppm",
+    "summary": "better-auth: Device login approval does not show the requesting client or permissions",
+    "severity": "high",
+    "html_url": "https://github.com/advisories/GHSA-q84f-53jg-9ppm",
+    "published_at": "2026-10-27T14:49:53Z",
+    "updated_at": "2026-10-27T14:49:54Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "better-auth"
+        },
+        "vulnerable_version_range": ">= 1.3.8-beta.3, < 1.7.0-rc.3",
+        "first_patched_version": "1.7.0-rc.3",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/better-auth/better-auth/security/advisories/GHSA-q84f-53jg-9ppm",
+      "https://github.com/better-auth/better-auth/commit/f68044dcfbd9fb83763249ed9509cfacbcce47be",
+      "https://github.com/better-auth/better-auth/releases/tag/v1.7.0-rc.3",
+      "https://github.com/advisories/GHSA-q84f-53jg-9ppm"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-qrxm-fqhp-jwvm",
+    "cve_id": "CVE-2026-87018",
+    "summary": "undici vulnerable to Denial of Service via TLS 1.2 certificate-changing renegotiation",
+    "severity": "high",
+    "html_url": "https://github.com/advisories/GHSA-qrxm-fqhp-jwvm",
+    "published_at": "2026-10-27T19:02:21Z",
+    "updated_at": "2026-10-27T19:02:22Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 4.2.1, < 6.29.1",
+        "first_patched_version": "6.29.1",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 7.0.0, < 7.30.1",
+        "first_patched_version": "7.30.1",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 8.0.0, < 8.12.2",
+        "first_patched_version": "8.12.2",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/nodejs/undici/security/advisories/GHSA-qrxm-fqhp-jwvm",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-87018",
+      "https://github.com/nodejs/undici/commit/12cfd96c3f430897656e3edc1c5e02be8c1cd309",
+      "https://github.com/nodejs/undici/commit/b40fbfc0651703cf9fa9f6ced68b679f28d8bb28",
+      "https://github.com/nodejs/undici/commit/e257e9f8fb42eedd50727b9cf65e548c8925e4a8",
+      "https://cna.openjsf.org/security-advisories.html",
+      "https://github.com/nodejs/undici/releases/tag/v6.29.1",
+      "https://github.com/nodejs/undici/releases/tag/v7.30.1",
+      "https://github.com/nodejs/undici/releases/tag/v8.12.2",
+      "https://github.com/advisories/GHSA-qrxm-fqhp-jwvm"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-r4xp-prcw-77qf",
+    "summary": "better-auth: OAuth Proxy lets an attacker sign in as another user",
+    "severity": "high",
+    "html_url": "https://github.com/advisories/GHSA-r4xp-prcw-77qf",
+    "published_at": "2026-10-27T15:32:16Z",
+    "updated_at": "2026-10-27T15:32:17Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "better-auth"
+        },
+        "vulnerable_version_range": ">= 1.5.0-beta.12, < 1.7.7",
+        "first_patched_version": "1.7.7",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/better-auth/better-auth/security/advisories/GHSA-r4xp-prcw-77qf",
+      "https://github.com/better-auth/better-auth/pull/11494",
+      "https://github.com/better-auth/better-auth/commit/ac54bfd67821a7607533af2059858b12bc54e26a",
+      "https://github.com/better-auth/better-auth/releases/tag/v1.7.7",
+      "https://github.com/advisories/GHSA-r4xp-prcw-77qf"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-w74x-v6f9-j3xg",
+    "cve_id": "CVE-2026-110306",
+    "summary": "fast-uri vulnerable to URI scheme spoofing via percent-encoded scheme decoding",
+    "severity": "medium",
+    "html_url": "https://github.com/advisories/GHSA-w74x-v6f9-j3xg",
+    "published_at": "2026-10-23T21:41:36Z",
+    "updated_at": "2026-10-23T21:41:38Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "fast-uri"
+        },
+        "vulnerable_version_range": "< 2.4.8",
+        "first_patched_version": "2.4.8",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "fast-uri"
+        },
+        "vulnerable_version_range": ">= 3.0.0, < 3.1.9",
+        "first_patched_version": "3.1.9",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "fast-uri"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.2.3",
+        "first_patched_version": "4.2.3",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/fastify/fast-uri/security/advisories/GHSA-w74x-v6f9-j3xg",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-110306",
+      "https://github.com/fastify/fast-uri/commit/39933a1f1422986f14e2d844f552238feb40f5d4",
+      "https://github.com/fastify/fast-uri/commit/597f254c86d151568511eeb9a1df761fd12520b3",
+      "https://github.com/fastify/fast-uri/commit/e60e716f41d1d73717e2d803d20b68d2c6d20a0f",
+      "https://cna.openjsf.org/security-advisories.html",
+      "https://github.com/fastify/fast-uri/releases/tag/v2.4.8",
+      "https://github.com/fastify/fast-uri/releases/tag/v3.1.9",
+      "https://github.com/fastify/fast-uri/releases/tag/v4.2.3",
+      "https://github.com/advisories/GHSA-w74x-v6f9-j3xg"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-wjr9-j795-jxcr",
+    "cve_id": "CVE-2026-110180",
+    "summary": "fast-uri vulnerable to host confusion via unchecked WHATWG host canonicalization",
+    "severity": "medium",
+    "html_url": "https://github.com/advisories/GHSA-wjr9-j795-jxcr",
+    "published_at": "2026-10-23T21:37:59Z",
+    "updated_at": "2026-10-23T21:38:02Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "fast-uri"
+        },
+        "vulnerable_version_range": ">= 2.4.2, < 2.4.8",
+        "first_patched_version": "2.4.8",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "fast-uri"
+        },
+        "vulnerable_version_range": ">= 3.1.3, < 3.1.9",
+        "first_patched_version": "3.1.9",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "fast-uri"
+        },
+        "vulnerable_version_range": ">= 4.0.1, < 4.2.3",
+        "first_patched_version": "4.2.3",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/fastify/fast-uri/security/advisories/GHSA-wjr9-j795-jxcr",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-110180",
+      "https://github.com/fastify/fast-uri/commit/58c183d0b168ad87f98773266444ce1f6375803a",
+      "https://github.com/fastify/fast-uri/commit/ddfc6a51122dfce0365655f04479fc3adb7f6b3c",
+      "https://github.com/fastify/fast-uri/commit/f6d46dfeab025d0c440485f4ae29fa4f14707646",
+      "https://cna.openjsf.org/security-advisories.html",
+      "https://github.com/fastify/fast-uri/releases/tag/v2.4.8",
+      "https://github.com/fastify/fast-uri/releases/tag/v3.1.9",
+      "https://github.com/fastify/fast-uri/releases/tag/v4.2.3",
+      "https://github.com/advisories/GHSA-wjr9-j795-jxcr"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-x562-297c-g43g",
+    "cve_id": "CVE-2026-113798",
+    "summary": "Electron: Pointer lock permission requests can be attributed to the wrong frame",
+    "severity": "medium",
+    "html_url": "https://github.com/advisories/GHSA-x562-297c-g43g",
+    "published_at": "2026-10-22T16:47:15Z",
+    "updated_at": "2026-10-22T16:47:18Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 45.0.0-alpha.1, < 45.0.0-alpha.13",
+        "first_patched_version": "45.0.0-alpha.13",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 44.0.0-alpha.1, < 44.5.0",
+        "first_patched_version": "44.5.0",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": ">= 43.0.0-alpha.1, < 43.7.6",
+        "first_patched_version": "43.7.6",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "electron"
+        },
+        "vulnerable_version_range": "< 42.11.9",
+        "first_patched_version": "42.11.9",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/electron/electron/security/advisories/GHSA-x562-297c-g43g",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-113798",
+      "https://github.com/electron/electron/pull/54432",
+      "https://github.com/electron/electron/pull/54463",
+      "https://github.com/electron/electron/pull/54464",
+      "https://github.com/electron/electron/pull/54465",
+      "https://github.com/electron/electron/pull/54466",
+      "https://github.com/electron/electron/commit/076c7496791a45968cf8d9e76e9657bc161ea979",
+      "https://github.com/electron/electron/commit/0b680cfa1ffa70a50282da53efde37a210d5223b",
+      "https://github.com/electron/electron/commit/1755ee598697356959219beefee1e139bc3f8207",
+      "https://github.com/electron/electron/commit/4073e9f4712f61e6b8abd5548673cc7638f6c1a1",
+      "https://github.com/electron/electron/commit/a48e6eaaafa85b6fc40f7431ceec4fd6ef4bb899",
+      "https://github.com/electron/electron/releases/tag/v42.11.9",
+      "https://github.com/electron/electron/releases/tag/v43.7.6",
+      "https://github.com/electron/electron/releases/tag/v44.5.0",
+      "https://github.com/electron/electron/releases/tag/v45.0.0-alpha.13",
+      "https://github.com/advisories/GHSA-x562-297c-g43g"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-xhq7-xmqj-769h",
+    "cve_id": "CVE-2026-110095",
+    "summary": "fast-uri vulnerable to improper path equivalence in relative reference normalization",
+    "severity": "low",
+    "html_url": "https://github.com/advisories/GHSA-xhq7-xmqj-769h",
+    "published_at": "2026-10-23T21:39:34Z",
+    "updated_at": "2026-10-23T21:39:38Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "fast-uri"
+        },
+        "vulnerable_version_range": "< 2.4.8",
+        "first_patched_version": "2.4.8",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "fast-uri"
+        },
+        "vulnerable_version_range": ">= 3.0.0, < 3.1.9",
+        "first_patched_version": "3.1.9",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "fast-uri"
+        },
+        "vulnerable_version_range": ">= 4.0.0, < 4.2.3",
+        "first_patched_version": "4.2.3",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/fastify/fast-uri/security/advisories/GHSA-xhq7-xmqj-769h",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-110095",
+      "https://github.com/fastify/fast-uri/commit/048bbd0a252971be86d6579f0dfc87f8de5b9c47",
+      "https://github.com/fastify/fast-uri/commit/52774a5c35df36b0bbe439cd4c12c3dc0e50e3b9",
+      "https://github.com/fastify/fast-uri/commit/7c19f8b97ec51f1f20b4e3d9d5820cb8d5176058",
+      "https://github.com/fastify/fast-uri/commit/9eb8759a9825c046f57f7f695f1944bc39b88abd",
+      "https://github.com/fastify/fast-uri/commit/acc5c5d60c4209571789496e1732468911c7e12a",
+      "https://github.com/fastify/fast-uri/commit/b110a3571c37dfcf9d1c72ce2e2e178c78d1a424",
+      "https://cna.openjsf.org/security-advisories.html",
+      "https://github.com/fastify/fast-uri/releases/tag/v2.4.8",
+      "https://github.com/fastify/fast-uri/releases/tag/v3.1.9",
+      "https://github.com/fastify/fast-uri/releases/tag/v4.2.3",
+      "https://github.com/advisories/GHSA-xhq7-xmqj-769h"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-xjj6-f33q-929c",
+    "cve_id": "CVE-2026-109869",
+    "summary": "undici vulnerable to Denial of Service via unhandled error on excessive content-encodings",
+    "severity": "high",
+    "html_url": "https://github.com/advisories/GHSA-xjj6-f33q-929c",
+    "published_at": "2026-10-23T22:14:31Z",
+    "updated_at": "2026-10-23T22:14:32Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 6.23.0, < 6.29.1",
+        "first_patched_version": "6.29.1",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 7.18.0, < 7.30.1",
+        "first_patched_version": "7.30.1",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "undici"
+        },
+        "vulnerable_version_range": ">= 8.0.0, < 8.12.2",
+        "first_patched_version": "8.12.2",
+        "vulnerable_functions": []
+      }
+    ],
+    "references": [
+      "https://github.com/nodejs/undici/security/advisories/GHSA-xjj6-f33q-929c",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-109869",
+      "https://github.com/nodejs/undici/commit/07ded4941b1e72afec862958c3b8ddf468f3b429",
+      "https://github.com/nodejs/undici/commit/1325a87dfb3492f8e87e6b0a84b3bda4e82e3436",
+      "https://github.com/nodejs/undici/commit/b5084c7dc239172d75c336b1cd51ddac023938a5",
+      "https://cna.openjsf.org/security-advisories.html",
+      "https://github.com/nodejs/undici/releases/tag/v6.29.1",
+      "https://github.com/nodejs/undici/releases/tag/v7.30.1",
+      "https://github.com/nodejs/undici/releases/tag/v8.12.2",
+      "https://github.com/advisories/GHSA-xjj6-f33q-929c"
+    ]
+  }
+]

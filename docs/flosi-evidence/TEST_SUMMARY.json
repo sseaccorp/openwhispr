@@ -1,0 +1,52 @@
+{
+  "source_commit": "ba6d61820b4c56d7b08012c61c2ae6b43f3152f3",
+  "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-concurrency=4 \"test/**/*.test.js\"",
+  "stats": {
+    "tests": 8746,
+    "suites": 8,
+    "pass": 8713,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 32,
+    "todo": 1,
+    "duration_ms": 1163989.50275
+  },
+  "skip_lines": [
+    "﹣ darwin: native snapshots exclude background speech while preserving meeting capture (4.0256ms) # the native microphone listener requires macOS",
+    "﹣ extractArchive PowerShell fallback extracts a zip under apostrophe paths (0.10658ms) # SKIP",
+    "﹣ native input regions scale, clip and route clicks without changing the visible window (52.134037ms) # Xvfb is not installed",
+    "﹣ native modifier gate waits for a held modifier, ignores locked ones, and reports an unreadable XKB state as unknown (4.87942ms) # Xvfb is not installed",
+    "﹣ native evdev modifier gate sees a held key on a keyboard and ignores ydotoold's virtual one (0.128603ms) # /dev/uinput is not writable",
+    "﹣ macOS shortcuts follow the active layout and fall back only without layout data (0.596868ms) # SKIP",
+    "﹣ --app-context output becomes the app's name, bundle id, title and host (0.910666ms) # SKIP",
+    "﹣ a failed --app-context run keeps what it printed before failing (0.124927ms) # SKIP",
+    "﹣ concurrent captures share one frontmost lookup (0.797496ms) # SKIP",
+    "﹣ a just-completed capture is reused instead of respawning osascript (0.132038ms) # SKIP",
+    "﹣ a failed capture is retried, not reused (0.103836ms) # SKIP",
+    "﹣ captures refresh once the reuse window has passed (0.138268ms) # SKIP",
+    "﹣ startMonitoring stops immediately without a target PID (0.212679ms) # SKIP",
+    "﹣ startMonitoring self-terminates when the target has no accessible focused element (0.131568ms) # SKIP",
+    "﹣ getSelectedText caches a -25212 native failure per PID (0.159539ms) # SKIP",
+    "﹣ getSelectedText skips the native binary for a cached PID (0.167741ms) # SKIP",
+    "﹣ getSelectedText identifies an empty writable field (0.41367ms) # SKIP",
+    "﹣ isFocusedEditable maps the native verdicts, including the dormant-tree UNKNOWN (0.285838ms) # SKIP",
+    "﹣ isFocusedEditable answers from a stale binary's first monitor line (0.63373ms) # SKIP",
+    "﹣ getSelectedText surfaces the native UNKNOWN verdict (0.247752ms) # SKIP",
+    "﹣ a non--25212 native failure is not cached (0.065318ms) # SKIP",
+    "﹣ a run where the AX tree woke mid-retry is not cached (0.029064ms) # SKIP",
+    "﹣ a monitor run ending in NO_ELEMENT with uniform -25212 teaches the cache (0.022403ms) # SKIP",
+    "﹣ a timeout-killed selection read is not cached (0.023004ms) # SKIP",
+    "﹣ startMonitoring skips the native monitor for a cached PID (0.021332ms) # SKIP",
+    "﹣ a reported window rect is parsed (0.66688ms) # SKIP",
+    "﹣ an app with no ordinary window resolves to null (0.101612ms) # SKIP",
+    "﹣ a failing read resolves to null rather than throwing (0.070776ms) # SKIP",
+    "﹣ reads are cached per pid for one press, then re-read (0.076645ms) # SKIP",
+    "﹣ no target pid means no spawn at all (0.069655ms) # SKIP",
+    "﹣ live helper probe succeeds on this machine when the binary is present (0.396739ms) # Windows-only probe",
+    "﹣ a macOS marker written before the arm64 ONNX Runtime slice is not a complete install (0.276982ms) # the slice is only replaced on macOS hosts"
+  ],
+  "todo_lines": [
+    "✔ S5 a full delta page tied on updated_at must not abandon the rest of the pull (0.090024ms) # TODO"
+  ],
+  "scope": "Desktop Node/DOM/local-HTTP tests. No Windows hardware or product acoustic parity certified."
+}

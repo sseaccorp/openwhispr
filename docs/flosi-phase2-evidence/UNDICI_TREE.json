@@ -1,0 +1,210 @@
+[
+  {
+    "name": "undici",
+    "version": "6.29.0",
+    "location": "node_modules/undici",
+    "isWorkspace": false,
+    "dependents": [
+      {
+        "type": "prod",
+        "name": "undici",
+        "spec": "^6.25.0",
+        "from": {
+          "name": "node-gyp",
+          "version": "12.4.0",
+          "location": "node_modules/node-gyp",
+          "isWorkspace": false,
+          "dependents": [
+            {
+              "type": "prod",
+              "name": "node-gyp",
+              "spec": "^12.2.0",
+              "from": {
+                "name": "@electron/rebuild",
+                "version": "4.1.0",
+                "location": "node_modules/@electron/rebuild",
+                "isWorkspace": false,
+                "dependents": [
+                  {
+                    "type": "prod",
+                    "name": "@electron/rebuild",
+                    "spec": "^4.0.4",
+                    "from": {
+                      "name": "app-builder-lib",
+                      "version": "26.15.3",
+                      "location": "node_modules/app-builder-lib",
+                      "isWorkspace": false,
+                      "dependents": [
+                        {
+                          "type": "prod",
+                          "name": "app-builder-lib",
+                          "spec": "26.15.3",
+                          "from": {
+                            "name": "dmg-builder",
+                            "version": "26.15.3",
+                            "location": "node_modules/dmg-builder",
+                            "isWorkspace": false,
+                            "dependents": [
+                              {
+                                "type": "peer",
+                                "name": "dmg-builder",
+                                "spec": "26.15.3",
+                                "from": {
+                                  "name": "app-builder-lib",
+                                  "version": "26.15.3"
+                                }
+                              },
+                              {
+                                "type": "prod",
+                                "name": "dmg-builder",
+                                "spec": "26.15.3",
+                                "from": {
+                                  "name": "electron-builder",
+                                  "version": "26.15.3",
+                                  "location": "node_modules/electron-builder",
+                                  "isWorkspace": false,
+                                  "dependents": [
+                                    {
+                                      "type": "dev",
+                                      "name": "electron-builder",
+                                      "spec": "^26.4.0",
+                                      "from": {
+                                        "location": "/workspace/work/flosi-baseline"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "prod",
+                          "name": "app-builder-lib",
+                          "spec": "26.15.3",
+                          "from": {
+                            "name": "electron-builder-squirrel-windows",
+                            "version": "26.15.3",
+                            "location": "node_modules/electron-builder-squirrel-windows",
+                            "isWorkspace": false,
+                            "dependents": [
+                              {
+                                "type": "peer",
+                                "name": "electron-builder-squirrel-windows",
+                                "spec": "26.15.3",
+                                "from": {
+                                  "name": "app-builder-lib",
+                                  "version": "26.15.3"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "prod",
+                          "name": "app-builder-lib",
+                          "spec": "26.15.3",
+                          "from": {
+                            "name": "electron-builder",
+                            "version": "26.15.3",
+                            "location": "node_modules/electron-builder",
+                            "isWorkspace": false,
+                            "dependents": [
+                              {
+                                "type": "dev",
+                                "name": "electron-builder",
+                                "spec": "^26.4.0",
+                                "from": {
+                                  "location": "/workspace/work/flosi-baseline"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "prod",
+        "name": "undici",
+        "spec": "^6.24.0",
+        "from": {
+          "name": "@qdrant/js-client-rest",
+          "version": "1.18.0",
+          "location": "node_modules/@qdrant/js-client-rest",
+          "isWorkspace": false,
+          "dependents": [
+            {
+              "type": "prod",
+              "name": "@qdrant/js-client-rest",
+              "spec": "^1.12.0",
+              "from": {
+                "location": "/workspace/work/flosi-baseline"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "dev": false,
+    "optional": false,
+    "devOptional": false,
+    "peer": false,
+    "bundled": false,
+    "overridden": false
+  },
+  {
+    "name": "undici",
+    "version": "7.30.0",
+    "location": "node_modules/@electron/get/node_modules/undici",
+    "isWorkspace": false,
+    "dependents": [
+      {
+        "type": "optional",
+        "name": "undici",
+        "spec": "^7.24.4",
+        "from": {
+          "name": "@electron/get",
+          "version": "5.0.0",
+          "location": "node_modules/@electron/get",
+          "isWorkspace": false,
+          "dependents": [
+            {
+              "type": "prod",
+              "name": "@electron/get",
+              "spec": "^5.0.0",
+              "from": {
+                "name": "electron",
+                "version": "41.10.7",
+                "location": "node_modules/electron",
+                "isWorkspace": false,
+                "dependents": [
+                  {
+                    "type": "dev",
+                    "name": "electron",
+                    "spec": "^41.10.7",
+                    "from": {
+                      "location": "/workspace/work/flosi-baseline"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "dev": true,
+    "optional": true,
+    "devOptional": false,
+    "peer": false,
+    "bundled": false,
+    "overridden": false
+  }
+]
