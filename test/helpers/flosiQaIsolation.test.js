@@ -208,6 +208,22 @@ test("private dotenv cannot introduce API credentials", (t) => {
     "LOCAL_WHISPER_MODEL=base\nWHISPER_CUDA_ENABLED=false\nOPENWHISPR_LOG_LEVEL=debug\n"
   );
   preflight.prepareRoot(paths, []);
+  assert.throws(
+    () =>
+      preflight.assertEnvironment(
+        { ...normalEnv, DICTATION_KEY: "synthetic-inherited-hotkey" },
+        repo
+      ),
+    /DICTATION_KEY/
+  );
+  assert.throws(
+    () =>
+      preflight.assertEnvironment(
+        { ...normalEnv, AWS_CONFIG_FILE: "synthetic-credential-selector" },
+        repo
+      ),
+    /AWS_CONFIG_FILE/
+  );
 });
 
 for (const name of [
