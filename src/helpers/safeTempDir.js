@@ -8,6 +8,7 @@ let cachedSafeTempDir = null;
 // Falls back to ProgramData when TEMP contains spaces or non-ASCII characters,
 // as many native binaries (whisper-server, ffmpeg) don't handle these paths correctly.
 function getSafeTempDir() {
+  if (process.env.FLOSI_VARIANT === "qa") return require("./flosiQa/identity").getPaths().temp;
   if (cachedSafeTempDir) return cachedSafeTempDir;
 
   const systemTemp = os.tmpdir();

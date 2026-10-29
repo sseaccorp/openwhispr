@@ -121,6 +121,8 @@ function migrateLegacyModelDirs(legacyRoot, targetRoot) {
 }
 
 function getCacheRoot() {
+  // QA never probes, moves or falls back to the official home cache.
+  if (process.env.FLOSI_VARIANT === "qa") return require("./flosiQa/identity").getPaths().cache;
   const homeDir = app?.getPath?.("home") || os.homedir();
   const homeCache = path.join(homeDir, ".cache", "openwhispr");
   let targetRoot = getPreferredCacheRoot(homeCache);

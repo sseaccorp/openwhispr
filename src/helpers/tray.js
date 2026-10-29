@@ -145,6 +145,8 @@ class TrayManager {
         systemPreferences.registerDefaults({ [MACOS_TRAY_POSITION_KEY]: 0 });
         this.tray = new Tray(trayIcon, MACOS_TRAY_GUID);
         this.tray.setIgnoreDoubleClickEvents(true);
+      } else if (process.platform === "win32" && process.env.FLOSI_VARIANT === "qa") {
+        this.tray = new Tray(trayIcon, "43497de8-a9bc-4778-a1fb-0d7c8a96a1e4");
       } else if (
         process.platform === "win32" &&
         process.env.OPENWHISPR_CHANNEL === "production" &&
@@ -326,7 +328,9 @@ class TrayManager {
     if (!this.tray) return;
 
     const contextMenu = Menu.buildFromTemplate(this.buildContextMenuTemplate());
-    this.tray.setToolTip(i18nMain.t("tray.tooltip"));
+    this.tray.setToolTip(
+      process.env.FLOSI_VARIANT === "qa" ? "Flosi QA (local only)" : i18nMain.t("tray.tooltip")
+    );
     this.tray.setContextMenu(contextMenu);
   }
 

@@ -26,6 +26,7 @@ function writeLoginItem(enabled) {
 
 // { enabled, requiresApproval } — requiresApproval is macOS-only.
 function getAutoStartState() {
+  if (process.env.FLOSI_VARIANT === "qa") return { enabled: false, requiresApproval: false };
   if (isLinux()) {
     return { enabled: linuxAutostart.isAutostartEnabled(), requiresApproval: false };
   }
@@ -36,6 +37,8 @@ function getAutoStartState() {
 }
 
 function setAutoStartEnabled(enabled) {
+  if (process.env.FLOSI_VARIANT === "qa")
+    throw new Error("Flosi QA does not register launch-at-login");
   if (isLinux()) {
     linuxAutostart.setAutostartEnabled(enabled);
     return;
@@ -44,6 +47,7 @@ function setAutoStartEnabled(enabled) {
 }
 
 function wasLaunchedAtLoginHidden() {
+  if (process.env.FLOSI_VARIANT === "qa") return false;
   return wasLaunchedHidden({
     platform: process.platform,
     argv: process.argv,
@@ -54,6 +58,7 @@ function wasLaunchedAtLoginHidden() {
 // Repairs an entry that still exists but no longer starts this executable, or
 // starts it without the flag that sends it to the tray. True when it rewrote one.
 function syncAutoStartEntry() {
+  if (process.env.FLOSI_VARIANT === "qa") return false;
   if (isLinux()) return linuxAutostart.syncAutostartEntry();
 
   const loginItemSettings = readLoginItemSettings();

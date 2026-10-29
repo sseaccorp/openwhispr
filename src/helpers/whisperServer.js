@@ -20,8 +20,10 @@ const {
 } = require("./transcriptionTimeout");
 const { extractWhisperGpuFailureReason } = require("./whisperGpuFailureReason");
 
-const PORT_RANGE_START = 8178;
-const PORT_RANGE_END = 8199;
+const PORT_RANGE_START =
+  process.env.FLOSI_VARIANT === "qa" ? require("./flosiQa/identity").PORTS.whisper[0] : 8178;
+const PORT_RANGE_END =
+  process.env.FLOSI_VARIANT === "qa" ? require("./flosiQa/identity").PORTS.whisper[1] : 8199;
 const STARTUP_TIMEOUT_MS = 30000;
 // Vulkan cold starts compile shaders and load the full model before the port binds. See #698.
 const VULKAN_STARTUP_TIMEOUT_MS = 120000;

@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "observed": "2026-10-29",
+  "assets": [
+    {
+      "id": "whisper",
+      "url": "https://github.com/OpenWhispr/whisper.cpp/releases/download/0.0.10/whisper-server-win32-x64-cpu.zip",
+      "sha256": "360c35ae259c75d8846de97fd0db499448ed019c04fb96dc3807ededd8b41f3f",
+      "size": 1288803,
+      "binary": "whisper-server-win32-x64.exe",
+      "sourceBinary": "whisper-server-win32-x64-cpu.exe"
+    },
+    {
+      "id": "key",
+      "url": "https://github.com/OpenWhispr/openwhispr/releases/download/windows-key-listener-v1.0.0/windows-key-listener-win32-x64.zip",
+      "sha256": "fee00d48ac03c72c9183b13245a57518ccc6bc94c12d1c0e11ec306b5911c896",
+      "size": 81131,
+      "binary": "windows-key-listener.exe",
+      "sourceBinary": "windows-key-listener.exe"
+    },
+    {
+      "id": "paste",
+      "url": "https://github.com/OpenWhispr/openwhispr/releases/download/windows-fast-paste-v2.0.0/windows-fast-paste-win32-x64.zip",
+      "sha256": "80414b7d0cf8b0b85cbbba998e0fcad7c6146f006a0296592743055bcb792ce5",
+      "size": 80466,
+      "binary": "windows-fast-paste.exe",
+      "sourceBinary": "windows-fast-paste.exe"
+    },
+    {
+      "id": "mic",
+      "url": "https://github.com/OpenWhispr/openwhispr/releases/download/windows-mic-listener-v1.1.0/windows-mic-listener-win32-x64.zip",
+      "sha256": "120395242bb2bb5956903e30b5344716656fc748c161063222de0a39d91d158d",
+      "size": 80925,
+      "binary": "windows-mic-listener.exe",
+      "sourceBinary": "windows-mic-listener.exe"
+    },
+    {
+      "id": "system",
+      "url": "https://github.com/OpenWhispr/openwhispr/releases/download/windows-system-audio-helper-v1.2.0/windows-system-audio-helper-win32-x64.zip",
+      "sha256": "3d5c72c42625fcc5eeed7058cb89e1c59fb04785dfe273ab7be14c531ce73a2a",
+      "size": 82625,
+      "binary": "windows-system-audio-helper.exe",
+      "sourceBinary": "windows-system-audio-helper.exe"
+    }
+  ],
+  "cuda": {
+    "id": "cuda",
+    "url": "https://github.com/OpenWhispr/whisper.cpp/releases/download/0.0.10/whisper-server-win32-x64-cuda.zip",
+    "sha256": "4bcf9f28bb1f725163442789015a600cdbccc4c40063de97d29f40b5855bb041",
+    "size": 772876247,
+    "binary": "whisper-server-win32-x64-cuda.exe",
+    "sourceBinary": "whisper-server-win32-x64-cuda.exe"
+  },
+  "models": [
+    {
+      "id": "base",
+      "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-base.bin",
+      "sha256": "60ed5bc3dd14eea856493d334349b405782ddcaf0028d4b5df4088345fba2efe",
+      "size": 147951465,
+      "fileName": "ggml-base.bin"
+    },
+    {
+      "id": "vad",
+      "url": "https://huggingface.co/ggml-org/whisper-vad/resolve/main/ggml-silero-v5.1.2.bin",
+      "sha256": "29940d98d42b91fbd05ce489f3ecf7c72f0a42f027e4875919a28fb4c04ea2cf",
+      "size": 885098,
+      "fileName": "ggml-silero-v5.1.2.bin"
+    }
+  ],
+  "llama": {
+    "id": "llama",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/download/b9763/llama-b9763-bin-win-cpu-x64.zip",
+    "sha256": "05144ee4d885a778ebaef619f79ca0b8a4edb7f017eaf70086a8781ff003815f",
+    "size": 17287711,
+    "binary": "llama-server-win32-x64-cpu.exe",
+    "sourceBinary": "llama-server.exe"
+  },
+  "reasoning": {
+    "id": "qwen2.5-1.5b-instruct-q5_k_m",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-q5_k_m.gguf",
+    "sha256": "b46661073c18e5b56a41fa320975f866a00def1ff08feef4718e013258896f8c",
+    "size": 1285494304,
+    "fileName": "qwen2.5-1.5b-instruct-q5_k_m.gguf",
+    "license": "Apache-2.0 (phase 2 metadata; no claim for Qwen 3B)"
+  }
+}

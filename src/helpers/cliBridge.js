@@ -18,6 +18,8 @@ const LOOPBACK_ADDRESSES = new Set(["127.0.0.1", "::1", "::ffff:127.0.0.1"]);
 const NO_CONTENT = Symbol("CliBridge.NoContent");
 
 function getBridgeFilePath() {
+  if (process.env.FLOSI_VARIANT === "qa")
+    return path.join(require("./flosiQa/identity").getPaths().userData, "cli-bridge.json");
   return path.join(os.homedir(), ".openwhispr", "cli-bridge.json");
 }
 

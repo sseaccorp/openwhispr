@@ -13,8 +13,10 @@ const {
 const sidecarPidFile = require("./sidecarPidFile");
 const { waitForExit } = require("./sidecarReaper");
 
-const PORT_RANGE_START = 6333;
-const PORT_RANGE_END = 6350;
+const PORT_RANGE_START =
+  process.env.FLOSI_VARIANT === "qa" ? require("./flosiQa/identity").PORTS.qdrant[0] : 6333;
+const PORT_RANGE_END =
+  process.env.FLOSI_VARIANT === "qa" ? require("./flosiQa/identity").PORTS.qdrant[1] : 6350;
 const STARTUP_TIMEOUT_MS = 30000;
 const STARTUP_POLL_INTERVAL_MS = 100;
 const HEALTH_CHECK_INTERVAL_MS = 5000;
@@ -29,12 +31,15 @@ const MAX_RESTARTS_PER_SESSION = 3;
 // verifies the old process is really gone before spawning its replacement.
 const RESTART_EXIT_WAIT_MS = 2000;
 
-const STORAGE_DIR = path.join(
-  os.homedir(),
-  ".cache",
-  "openwhispr",
-  process.env.NODE_ENV === "development" ? "qdrant-data-dev" : "qdrant-data"
-);
+const STORAGE_DIR =
+  process.env.FLOSI_VARIANT === "qa"
+    ? path.join(require("./flosiQa/identity").getPaths().cache, "qdrant-data")
+    : path.join(
+        os.homedir(),
+        ".cache",
+        "openwhispr",
+        process.env.NODE_ENV === "development" ? "qdrant-data-dev" : "qdrant-data"
+      );
 
 // Emits "restarted" (port) after a successful unhealthy-restart so the
 // composition root can re-wire clients (the replacement may be on a new port).
@@ -117,6 +122,7 @@ class QdrantManager extends EventEmitter {
       `  http_port: ${this.port}`,
       `  grpc_port: ${this.port + 1}`,
       "log_level: warn",
+      ...(process.env.FLOSI_VARIANT === "qa" ? ["telemetry_disabled: true"] : []),
       "",
     ].join("\n");
 

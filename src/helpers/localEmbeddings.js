@@ -15,13 +15,14 @@ class LocalEmbeddings {
   }
 
   _resolveModelDir() {
-    const cacheDir = path.join(
-      os.homedir(),
-      ".cache",
-      "openwhispr",
-      "embedding-models",
-      MODEL_SUBDIR
-    );
+    const cacheDir =
+      process.env?.FLOSI_VARIANT === "qa"
+        ? path.join(
+            require("./flosiQa/identity").getPaths().cache,
+            "embedding-models",
+            MODEL_SUBDIR
+          )
+        : path.join(os.homedir(), ".cache", "openwhispr", "embedding-models", MODEL_SUBDIR);
 
     if (process.resourcesPath) {
       const bundled = path.join(process.resourcesPath, "bin", MODEL_SUBDIR);

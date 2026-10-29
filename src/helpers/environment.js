@@ -80,6 +80,8 @@ class EnvironmentManager {
       }
     } catch {}
 
+    if (process.env.FLOSI_VARIANT === "qa") return;
+
     const fallbackPaths = [
       path.join(__dirname, "..", "..", ".env"), // Development
       path.join(process.resourcesPath, ".env"),
@@ -101,6 +103,8 @@ class EnvironmentManager {
   // both no-ops on fresh installs, so neither path triggers Keychain until
   // the user actually saves their first secret.
   async init() {
+    // QA has no API credentials to hydrate or migrate. Private preferences still load.
+    if (process.env.FLOSI_VARIANT === "qa") return;
     if (!fs.existsSync(this._getMigrationSentinelPath())) {
       await this._migrateToSecureStorage();
     }

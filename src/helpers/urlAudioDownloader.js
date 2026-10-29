@@ -32,6 +32,9 @@ const USER_AGENT = "OpenWhispr/1.0";
 // self-update (the bundled copy is read-only / inside the signed bundle).
 // OPENWHISPR_YTDLP_CACHE_DIR overrides the location (relocate it, or isolate it in tests).
 const YT_DLP_CACHE_DIR =
+  (process.env.FLOSI_VARIANT === "qa"
+    ? path.join(require("./flosiQa/identity").getPaths().cache, "yt-dlp")
+    : null) ||
   process.env.OPENWHISPR_YTDLP_CACHE_DIR ||
   path.join(os.homedir(), ".cache", "openwhispr", "yt-dlp");
 const YT_DLP_UPDATE_THROTTLE_MS = 24 * 60 * 60 * 1000;
@@ -1559,3 +1562,13 @@ module.exports = {
   _recordCacheChecksum: recordCacheChecksum,
   _looksLikeYouTubeBlock: looksLikeYouTubeBlock,
 };
+
+// yt-dlp could load a system configuration; no native remote downloads in QA.
+if (process.env.FLOSI_VARIANT === "qa") {
+  const unavailable = async () => {
+    throw new Error("FLOSI_QA_UNAVAILABLE: remote URL downloads and yt-dlp updates are disabled");
+  };
+  module.exports.download = unavailable;
+  module.exports.downloadViaProxy = unavailable;
+  module.exports.maybeUpdateYtDlp = unavailable;
+}

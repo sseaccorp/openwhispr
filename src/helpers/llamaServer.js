@@ -12,8 +12,10 @@ const { BIN_SUBDIR: LLAMA_VULKAN_BIN_SUBDIR } = require("./llamaVulkanManager");
 const { BASELINE_CONTEXT_SIZE } = require("./llamaContextPolicy");
 
 // Range kept clear of cliBridge (8200-8219) to avoid port-bind collisions.
-const PORT_RANGE_START = 8221;
-const PORT_RANGE_END = 8240;
+const PORT_RANGE_START =
+  process.env.FLOSI_VARIANT === "qa" ? require("./flosiQa/identity").PORTS.llama[0] : 8221;
+const PORT_RANGE_END =
+  process.env.FLOSI_VARIANT === "qa" ? require("./flosiQa/identity").PORTS.llama[1] : 8240;
 const STARTUP_TIMEOUT_MS = 120000;
 const VULKAN_STARTUP_TIMEOUT_MS = 120000;
 const HEALTH_CHECK_INTERVAL_MS = 5000;

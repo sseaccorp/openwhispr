@@ -27,7 +27,7 @@ class UpdateManager {
   }
 
   setupAutoUpdater() {
-    if (process.env.NODE_ENV === "development") {
+    if (process.env.NODE_ENV === "development" || process.env.FLOSI_VARIANT === "qa") {
       return;
     }
 
@@ -158,7 +158,7 @@ class UpdateManager {
 
   async checkForUpdates() {
     try {
-      if (process.env.NODE_ENV === "development") {
+      if (process.env.NODE_ENV === "development" || process.env.FLOSI_VARIANT === "qa") {
         return {
           updateAvailable: false,
           message: "Update checks are disabled in development mode",
@@ -199,7 +199,7 @@ class UpdateManager {
 
   async downloadUpdate() {
     try {
-      if (process.env.NODE_ENV === "development") {
+      if (process.env.NODE_ENV === "development" || process.env.FLOSI_VARIANT === "qa") {
         return {
           success: false,
           message: "Update downloads are disabled in development mode",
@@ -235,7 +235,7 @@ class UpdateManager {
 
   async installUpdate() {
     try {
-      if (process.env.NODE_ENV === "development") {
+      if (process.env.NODE_ENV === "development" || process.env.FLOSI_VARIANT === "qa") {
         return {
           success: false,
           message: "Update installation is disabled in development mode",
@@ -285,7 +285,7 @@ class UpdateManager {
       return {
         updateAvailable: this.updateAvailable,
         updateDownloaded: this.updateDownloaded,
-        isDevelopment: process.env.NODE_ENV === "development",
+        isDevelopment: process.env.NODE_ENV === "development" || process.env.FLOSI_VARIANT === "qa",
         isSupported: isUpdaterSupported,
       };
     } catch (error) {
@@ -339,7 +339,11 @@ class UpdateManager {
   }
 
   checkForUpdatesOnStartup() {
-    if (process.env.NODE_ENV !== "development" && isUpdaterSupported) {
+    if (
+      process.env.NODE_ENV !== "development" &&
+      process.env.FLOSI_VARIANT !== "qa" &&
+      isUpdaterSupported
+    ) {
       setTimeout(() => {
         this._autoCheckForUpdates("Startup");
       }, 3000);

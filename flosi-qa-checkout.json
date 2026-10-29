@@ -1,0 +1,5 @@
+{
+  "variant": "qa",
+  "baseline": "323923f963987a50913fbd3ba21f4fdf7b122cbc",
+  "purpose": "Unpackaged local Windows QA only; use scripts/flosi-qa.ps1"
+}

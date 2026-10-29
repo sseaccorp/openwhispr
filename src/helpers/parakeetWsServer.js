@@ -20,8 +20,10 @@ const {
   TRANSCRIPTION_TIMEOUT_FLOOR_MS,
 } = require("./transcriptionTimeout");
 
-const PORT_RANGE_START = 6006;
-const PORT_RANGE_END = 6029;
+const PORT_RANGE_START =
+  process.env.FLOSI_VARIANT === "qa" ? require("./flosiQa/identity").PORTS.parakeet[0] : 6006;
+const PORT_RANGE_END =
+  process.env.FLOSI_VARIANT === "qa" ? require("./flosiQa/identity").PORTS.parakeet[1] : 6029;
 const STARTUP_TIMEOUT_MS = 60000;
 const HEALTH_CHECK_INTERVAL_MS = 5000;
 const FLOAT32_BYTES_PER_SAMPLE = 4;

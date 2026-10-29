@@ -1,3 +1,7 @@
+require("./src/helpers/flosiQa/checkoutGuard").assertExplicitQaMode(__dirname);
+// Establish QA identity and write/network boundaries before stateful imports.
+const flosiQa = require("./src/helpers/flosiQa/bootstrap").initialize(require("electron"));
+
 // Chromium picks the display backend before JS runs, so appendSwitch is too
 // late — the flag has to come from a relaunch.
 const { XWAYLAND_FLAG, shouldForceXWayland } = require("./src/helpers/xwayland");
@@ -27,7 +31,7 @@ const {
 const path = require("path");
 const http = require("http");
 const tls = require("tls");
-require("dotenv").config({ path: path.join(__dirname, ".env") });
+if (!flosiQa) require("dotenv").config({ path: path.join(__dirname, ".env") });
 
 // Extend Node's TLS trust with the OS store so ws and https.get see corporate
 // CAs that Chromium already trusts.
@@ -84,7 +88,7 @@ const APP_CHANNEL = resolveAppChannel();
 process.env.OPENWHISPR_CHANNEL = APP_CHANNEL;
 
 function configureChannelUserDataPath() {
-  if (APP_CHANNEL === "production") {
+  if (flosiQa || APP_CHANNEL === "production") {
     return;
   }
 
@@ -136,13 +140,14 @@ if (process.platform === "linux") {
 }
 
 // Group all windows under single taskbar entry on Windows
-if (process.platform === "win32") {
+if (process.platform === "win32" && !flosiQa) {
   const windowsAppId =
     APP_CHANNEL === "production" ? BASE_WINDOWS_APP_ID : `${BASE_WINDOWS_APP_ID}.${APP_CHANNEL}`;
   app.setAppUserModelId(windowsAppId);
 }
 
 function getOAuthProtocol() {
+  if (flosiQa) return "flosi-qa";
   const fromEnv = (process.env.VITE_OPENWHISPR_PROTOCOL || process.env.OPENWHISPR_PROTOCOL || "")
     .trim()
     .toLowerCase();
@@ -248,11 +253,12 @@ function registerOpenWhisprProtocol() {
 // system MIME database for an actual handler. This keeps OAuth enabled where the
 // callback can resolve and correctly gated where it can't.
 const linuxSchemeHandler =
-  process.platform === "linux"
+  process.platform === "linux" && !flosiQa
     ? registerLinuxUrlSchemeHandler(OAUTH_PROTOCOL, getProtocolAppArgs())
     : null;
 const protocolRegistered =
-  linuxSchemeHandler?.registered || registerOpenWhisprProtocol() || isOAuthSchemeRegistered();
+  !flosiQa &&
+  (linuxSchemeHandler?.registered || registerOpenWhisprProtocol() || isOAuthSchemeRegistered());
 if (!protocolRegistered) {
   console.warn(`[Auth] Failed to register ${OAUTH_PROTOCOL}:// protocol handler`);
 }
@@ -1151,7 +1157,8 @@ async function checkStartupHold() {
 async function startApp() {
   // Await so a stale sidecar is confirmed dead before new ones can spawn and
   // contend for its port or storage lock.
-  await reapStaleSidecars();
+  if (flosiQa) await flosiQa.preflight();
+  else await reapStaleSidecars();
 
   // Phase 1: Core managers + IPC handlers before windows
   initializeCoreManagers();
@@ -1160,17 +1167,19 @@ async function startApp() {
   // failure before the whisper pre-warm below resolves its GPU backend.
   resetWhisperGpuFailureOnUpgrade(environmentManager);
   registerSidecars();
-  startAuthBridgeServer();
+  if (!flosiQa) startAuthBridgeServer();
 
-  cliBridge = new CliBridge(ipcHandlers);
-  cliBridge.start().catch((err) => {
-    debugLogger.error("CLI bridge failed to start", { error: err.message });
-    cliBridge = null;
-  });
+  if (!flosiQa) {
+    cliBridge = new CliBridge(ipcHandlers);
+    cliBridge.start().catch((err) => {
+      debugLogger.error("CLI bridge failed to start", { error: err.message });
+      cliBridge = null;
+    });
 
-  await migrateCookieToBearerToken();
+    await migrateCookieToBearerToken();
 
-  applyOpenWhisprOriginHeader(session.defaultSession);
+    applyOpenWhisprOriginHeader(session.defaultSession);
+  }
 
   await windowManager.setActivationModeCache(environmentManager.getActivationMode());
   windowManager.setFloatingIconAutoHide(environmentManager.getFloatingIconAutoHide());
@@ -1433,6 +1442,7 @@ async function startApp() {
 
   // Auto-download diarization models if binary is available
   if (
+    !flosiQa &&
     diarizationManager.getBinaryPath() &&
     (!diarizationManager.isModelDownloaded() || !diarizationManager.isVadModelDownloaded())
   ) {
