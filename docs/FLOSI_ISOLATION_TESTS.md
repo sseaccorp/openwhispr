@@ -1,5 +1,7 @@
 # Flosi QA — verificación, regresión y límites
 
+> **Actualización Orukeet, 29 de octubre de 2026:** Los resultados anteriores corresponden a la fase de aislamiento. La ampliación Orukeet, su inferencia nativa real en Linux y las simulaciones de política Windows se registran por separado en [FLOSI_ORUKEET_TESTS.md](FLOSI_ORUKEET_TESTS.md). El usuario confirmó posteriormente arranque Windows/Whisper y cero diferencias en 168 archivos oficiales; eso no valida todavía Orukeet ni una paridad completa con v1.11.0.
+
 Base exacta: `323923f963987a50913fbd3ba21f4fdf7b122cbc`, OpenWhispr v1.10.4. Rama independiente `codex/flosi-windows-isolation`. Entorno de ejecución: Linux x64 cloud, Node 24.19.0/npm 11.9.0; **no** Windows 11 ni npm 11.17.0 del equipo objetivo. Revisión del 29 de octubre de 2026, America/New_York; timestamps técnicos UTC.
 
 ## Qué demuestran las pruebas

@@ -1,5 +1,7 @@
 # Flosi QA — identidad y límites de aislamiento
 
+> **Actualización Orukeet, 29 de octubre de 2026:** La rama `codex/flosi-orukeet-qa`, desde `a31a8218`, añade únicamente preparación opcional y un gate QA previo al spawn del Orukeet original. Inventario de modelo/cachés/puertos/procesos, hashes y protección de su listener wildcard: [FLOSI_ORUKEET_QA.md](FLOSI_ORUKEET_QA.md). Los motores e identidades anteriores se conservan; la protección efectiva de Windows sigue requiriendo validación nativa.
+
 Fase 3, 29 de octubre de 2026 (America/New_York). Rama `codex/flosi-windows-isolation`, creada desde **`323923f963987a50913fbd3ba21f4fdf7b122cbc`**. La rama `codex/flosi-baseline` y el PR #1 se conservan. Esta modalidad es una candidata de desarrollo Windows x64, sin instalador, firma, rediseño ni infraestructura comercial nueva. Las auditorías anteriores siguen vigentes: [seguridad](FLOSI_SECURITY_REVIEW.md), [licencias](FLOSI_LICENSES.md) y [paridad](FLOSI_PARITY_MATRIX.md).
 
 ## Diseño mínimo y orden de arranque

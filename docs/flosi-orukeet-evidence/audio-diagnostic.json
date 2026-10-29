@@ -1,0 +1,12 @@
+{
+  "method": "Synthetic English sentence generated using installed Flite CMU_US_SLT; ffmpeg normalized PCM16 mono 16kHz. No personal audio; audio not distributed.",
+  "reference": "This is a local speech recognition test. The meeting starts tomorrow at nine in the morning.",
+  "audioSha256": "09123b2c44eff2d3edec874232d379eb3d2d8f94a2c34c911d36802ccd7c2f9b",
+  "audioBytes": 172558,
+  "durationSeconds": 5.39,
+  "nativeDiagnosticOnly": true,
+  "qualityBenchmark": false,
+  "windowsTested": false,
+  "gpuTested": false,
+  "spanishTested": false
+}

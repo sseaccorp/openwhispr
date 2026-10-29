@@ -117,6 +117,14 @@ class ParakeetWsServer {
     if (!wsBinary) throw new Error(`sherpa-onnx ${runtime} WS server binary not found`);
     if (!fs.existsSync(modelDir)) throw new Error(`Model directory not found: ${modelDir}`);
 
+    if (process.env.FLOSI_VARIANT === "qa")
+      require("./flosiQa/orukeet").assertRuntime({
+        modelName,
+        modelDir,
+        runtime,
+        binary: wsBinary,
+      });
+
     this.port = await findAvailablePort(PORT_RANGE_START, PORT_RANGE_END);
     this.modelName = modelName;
     this.modelDir = modelDir;

@@ -1,5 +1,7 @@
 # Flosi QA — pendientes y criterios antes del rediseño
 
+> **Actualización Orukeet, 29 de octubre de 2026:** Orukeet local ya dispone de preparación opcional fijada y gate nativo QA en una rama independiente: [arquitectura](FLOSI_ORUKEET_QA.md), [pasos Windows](FLOSI_ORUKEET_WINDOWS.md). La fuente y la ejecución Linux confirman bind `0.0.0.0`: ahora hay protección restrictiva específica preparada, cuya aplicación Windows/eficacia LAN sigue pendiente. El usuario ya validó Windows/Whisper/168 archivos sin diferencias; conservar esa evidencia y ampliar la prueba a Orukeet. Qwen3.5 2B sigue pendiente de preparación fijada; el Qwen2.5 de la opción anterior no sirve para alegar equivalencia. Recomendación: cerrar este experimento sobre v1.10.4 y evaluar después v1.11.0 en otra rama, antes de aceptar rediseño o distribución. Mantener todos los gates legales y de seguridad previos.
+
 Esta fase introduce independencia a nivel de aplicación en el mismo usuario Windows. No convierte el fork en una aplicación comercial distribuible. Las auditorías de seguridad/licencias de `323923f9` siguen vigentes; no se actualizó Electron, no se cambiaron prompts ni se implementaron cuentas/suscripciones.
 
 ## P0: primera aceptación Windows
