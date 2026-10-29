@@ -1,0 +1,62 @@
+[
+  {
+    "url": "https://huggingface.co/api/models/oruk/orukeet/revision/55a984d46f68323301837194ce647c702f55facc",
+    "status": 200,
+    "id": "oruk/orukeet",
+    "sha": "55a984d46f68323301837194ce647c702f55facc",
+    "gated": false,
+    "license": "cc-by-sa-4.0",
+    "license_name": null,
+    "license_link": null
+  },
+  {
+    "url": "https://huggingface.co/api/models/nvidia/parakeet-tdt-0.6b-v3",
+    "status": 200,
+    "id": "nvidia/parakeet-tdt-0.6b-v3",
+    "sha": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+    "gated": false,
+    "license": "cc-by-4.0",
+    "license_name": null,
+    "license_link": null
+  },
+  {
+    "url": "https://huggingface.co/api/models/CohereLabs/cohere-transcribe-03-2026",
+    "status": 200,
+    "id": "CohereLabs/cohere-transcribe-03-2026",
+    "sha": "d552dadc2922ba6f6c1f994f8db904d52dcaf942",
+    "gated": "auto",
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": null
+  },
+  {
+    "url": "https://huggingface.co/api/models/ggerganov/whisper.cpp",
+    "status": 200,
+    "id": "ggerganov/whisper.cpp",
+    "sha": "5359861c739e955e79d9a303bcbc70fb988958b1",
+    "gated": false,
+    "license": "mit",
+    "license_name": null,
+    "license_link": null
+  },
+  {
+    "url": "https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2",
+    "status": 200,
+    "id": "sentence-transformers/all-MiniLM-L6-v2",
+    "sha": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "gated": false,
+    "license": "apache-2.0",
+    "license_name": null,
+    "license_link": null
+  },
+  {
+    "url": "https://huggingface.co/api/models/pyannote/segmentation-3.0",
+    "status": 200,
+    "id": "pyannote/segmentation-3.0",
+    "sha": "e66f3d3b9eb0873085418a7b813d3b369bf160bb",
+    "gated": "auto",
+    "license": "mit",
+    "license_name": null,
+    "license_link": null
+  }
+]

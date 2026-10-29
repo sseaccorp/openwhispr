@@ -1,0 +1,398 @@
+[
+  {
+    "name": "network",
+    "command": "for url in https://registry.npmjs.org/electron https://github.com/sseaccorp/openwhispr https://api.github.com/repos/OpenWhispr/openwhispr/git/ref/tags/v1.10.4 https://github.com/electron/electron/releases/download/v43.8.3/electron-v43.8.3-linux-x64.zip https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-tiny.bin https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer.json; do printf \"%s \" \"$url\"; curl -IL --max-time 25 -sS -o /dev/null -w \"HTTP=%{http_code}\\n\" \"$url\"; done",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T02:58:28.950856+00:00",
+    "seconds": 0.04,
+    "exit_code": 7,
+    "log": "/workspace/work/flosi-audit/logs/network.log"
+  },
+  {
+    "name": "npm-ci",
+    "command": "npm ci --offline --no-audit --no-fund --fetch-retries=0",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T02:58:38.865949+00:00",
+    "seconds": 1.14,
+    "exit_code": 1,
+    "log": "/workspace/work/flosi-audit/logs/npm-ci.log"
+  },
+  {
+    "name": "npm-ci-network",
+    "command": "npm ci --cache /workspace/.cache/npm --no-audit --no-fund --fetch-retries=0 --fetch-timeout=20000",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T02:59:03.988309+00:00",
+    "seconds": 7.75,
+    "exit_code": 1,
+    "log": "/workspace/work/flosi-audit/logs/npm-ci-network.log"
+  },
+  {
+    "name": "node-ci-routing",
+    "command": "node --test .github/scripts/ci-scope.test.cjs",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T02:59:03.989949+00:00",
+    "seconds": 0.12,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/node-ci-routing.log"
+  },
+  {
+    "name": "node-i18n",
+    "command": "node scripts/check-i18n.js",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T02:59:04.145974+00:00",
+    "seconds": 0.21,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/node-i18n.log"
+  },
+  {
+    "name": "npm-ci-quality",
+    "command": "NODE_USE_ENV_PROXY=1 npm ci --ignore-scripts --cache /workspace/.cache/npm --no-audit --no-fund --fetch-retries=0 --fetch-timeout=15000",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T02:59:32.806095+00:00",
+    "seconds": 9.19,
+    "exit_code": 1,
+    "log": "/workspace/work/flosi-audit/logs/npm-ci-quality.log"
+  },
+  {
+    "name": "network-baseline",
+    "command": "for url in https://www.electronjs.org/headers/index.json https://artifacts.electronjs.org/headers/dist/v41.10.7/node-v41.10.7-headers.tar.gz https://github.com/electron/electron/releases/download/v41.10.7/electron-v41.10.7-linux-x64.zip https://huggingface.co/oruk/orukeet/resolve/55a984d46f68323301837194ce647c702f55facc/onnx/manifest.json; do printf \"%s \" \"$url\"; curl -IL --max-time 15 -sS -o /dev/null -w \"HTTP=%{http_code}\\n\" \"$url\"; done",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T02:59:32.816029+00:00",
+    "seconds": 0.03,
+    "exit_code": 7,
+    "log": "/workspace/work/flosi-audit/logs/network-baseline.log"
+  },
+  {
+    "name": "npm-ci-offline-quality",
+    "command": "npm ci --offline --ignore-scripts --cache /workspace/.cache/npm --no-audit --no-fund --fetch-retries=0",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T02:59:59.903342+00:00",
+    "seconds": 9.95,
+    "exit_code": 1,
+    "log": "/workspace/work/flosi-audit/logs/npm-ci-offline-quality.log"
+  },
+  {
+    "name": "npm-ci-permitted",
+    "command": "NODE_USE_ENV_PROXY=1 ELECTRON_CACHE=/workspace/.cache/electron npm ci --cache /workspace/.cache/npm --no-audit --no-fund --fetch-retries=0 --fetch-timeout=20000",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:00:39.052181+00:00",
+    "seconds": 16.05,
+    "exit_code": 1,
+    "log": "/workspace/work/flosi-audit/logs/npm-ci-permitted.log"
+  },
+  {
+    "name": "network-permitted",
+    "command": "for url in https://registry.npmjs.org/electron https://github.com/sseaccorp/openwhispr https://api.github.com/repos/OpenWhispr/openwhispr/git/ref/tags/v1.10.4 https://www.electronjs.org/headers/index.json https://artifacts.electronjs.org/headers/dist/v41.10.7/node-v41.10.7-headers.tar.gz https://github.com/electron/electron/releases/download/v41.10.7/electron-v41.10.7-linux-x64.zip https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-tiny.bin https://huggingface.co/oruk/orukeet/resolve/55a984d46f68323301837194ce647c702f55facc/onnx/manifest.json https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer.json; do printf \"%s \" \"$url\"; curl -IL --max-time 20 -sS -o /dev/null -w \"HTTP=%{http_code}\\n\" \"$url\"; done",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:00:39.465567+00:00",
+    "seconds": 2.8,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/network-permitted.log"
+  },
+  {
+    "name": "npm-ci-caches",
+    "command": "NODE_USE_ENV_PROXY=1 XDG_CACHE_HOME=/workspace/.cache npm_config_devdir=/workspace/work/flosi-audit/node-gyp npm ci --cache /workspace/.cache/npm --no-audit --no-fund --fetch-retries=0 --fetch-timeout=30000",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:01:29.266585+00:00",
+    "seconds": 21.53,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/npm-ci-caches.log"
+  },
+  {
+    "name": "audit-deps",
+    "command": "NODE_USE_ENV_PROXY=1 npm audit --audit-level=high --cache /workspace/.cache/npm --json",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:01:56.151406+00:00",
+    "seconds": 2.65,
+    "exit_code": 1,
+    "log": "/workspace/work/flosi-audit/logs/audit-deps.log"
+  },
+  {
+    "name": "quality-check",
+    "command": "npm run quality-check",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:02:13.889188+00:00",
+    "seconds": 49.8,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/quality-check.log"
+  },
+  {
+    "name": "renderer-build",
+    "command": "npm run build:renderer",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:02:13.894336+00:00",
+    "seconds": 4.27,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/renderer-build.log"
+  },
+  {
+    "name": "sqlite-node-rebuild",
+    "command": "NODE_USE_ENV_PROXY=1 XDG_CACHE_HOME=/workspace/.cache npm_config_devdir=/workspace/work/flosi-audit/node-gyp npm rebuild better-sqlite3 --cache /workspace/.cache/npm",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:02:18.140701+00:00",
+    "seconds": 1.39,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/sqlite-node-rebuild.log"
+  },
+  {
+    "name": "native-linux",
+    "command": "source /workspace/.openwhispr-cloud/activate.sh && npm run compile:native",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:02:54.196713+00:00",
+    "seconds": 660.0,
+    "exit_code": -15,
+    "log": "/workspace/work/flosi-audit/logs/native-linux.log"
+  },
+  {
+    "name": "sqlite-probe",
+    "command": "node -e 'const D=require(\"better-sqlite3\");const d=new D(\":memory:\"); console.log({node:process.version,abi:process.versions.modules,sqlite:d.prepare(\"select sqlite_version() as version\").get()}); d.close()'",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:02:56.233050+00:00",
+    "seconds": 0.09,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/sqlite-probe.log"
+  },
+  {
+    "name": "full-tests",
+    "command": "REQUIRE_DB_TESTS=1 npm test -- --test-concurrency=4",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:02:56.394437+00:00",
+    "seconds": 846.13,
+    "exit_code": 1,
+    "log": "/workspace/work/flosi-audit/logs/full-tests.log"
+  },
+  {
+    "name": "download-whisper",
+    "command": "NODE_USE_ENV_PROXY=1 npm run download:whisper-cpp",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:03:44.643293+00:00",
+    "seconds": 1.18,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/download-whisper.log"
+  },
+  {
+    "name": "download-sherpa",
+    "command": "NODE_USE_ENV_PROXY=1 npm run download:sherpa-onnx",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:03:45.850985+00:00",
+    "seconds": 3.77,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/download-sherpa.log"
+  },
+  {
+    "name": "download-llama",
+    "command": "NODE_USE_ENV_PROXY=1 npm run download:llama-server",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:03:49.651660+00:00",
+    "seconds": 1.76,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/download-llama.log"
+  },
+  {
+    "name": "download-vad",
+    "command": "NODE_USE_ENV_PROXY=1 npm run download:whisper-vad-model",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:03:51.434599+00:00",
+    "seconds": 0.9,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/download-vad.log"
+  },
+  {
+    "name": "license-metadata",
+    "command": "node -e 'const p=require(\"./package-lock.json\");const counts={};const review=[];for(const [path,x] of Object.entries(p.packages)){const l=String(x.license||\"UNKNOWN\");counts[l]=(counts[l]||0)+1;if(/GPL|UNKNOWN|SEE LICENSE/.test(l))review.push({path,version:x.version,license:l});}console.log(JSON.stringify({counts,review},null,2))'",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:03:59.654431+00:00",
+    "seconds": 0.05,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/license-metadata.log"
+  },
+  {
+    "name": "model-metadata",
+    "command": "python /workspace/work/flosi-audit/model_metadata.py",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:04:20.127451+00:00",
+    "seconds": 1.29,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/model-metadata.log"
+  },
+  {
+    "name": "electron-node",
+    "command": "LD_LIBRARY_PATH=/workspace/.openwhispr-cloud/sysroot/usr/lib/x86_64-linux-gnu ELECTRON_RUN_AS_NODE=1 node_modules/electron/dist/electron -p 'JSON.stringify({electron:process.versions.electron,node:process.versions.node,abi:process.versions.modules})'",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:05:06.738857+00:00",
+    "seconds": 0.97,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/electron-node.log"
+  },
+  {
+    "name": "native-runtime",
+    "command": "resources/bin/whisper-server-linux-x64 --help >/workspace/work/flosi-audit/whisper-help.txt 2>&1 && resources/bin/llama-server-linux-x64-cpu --version && resources/bin/sherpa-onnx-ws-linux-x64 --help >/workspace/work/flosi-audit/sherpa-help.txt 2>&1",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:05:07.742453+00:00",
+    "seconds": 0.04,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/native-runtime.log"
+  },
+  {
+    "name": "download-qdrant",
+    "command": "NODE_USE_ENV_PROXY=1 npm run download:qdrant",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:05:09.576555+00:00",
+    "seconds": 2.53,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/download-qdrant.log"
+  },
+  {
+    "name": "download-aec",
+    "command": "NODE_USE_ENV_PROXY=1 npm run download:meeting-aec-helper",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:05:12.129229+00:00",
+    "seconds": 2.0,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/download-aec.log"
+  },
+  {
+    "name": "download-embedding",
+    "command": "NODE_USE_ENV_PROXY=1 npm run download:embedding-model -- --for-build",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:05:14.161615+00:00",
+    "seconds": 6.88,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/download-embedding.log"
+  },
+  {
+    "name": "download-diarization",
+    "command": "NODE_USE_ENV_PROXY=1 npm run download:diarization-models -- --output-dir resources/bin/diarization-models",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:05:21.062782+00:00",
+    "seconds": 2.15,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/download-diarization.log"
+  },
+  {
+    "name": "download-tiny",
+    "command": "curl --fail --location --max-time 90 --silent --show-error https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-tiny.bin -o /workspace/work/flosi-audit/ggml-tiny.bin",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:06:23.628037+00:00",
+    "seconds": 5.13,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/download-tiny.log"
+  },
+  {
+    "name": "linux-audio-compile",
+    "command": "source /workspace/.openwhispr-cloud/activate.sh && timeout 45s npm run compile:linux-system-audio",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:13:54.219242+00:00",
+    "seconds": 1.61,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/linux-audio-compile.log"
+  },
+  {
+    "name": "linux-text-compile",
+    "command": "source /workspace/.openwhispr-cloud/activate.sh && timeout 45s npm run compile:text-monitor",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:13:55.859007+00:00",
+    "seconds": 0.48,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/linux-text-compile.log"
+  },
+  {
+    "name": "whisper-cpu-smoke",
+    "command": "python /workspace/work/flosi-audit/whisper_smoke.py",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:14:00.299049+00:00",
+    "seconds": 1.28,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/whisper-cpu-smoke.log"
+  },
+  {
+    "name": "linux-capture-probe",
+    "command": "LD_LIBRARY_PATH=/workspace/.openwhispr-cloud/sysroot/usr/lib/x86_64-linux-gnu resources/bin/linux-system-audio-helper probe",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:14:41.499189+00:00",
+    "seconds": 0.02,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/linux-capture-probe.log"
+  },
+  {
+    "name": "runtime-ort",
+    "command": "node -e 'const o=require(\"onnxruntime-node\");console.log({version:o.env.versions,backends:o.listSupportedBackends()})'",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:14:41.557684+00:00",
+    "seconds": 0.05,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/runtime-ort.log"
+  },
+  {
+    "name": "electron-desktop-attempt",
+    "command": "env -u ELECTRON_RUN_AS_NODE NODE_ENV=development OPENWHISPR_CHANNEL=development XDG_CONFIG_HOME=/workspace/work/flosi-audit/xdg-config XDG_CACHE_HOME=/workspace/work/flosi-audit/xdg-cache LD_LIBRARY_PATH=/workspace/.openwhispr-cloud/sysroot/usr/lib/x86_64-linux-gnu timeout 15s node_modules/electron/dist/electron .",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:15:13.129000+00:00",
+    "seconds": 0.03,
+    "exit_code": -5,
+    "log": "/workspace/work/flosi-audit/logs/electron-desktop-attempt.log"
+  },
+  {
+    "name": "typecheck-explicit",
+    "command": "npm run typecheck",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:15:13.188010+00:00",
+    "seconds": 25.34,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/typecheck-explicit.log"
+  },
+  {
+    "name": "full-tests-concurrent",
+    "command": "REQUIRE_DB_TESTS=1 node --import tsx --test --test-concurrency=4 \"test/**/*.test.js\"",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:17:02.486943+00:00",
+    "seconds": 1164.05,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/full-tests-concurrent.log"
+  },
+  {
+    "name": "electron-desktop-permitted",
+    "command": "env -u ELECTRON_RUN_AS_NODE NODE_ENV=development OPENWHISPR_CHANNEL=development XDG_CONFIG_HOME=/workspace/work/flosi-audit/xdg-config XDG_CACHE_HOME=/workspace/work/flosi-audit/xdg-cache LD_LIBRARY_PATH=/workspace/.openwhispr-cloud/sysroot/usr/lib/x86_64-linux-gnu timeout 15s node_modules/electron/dist/electron .",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:22:41.167925+00:00",
+    "seconds": 0.23,
+    "exit_code": -5,
+    "log": "/workspace/work/flosi-audit/logs/electron-desktop-permitted.log"
+  },
+  {
+    "name": "native-linux-permitted",
+    "command": "source /workspace/.openwhispr-cloud/activate.sh && timeout 60s npm run compile:native",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:23:15.030018+00:00",
+    "seconds": 11.7,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/native-linux-permitted.log"
+  },
+  {
+    "name": "linux-native-xvfb",
+    "command": "source /workspace/.openwhispr-cloud/activate.sh && PATH=/workspace/.openwhispr-cloud/sysroot/usr/bin:$PATH node --import tsx --test --test-concurrency=1 test/helpers/linuxInputRegionNative.test.js test/helpers/linuxModifierGateNative.test.js",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:33:15.348346+00:00",
+    "seconds": 6.77,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/linux-native-xvfb.log"
+  },
+  {
+    "name": "ffmpeg-license",
+    "command": "node_modules/ffmpeg-static/ffmpeg -L",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:33:42.621317+00:00",
+    "seconds": 0.02,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/ffmpeg-license.log"
+  },
+  {
+    "name": "docs-format-check",
+    "command": "node_modules/.bin/prettier --check docs/FLOSI_BASELINE.md docs/FLOSI_PARITY_MATRIX.md docs/FLOSI_WINDOWS_QA.md docs/FLOSI_ROADMAP.md docs/flosi-evidence/*.md docs/flosi-evidence/*.json",
+    "cwd": "/workspace/work/flosi-baseline",
+    "started_utc": "2026-10-29T03:41:57.869837+00:00",
+    "seconds": 0.5,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-audit/logs/docs-format-check.log"
+  }
+]
