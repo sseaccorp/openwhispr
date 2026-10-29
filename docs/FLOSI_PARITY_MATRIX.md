@@ -1,5 +1,7 @@
 # Flosi — auditoría de paridad funcional
 
+> Inventario funcional histórico de v1.10.4, conservado sin reauditar. Para estado posterior de seguridad/licencias y condiciones de distribución, ver [FLOSI_SECURITY_REVIEW.md](FLOSI_SECURITY_REVIEW.md) y [FLOSI_LICENSES.md](FLOSI_LICENSES.md).
+
 Referencia: OpenWhispr **v1.10.4**, commit `ba6d61820b4c56d7b08012c61c2ae6b43f3152f3`, en el historial del fork `sseaccorp/openwhispr`. Auditoría: 28 de octubre de 2026, America/New_York. Los resultados ejecutados están en [FLOSI_BASELINE.md](FLOSI_BASELINE.md).
 
 ## Cómo interpretar la matriz

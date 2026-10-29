@@ -1,0 +1,45 @@
+[
+  {
+    "name": "better-auth",
+    "version": "1.6.27",
+    "location": "node_modules/better-auth",
+    "isWorkspace": false,
+    "dependents": [
+      {
+        "type": "prod",
+        "name": "better-auth",
+        "spec": "1.6.27",
+        "from": {
+          "location": "/workspace/work/flosi-baseline"
+        }
+      },
+      {
+        "type": "peer",
+        "name": "better-auth",
+        "spec": "^1.6.27",
+        "from": {
+          "name": "@better-auth/sso",
+          "version": "1.6.27",
+          "location": "node_modules/@better-auth/sso",
+          "isWorkspace": false,
+          "dependents": [
+            {
+              "type": "prod",
+              "name": "@better-auth/sso",
+              "spec": "1.6.27",
+              "from": {
+                "location": "/workspace/work/flosi-baseline"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "dev": false,
+    "optional": false,
+    "devOptional": false,
+    "peer": false,
+    "bundled": false,
+    "overridden": false
+  }
+]

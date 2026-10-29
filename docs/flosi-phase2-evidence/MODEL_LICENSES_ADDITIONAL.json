@@ -1,0 +1,29 @@
+[
+  {
+    "id": "nvidia/parakeet-unified-en-0.6b",
+    "url": "https://huggingface.co/api/models/nvidia/parakeet-unified-en-0.6b",
+    "sha": "fe53cd885760c96b6a5f51a0bfd362cb4584a98b",
+    "license": "other",
+    "license_name": "nvidia-open-model-license",
+    "license_link": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+    "gated": false
+  },
+  {
+    "id": "nvidia/nemotron-speech-streaming-en-0.6b",
+    "url": "https://huggingface.co/api/models/nvidia/nemotron-speech-streaming-en-0.6b",
+    "sha": "ebe59e5a817142986528bbbee5dba8db7b38ed50",
+    "license": "other",
+    "license_name": "nvidia-open-model-license",
+    "license_link": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+    "gated": false
+  },
+  {
+    "id": "nvidia/nemotron-3.5-asr-streaming-0.6b",
+    "url": "https://huggingface.co/api/models/nvidia/nemotron-3.5-asr-streaming-0.6b",
+    "sha": "ea30d66debe3740a08b573244286791d423d6b3e",
+    "license": "other",
+    "license_name": "openmdw-1.1",
+    "license_link": "https://openmdw.ai/license/1-1/",
+    "gated": false
+  }
+]

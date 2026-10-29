@@ -1,0 +1,805 @@
+[
+  {
+    "id": "tinfoil@1.1.8",
+    "name": "tinfoil",
+    "version": "1.1.8",
+    "size": 32905,
+    "unpackedSize": 135115,
+    "shasum": "6f7831e106e7096d023e23ac302df5e3104b4166",
+    "integrity": "sha512-wD6DlDwnzquRqQcmfUNVYdQWM1kdzESwt/ksta2R78+9Zuk7NNQb2HinCkROJ0AZCHJZN0vHpQr/n98SxS3H7A==",
+    "filename": "tinfoil-1.1.8.tgz",
+    "files": [
+      {
+        "path": "dist/ai-sdk-provider.d.ts",
+        "size": 1589,
+        "mode": 420
+      },
+      {
+        "path": "dist/ai-sdk-provider.d.ts.map",
+        "size": 406,
+        "mode": 420
+      },
+      {
+        "path": "dist/ai-sdk-provider.js",
+        "size": 2115,
+        "mode": 420
+      },
+      {
+        "path": "dist/ai-sdk-provider.js.map",
+        "size": 1022,
+        "mode": 420
+      },
+      {
+        "path": "dist/atc.d.ts",
+        "size": 956,
+        "mode": 420
+      },
+      {
+        "path": "dist/atc.d.ts.map",
+        "size": 443,
+        "mode": 420
+      },
+      {
+        "path": "dist/atc.js",
+        "size": 2683,
+        "mode": 420
+      },
+      {
+        "path": "dist/atc.js.map",
+        "size": 1975,
+        "mode": 420
+      },
+      {
+        "path": "dist/config.d.ts",
+        "size": 402,
+        "mode": 420
+      },
+      {
+        "path": "dist/config.d.ts.map",
+        "size": 171,
+        "mode": 420
+      },
+      {
+        "path": "dist/config.js",
+        "size": 375,
+        "mode": 420
+      },
+      {
+        "path": "dist/config.js.map",
+        "size": 225,
+        "mode": 420
+      },
+      {
+        "path": "dist/encrypted-body-fetch.d.ts",
+        "size": 1788,
+        "mode": 420
+      },
+      {
+        "path": "dist/encrypted-body-fetch.d.ts.map",
+        "size": 983,
+        "mode": 420
+      },
+      {
+        "path": "dist/encrypted-body-fetch.js",
+        "size": 7334,
+        "mode": 420
+      },
+      {
+        "path": "dist/encrypted-body-fetch.js.map",
+        "size": 5530,
+        "mode": 420
+      },
+      {
+        "path": "dist/env.d.ts",
+        "size": 353,
+        "mode": 420
+      },
+      {
+        "path": "dist/env.d.ts.map",
+        "size": 179,
+        "mode": 420
+      },
+      {
+        "path": "dist/env.js",
+        "size": 1516,
+        "mode": 420
+      },
+      {
+        "path": "dist/env.js.map",
+        "size": 1037,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.browser.d.ts",
+        "size": 1362,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.browser.d.ts.map",
+        "size": 1070,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.browser.js",
+        "size": 1138,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.browser.js.map",
+        "size": 775,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.d.ts",
+        "size": 1354,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.d.ts.map",
+        "size": 1054,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js",
+        "size": 1023,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js.map",
+        "size": 746,
+        "mode": 420
+      },
+      {
+        "path": "dist/pinned-tls-fetch.browser.d.ts",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "dist/pinned-tls-fetch.browser.d.ts.map",
+        "size": 238,
+        "mode": 420
+      },
+      {
+        "path": "dist/pinned-tls-fetch.browser.js",
+        "size": 745,
+        "mode": 420
+      },
+      {
+        "path": "dist/pinned-tls-fetch.browser.js.map",
+        "size": 333,
+        "mode": 420
+      },
+      {
+        "path": "dist/pinned-tls-fetch.d.ts",
+        "size": 295,
+        "mode": 420
+      },
+      {
+        "path": "dist/pinned-tls-fetch.d.ts.map",
+        "size": 335,
+        "mode": 420
+      },
+      {
+        "path": "dist/pinned-tls-fetch.js",
+        "size": 6481,
+        "mode": 420
+      },
+      {
+        "path": "dist/pinned-tls-fetch.js.map",
+        "size": 6164,
+        "mode": 420
+      },
+      {
+        "path": "dist/pinned-ws.browser.d.ts",
+        "size": 730,
+        "mode": 420
+      },
+      {
+        "path": "dist/pinned-ws.browser.d.ts.map",
+        "size": 514,
+        "mode": 420
+      },
+      {
+        "path": "dist/pinned-ws.browser.js",
+        "size": 566,
+        "mode": 420
+      },
+      {
+        "path": "dist/pinned-ws.browser.js.map",
+        "size": 435,
+        "mode": 420
+      },
+      {
+        "path": "dist/pinned-ws.d.ts",
+        "size": 1329,
+        "mode": 420
+      },
+      {
+        "path": "dist/pinned-ws.d.ts.map",
+        "size": 651,
+        "mode": 420
+      },
+      {
+        "path": "dist/pinned-ws.js",
+        "size": 3090,
+        "mode": 420
+      },
+      {
+        "path": "dist/pinned-ws.js.map",
+        "size": 1922,
+        "mode": 420
+      },
+      {
+        "path": "dist/realtime.browser.d.ts",
+        "size": 599,
+        "mode": 420
+      },
+      {
+        "path": "dist/realtime.browser.d.ts.map",
+        "size": 471,
+        "mode": 420
+      },
+      {
+        "path": "dist/realtime.browser.js",
+        "size": 413,
+        "mode": 420
+      },
+      {
+        "path": "dist/realtime.browser.js.map",
+        "size": 304,
+        "mode": 420
+      },
+      {
+        "path": "dist/realtime.d.ts",
+        "size": 589,
+        "mode": 420
+      },
+      {
+        "path": "dist/realtime.d.ts.map",
+        "size": 454,
+        "mode": 420
+      },
+      {
+        "path": "dist/realtime.js",
+        "size": 645,
+        "mode": 420
+      },
+      {
+        "path": "dist/realtime.js.map",
+        "size": 471,
+        "mode": 420
+      },
+      {
+        "path": "dist/secure-client.d.ts",
+        "size": 7988,
+        "mode": 420
+      },
+      {
+        "path": "dist/secure-client.d.ts.map",
+        "size": 1658,
+        "mode": 420
+      },
+      {
+        "path": "dist/secure-client.js",
+        "size": 15420,
+        "mode": 420
+      },
+      {
+        "path": "dist/secure-client.js.map",
+        "size": 7673,
+        "mode": 420
+      },
+      {
+        "path": "dist/secure-fetch.d.ts",
+        "size": 690,
+        "mode": 420
+      },
+      {
+        "path": "dist/secure-fetch.d.ts.map",
+        "size": 335,
+        "mode": 420
+      },
+      {
+        "path": "dist/secure-fetch.js",
+        "size": 1683,
+        "mode": 420
+      },
+      {
+        "path": "dist/secure-fetch.js.map",
+        "size": 895,
+        "mode": 420
+      },
+      {
+        "path": "dist/tinfoil-ai.d.ts",
+        "size": 5999,
+        "mode": 420
+      },
+      {
+        "path": "dist/tinfoil-ai.d.ts.map",
+        "size": 2308,
+        "mode": 420
+      },
+      {
+        "path": "dist/tinfoil-ai.js",
+        "size": 7421,
+        "mode": 420
+      },
+      {
+        "path": "dist/tinfoil-ai.js.map",
+        "size": 4886,
+        "mode": 420
+      },
+      {
+        "path": "dist/unsafe.browser.d.ts",
+        "size": 183,
+        "mode": 420
+      },
+      {
+        "path": "dist/unsafe.browser.d.ts.map",
+        "size": 210,
+        "mode": 420
+      },
+      {
+        "path": "dist/unsafe.browser.js",
+        "size": 181,
+        "mode": 420
+      },
+      {
+        "path": "dist/unsafe.browser.js.map",
+        "size": 208,
+        "mode": 420
+      },
+      {
+        "path": "dist/unsafe.d.ts",
+        "size": 175,
+        "mode": 420
+      },
+      {
+        "path": "dist/unsafe.d.ts.map",
+        "size": 194,
+        "mode": 420
+      },
+      {
+        "path": "dist/unsafe.js",
+        "size": 173,
+        "mode": 420
+      },
+      {
+        "path": "dist/unsafe.js.map",
+        "size": 192,
+        "mode": 420
+      },
+      {
+        "path": "dist/unverified-client.d.ts",
+        "size": 668,
+        "mode": 420
+      },
+      {
+        "path": "dist/unverified-client.d.ts.map",
+        "size": 525,
+        "mode": 420
+      },
+      {
+        "path": "dist/unverified-client.js",
+        "size": 2856,
+        "mode": 420
+      },
+      {
+        "path": "dist/unverified-client.js.map",
+        "size": 1891,
+        "mode": 420
+      },
+      {
+        "path": "dist/verifier.d.ts",
+        "size": 75,
+        "mode": 420
+      },
+      {
+        "path": "dist/verifier.d.ts.map",
+        "size": 131,
+        "mode": 420
+      },
+      {
+        "path": "dist/verifier.js",
+        "size": 73,
+        "mode": 420
+      },
+      {
+        "path": "dist/verifier.js.map",
+        "size": 129,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 2745,
+        "mode": 420
+      }
+    ],
+    "entryCount": 81,
+    "bundled": []
+  },
+  {
+    "id": "@tinfoilsh/verifier@1.1.8",
+    "name": "@tinfoilsh/verifier",
+    "version": "1.1.8",
+    "size": 51068,
+    "unpackedSize": 196987,
+    "shasum": "5964160695f4ac3beef466cae379a8fbe8891511",
+    "integrity": "sha512-4L09Xr0SqVGzByzs3bnDqL4+U9kwgX8nmv2JMt4xydeTKjKtHZUosAt0jphtN7jT9h6mhfXhX0Yim5bCyEJc/Q==",
+    "filename": "tinfoilsh-verifier-1.1.8.tgz",
+    "files": [
+      {
+        "path": "README.md",
+        "size": 5013,
+        "mode": 420
+      },
+      {
+        "path": "dist/attestation.d.ts",
+        "size": 710,
+        "mode": 420
+      },
+      {
+        "path": "dist/attestation.d.ts.map",
+        "size": 409,
+        "mode": 420
+      },
+      {
+        "path": "dist/attestation.js",
+        "size": 4426,
+        "mode": 420
+      },
+      {
+        "path": "dist/attestation.js.map",
+        "size": 3315,
+        "mode": 420
+      },
+      {
+        "path": "dist/bundle.d.ts",
+        "size": 669,
+        "mode": 420
+      },
+      {
+        "path": "dist/bundle.d.ts.map",
+        "size": 278,
+        "mode": 420
+      },
+      {
+        "path": "dist/bundle.js",
+        "size": 4737,
+        "mode": 420
+      },
+      {
+        "path": "dist/bundle.js.map",
+        "size": 4156,
+        "mode": 420
+      },
+      {
+        "path": "dist/cert-verify.d.ts",
+        "size": 1291,
+        "mode": 420
+      },
+      {
+        "path": "dist/cert-verify.d.ts.map",
+        "size": 488,
+        "mode": 420
+      },
+      {
+        "path": "dist/cert-verify.js",
+        "size": 5144,
+        "mode": 420
+      },
+      {
+        "path": "dist/cert-verify.js.map",
+        "size": 3573,
+        "mode": 420
+      },
+      {
+        "path": "dist/client.d.ts",
+        "size": 719,
+        "mode": 420
+      },
+      {
+        "path": "dist/client.d.ts.map",
+        "size": 566,
+        "mode": 420
+      },
+      {
+        "path": "dist/client.js",
+        "size": 5133,
+        "mode": 420
+      },
+      {
+        "path": "dist/client.js.map",
+        "size": 3978,
+        "mode": 420
+      },
+      {
+        "path": "dist/dcode.d.ts",
+        "size": 312,
+        "mode": 420
+      },
+      {
+        "path": "dist/dcode.d.ts.map",
+        "size": 240,
+        "mode": 420
+      },
+      {
+        "path": "dist/dcode.js",
+        "size": 1354,
+        "mode": 420
+      },
+      {
+        "path": "dist/dcode.js.map",
+        "size": 1754,
+        "mode": 420
+      },
+      {
+        "path": "dist/errors.d.ts",
+        "size": 2719,
+        "mode": 420
+      },
+      {
+        "path": "dist/errors.d.ts.map",
+        "size": 825,
+        "mode": 420
+      },
+      {
+        "path": "dist/errors.js",
+        "size": 2892,
+        "mode": 420
+      },
+      {
+        "path": "dist/errors.js.map",
+        "size": 1109,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.d.ts",
+        "size": 715,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.d.ts.map",
+        "size": 603,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js",
+        "size": 480,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js.map",
+        "size": 452,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/cert-chain.d.ts",
+        "size": 890,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/cert-chain.d.ts.map",
+        "size": 819,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/cert-chain.js",
+        "size": 12332,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/cert-chain.js.map",
+        "size": 9094,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/certs.d.ts",
+        "size": 4779,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/certs.d.ts.map",
+        "size": 177,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/certs.js",
+        "size": 4832,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/certs.js.map",
+        "size": 289,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/constants.d.ts",
+        "size": 685,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/constants.d.ts.map",
+        "size": 570,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/constants.js",
+        "size": 1140,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/constants.js.map",
+        "size": 793,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/report.d.ts",
+        "size": 1449,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/report.d.ts.map",
+        "size": 1207,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/report.js",
+        "size": 9826,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/report.js.map",
+        "size": 8167,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/types.d.ts",
+        "size": 851,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/types.d.ts.map",
+        "size": 910,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/types.js",
+        "size": 80,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/types.js.map",
+        "size": 150,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/utils.d.ts",
+        "size": 455,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/utils.d.ts.map",
+        "size": 463,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/utils.js",
+        "size": 1945,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/utils.js.map",
+        "size": 2677,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/validation.d.ts",
+        "size": 1376,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/validation.d.ts.map",
+        "size": 1046,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/validation.js",
+        "size": 16180,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/validation.js.map",
+        "size": 11448,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/verify.d.ts",
+        "size": 449,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/verify.d.ts.map",
+        "size": 319,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/verify.js",
+        "size": 5438,
+        "mode": 420
+      },
+      {
+        "path": "dist/sev/verify.js.map",
+        "size": 3852,
+        "mode": 420
+      },
+      {
+        "path": "dist/sigstore-trusted-root.d.ts",
+        "size": 2072,
+        "mode": 420
+      },
+      {
+        "path": "dist/sigstore-trusted-root.d.ts.map",
+        "size": 239,
+        "mode": 420
+      },
+      {
+        "path": "dist/sigstore-trusted-root.js",
+        "size": 7694,
+        "mode": 420
+      },
+      {
+        "path": "dist/sigstore-trusted-root.js.map",
+        "size": 1902,
+        "mode": 420
+      },
+      {
+        "path": "dist/sigstore.d.ts",
+        "size": 675,
+        "mode": 420
+      },
+      {
+        "path": "dist/sigstore.d.ts.map",
+        "size": 292,
+        "mode": 420
+      },
+      {
+        "path": "dist/sigstore.js",
+        "size": 5433,
+        "mode": 420
+      },
+      {
+        "path": "dist/sigstore.js.map",
+        "size": 3068,
+        "mode": 420
+      },
+      {
+        "path": "dist/types.d.ts",
+        "size": 3060,
+        "mode": 420
+      },
+      {
+        "path": "dist/types.d.ts.map",
+        "size": 1802,
+        "mode": 420
+      },
+      {
+        "path": "dist/types.js",
+        "size": 3603,
+        "mode": 420
+      },
+      {
+        "path": "dist/types.js.map",
+        "size": 2796,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 1603,
+        "mode": 420
+      }
+    ],
+    "entryCount": 74,
+    "bundled": []
+  }
+]

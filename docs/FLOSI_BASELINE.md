@@ -1,5 +1,7 @@
 # Flosi — baseline reproducible y resultados
 
+> Registro histórico de `30037542` (fase inicial). La rama ya fue publicada en GitHub en la fase siguiente. Estado actual, cambios de dependencias y riesgos: [FLOSI_SECURITY_REVIEW.md](FLOSI_SECURITY_REVIEW.md); restricciones actualizadas: [FLOSI_LICENSES.md](FLOSI_LICENSES.md). Los resultados de este documento conservan las versiones y condiciones de la auditoría original.
+
 Auditoría: **28 de octubre de 2026, America/New_York**. Los logs usan UTC, ya 29 de octubre. Se ha investigado y probado código; no se declara paridad completa ni preparación para distribuir un producto comercial.
 
 ## Identidad exacta y preservación del trabajo

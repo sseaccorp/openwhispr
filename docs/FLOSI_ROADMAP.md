@@ -61,3 +61,17 @@ flowchart TD
 ## ¿Listos para el rediseño?
 
 **Listos para planificarlo con estos límites; todavía no para iniciarlo como baseline de producción aceptada.** Antes deben cerrarse la aceptación local Windows, los resultados pendientes de pruebas, el triage de seguridad y las decisiones legales sobre dependencias/recursos. No se necesita una reescritura: el camino recomendado conserva la base técnica y abre la nueva UI cuando esas puertas sean verificables.
+
+## Actualización de preparación Windows — 29 de octubre de 2026
+
+La auditoría `30037542` está preservada en la rama publicada `codex/flosi-baseline` y el [PR borrador #1 del propio fork](https://github.com/sseaccorp/openwhispr/pull/1), dirigido a `flosi/upstream-v1.10.4` para conservar la versión de referencia. No se integra con main 1.11.0 ni se hace merge. Se aplicaron únicamente actualizaciones acotadas de Undici, Zod y Happy DOM; las decisiones de runtime/autenticación no se ejecutaron. Ver [revisión de seguridad](FLOSI_SECURITY_REVIEW.md), [matriz de licencias](FLOSI_LICENSES.md) y [procedimiento PowerShell para RTX 3050 Ti de 4 GB](FLOSI_WINDOWS_QA.md).
+
+Bloqueos reales antes de una baseline de producción/rediseño aceptado:
+
+- **P0 seguridad:** Electron 41.10.7 mantiene una alta aplicable a conexiones TLS. Proponer y autorizar migración separada a 42.11.16 o versión corregida revisada; requiere nueva ABI y QA nativa. Better Auth mantiene metadata crítica de servidor sin ruta local encontrada, pero no puede darse por segura la infraestructura de cuentas no auditada. No habilitar cuentas/cloud con datos reales en esta candidata.
+- **P0 derechos de distribución:** cerrar ambigüedad Tinfoil npm AGPL frente a licencia raíz Apache; cumplimiento GPL de FFmpeg/yt-dlp, paquete/condiciones NirCmd y derechos Nucleo/Yowza/assets. No se ha retirado ni reemplazado componente alguno.
+- **P0 aceptación Windows:** completar micrófono, hotkeys, pegado incluyendo ChatGPT sin enviar mensajes, WASAPI/reuniones, precisión/latencia ES/EN, CUDA y VRAM de 4 GB, estabilidad y recuperación. Los resultados cloud de mocks no satisfacen este gate.
+- **P0 aislamiento:** ejecutar QA con datos ficticios en instancia Windows independiente; cuentas ASCII/TEMP privado aportan guardas operativas, no aislamiento completo del kernel/loopback. Antes de coexistencia ordinaria, diseñar namespaces e identidad propios con migración/rollback sin tocar perfiles oficiales.
+- **P1 reproducibilidad/distribución:** congelar versiones/hashes de sidecars/modelos mutables y auditar el paquete Windows real. Firma, updater, OAuth y dominios propios quedan para fase autorizada; no publicar con identidades upstream.
+
+La UI y motores siguen intactos. Estas puertas permiten planificar el diseño sin exigir una reescritura, pero la candidata no está certificada para producción ni distribución comercial.
