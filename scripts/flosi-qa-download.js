@@ -24,17 +24,20 @@ function verifiedHost(value) {
   return url;
 }
 
-async function responseFor(value, redirects = 0) {
+async function responseFor(value, redirects = 0, signal) {
   if (redirects > 6) throw new Error("Too many QA download redirects");
   const url = verifiedHost(value);
   return new Promise((resolve, reject) => {
     const request = https.get(
       url,
-      { headers: { "User-Agent": "Flosi-QA-Preparation" } },
+      { headers: { "User-Agent": "Flosi-QA-Preparation" }, signal },
       (response) => {
         if ([301, 302, 303, 307, 308].includes(response.statusCode)) {
           response.resume();
-          responseFor(new URL(response.headers.location, url), redirects + 1).then(resolve, reject);
+          responseFor(new URL(response.headers.location, url), redirects + 1, signal).then(
+            resolve,
+            reject
+          );
         } else if (response.statusCode !== 200) {
           response.resume();
           reject(
@@ -50,7 +53,8 @@ async function responseFor(value, redirects = 0) {
   });
 }
 
-async function downloadPinned(record, destination) {
+async function downloadPinned(record, destination, { signal } = {}) {
+  signal?.throwIfAborted();
   verifiedHost(record.url);
   if (
     !/^[a-f0-9]{64}$/.test(record.sha256) ||
@@ -67,14 +71,14 @@ async function downloadPinned(record, destination) {
   const part = `${destination}.part`;
   if (fs.existsSync(part))
     throw new Error("An incomplete QA download exists; inspect and rename it before retrying");
-  const response = await responseFor(record.url);
+  const response = await responseFor(record.url, 0, signal);
   // Limit even a compromised source to the pinned size and hash.
   let received = 0;
   response.on("data", (chunk) => {
     received += chunk.length;
     if (received > record.size) response.destroy(new Error("QA download exceeds pinned size"));
   });
-  await pipeline(response, fs.createWriteStream(part, { flags: "wx" }));
+  await pipeline(response, fs.createWriteStream(part, { flags: "wx" }), { signal });
   if (received !== record.size || hashFile(part) !== record.sha256)
     throw new Error("QA artifact integrity check failed; retained .part for investigation");
   fs.renameSync(part, destination);
@@ -101,4 +105,71 @@ async function extractPinnedZip(archive, destination) {
   await directory.extract({ path: destination });
 }
 
-module.exports = { hashFile, verifiedHost, downloadPinned, extractPinnedZip };
+// The upstream packages are tar.bz2. Extract only regular files/directories,
+// never links/devices; validate even skipped names before touching the disk.
+async function extractPinnedTarBz2(
+  archive,
+  destination,
+  { select = () => true, maxBytes = 1024 ** 3 } = {}
+) {
+  if (fs.existsSync(destination)) throw new Error("Existing staging directory preserved");
+  fs.mkdirSync(destination, { recursive: true });
+  let total = 0;
+  const seen = new Set();
+  const parser = new (require("tar").Parser)({
+    strict: true,
+    onReadEntry(entry) {
+      let fd;
+      try {
+        const name = entry.path.replace(/\/$/, "");
+        const target = path.resolve(destination, name);
+        if (
+          !name ||
+          /[\\:]/.test(name) ||
+          path.isAbsolute(name) ||
+          !contains(destination, target) ||
+          name.split("/").some((p) => p === "..")
+        )
+          throw new Error("Unsafe TAR path");
+        if (!select(name)) {
+          entry.resume();
+          return;
+        }
+        if (!["File", "Directory"].includes(entry.type)) throw new Error("Unsafe TAR link/device");
+        if (seen.has(name.toLowerCase())) throw new Error("Duplicate TAR entry");
+        seen.add(name.toLowerCase());
+        total += entry.size;
+        if (!Number.isSafeInteger(total) || total > maxBytes)
+          throw new Error("TAR exceeds extraction budget");
+        if (entry.type === "Directory") fs.mkdirSync(target, { recursive: true });
+        else {
+          fs.mkdirSync(path.dirname(target), { recursive: true });
+          fd = fs.openSync(target, "wx", 0o600);
+          entry.on("data", (chunk) => {
+            try {
+              fs.writeSync(fd, chunk);
+            } catch (error) {
+              parser.abort(error);
+            }
+          });
+          const close = () => {
+            parser.removeListener("error", close);
+            if (fd !== undefined) {
+              fs.closeSync(fd);
+              fd = undefined;
+            }
+          };
+          entry.once("end", close);
+          parser.once("error", close);
+        }
+        entry.resume();
+      } catch (error) {
+        entry.resume();
+        parser.abort(error);
+      }
+    },
+  });
+  await pipeline(fs.createReadStream(archive), require("unbzip2-stream")(), parser);
+}
+
+module.exports = { hashFile, verifiedHost, downloadPinned, extractPinnedZip, extractPinnedTarBz2 };

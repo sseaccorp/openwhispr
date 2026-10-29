@@ -1,0 +1,142 @@
+[
+  {
+    "name": "npm-ci",
+    "command": "NODE_USE_ENV_PROXY=1 XDG_CACHE_HOME=/workspace/.cache npm_config_devdir=/workspace/work/flosi-orukeet-audit/node-gyp npm ci --cache /workspace/.cache/npm --no-audit --no-fund --fetch-retries=0 --fetch-timeout=30000",
+    "cwd": "/workspace/work/flosi-orukeet",
+    "started_utc": "2026-10-29T22:35:34.242544+00:00",
+    "seconds": 20.79,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-orukeet-audit/logs/npm-ci.log",
+    "logSha256": "5e8266d08021653af4afb1ee891f8ccc713d436b7781d48213df97a979f75739"
+  },
+  {
+    "name": "sqlite-node",
+    "command": "npm rebuild better-sqlite3 --cache /workspace/.cache/npm",
+    "cwd": "/workspace/work/flosi-orukeet",
+    "started_utc": "2026-10-29T22:42:50.550403+00:00",
+    "seconds": 0.65,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-orukeet-audit/logs/sqlite-node.log",
+    "logSha256": "e567eb0a69b135c21d7392937e2c73416d37b8ccdd76a65330ac0f99526b5fc6"
+  },
+  {
+    "name": "typecheck",
+    "command": "npm run typecheck",
+    "cwd": "/workspace/work/flosi-orukeet",
+    "started_utc": "2026-10-29T22:47:32.697416+00:00",
+    "seconds": 84.4,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-orukeet-audit/logs/typecheck.log",
+    "logSha256": "d2cd934547757e2d706fcc2e97bbd1d5d4cdff5be8832000f91c9ada1cf0536c"
+  },
+  {
+    "name": "build-frontend",
+    "command": "npm run build:renderer",
+    "cwd": "/workspace/work/flosi-orukeet",
+    "started_utc": "2026-10-29T22:48:57.229909+00:00",
+    "seconds": 11.89,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-orukeet-audit/logs/build-frontend.log",
+    "logSha256": "2826d0cc5a1d819f9a565d93359cfd7cfc7d554216bfe204d08936949018a81f"
+  },
+  {
+    "name": "actual-preparation-2",
+    "command": "node /workspace/work/flosi-orukeet-audit/prepare-real.cjs",
+    "cwd": "/workspace/work/flosi-orukeet",
+    "started_utc": "2026-10-29T22:47:29.483330+00:00",
+    "seconds": 276.05,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-orukeet-audit/logs/actual-preparation-2.log",
+    "logSha256": "32378153be056b430d8e108b3dcfc0e15a7b6242790bf4f27ade6a9d15603016"
+  },
+  {
+    "name": "downloader-live",
+    "command": "NODE_USE_ENV_PROXY=1 node -e 'const {downloadPinned}=require(\"./scripts/flosi-qa-download\");const p=require(\"./scripts/flosi-qa-orukeet-artifacts.json\");(async()=>{for(const k of [\"runtime\",\"modelManifest\"])await downloadPinned(p[k],\"/workspace/work/flosi-orukeet-audit/http-\"+k);console.log(\"Pinned HTTPS download and redirect/hash checks passed\")})().catch(e=>{console.error(e);process.exitCode=1})'",
+    "cwd": "/workspace/work/flosi-orukeet",
+    "started_utc": "2026-10-29T22:56:25.284099+00:00",
+    "seconds": 1.62,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-orukeet-audit/logs/downloader-live.log",
+    "logSha256": "133a17373097d36211d9877113c9481ae2362e942266727680f5e86d1399ba90"
+  },
+  {
+    "name": "focused-complete",
+    "command": "TMPDIR=/workspace/work/flosi-orukeet-audit/tmp node --import tsx --test --test-concurrency=4 --test-reporter=tap test/helpers/flosiQaOrukeet.test.js test/helpers/flosiQaIsolation.test.js test/helpers/parakeetWsStartup.test.js test/scripts/peImports.test.js",
+    "cwd": "/workspace/work/flosi-orukeet",
+    "started_utc": "2026-10-29T23:01:42.312540+00:00",
+    "seconds": 5.42,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-orukeet-audit/logs/focused-complete.log",
+    "logSha256": "922bb7f88d734868a732cb97807ec7f4567b5374c0a4ac46103d51ef4513c940"
+  },
+  {
+    "name": "actual-native-manager",
+    "command": "TMPDIR=/workspace/work/flosi-orukeet-audit/tmp LD_LIBRARY_PATH=/workspace/work/flosi-orukeet-audit/real/linux FLOSI_ORUKEET_NATIVE_ROOT=/workspace/work/flosi-orukeet-audit/real node --test --test-reporter=tap test/helpers/flosiQaOrukeetNative.test.js",
+    "cwd": "/workspace/work/flosi-orukeet",
+    "started_utc": "2026-10-29T23:03:18.502129+00:00",
+    "seconds": 62.97,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-orukeet-audit/logs/actual-native-manager.log",
+    "logSha256": "acec0b148c853edfdf3028f82eee81f09e9cf8093e994f63ff33ef8e67559f6b"
+  },
+  {
+    "name": "quality-check",
+    "command": "npm run quality-check",
+    "cwd": "/workspace/work/flosi-orukeet",
+    "started_utc": "2026-10-29T23:01:18.696572+00:00",
+    "seconds": 193.2,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-orukeet-audit/logs/quality-check.log",
+    "logSha256": "8365f384d8b5476c5dc26e8db08b82c27a0aeafbaad180f18ae64c094f9cae22"
+  },
+  {
+    "name": "powershell-policy-final",
+    "command": "TMPDIR=/workspace/work/flosi-orukeet-audit/tmp XDG_DATA_HOME=/workspace/work/flosi-orukeet-audit/powershell-data XDG_CONFIG_HOME=/workspace/work/flosi-orukeet-audit/powershell-config XDG_CACHE_HOME=/workspace/work/flosi-orukeet-audit/powershell-cache /workspace/work/flosi-orukeet-audit/powershell/pwsh -NoProfile -NonInteractive -File test/scripts/flosiQaFirewallPolicy.ps1",
+    "cwd": "/workspace/work/flosi-orukeet",
+    "started_utc": "2026-10-29T23:08:32.982557+00:00",
+    "seconds": 1.9,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-orukeet-audit/logs/powershell-policy-final.log",
+    "logSha256": "13efe153b8752167c0b21c506fe770d1ceb152c7556ace2ccaea634f59f907a2"
+  },
+  {
+    "name": "full-regression",
+    "command": "TMPDIR=/workspace/work/flosi-orukeet-audit/tmp REQUIRE_DB_TESTS=1 node --import tsx --test --test-concurrency=4 --test-reporter=tap \"test/**/*.test.js\"",
+    "cwd": "/workspace/work/flosi-orukeet",
+    "started_utc": "2026-10-29T22:47:04.188540+00:00",
+    "seconds": 1357.6,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-orukeet-audit/logs/full-regression.log",
+    "logSha256": "ade1e9b9967d43e0cb4339f74a91dd96657d9237e353b780a81806c1115344e3"
+  },
+  {
+    "name": "diagnostic-followup-tests",
+    "command": "TMPDIR=/workspace/work/flosi-orukeet-audit/tmp node --import tsx --test --test-concurrency=4 --test-reporter=tap test/helpers/flosiQaOrukeet.test.js test/helpers/flosiQaIsolation.test.js test/helpers/parakeetWsStartup.test.js test/scripts/peImports.test.js",
+    "cwd": "/workspace/work/flosi-orukeet",
+    "started_utc": "2026-10-29T23:14:19.143694+00:00",
+    "seconds": 1.21,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-orukeet-audit/logs/diagnostic-followup-tests.log",
+    "logSha256": "0c0afbecb6b1660960df58128e5d6d9a23ba609d85262c8bfdd1a9be9631570e"
+  },
+  {
+    "name": "diagnostic-followup-eslint",
+    "command": "node node_modules/eslint/bin/eslint.js scripts/flosi-qa.js test/helpers/flosiQaOrukeet.test.js && cd src && node ../node_modules/eslint/bin/eslint.js helpers/flosiQa/orukeet.js",
+    "cwd": "/workspace/work/flosi-orukeet",
+    "started_utc": "2026-10-29T23:14:20.384431+00:00",
+    "seconds": 1.06,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-orukeet-audit/logs/diagnostic-followup-eslint.log",
+    "logSha256": "029f911b7ae07482eba006363fbd736c240397870009f2c10314f6ab2f57b971"
+  },
+  {
+    "name": "helpers-eslint-explicit",
+    "command": "node node_modules/eslint/bin/eslint.js --no-ignore src/helpers/flosiQa/orukeet.js src/helpers/flosiQa/bootstrap.js src/helpers/parakeetWsServer.js",
+    "cwd": "/workspace/work/flosi-orukeet",
+    "started_utc": "2026-10-29T23:15:16.805030+00:00",
+    "seconds": 0.91,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-orukeet-audit/logs/helpers-eslint-explicit.log",
+    "logSha256": "b21dae1779f873881935c59190029df70ef020b21be4b7e76f40dd7957fc824e"
+  }
+]

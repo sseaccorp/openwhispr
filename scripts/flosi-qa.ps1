@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param(
-    [ValidateSet('Prepare', 'Check', 'Run', 'Report')]
+    [ValidateSet('Prepare', 'AddOrukeet', 'Check', 'Run', 'Report')]
     [string]$Action = 'Check',
     [string]$DataRoot = '',
     [switch]$Cuda,

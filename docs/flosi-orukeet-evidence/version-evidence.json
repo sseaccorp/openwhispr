@@ -1,0 +1,67 @@
+{
+  "base": "ba6d61820b4c56d7b08012c61c2ae6b43f3152f3",
+  "v111": "b9e9ebefac4b961456c269164a93ddfdd53438b9",
+  "files": [
+    {
+      "path": "src/helpers/parakeet.js",
+      "baseSha256": "aa0cae10df9f7d3e5bcffde9d557f4e15d92501750f79cae0284ef989ce4bdf8",
+      "v111Sha256": "aa0cae10df9f7d3e5bcffde9d557f4e15d92501750f79cae0284ef989ce4bdf8",
+      "equal": true
+    },
+    {
+      "path": "src/helpers/parakeetServer.js",
+      "baseSha256": "383aebe5b204527a50072a8473ac69b50869199dff7ce1cc887cf4a262395c59",
+      "v111Sha256": "383aebe5b204527a50072a8473ac69b50869199dff7ce1cc887cf4a262395c59",
+      "equal": true
+    },
+    {
+      "path": "src/helpers/parakeetWsServer.js",
+      "baseSha256": "cc613892759a7668a392f05e7b322f825be81ec06dce5469ece5ca4f9686b1e0",
+      "v111Sha256": "cc613892759a7668a392f05e7b322f825be81ec06dce5469ece5ca4f9686b1e0",
+      "equal": true
+    },
+    {
+      "path": "src/helpers/parakeetSegmentation.js",
+      "baseSha256": "99640b0c23919e35a77790288b521cac15c786a14ec482108c4de4b1c700853e",
+      "v111Sha256": "99640b0c23919e35a77790288b521cac15c786a14ec482108c4de4b1c700853e",
+      "equal": true
+    },
+    {
+      "path": "src/helpers/parakeetModelInfo.js",
+      "baseSha256": "c11f0ac627ee95cb5f86254b1f4b30da19a40f2db8289cf9cec20664fc771098",
+      "v111Sha256": "c11f0ac627ee95cb5f86254b1f4b30da19a40f2db8289cf9cec20664fc771098",
+      "equal": true
+    },
+    {
+      "path": "src/helpers/orukeetStreaming.js",
+      "baseSha256": "939c2e9da0573936fa1c55e71d7b3c72cccb691a4d80dd4ff44607fbc69c8f31",
+      "v111Sha256": "939c2e9da0573936fa1c55e71d7b3c72cccb691a4d80dd4ff44607fbc69c8f31",
+      "equal": true
+    },
+    {
+      "path": "src/helpers/orukeetProtocol.js",
+      "baseSha256": "81b47d45246f2265c52d69d21db91a68607ee1b137643242debc5080e279366e",
+      "v111Sha256": "81b47d45246f2265c52d69d21db91a68607ee1b137643242debc5080e279366e",
+      "equal": true
+    },
+    {
+      "path": "src/helpers/orukeetCloudSession.js",
+      "baseSha256": "b5c7ad30a3e3391c9920cac0c00502c62365bf3ee0838acce9d12fda8686021d",
+      "v111Sha256": "b5c7ad30a3e3391c9920cac0c00502c62365bf3ee0838acce9d12fda8686021d",
+      "equal": true
+    },
+    {
+      "path": "scripts/download-sherpa-onnx.js",
+      "baseSha256": "62c444cd8d2a7fc42efb382fd485daf535ab5e091a0b720d32e6e230f7bc0c09",
+      "v111Sha256": "62c444cd8d2a7fc42efb382fd485daf535ab5e091a0b720d32e6e230f7bc0c09",
+      "equal": true
+    },
+    {
+      "path": "src/models/modelRegistryData.json",
+      "baseSha256": "f6d9eabf7465e3ffd5fd0c420b460481c1fb53bf9eeeefdcd2ac0b3cac3fa25b",
+      "v111Sha256": "c7810c094669cb4174947a0b630a7d95f63ea1513deb74c050408b756503ce3c",
+      "equal": false
+    }
+  ],
+  "orukeetRegistryEqual": true
+}

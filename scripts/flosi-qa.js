@@ -106,6 +106,7 @@ function saveManifest(paths, sourceCommit) {
     ...[
       path.join(paths.cache, "whisper-models"),
       path.join(paths.cache, "models"),
+      path.join(paths.cache, "parakeet-models"),
       path.join(paths.userData, "bin"),
     ]
       .flatMap(walkFiles)
@@ -121,6 +122,9 @@ function saveManifest(paths, sourceCommit) {
     sourceCommit,
     files,
     sources: pins,
+    optionalSources: fs.existsSync(path.join(paths.root, "orukeet.json"))
+      ? require("./flosi-qa-orukeet-artifacts.json")
+      : undefined,
     preparedAt: new Date().toISOString(),
   };
   const target = path.join(paths.root, "artifacts.json");
@@ -130,9 +134,9 @@ function saveManifest(paths, sourceCommit) {
 
 async function main() {
   const mode = process.argv[2];
-  if (!["prepare", "check", "run", "report"].includes(mode))
+  if (!["prepare", "addorukeet", "check", "run", "report"].includes(mode))
     throw new Error(
-      "Usage: node scripts/flosi-qa.js prepare|check|run|report [--root PATH] [--cuda] [--local-ai]"
+      "Usage: node scripts/flosi-qa.js prepare|addorukeet|check|run|report [--root PATH] [--cuda] [--local-ai]"
     );
   if (process.platform !== "win32" || process.arch !== "x64")
     throw new Error("The launcher requires Windows x64. Automated policy tests can run on Linux.");
@@ -195,6 +199,38 @@ async function main() {
   const lockHash = hashFile(path.join(repo, "package-lock.json"));
   if (lockHash !== "9dfb56d340c4e7490ea88a0d819dd38ad273a788ea10ab0431d913369ea97a92")
     throw new Error("QA dependency lock differs from the audited baseline");
+  if (mode === "addorukeet") {
+    // Validate all existing hashes, including old renderer. Source changes are
+    // accepted only here, with a clean reviewed descendant and unchanged lock.
+    const previous = verifyArtifacts(repo, paths, "provisioning");
+    if (!/^[a-f0-9]{40}$/.test(previous.sourceCommit))
+      throw new Error("Invalid previous QA source identity");
+    git("merge-base", "--is-ancestor", "a31a82182d8bda46c4aae5853098ea77185cfdba", "HEAD");
+    git("merge-base", "--is-ancestor", previous.sourceCommit, "HEAD");
+    if (!fs.existsSync(path.join(repo, "node_modules", "electron", "dist", "electron.exe")))
+      throw new Error(
+        "AddOrukeet requires your existing prepared QA checkout; no dependency reinstall is performed"
+      );
+    const { prepareOrukeet, diskBudget } = require("./flosi-qa-orukeet");
+    console.log(
+      `Optional Orukeet only: 486807585-byte model + 19164933-byte runtime. Conservative free-space budget ${(diskBudget() / 1024 ** 3).toFixed(2)} GiB including 4 GiB reserve. Existing QA preferences, Whisper and credentials are preserved.`
+    );
+    await prepareOrukeet(repo, paths);
+    require("../src/helpers/flosiQa/orukeet").checkNativeDependencies(
+      path.join(repo, "resources", "bin", "sherpa-onnx-ws-win32-x64.exe"),
+      paths,
+      toolEnv,
+      { log }
+    );
+    command(process.execPath, [npmCli, "run", "build:renderer"], toolEnv, log);
+    const backup = path.join(paths.logs, `artifacts-before-orukeet-${Date.now()}.json`);
+    fs.copyFileSync(path.join(paths.root, "artifacts.json"), backup, fs.constants.COPYFILE_EXCL);
+    saveManifest(paths, git("rev-parse", "HEAD"));
+    console.log(
+      "Orukeet provisioned. Before Check/Run, explicitly install its dedicated firewall rules from an elevated PowerShell. The application itself must run without elevation."
+    );
+    return;
+  }
   if (mode === "prepare") {
     const cuda = process.argv.includes("--cuda");
     const localAi = process.argv.includes("--local-ai");
@@ -245,6 +281,8 @@ async function main() {
     saveManifest(paths, git("rev-parse", "HEAD"));
   }
   verifyArtifacts(repo, paths);
+  if (fs.existsSync(path.join(paths.root, "orukeet.json")))
+    require("../src/helpers/flosiQa/orukeet").verifyOrukeet(repo, paths);
   const electronPackage = require(path.join(repo, "node_modules", "electron", "package.json"));
   if (electronPackage.version !== "41.10.7")
     throw new Error("Electron does not match the audited lock");

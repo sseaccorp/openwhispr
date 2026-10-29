@@ -1,5 +1,7 @@
 # Flosi QA — prueba controlada en tu usuario habitual
 
+> **Actualización Orukeet, 29 de octubre de 2026:** La ampliación opcional desde el checkout validado `a31a8218` está en [FLOSI_ORUKEET_WINDOWS.md](FLOSI_ORUKEET_WINDOWS.md). Usar `AddOrukeet`, sin reinstalar ni cambiar la selección automáticamente. Incluye protección nativa obligatoria porque sherpa escucha IPv4 ANY; no habilitarlo solo copiando el modelo. La referencia oficial comunicada ahora es v1.11.0, no v1.10.4; seguir [la comparación entre versiones](FLOSI_VERSION_COMPARISON.md).
+
 Windows 11 x64, **Node 24.19.0, npm 11.17.0**, Git, RTX 3050 Ti 4 GB. Esta guía sustituye **para la modalidad QA de esta rama** la exigencia anterior de otra cuenta/VM. No valida Windows desde Linux, no declara aislamiento absoluto y no autoriza distribución. Los procedimientos históricos se conservan en [FLOSI_WINDOWS_QA.md](FLOSI_WINDOWS_QA.md).
 
 ## Antes de empezar

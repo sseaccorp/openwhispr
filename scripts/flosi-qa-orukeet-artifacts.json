@@ -1,0 +1,91 @@
+{
+  "schema": 1,
+  "modelId": "orukeet-v0.1.0",
+  "revision": "55a984d46f68323301837194ce647c702f55facc",
+  "license": "CC-BY-SA-4.0",
+  "model": {
+    "id": "orukeet-v0.1.0",
+    "url": "https://huggingface.co/oruk/orukeet/resolve/55a984d46f68323301837194ce647c702f55facc/onnx/sherpa-onnx-orukeet-v0.1.0-int8.tar.bz2",
+    "size": 486807585,
+    "sha256": "f9191f30178cc9122ce2f023bf9fefafc822028307b0efa4caff645ba3fe8d0a"
+  },
+  "modelManifest": {
+    "url": "https://huggingface.co/oruk/orukeet/resolve/55a984d46f68323301837194ce647c702f55facc/onnx/manifest.json",
+    "size": 1867,
+    "sha256": "7e80f93f0e9b923c392424b0f85d28a717feee0a4d2a6aa9bfa723693868e727"
+  },
+  "modelFiles": [
+    {
+      "path": "encoder.int8.onnx",
+      "bytes": 653182378,
+      "sha256": "7b55f2a504a20a8e462899f5befd45f4a1784948d76ed0127902d9cf39405487"
+    },
+    {
+      "path": "decoder.int8.onnx",
+      "bytes": 11845332,
+      "sha256": "c185c2afb4c77c94bb1314807ecb3dc1623057a3dc540b83e10301af9bf4cfca"
+    },
+    {
+      "path": "joiner.int8.onnx",
+      "bytes": 6355335,
+      "sha256": "1a7e90abf7172d926dd7e2edac2a5d5035c24dfb641a15e131d57b6a5f63cdd3"
+    },
+    {
+      "path": "tokens.txt",
+      "bytes": 93939,
+      "sha256": "d58544679ea4bc6ac563d1f545eb7d474bd6cfa467f0a6e2c1dc1c7d37e3c35d"
+    },
+    {
+      "path": "bpe.vocab",
+      "bytes": 117408,
+      "sha256": "41d5e71b3591642eff088151efd7acd4e750124cc0054c8ba9fa3245187a4804"
+    },
+    {
+      "path": "LICENSE-WEIGHTS",
+      "bytes": 20137,
+      "sha256": "23ee78c8bae49cf08ea2f0c84945c66b987ebe4520881fb51b3dad4fb43d07c2"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 5271,
+      "sha256": "440361d963edd9621e744f251332b47f2c4de2e2594ecfe42b215e3f6223fa44"
+    }
+  ],
+  "extractDir": "sherpa-onnx-orukeet-v0.1.0-int8",
+  "runtimeVersion": "1.13.8",
+  "runtimeSourceCommit": "11afbd009a7f8c08f4bcf2fc1b265d0df4670fbf",
+  "runtime": {
+    "id": "sherpa-onnx-1.13.8-no-tts-win-x64",
+    "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/v1.13.8/sherpa-onnx-v1.13.8-win-x64-shared-MD-Release-no-tts.tar.bz2",
+    "size": 19164933,
+    "sha256": "876e6b89b8cf84a3a1b375a397507f2cfe9c227c2a945411a11a668475fcb5d3"
+  },
+  "runtimeFiles": [
+    {
+      "archivePath": "sherpa-onnx-v1.13.8-win-x64-shared-MD-Release-no-tts/bin/sherpa-onnx-offline-websocket-server.exe",
+      "file": "sherpa-onnx-ws-win32-x64.exe",
+      "size": 2368000,
+      "sourceSha256": "c4d7e871df2ae62234292459c6548e3c828e8ff89ec831a4265011bf90cd2e0b",
+      "installedSha256": "0da44b557649818b381221434c3610239c475dc9d9c822c6e91f8bc74db4384e"
+    },
+    {
+      "archivePath": "sherpa-onnx-v1.13.8-win-x64-shared-MD-Release-no-tts/bin/onnxruntime.dll",
+      "file": "ow-onnxrt.dll",
+      "size": 17136128,
+      "sourceSha256": "422d776ab0e3218260f7f628fcb84606aaa5c21116f720c8619a6da5e0b2e0f9",
+      "installedSha256": "422d776ab0e3218260f7f628fcb84606aaa5c21116f720c8619a6da5e0b2e0f9"
+    },
+    {
+      "archivePath": "sherpa-onnx-v1.13.8-win-x64-shared-MD-Release-no-tts/bin/onnxruntime_providers_shared.dll",
+      "file": "onnxruntime_providers_shared.dll",
+      "size": 10752,
+      "sourceSha256": "0190137dee4933261c065c5d030c3568a68c7aa43cad942b4726a07011738bc2",
+      "installedSha256": "0190137dee4933261c065c5d030c3568a68c7aa43cad942b4726a07011738bc2"
+    }
+  ],
+  "evidence": {
+    "modelArchiveHash": "Hugging Face LFS API at pinned revision and pinned ONNX manifest; independently downloaded and hashed 2026-10-29",
+    "runtimeArchiveHash": "GitHub release asset digest; independently downloaded and hashed 2026-10-29",
+    "peTransform": "Existing scripts/lib/pe-imports.js renameImportedModule: onnxruntime.dll -> ow-onnxrt.dll (upstream Windows 11 loader fix)"
+  }
+}

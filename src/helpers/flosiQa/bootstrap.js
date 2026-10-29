@@ -68,6 +68,8 @@ function initialize(electron) {
   process.env.CUDA_CACHE_PATH = path.join(paths.cache, "cuda");
   process.env.PSModuleAnalysisCachePath = path.join(paths.cache, "powershell-module-analysis");
   process.env.XDG_CACHE_HOME = path.join(paths.cache, "xdg");
+  if (fs.existsSync(path.join(paths.root, "orukeet.json")))
+    require("./orukeet").verifyOrukeet(repo, paths);
   process.env.LOCAL_TRANSCRIPTION_PROVIDER = "whisper";
   process.env.LOCAL_WHISPER_MODEL = "base";
   process.chdir(paths.root);
