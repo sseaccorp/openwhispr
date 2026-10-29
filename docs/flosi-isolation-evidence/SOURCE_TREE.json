@@ -1,0 +1,142 @@
+{
+  "source_commit": "ca04c5b305175e8684f45d5a883cdd2c65b81a9c",
+  "baseline": "323923f963987a50913fbd3ba21f4fdf7b122cbc",
+  "files": [
+    {
+      "path": "flosi-qa-checkout.json",
+      "sha256": "aaa49537bffda960127db8cf5d2d4c37ad863ae6acdfef5271da8d79c5dcfdfc"
+    },
+    {
+      "path": "main.js",
+      "sha256": "246777466737d640c6eefa1bfc6c9b9aa652faba47d08854768f2a32552c48c0"
+    },
+    {
+      "path": "package.json",
+      "sha256": "6e72b4e994d0706714bdeb2e2f9b7d31d5e508a2db9658b21780a4d4b8187b6c"
+    },
+    {
+      "path": "preload.js",
+      "sha256": "949e9994bca8f23e39f3ee3967584384d670432c13691d544544d96f854ba601"
+    },
+    {
+      "path": "scripts/flosi-qa-artifacts.json",
+      "sha256": "05cc81ad53ec1045643dd7e1087ce3890af3cd8a48c7bf3f12bc6e43f6a87db9"
+    },
+    {
+      "path": "scripts/flosi-qa-download.js",
+      "sha256": "cb13d944137b031b20a1e48f3fdd3291ed3288c87e267d75a389e278c32ce810"
+    },
+    {
+      "path": "scripts/flosi-qa.js",
+      "sha256": "38e5af0a9792f63935e37f74ce5ef180f36a2fb31a8c9d754117cd672a1535b9"
+    },
+    {
+      "path": "scripts/flosi-qa.ps1",
+      "sha256": "b1d25f19ef3f484f47dcfb241bc2f43377eb3ed4d8a5ef6cd75fb1bc1eb9ff58"
+    },
+    {
+      "path": "scripts/require-safe-entry.js",
+      "sha256": "be7f249bd3d5ead00a82d9d8c5dc761d5aceb932c379448827ca18ab402ca457"
+    },
+    {
+      "path": "src/helpers/autoStart.js",
+      "sha256": "47ca927f12b46b73c76a64bdca1a8d4b38cff2b6fb46bfbb5ccf28f0711eb875"
+    },
+    {
+      "path": "src/helpers/cliBridge.js",
+      "sha256": "0a84aebcdff530477349a530e33770433367902335460d941da3528a203b629e"
+    },
+    {
+      "path": "src/helpers/environment.js",
+      "sha256": "6c155d4b5455158cc756a9f87705165ade407f2d11aba7eef84afa1b3bb6b405"
+    },
+    {
+      "path": "src/helpers/externalUrlOpener.js",
+      "sha256": "678f60c1c95d728d3b9ec86f6bb9db8b2ecfb1874b856e64875f50ad05375181"
+    },
+    {
+      "path": "src/helpers/flosiQa/bootstrap.js",
+      "sha256": "04ac945802c94e0f6f0b5555ff93d40a0cf319deb455609d237f123b3a22117d"
+    },
+    {
+      "path": "src/helpers/flosiQa/checkoutGuard.js",
+      "sha256": "20ac8d5c5adf806c7635e1eacf63163f59e1f877d51bcc2bc9c30ec4691e075d"
+    },
+    {
+      "path": "src/helpers/flosiQa/identity.js",
+      "sha256": "5367368c11fe4fdafad3d3208a942e16bd7cc003868d9fcda06efa31001149dd"
+    },
+    {
+      "path": "src/helpers/flosiQa/policy.js",
+      "sha256": "1f0c45a819239358cde30b6db6609aee5c9537578922eca319f093fdfa30af22"
+    },
+    {
+      "path": "src/helpers/flosiQa/preflight.js",
+      "sha256": "f9a24f0af7d2f2b21c129ec0bf414f2c60f7b23efe7d92fa8ac7a572ec03f806"
+    },
+    {
+      "path": "src/helpers/flosiQa/writeBoundary.js",
+      "sha256": "a283b49281c55c525691c7b5de2768c1c0d2ff8771ad6311598642d3cf32e57e"
+    },
+    {
+      "path": "src/helpers/ipcHandlers.js",
+      "sha256": "31a8b6e5b2464e488878dc8bc6a47323db980464610921e395640d74baab026f"
+    },
+    {
+      "path": "src/helpers/llamaServer.js",
+      "sha256": "353c96dc1fd1fac0296d5abaaf78c75da5d8ad8d2d18d93435480d6303a172bd"
+    },
+    {
+      "path": "src/helpers/localEmbeddings.js",
+      "sha256": "19437c4f309bf8d9c7eb896267be26798ed2128a1cadebb1fa4c62f8c3a7a1e2"
+    },
+    {
+      "path": "src/helpers/modelDirUtils.js",
+      "sha256": "5cb291f5dfcd6df714d2fc04124a8211592e55d0832767dd5a3806b3733e8f42"
+    },
+    {
+      "path": "src/helpers/parakeetWsServer.js",
+      "sha256": "5a9bb5a1948c9d4ee36e097e78dfccc22e139b3727e41d92eec71e0995a3d2f8"
+    },
+    {
+      "path": "src/helpers/qdrantManager.js",
+      "sha256": "659e1d1cdbcd9708a6401ebc67808db8b8f5d318da0caeba3390954dd1fb07a1"
+    },
+    {
+      "path": "src/helpers/safeTempDir.js",
+      "sha256": "1efd599a48f465cf6d03684e996af74a838e3500bc31e9265f88d3a50142fb2a"
+    },
+    {
+      "path": "src/helpers/secretCrypto.js",
+      "sha256": "1fc72729f4163e29587f3a037fd4641aee5ced5ead4bed9d0b4b2ee399a2f888"
+    },
+    {
+      "path": "src/helpers/tinfoilSecureClient.js",
+      "sha256": "fbca75196418f568f373f792fb334481bf29c2031ec2fe4ef6c15dd30dfc0784"
+    },
+    {
+      "path": "src/helpers/tray.js",
+      "sha256": "5979380be0c18eecceb8e218af823c22464285a8ef4cba37c7ad4ffc907ffbc9"
+    },
+    {
+      "path": "src/helpers/urlAudioDownloader.js",
+      "sha256": "6e5162f774987977400fe107f8ac15539b90348004f6ec5806cdd861ed48d219"
+    },
+    {
+      "path": "src/helpers/whisperServer.js",
+      "sha256": "e110637e8e876a2b4848d77c2b4a0e0208179f1c5edf3bcaf1e75843cdbbe5cb"
+    },
+    {
+      "path": "src/helpers/windowConfig.js",
+      "sha256": "343469f91e6aca00c6d5b741b3d54cf9020fe3b6bb61c2a5bea83369e5b91336"
+    },
+    {
+      "path": "src/updater.js",
+      "sha256": "3d77eea526f402b34a0e8e4fbc87090ac1a3afaa6e2407e1a6725547ea821b93"
+    },
+    {
+      "path": "test/helpers/flosiQaIsolation.test.js",
+      "sha256": "3b1bf1caf97818a74b3943feb566045bc9225ffec39015d011d17617d16a9caa"
+    }
+  ]
+}

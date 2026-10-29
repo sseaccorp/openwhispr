@@ -27,6 +27,8 @@ const debugLogger = require("./debugLogger");
 const EXPLORER_BREAKING_CHARS = /[?#=,]/;
 
 async function openExternalUrl(url) {
+  if (process.env.FLOSI_VARIANT === "qa")
+    throw new Error("FLOSI_QA_UNAVAILABLE: external links and real sign-in are disabled");
   const { protocol, href } = new URL(url);
   if (
     process.platform === "win32" &&

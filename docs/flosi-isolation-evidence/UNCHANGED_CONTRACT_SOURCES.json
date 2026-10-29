@@ -1,0 +1,66 @@
+{
+  "baseline": "323923f963987a50913fbd3ba21f4fdf7b122cbc",
+  "current_source_commit": "ca04c5b305175e8684f45d5a883cdd2c65b81a9c",
+  "unchanged": [
+    {
+      "path": "src/helpers/whisper.js",
+      "sha256": "267a62f38a5329f3316c116549bceb0a996745f24cd92ff8abf0bcae63d1c2df"
+    },
+    {
+      "path": "src/helpers/parakeet.js",
+      "sha256": "aa0cae10df9f7d3e5bcffde9d557f4e15d92501750f79cae0284ef989ce4bdf8"
+    },
+    {
+      "path": "src/helpers/audioManager.js",
+      "sha256": "acf08e8bc423bc1f7bcff21317215bcdcf45fc43d1dbc4e95c82abb5aacb8504"
+    },
+    {
+      "path": "src/helpers/ffmpegUtils.js",
+      "sha256": "10ecb8aa9a7fe4aded1ded874276de10d2c24de8954f9b7e613b9ffb3fc97a84"
+    },
+    {
+      "path": "src/helpers/translationChain.js",
+      "sha256": "9b262666a4d4b4caa3158f85498718b761ab625503b55d6374d0caa2dd7b967b"
+    },
+    {
+      "path": "src/helpers/dictationTranslationInference.js",
+      "sha256": "17f4331482835c3083a66e9c002edd06c204a57fa10847240c28c8fb6047b9a3"
+    },
+    {
+      "path": "src/helpers/diarization.js",
+      "sha256": "002419b3472fc999164b462aad01cf6b367f3e9ae4349ac00c45244bd5a18b9a"
+    },
+    {
+      "path": "src/helpers/modelManagerBridge.js",
+      "sha256": "4589bb6960f79ae6b233b9da74efebe5af36854dab63fc33855af89ce1be5b47"
+    },
+    {
+      "path": "src/helpers/speakerEmbeddings.js",
+      "sha256": "163f54bbf0fe9df8414dc9d2dd29f6f2c05e603903762d22fe440256bcffc408"
+    },
+    {
+      "path": "src/models/modelRegistryData.json",
+      "sha256": "f6d9eabf7465e3ffd5fd0c420b460481c1fb53bf9eeeefdcd2ac0b3cac3fa25b"
+    },
+    {
+      "path": "src/config/prompts.ts",
+      "sha256": "8bdd88cf7a55c8878e7d7ef6cc35aa15e586956595f04cc2d4f9528aca98667c"
+    },
+    {
+      "path": "src/lib/auth.ts",
+      "sha256": "212677bf69e277cd1cb967f3d93178daa1c77caece3cdea2d2475a86714b19f2"
+    },
+    {
+      "path": "src/services/SyncService.ts",
+      "sha256": "2327758a8f3bd94de0e40e51451c770b6d452d6a8341075cabb6b1f7780d6950"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "9dfb56d340c4e7490ea88a0d819dd38ad273a788ea10ab0431d913369ea97a92"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "ecf1a12d3dc51085d2f3a720dc177c7da3cd075ea3fadcc6a1b719fb44ed30e0"
+    }
+  ]
+}

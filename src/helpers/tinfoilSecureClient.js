@@ -4,6 +4,8 @@
 let clientPromise = null;
 
 function getSecureClient() {
+  if (process.env.FLOSI_VARIANT === "qa")
+    throw new Error("FLOSI_QA_UNAVAILABLE: Tinfoil attestation and remote inference are disabled");
   if (!clientPromise) {
     // ESM-only package, loaded from CommonJS.
     clientPromise = import("tinfoil").then(({ SecureClient }) => new SecureClient());

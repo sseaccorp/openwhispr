@@ -4,13 +4,14 @@ const path = require("path");
 const { app, safeStorage } = require("electron");
 const debugLogger = require("./debugLogger");
 
-const SERVICE = "OpenWhispr";
-const ACCOUNT = "secrets-master-key";
+const qaIdentity = process.env.FLOSI_VARIANT === "qa" ? require("./flosiQa/identity").QA : null;
+const SERVICE = qaIdentity ? qaIdentity.credentialService : "OpenWhispr";
+const ACCOUNT = qaIdentity ? qaIdentity.credentialAccount : "secrets-master-key";
 const ALGO = "aes-256-gcm";
 const IV_LEN = 12;
 const TAG_LEN = 16;
 const KEY_LEN = 32;
-const BACKUP_FILE = "master-key-backup.enc";
+const BACKUP_FILE = qaIdentity ? "flosi-qa-master-key-backup.enc" : "master-key-backup.enc";
 
 let mode = null;
 let masterKey = null;
@@ -95,7 +96,8 @@ function _ensureInit() {
     debugLogger.info("recovered master key from safeStorage backup", {}, "secretCrypto");
     return;
   }
-  mode = safeStorage.isEncryptionAvailable() ? "safeStorage" : "unavailable";
+  // QA requires its own AES key; do not accept legacy user-wide DPAPI blobs.
+  mode = !qaIdentity && safeStorage.isEncryptionAvailable() ? "safeStorage" : "unavailable";
 }
 
 function isAvailable() {
@@ -130,7 +132,7 @@ function decrypt(blob) {
       // Legacy safeStorage blob — handled by the fallback below.
     }
   }
-  if (safeStorage.isEncryptionAvailable()) {
+  if (!qaIdentity && safeStorage.isEncryptionAvailable()) {
     return {
       value: safeStorage.decryptString(blob),
       needsReencrypt: mode === "keychain",

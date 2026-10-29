@@ -1,5 +1,40 @@
 const { contextBridge, ipcRenderer, webUtils } = require("electron");
 
+// Only the explicit QA main supplies this flag. Runs before renderer imports;
+// configures a fresh private profile without touching inference algorithms.
+if (process.argv.includes("--flosi-qa")) {
+  const identity = ipcRenderer.sendSync("flosi-qa-config");
+  if (identity?.variant !== "qa") throw new Error("Flosi QA main identity missing");
+  if (!localStorage.getItem("flosiQaInitialized")) {
+    const settings = {
+      onboardingCompleted: "true",
+      authenticationSkipped: "true",
+      skipAuth: "true",
+      isSignedIn: "false",
+      useLocalWhisper: "true",
+      transcriptionMode: "local",
+      localTranscriptionProvider: "whisper",
+      whisperModel: "base",
+      meetingTranscriptionMode: "local",
+      meetingUseLocalWhisper: "true",
+      meetingWhisperModel: "base",
+      meetingLocalTranscriptionProvider: "whisper",
+      uploadTranscriptionMode: "local",
+      uploadUseLocalWhisper: "true",
+      uploadWhisperModel: "base",
+      uploadLocalTranscriptionProvider: "whisper",
+      useCleanupModel: "false",
+      useDictationAgent: "false",
+      autoGenerateNoteTitle: "false",
+      autoUpdatesEnabled: "false",
+      noteFilesEnabled: "false",
+      autoPasteEnabled: "true",
+      flosiQaInitialized: "1",
+    };
+    for (const [key, value] of Object.entries(settings)) localStorage.setItem(key, value);
+  }
+}
+
 // BYOK API-key bridges, built once instead of hand-listed per key. Sandboxed
 // preloads can't require local modules, so the {base, get, save} tuples are
 // inlined here; keep them in sync with the BYOK_API_KEYS manifest in

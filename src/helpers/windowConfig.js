@@ -182,6 +182,7 @@ const MAIN_WINDOW_CONFIG = {
   height: WINDOW_SIZES.BASE.height,
   title: "Voice Recorder",
   webPreferences: {
+    ...(process.env.FLOSI_VARIANT === "qa" ? { additionalArguments: ["--flosi-qa"] } : {}),
     preload: path.join(__dirname, "..", "..", "preload.js"),
     nodeIntegration: false,
     contextIsolation: true,
@@ -221,6 +222,7 @@ const CONTROL_PANEL_CONFIG = {
   // paints its own background on top) — see the transparent flag below.
   backgroundColor: process.platform === "darwin" ? "#00000000" : "#1c1c2e",
   webPreferences: {
+    ...(process.env.FLOSI_VARIANT === "qa" ? { additionalArguments: ["--flosi-qa"] } : {}),
     preload: path.join(__dirname, "..", "..", "preload.js"),
     nodeIntegration: false,
     contextIsolation: true,
@@ -276,6 +278,7 @@ const NOTIFICATION_WINDOW_CONFIG = {
   show: false,
   acceptFirstMouse: true,
   webPreferences: {
+    ...(process.env.FLOSI_VARIANT === "qa" ? { additionalArguments: ["--flosi-qa"] } : {}),
     preload: path.join(__dirname, "..", "..", "preload.js"),
     nodeIntegration: false,
     contextIsolation: true,
