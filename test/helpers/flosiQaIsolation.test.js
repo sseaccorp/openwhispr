@@ -73,6 +73,14 @@ test("unknown variant fails before Electron state is read", () => {
 test("QA paths are siblings under a dedicated root", (t) => {
   const { paths, official } = fixture(t);
   assert.equal(new Set(Object.values(paths)).size, Object.keys(paths).length);
+  const verify = require("../../src/helpers/flosiQa/bootstrap").verifyElectronPaths;
+  const actual = verify({ getPath: (key) => paths[key] }, paths);
+  assert.equal(actual.userData, paths.userData);
+  assert.throws(
+    () => verify({ getPath: (key) => (key === "userData" ? official : paths[key]) }, paths),
+    /path was not applied/
+  );
+
   for (const target of Object.values(paths)) {
     assert.ok(identity.contains(paths.root, target));
     assert.equal(identity.contains(official, target), false);

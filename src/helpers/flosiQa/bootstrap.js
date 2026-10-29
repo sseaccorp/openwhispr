@@ -11,6 +11,16 @@ const {
   verifyArtifacts,
 } = require("./preflight");
 
+function verifyElectronPaths(app, paths) {
+  const actual = {};
+  for (const key of ["userData", "sessionData", "temp", "logs", "crashDumps"]) {
+    actual[key] = app.getPath(key);
+    if (path.relative(paths[key], actual[key]) !== "")
+      throw new Error(`Flosi QA Electron path was not applied: ${key}`);
+  }
+  return actual;
+}
+
 function initialize(electron) {
   if (!process.env.FLOSI_VARIANT) return null;
   if (!isQa()) throw new Error("Unknown Flosi variant; production is not implemented");
@@ -46,6 +56,7 @@ function initialize(electron) {
   for (const key of ["userData", "sessionData", "temp", "logs", "crashDumps"])
     app.setPath(key, paths[key]);
   app.setAppLogsPath(paths.logs);
+  const electronPaths = verifyElectronPaths(app, paths);
   // Process-local only. No HOME/USERPROFILE/APPDATA/LOCALAPPDATA changes.
   process.env.TEMP = paths.temp;
   process.env.TMP = paths.temp;
@@ -103,6 +114,8 @@ function initialize(electron) {
         JSON.stringify(
           {
             ...initialReport,
+            electronPaths,
+            modelCache: paths.cache,
             appId: QA.appId,
             electron: process.versions.electron,
             nativeWindowsFunctionalQA: "not_verified",
@@ -141,4 +154,4 @@ function initialize(electron) {
   };
 }
 
-module.exports = { initialize };
+module.exports = { initialize, verifyElectronPaths };
