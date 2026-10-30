@@ -1,0 +1,122 @@
+[
+  {
+    "name": "npm-ci",
+    "command": "NODE_USE_ENV_PROXY=1 XDG_CACHE_HOME=/workspace/.cache npm_config_devdir=/workspace/work/flosi-firewall-audit/node-gyp npm ci --cache /workspace/.cache/npm --no-audit --no-fund --fetch-retries=0 --fetch-timeout=30000",
+    "cwd": "/workspace/work/flosi-firewall-fix",
+    "started_utc": "2026-10-30T02:03:28.776847+00:00",
+    "seconds": 23.11,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-firewall-audit/logs/npm-ci.log",
+    "logSha256": "bd6be5dfa01bc614ac59b886cffa7aaacb24e2fd29e47e3f734ac0c18a579e5b"
+  },
+  {
+    "name": "policy-v2",
+    "command": "TMPDIR=/workspace/work/flosi-firewall-audit/tmp XDG_DATA_HOME=/workspace/work/flosi-firewall-audit/ps-data XDG_CONFIG_HOME=/workspace/work/flosi-firewall-audit/ps-config XDG_CACHE_HOME=/workspace/work/flosi-firewall-audit/ps-cache /workspace/work/flosi-orukeet-audit/powershell/pwsh -NoProfile -NonInteractive -File test/scripts/flosiQaFirewallPolicy.ps1",
+    "cwd": "/workspace/work/flosi-firewall-fix",
+    "started_utc": "2026-10-30T19:04:32.429839+00:00",
+    "seconds": 1.16,
+    "exit_code": 1,
+    "log": "/workspace/work/flosi-firewall-audit/logs/policy-v2.log",
+    "logSha256": "6f52d7e346de7725c0216c5d4c439889f80d91d7fbfba3e850dcf7c27ab22619"
+  },
+  {
+    "name": "sqlite-node",
+    "command": "npm rebuild better-sqlite3 --cache /workspace/.cache/npm",
+    "cwd": "/workspace/work/flosi-firewall-fix",
+    "started_utc": "2026-10-30T19:04:53.901206+00:00",
+    "seconds": 0.87,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-firewall-audit/logs/sqlite-node.log",
+    "logSha256": "4bfa5894df220b2ae9d3e5aa9e9f65c0f1dcee2e7b0680f9f585f413ddb6297f"
+  },
+  {
+    "name": "policy-v2-2",
+    "command": "TMPDIR=/workspace/work/flosi-firewall-audit/tmp XDG_DATA_HOME=/workspace/work/flosi-firewall-audit/ps-data XDG_CONFIG_HOME=/workspace/work/flosi-firewall-audit/ps-config XDG_CACHE_HOME=/workspace/work/flosi-firewall-audit/ps-cache /workspace/work/flosi-orukeet-audit/powershell/pwsh -NoProfile -NonInteractive -File test/scripts/flosiQaFirewallPolicy.ps1",
+    "cwd": "/workspace/work/flosi-firewall-fix",
+    "started_utc": "2026-10-30T19:05:45.036086+00:00",
+    "seconds": 1.54,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-firewall-audit/logs/policy-v2-2.log",
+    "logSha256": "854f9bcce944c65c2d06a7c30921a2cd6cc58e5fe796354febe147d799cc39cb"
+  },
+  {
+    "name": "focused-js",
+    "command": "TMPDIR=/workspace/work/flosi-firewall-audit/tmp REQUIRE_DB_TESTS=1 node --import tsx --test --test-concurrency=4 --test-reporter=tap test/helpers/flosiQaFirewallRefresh.test.js test/helpers/flosiQaOrukeet.test.js test/helpers/flosiQaIsolation.test.js test/helpers/parakeetWsStartup.test.js test/scripts/peImports.test.js",
+    "cwd": "/workspace/work/flosi-firewall-fix",
+    "started_utc": "2026-10-30T19:07:59.465559+00:00",
+    "seconds": 1.17,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-firewall-audit/logs/focused-js.log",
+    "logSha256": "1c1d27409a941accce729348336c118a5e009ade85fd88088d53b4a5c762af42"
+  },
+  {
+    "name": "policy-v2-3",
+    "command": "TMPDIR=/workspace/work/flosi-firewall-audit/tmp XDG_DATA_HOME=/workspace/work/flosi-firewall-audit/ps-data XDG_CONFIG_HOME=/workspace/work/flosi-firewall-audit/ps-config XDG_CACHE_HOME=/workspace/work/flosi-firewall-audit/ps-cache /workspace/work/flosi-orukeet-audit/powershell/pwsh -NoProfile -NonInteractive -File test/scripts/flosiQaFirewallPolicy.ps1",
+    "cwd": "/workspace/work/flosi-firewall-fix",
+    "started_utc": "2026-10-30T19:08:00.660032+00:00",
+    "seconds": 1.55,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-firewall-audit/logs/policy-v2-3.log",
+    "logSha256": "d1134a57bc354e67a2d58b0c3bf67a08a7f72a423ee3592b5c29e3c5de88a813"
+  },
+  {
+    "name": "policy-final",
+    "command": "TMPDIR=/workspace/work/flosi-firewall-audit/tmp XDG_DATA_HOME=/workspace/work/flosi-firewall-audit/ps-data XDG_CONFIG_HOME=/workspace/work/flosi-firewall-audit/ps-config XDG_CACHE_HOME=/workspace/work/flosi-firewall-audit/ps-cache /workspace/work/flosi-orukeet-audit/powershell/pwsh -NoProfile -NonInteractive -File test/scripts/flosiQaFirewallPolicy.ps1",
+    "cwd": "/workspace/work/flosi-firewall-fix",
+    "started_utc": "2026-10-30T19:09:18.000735+00:00",
+    "seconds": 7.28,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-firewall-audit/logs/policy-final.log",
+    "logSha256": "792731d4038005e2e70e43263993d7ca8ecebb433a359ee0699fd3e266d37236"
+  },
+  {
+    "name": "numeric-coverage",
+    "command": "python3 /workspace/work/flosi-firewall-audit/coverage.py",
+    "cwd": "/workspace/work/flosi-firewall-fix",
+    "started_utc": "2026-10-30T19:11:02.250035+00:00",
+    "seconds": 2.14,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-firewall-audit/logs/numeric-coverage.log",
+    "logSha256": "7545e2c63a8305c14618d95d60bc4b0c6bc600ecae2a2a9ae0beb944cef03c8b"
+  },
+  {
+    "name": "quality-check",
+    "command": "npm run quality-check",
+    "cwd": "/workspace/work/flosi-firewall-fix",
+    "started_utc": "2026-10-30T19:09:25.366381+00:00",
+    "seconds": 172.9,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-firewall-audit/logs/quality-check.log",
+    "logSha256": "4e5edf3db8c432fb0fd2d585f7394c28cbbbad03a1c6d1493c294684b76626ea"
+  },
+  {
+    "name": "policy-confirmed-absence",
+    "command": "TMPDIR=/workspace/work/flosi-firewall-audit/tmp XDG_DATA_HOME=/workspace/work/flosi-firewall-audit/ps-data XDG_CONFIG_HOME=/workspace/work/flosi-firewall-audit/ps-config XDG_CACHE_HOME=/workspace/work/flosi-firewall-audit/ps-cache /workspace/work/flosi-orukeet-audit/powershell/pwsh -NoProfile -NonInteractive -File test/scripts/flosiQaFirewallPolicy.ps1",
+    "cwd": "/workspace/work/flosi-firewall-fix",
+    "started_utc": "2026-10-30T19:27:05.143447+00:00",
+    "seconds": 7.9,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-firewall-audit/logs/policy-confirmed-absence.log",
+    "logSha256": "d1bf5686e4ddfffb97ba4ed3546da4be7299f502906d6b3c73d64f1bed8406ef"
+  },
+  {
+    "name": "policy-expanded-final",
+    "command": "TMPDIR=/workspace/work/flosi-firewall-audit/tmp XDG_DATA_HOME=/workspace/work/flosi-firewall-audit/ps-data XDG_CONFIG_HOME=/workspace/work/flosi-firewall-audit/ps-config XDG_CACHE_HOME=/workspace/work/flosi-firewall-audit/ps-cache /workspace/work/flosi-orukeet-audit/powershell/pwsh -NoProfile -NonInteractive -File test/scripts/flosiQaFirewallPolicy.ps1",
+    "cwd": "/workspace/work/flosi-firewall-fix",
+    "started_utc": "2026-10-30T19:28:23.166587+00:00",
+    "seconds": 8.29,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-firewall-audit/logs/policy-expanded-final.log",
+    "logSha256": "88276965aae6d688bbd5dcaa6e40c812200203318d3714fa24d0c47660a35266"
+  },
+  {
+    "name": "full-regression",
+    "command": "TMPDIR=/workspace/work/flosi-firewall-audit/tmp REQUIRE_DB_TESTS=1 node --import tsx --test --test-concurrency=4 --test-reporter=tap \"test/**/*.test.js\"",
+    "cwd": "/workspace/work/flosi-firewall-fix",
+    "started_utc": "2026-10-30T19:09:16.516214+00:00",
+    "seconds": 1205.95,
+    "exit_code": 0,
+    "log": "/workspace/work/flosi-firewall-audit/logs/full-regression.log",
+    "logSha256": "5df6a6ab5b9da50c57b031db321a94b870a03db6f3b082fb5e9e0c10baae68d4"
+  }
+]

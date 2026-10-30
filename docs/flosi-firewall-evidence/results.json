@@ -1,0 +1,14 @@
+{
+  "tests": 8854,
+  "suites": 8,
+  "pass": 8820,
+  "fail": 0,
+  "cancelled": 0,
+  "skipped": 33,
+  "todo": 1,
+  "duration_ms": 1205907.741851,
+  "parent": "a22615dd527e0cfab4e393bbd17abfcc3d3c417c",
+  "nativeWindowsVerified": false,
+  "nativeRejectedValue": "NOT_YET_IDENTIFIED",
+  "policySimulatedCases": 60
+}

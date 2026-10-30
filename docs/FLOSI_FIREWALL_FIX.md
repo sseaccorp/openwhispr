@@ -28,7 +28,7 @@ Las sondas son siempre `Block`, `Enabled=False`, para la ruta/SHA del EXE QA. Us
 - Las familias están separadas; el comprobador compara conjuntos numéricos, no solo cadenas. Acepta normalizaciones equivalentes de rangos/CIDR/máscaras y rechaza huecos, direcciones añadidas o keywords dinámicas.
 - El esquema `v2` tiene nombres/grupo distintos por hash de ruta. Las reglas antiguas, incluso parciales, se validan y se conservan. No se borran/reemplazan reglas ajenas ni antiguas. Una identidad/filtro distinto bloquea la operación antes de la primera escritura.
 - Primero valida todos los objetos existentes, crea los faltantes **deshabilitados**, vuelve a validar el conjunto y después habilita. Una caída entre operaciones deja reglas restrictivas reconocibles para reintentar; nunca se borran reglas válidas para hacer rollback. `Check` exige las cuatro reglas habilitadas en ActiveStore, servicios/perfiles operativos y filtros completos.
-- Las consultas fallidas por ACL/proveedor no se confunden con «regla inexistente». La ausencia se reconoce únicamente por el error CIM específico de nombre no encontrado.
+- Las consultas fallidas por ACL/proveedor no se confunden con «regla inexistente». Ante ObjectNotFound se exige una segunda consulta completa exitosa que confirme la ausencia; no se depende del texto localizado ni de un ID de error distinto entre versiones de NetSecurity.
 
 No hay transacción atómica de cuatro cmdlets CIM. La seguridad ante una instalación parcial depende también de mantener QA cerrada y del gate de arranque: si falta una regla o no puede verificarse, no se permite iniciar Orukeet. No se termina ningún proceso ajeno.
 
@@ -72,6 +72,11 @@ $diagnostic.probes | Select-Object label,direction,accepted,equivalent,hresult,e
 if (@($diagnostic.probes | Where-Object { ($_.label -like 'v2-*' -or $_.label -like 'control-*') -and (-not $_.accepted -or -not $_.equivalent -or -not $_.cleaned) }).Count) {
     throw "Parser/política v2 no verificados. Conservar $reportPath; no instalar ni arrancar QA."
 }
+```
+
+Solo después de revisar el informe y de que pasen controles y listas v2, instalar en esa misma consola elevada:
+
+```powershell
 .\scripts\flosi-qa-orukeet-firewall.ps1 -Mode Install -Binary $binary
 .\scripts\flosi-qa-orukeet-firewall.ps1 -Mode Check -Binary $binary
 ```

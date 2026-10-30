@@ -1,5 +1,7 @@
 # Habilitar Orukeet en el checkout Windows existente
 
+> **Incidencia Windows confirmada y corrección independiente (30 de octubre de 2026):** la instalación original de firewall falló con `0x80070057`. No usar sus simulaciones como validación nativa. Ver [FLOSI_FIREWALL_FIX.md](FLOSI_FIREWALL_FIX.md): diagnóstico por valor/combinación, política v2 y actualización `RefreshFirewall` sin reinstalar ni borrar datos.
+
 No reinstalar OpenWhispr ni borrar datos/cachés. Cerrar **ambas aplicaciones** desde sus bandejas y comprobar Task Manager; si quedan procesos ajenos, detener este procedimiento y cerrarlos normalmente. No ejecutar QA como administrador. Requisitos originales: Windows 11 x64, Node 24.19.0, npm 11.17.0, Git y un checkout/perfil QA previamente preparados. Necesita **6,31 GiB libres** en el volumen de datos y del checkout; no descarga Qwen ni todos los modelos.
 
 Esta ampliación conserva v1.10.4. La ejecución de Orukeet en Windows y las reglas de firewall **aún no han sido verificadas en el equipo real**. El script falla de forma cerrada si no puede confirmar la protección. La cuenta habitual es válida para QA controlada, sin garantía de aislamiento absoluto del SO.

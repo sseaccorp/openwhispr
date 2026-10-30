@@ -24,7 +24,11 @@ $plan=@(Get-FlosiFirewallPlan $expected)
 function Get-ExactRule([string]$Name,[string]$Store) {
     try { return @(Get-NetFirewallRule -PolicyStore $Store -Name $Name -ErrorAction Stop) }
     catch {
-        if ($_.FullyQualifiedErrorId -like 'CmdletizationQuery_NotFound_Name,*' -and $_.CategoryInfo.Category.ToString() -eq 'ObjectNotFound') { return @() }
+        if ($_.CategoryInfo.Category.ToString() -eq 'ObjectNotFound') {
+            # Provider versions can name InstanceID/Name differently in the
+            # error ID. Confirm absence with a SUCCESSFUL independent query.
+            return @(Get-NetFirewallRule -PolicyStore $Store -ErrorAction Stop | Where-Object { $_.Name -ceq $Name })
+        }
         throw # Never turn an ACL/provider failure into permission to create.
     }
 }

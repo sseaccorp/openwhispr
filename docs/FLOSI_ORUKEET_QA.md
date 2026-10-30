@@ -1,5 +1,7 @@
 # Orukeet opcional en Flosi QA
 
+> **Incidencia Windows confirmada y corrección independiente (30 de octubre de 2026):** la instalación original de firewall falló con `0x80070057`. No usar sus simulaciones como validación nativa. Ver [FLOSI_FIREWALL_FIX.md](FLOSI_FIREWALL_FIX.md): diagnóstico por valor/combinación, política v2 y actualización `RefreshFirewall` sin reinstalar ni borrar datos.
+
 Estado: candidata de desarrollo sobre `a31a82182d8bda46c4aae5853098ea77185cfdba`, código OpenWhispr v1.10.4. Rama independiente `codex/flosi-orukeet-qa`; no modifica los PR #1/#2 ni sus ramas. No es un instalador ni una certificación comercial.
 
 El usuario confirmó previamente arranque Windows 11, dictado Whisper base y comparación de 168 archivos oficiales sin diferencias. Esa evidencia corresponde a la candidata anterior; no demuestra todavía el funcionamiento de Orukeet en Windows. No se recibieron aquí los logs ni el manifiesto de esa comparación para repetirla.

@@ -50,6 +50,10 @@ function Get-NetFirewallRule {
     [CmdletBinding()]param($PolicyStore,$Name)
     $state=$global:FlosiFirewallTestState
     if ($state.Denied) { throw [UnauthorizedAccessException]::new('Synthetic denied query') }
+    if (-not $PSBoundParameters.ContainsKey('Name')) {
+        if (-not ($PolicyStore -eq 'ActiveStore' -and $state.ActiveMissing)) { $state.Rules.Values }
+        return
+    }
     if ($state.Rules.ContainsKey($Name) -and -not ($PolicyStore -eq 'ActiveStore' -and $state.ActiveMissing)) {
         $state.Rules[$Name]
         if ($state.Duplicate) { $state.Rules[$Name] }
@@ -120,7 +124,27 @@ try {
         { $global:FlosiFirewallTestState.Rules[$plan[0].Name].Port.RemotePort=@('443') },
         { $global:FlosiFirewallTestState.Rules[$plan[0].Name].Address.RemoteAddress=@('Any') },
         { $global:FlosiFirewallTestState.Rules[$plan[1].Name].Address.RemoteAddress=@('2000::/3') },
-        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].EnforcementStatus='DisabledObject' })
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].EnforcementStatus='DisabledObject' },
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].App.Package='fixture-package' },
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].Address.LocalAddress=@('192.0.2.1') },
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].Port.LocalPort=@('443') },
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].Port.Protocol='TCP' },
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].Interface.InterfaceType='Wireless' },
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].Alias.InterfaceAlias=@('Ethernet') },
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].ServiceFilter.Service='fixture-service' },
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].Security.LocalUser='fixture-user' },
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].Security.RemoteUser='fixture-user' },
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].Security.RemoteMachine='fixture-machine' },
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].Profile='Private' },
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].Direction='Outbound' },
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].PrimaryStatus='Error' },
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].EdgeTraversalPolicy='Allow' },
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].DisplayName='foreign display' },
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].Name='foreign name' },
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].Port.RemotePort=@('Any','443') },
+        { $global:FlosiFirewallTestState.Rules[$plan[0].Name].Address.RemoteAddress=@('0.0.0.0/0') },
+        { $global:FlosiFirewallTestState.Rules[$plan[1].Name].Address.RemoteAddress=@('Any6') },
+        { $global:FlosiFirewallTestState.Rules[$plan[1].Name].Enabled='False' })
     $index=0
     foreach ($mutate in $mutations) {
         Assert-Case "read-only Check rejects mismatch $index" { $global:FlosiFirewallTestState=New-State; Fill-Rules; & $mutate; Must-Reject; if ($global:FlosiFirewallTestState.Events.Count) { throw 'Check mutated policy' } }; $index++
