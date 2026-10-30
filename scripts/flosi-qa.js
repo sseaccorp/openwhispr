@@ -134,9 +134,9 @@ function saveManifest(paths, sourceCommit) {
 
 async function main() {
   const mode = process.argv[2];
-  if (!["prepare", "addorukeet", "check", "run", "report"].includes(mode))
+  if (!["prepare", "addorukeet", "refreshfirewall", "check", "run", "report"].includes(mode))
     throw new Error(
-      "Usage: node scripts/flosi-qa.js prepare|addorukeet|check|run|report [--root PATH] [--cuda] [--local-ai]"
+      "Usage: node scripts/flosi-qa.js prepare|addorukeet|refreshfirewall|check|run|report [--root PATH] [--cuda] [--local-ai]"
     );
   if (process.platform !== "win32" || process.arch !== "x64")
     throw new Error("The launcher requires Windows x64. Automated policy tests can run on Linux.");
@@ -199,6 +199,13 @@ async function main() {
   const lockHash = hashFile(path.join(repo, "package-lock.json"));
   if (lockHash !== "9dfb56d340c4e7490ea88a0d819dd38ad273a788ea10ab0431d913369ea97a92")
     throw new Error("QA dependency lock differs from the audited baseline");
+  if (mode === "refreshfirewall") {
+    require("./flosi-qa-firewall-refresh").refreshFirewallArtifacts(repo, paths);
+    console.log(
+      "Firewall-only QA source refreshed after artifact/rule verification. Existing renderer, models, data and dependencies preserved. Run Check before Run."
+    );
+    return;
+  }
   if (mode === "addorukeet") {
     // Validate all existing hashes, including old renderer. Source changes are
     // accepted only here, with a clean reviewed descendant and unchanged lock.

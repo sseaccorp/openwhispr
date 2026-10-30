@@ -1,5 +1,7 @@
 # Verificación Orukeet y regresión
 
+> **Incidencia Windows confirmada y corrección independiente (30 de octubre de 2026):** la instalación original de firewall falló con `0x80070057`. No usar sus simulaciones como validación nativa. Ver [FLOSI_FIREWALL_FIX.md](FLOSI_FIREWALL_FIX.md): diagnóstico por valor/combinación, política v2 y actualización `RefreshFirewall` sin reinstalar ni borrar datos.
+
 Candidata sobre `a31a82182d8bda46c4aae5853098ea77185cfdba`, OpenWhispr v1.10.4, rama `codex/flosi-orukeet-qa`. Linux x64 Cloud, Node **24.19.0**, npm **11.9.0**, dos CPU disponibles/cgroup 2 cores, memoria máxima 8 GiB. No Windows 11, NVIDIA ni npm 11.17.0 del equipo objetivo. Fecha 29 de octubre de 2026; registros técnicos UTC.
 
 ## Resultados finales

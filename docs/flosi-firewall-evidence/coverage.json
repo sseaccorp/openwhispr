@@ -1,0 +1,9 @@
+{
+  "rules": 4,
+  "ipv4CIDRs": 8,
+  "ipv6CIDRs": 127,
+  "exactIntervalCoverage": true,
+  "IPv4LoopbackExcluded": true,
+  "IPv6LoopbackExcluded": true,
+  "nativeWindowsVerified": false
+}

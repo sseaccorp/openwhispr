@@ -1,0 +1,13 @@
+{
+  "parent": "a22615dd527e0cfab4e393bbd17abfcc3d3c417c",
+  "pathsChecked": [
+    "src",
+    "resources",
+    "main.js",
+    "preload.js",
+    "package.json",
+    "package-lock.json"
+  ],
+  "changedFiles": [],
+  "packageLockSha256": "9dfb56d340c4e7490ea88a0d819dd38ad273a788ea10ab0431d913369ea97a92"
+}
