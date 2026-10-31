@@ -1,0 +1,456 @@
+{
+  "schemaVersion": 1,
+  "runId": "8edd9d62-0592-407c-972e-30244ebd091c",
+  "reviews": [
+    {
+      "caseId": "dev-es-01",
+      "outputHash": "7b242ef3a58be8df296c31083481fe6b2d5f17f32bfa48006b2ccdf9ad570efa",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-es-02",
+      "outputHash": "9c6fb4e188414909ee9125fbfdb941c270ebd278667891e0e8457d2a900a7d6c",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-es-03",
+      "outputHash": "b5c0b4b3be882e4dd1e3e915316934dbc068ac6adc167d564b97b7647a19b848",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-es-04",
+      "outputHash": "98fdb21640ab0406f7561fc2ffb6f50670000cc78a09832caaab41195e321640",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-es-05",
+      "outputHash": "e56c47ce973416f8b79f0128c296f48ecc3885646f3c7617e95653a11e6cb8e7",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-es-06",
+      "outputHash": "274d50aa9367a5e70511c68ffdbb2b9c5ed6bd6f7ead2a49afbb2645b847f439",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-es-07",
+      "outputHash": "25d704a9063fe81e6b619f828566f4b68dbe6db4e2be067d15c005be80ae07b4",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-es-08",
+      "outputHash": "8bcce090fc8366cee6dae3bfb076d46dea9db72a1b4fb2709e50c668dc87b9d0",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-es-09",
+      "outputHash": "87d9deac2e0f3dcbec5a7fd07cce92338e08f5ba6536ba1915361b7fc6c8d16c",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-es-10",
+      "outputHash": "89fc404846b0675e8a8454fd214f478f244cda0e936d874ebdc99835019c3783",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-es-11",
+      "outputHash": "c83dc46d3aa2e9bf62a3322ba43de018aadf02156d7f99e853314fbf49fd3996",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-es-12",
+      "outputHash": "1b71a375b2e34992e33245c9535a509a0303c61cf79cc1e86d5600a567c40783",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-es-13",
+      "outputHash": "bc16f6ddda1117d5ed678a047df02c7ed681737453dd67237500e94a4b5a7ffb",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-es-14",
+      "outputHash": "618bafff0b90cf88706dcf8f421902c9792eb9cf347efb8a1b0683c77aae7ff4",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-es-15",
+      "outputHash": "fcd5bb4e531ea90972fc99d082146e220783628646c06cf37ba7fbbfc00b7dc7",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-en-01",
+      "outputHash": "beb6debc18d0d314341cf89ecac8f25d2366c7336905e3f244a2061db538ddbf",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-en-02",
+      "outputHash": "583896a334827f96fc3cb1c277e3c01dbaf5aede530868721e6f76d969f82c72",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-en-03",
+      "outputHash": "53da14cd37548f72a9d51e8e71b2031e855b8c4da42ef1f67e4e781cf0aefd75",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-en-04",
+      "outputHash": "777c4d1cb1b58610080b560a768e389983c650c4e36cfeca2a1bf20f31cbe95f",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-en-05",
+      "outputHash": "7f8bd15a788425f14084cfff936fbf7721196a41b6dd634aace9e4bdecbf495c",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-en-06",
+      "outputHash": "8e311899989786c0f29caae41b3d016412e6b58c1e5e4190ec038b2c8d97854e",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-en-07",
+      "outputHash": "9077d6f2e248b0eada902210075260ebf571c86ba47c4f6bca09393d65c9d959",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-en-08",
+      "outputHash": "693ed058bcac74d88007bbc599ffefad151bd6b5c8789f8e16c6095d5615df5e",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-en-09",
+      "outputHash": "0629ba2573d9ef173dab538cae7b9636d1b19744f71a09de1f9307e0a06dc9cb",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-en-10",
+      "outputHash": "74b2f0cce9ca6c665d4a0cc016b02ae13c4250556dc38b0d02eb52205ac8ead7",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-en-11",
+      "outputHash": "405a98fbd4aaa3d6d2e02945f3adf17d0d451d92b7dba1f9991580ecf3546d9d",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-en-12",
+      "outputHash": "86f695b71a18e683c2378db208b4745376e450424ca19a6e74cd4b4c1f46b5d3",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-en-13",
+      "outputHash": "b2c2d1f5785167d9b8f82fbaf5629f3091288b60aeaf8a03b5ff493dfd166c55",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-en-14",
+      "outputHash": "41e430d17733c3aea19a090ffcd00d2676279de34696f4e7e006ef4d016e6528",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    },
+    {
+      "caseId": "dev-en-15",
+      "outputHash": "1613b57e5f44c9cd52a2687ba1e9e7f2591abcf874754d14c665c5b279092adc",
+      "reviewer": "",
+      "notes": "",
+      "dimensions": {
+        "self_correction": "pending",
+        "fillers": "pending",
+        "meaning": "pending",
+        "names": "pending",
+        "numbers": "pending",
+        "negations": "pending",
+        "punctuation": "pending"
+      }
+    }
+  ]
+}

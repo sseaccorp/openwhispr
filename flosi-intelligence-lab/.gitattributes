@@ -1,0 +1,4 @@
+# Stable hashes for prompts, corpus and evaluator on Windows and Linux.
+* text eol=lf
+# Preserve standard CSV CRLF without whitespace-check false positives.
+*.csv -text whitespace=cr-at-eol

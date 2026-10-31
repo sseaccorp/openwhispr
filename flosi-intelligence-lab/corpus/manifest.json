@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "synthetic": true,
+  "counts": {
+    "dev": 30,
+    "holdout": 20,
+    "es": 25,
+    "en": 25
+  },
+  "files": {
+    "dev": "1e697a9f1b06c7d4c39c8f410dd13b425d3861c02174b9f0571c71d4ef58c582",
+    "holdout": "7f8fc38672738c0cca347782396992e9c37cd55e1ada316580269aba66d75f9f"
+  }
+}
