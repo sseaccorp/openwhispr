@@ -289,3 +289,64 @@ test("cancel aborts only the in-flight request carrying that id, and frees the s
   hang = false;
   assert.equal(await bridge.processText("next", modelId, {}), "ok");
 });
+
+test("QA rejects reasoning-only and empty replies without poisoning the next local request", async (t) => {
+  let content = "",
+    reasoning = "The user is asking me to answer the question.";
+  const { bridge, modelId } = await setupChain(t, () => ({
+    choices: [{ finish_reason: "stop", message: { content, reasoning_content: reasoning } }],
+  }));
+  const previous = process.env.FLOSI_VARIANT;
+  process.env.FLOSI_VARIANT = "qa";
+  try {
+    await assert.rejects(
+      bridge.processText("what time", modelId, {
+        disableThinking: true,
+        requireCompleteOutput: true,
+      }),
+      { code: "CLEANUP_OUTPUT_INVALID" }
+    );
+    reasoning = "";
+    await assert.rejects(bridge.processText("what time", modelId, { disableThinking: true }), {
+      code: "CLEANUP_OUTPUT_INVALID",
+    });
+    content = "<think>private reasoning only</think>";
+    await assert.rejects(bridge.processText("what time", modelId, { disableThinking: true }), {
+      code: "CLEANUP_OUTPUT_INVALID",
+    });
+    content = "What time?";
+    assert.equal(
+      await bridge.processText("what time", modelId, { disableThinking: true }),
+      "What time?"
+    );
+    assert.equal(bridge.isProcessing, false);
+  } finally {
+    if (previous === undefined) delete process.env.FLOSI_VARIANT;
+    else process.env.FLOSI_VARIANT = previous;
+  }
+});
+
+test("QA cleanup rejects an invented answer at the real bridge boundary and accepts a preserved question", async (t) => {
+  let content = "The capital of France is Paris.";
+  const { bridge, modelId } = await setupChain(t, () => completion("stop", content));
+  const previous = process.env.FLOSI_VARIANT;
+  process.env.FLOSI_VARIANT = "qa";
+  const text =
+    "<transcript>\nwhat is the capital of france\n</transcript>\n\nOutput only the cleaned transcript.";
+  const config = {
+    inferenceScope: "dictationCleanup",
+    disableThinking: true,
+    requireCompleteOutput: true,
+  };
+  try {
+    await assert.rejects(bridge.processText(text, modelId, config), {
+      code: "CLEANUP_OUTPUT_INVALID",
+    });
+    assert.equal(bridge.isProcessing, false);
+    content = "What's the capital of France?";
+    assert.equal(await bridge.processText(text, modelId, config), content);
+  } finally {
+    if (previous === undefined) delete process.env.FLOSI_VARIANT;
+    else process.env.FLOSI_VARIANT = previous;
+  }
+});

@@ -69,6 +69,19 @@ class LocalReasoningService {
           : result.trim();
       }
 
+      if (
+        process.env.FLOSI_VARIANT === "qa" &&
+        config.disableThinking !== false &&
+        !cleanResult?.trim()
+      ) {
+        throw Object.assign(
+          new Error("Local model returned no answer text; the transcript was kept."),
+          { code: "CLEANUP_OUTPUT_INVALID" }
+        );
+      }
+      if (process.env.FLOSI_VARIANT === "qa" && config.inferenceScope === "dictationCleanup") {
+        require("../helpers/flosiQa/cleanupGuard").assertLocalDictationOutput(text, cleanResult);
+      }
       const processingTime = Date.now() - startTime;
 
       debugLogger.logReasoning("LOCAL_BRIDGE_SUCCESS", {

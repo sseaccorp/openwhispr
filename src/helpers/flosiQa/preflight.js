@@ -102,6 +102,14 @@ function prepareRoot(
   { platform = process.platform, minFreeBytes = MIN_FREE_BYTES } = {}
 ) {
   assertRoot(paths.root, protectedPaths, platform);
+  for (
+    let parent = path.dirname(paths.root);
+    parent !== path.dirname(parent);
+    parent = path.dirname(parent)
+  ) {
+    if (fs.existsSync(path.join(parent, "flosi-qa.json")))
+      throw new Error("MVP root must not be nested inside any earlier QA profile");
+  }
   assertNoLinks(paths.root);
   assertRoot(canonicalPath(paths.root), protectedPaths.map(canonicalPath), platform);
   let existing = path.dirname(paths.root);
@@ -122,6 +130,7 @@ function prepareRoot(
       marker.variant !== QA.variant ||
       marker.appId !== QA.appId ||
       marker.schema !== QA.schema ||
+      marker.purpose !== QA.purpose ||
       marker.root !== paths.root
     ) {
       throw new Error("Flosi QA root identity does not match");
