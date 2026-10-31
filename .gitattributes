@@ -1,1 +1,2 @@
 openwhispr-mobile/patches/*.patch -whitespace
+package-lock.json text eol=lf
