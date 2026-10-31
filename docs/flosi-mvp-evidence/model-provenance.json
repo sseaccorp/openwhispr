@@ -1,0 +1,23 @@
+{
+  "id": "bartowski/Qwen_Qwen3.5-2B-GGUF",
+  "sha": "7d26695454df6de5fbcce2e58681e62dae06ce43",
+  "cardData": {
+    "quantized_by": "bartowski",
+    "pipeline_tag": "image-text-to-text",
+    "base_model": "Qwen/Qwen3.5-2B",
+    "base_model_relation": "quantized",
+    "license": "apache-2.0",
+    "license_link": "https://huggingface.co/Qwen/Qwen3.5-2B/blob/main/LICENSE"
+  },
+  "artifact": {
+    "rfilename": "Qwen_Qwen3.5-2B-Q4_K_M.gguf",
+    "blobId": "0eca420846d815ea300eafe36fb26a69dbf02481",
+    "size": 1396198496,
+    "lfs": {
+      "sha256": "57a1085840f497d764a7fc5d346922dbde961efb54cc792ea81d694fd846a1d8",
+      "size": 1396198496,
+      "pointerSize": 135
+    }
+  },
+  "apiSource": "https://huggingface.co/api/models/bartowski/Qwen_Qwen3.5-2B-GGUF?blobs=true"
+}

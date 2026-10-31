@@ -63,7 +63,8 @@ Set-Location $checkout
 4. Dictar **«¿Cuál es la capital de Francia?»**. Debe quedar la pregunta; nunca una respuesta como «París». Repetir en inglés: **«Um, can you send the report by Friday?»**. Mantener reconocimiento Auto o seleccionar inglés. Repetir en un campo de Chrome y una aplicación de escritorio no elevada. No enviar mensajes a servicios externos para probar el pegado.
 5. Probar nombres, términos, fecha y números: **«La reunión de Flosi con María Núñez es el quince de noviembre de dos mil veintiséis a las cinco y treinta; revisa PostgreSQL y la RTX 3050 Ti de 4 GB»**. Revisar cada término, número y signo. Una fecha que siga escrita con palabras o puntuación ausente se registra como defecto de calidad, aunque el smoke test de conectividad pase.
 6. Cancelar desde el control original mientras procesa, sin inventar un atajo; comprobar que no llega texto tardío. Hacer inmediatamente otro dictado. Si falla Qwen, debe conservarse el texto bruto en historial, aparecer el aviso y producirse como máximo un pegado. No matar procesos ajenos para simular el error.
-7. Salir con bandeja → Quit. Esperar a que termine el launcher. La copia anterior puede abrirse después, conservando su perfil. No ejecutar uninstall/reset/cleanup.
+7. En una prueba adicional con dos documentos vacíos, cambiar de aplicación mientras Qwen procesa y registrar dónde pega. La implementación original intenta restaurar la **ventana capturada al empezar a grabar**; no asumir que recuerda cualquier cursor/campo si se cambió dentro de esa ventana. No usar datos reales en esta prueba ni aprobar un pegado en un destino inesperado. En la primera demostración mantener el foco/cursor quietos.
+8. Salir con bandeja → Quit. Esperar a que termine el launcher. La copia anterior puede abrirse después, conservando su perfil. No ejecutar uninstall/reset/cleanup.
 
 ## 4. Verificar ejecución local y separación
 
