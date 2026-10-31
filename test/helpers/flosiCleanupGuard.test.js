@@ -8,6 +8,7 @@ for (const [input, output] of [
   ["qué hora es", "¿Qué hora es?"],
   ["what is the capital of france", "What's the capital of France?"],
   ["send the report at five thirty PM", "Send the report at 5:30 PM."],
+  ["send the report at 5:30am", "Send the report at 5:30 AM."],
   [
     "la reunión de Flosi con Jesús Márquez es el quince de noviembre",
     "La reunión de Flosi con Jesús Márquez es el 15 de noviembre.",

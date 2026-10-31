@@ -40,7 +40,9 @@ function assertLocalDictationOutput(wrapped, output) {
   // A time with no half-day qualifier must not silently gain AM/PM. This
   // protects an actual Qwen completion observed in the native smoke corpus.
   const periods = (value) =>
-    Array.from(value.matchAll(/\b([ap])\.?\s*m\.?\b/giu), (match) => match[1].toLowerCase());
+    Array.from(value.matchAll(/(?<!\p{L})([ap])\.?\s*m\.?\b/giu), (match) =>
+      match[1].toLowerCase()
+    );
   const rawPeriods = new Set(periods(raw));
   const explicitTimeContext =
     /\b(?:morning|afternoon|evening|night|tarde|noche)\b|ma[ñn]ana/iu.test(raw);
