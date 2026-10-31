@@ -830,6 +830,21 @@ class LlamaServerManager {
               // Some builds still route a suppressed-thinking answer into
               // `reasoning_content` (#809). With thinking on, that field is the
               // reasoning itself, which must never stand in for the answer.
+              // The local QA MVP must never paste a reasoning-only completion.
+              // Keep the upstream compatibility fallback outside explicit QA.
+              if (
+                process.env.FLOSI_VARIANT === "qa" &&
+                suppressThinking &&
+                !message?.content?.trim()
+              ) {
+                reject(
+                  Object.assign(
+                    new Error("Local model returned no answer text; the transcript was kept."),
+                    { code: "CLEANUP_OUTPUT_INVALID" }
+                  )
+                );
+                return;
+              }
               const text =
                 message?.content || (suppressThinking && message?.reasoning_content) || "";
               resolve(text.trim());

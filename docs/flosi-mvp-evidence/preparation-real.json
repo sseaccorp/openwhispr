@@ -1,0 +1,153 @@
+{
+  "platform": "linux",
+  "windowsRuntimeExecuted": false,
+  "receipt": {
+    "schema": 1,
+    "purpose": "local-dictation-mvp-v1",
+    "model": {
+      "fileName": "Qwen_Qwen3.5-2B-Q4_K_M.gguf",
+      "sha256": "57a1085840f497d764a7fc5d346922dbde961efb54cc792ea81d694fd846a1d8",
+      "size": 1396198496,
+      "license": "Apache-2.0",
+      "revision": "7d26695454df6de5fbcce2e58681e62dae06ce43",
+      "id": "qwen3.5-2b-q4_k_m",
+      "hfRepo": "bartowski/Qwen_Qwen3.5-2B-GGUF",
+      "url": "https://huggingface.co/bartowski/Qwen_Qwen3.5-2B-GGUF/resolve/7d26695454df6de5fbcce2e58681e62dae06ce43/Qwen_Qwen3.5-2B-Q4_K_M.gguf",
+      "licenseUrl": "https://huggingface.co/Qwen/Qwen3.5-2B/raw/15852e8c16360a2fea060d615a32b45270f8a8fc/LICENSE",
+      "licenseSha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a"
+    },
+    "runtime": {
+      "version": "b9763",
+      "sourceRevision": "dec5ca5577d6042b4e870fadf4087c5b9b8d3a70",
+      "archiveSha256": "05144ee4d885a778ebaef619f79ca0b8a4edb7f017eaf70086a8781ff003815f",
+      "probe": {
+        "executed": false,
+        "reason": "Windows runtime requires native Windows validation"
+      },
+      "files": [
+        {
+          "path": "resources/bin/llama-server-win32-x64-cpu.exe",
+          "sha256": "71bab7557c6631b989247f81ae5cccf962ee7fb3edcc37a26f1e83579810cf04"
+        },
+        {
+          "path": "resources/bin/ggml-base.dll",
+          "sha256": "eae66b84f3dfd086d78f4e68adb4dd0c5a36473b3a3e0ba1f3f5f0c850eb2283"
+        },
+        {
+          "path": "resources/bin/ggml-cpu-alderlake.dll",
+          "sha256": "0c7afd24e0e490a66450431e74ce4e81bf3934cbbf1a71455b9ba839c892b9d0"
+        },
+        {
+          "path": "resources/bin/ggml-cpu-cannonlake.dll",
+          "sha256": "58686e5e2f1012ae052f3adbbaa7713cba83702cd061b395f8a31d33a13fd4c7"
+        },
+        {
+          "path": "resources/bin/ggml-cpu-cascadelake.dll",
+          "sha256": "34ca4b220b5cb9623607b46c9276c0c34f403928fee0f85bf04e52c54b7b5b77"
+        },
+        {
+          "path": "resources/bin/ggml-cpu-cooperlake.dll",
+          "sha256": "db4372b08698e5815bf977c2194bfb96c8de719177ec5c2a13a096d147f17328"
+        },
+        {
+          "path": "resources/bin/ggml-cpu-haswell.dll",
+          "sha256": "bebb519c1059d8ce1946b0a9afd6d1109ee4ee95431a3fedbe4797a88fb828ea"
+        },
+        {
+          "path": "resources/bin/ggml-cpu-icelake.dll",
+          "sha256": "15e7ea95aa8d588a8d42debd44e909362c61bdf030c336f48277a1f6b6578b5e"
+        },
+        {
+          "path": "resources/bin/ggml-cpu-ivybridge.dll",
+          "sha256": "37fba8d56f668439bcd000ebbdd59a97af6d3083c04b407c240bfa125b894ccb"
+        },
+        {
+          "path": "resources/bin/ggml-cpu-piledriver.dll",
+          "sha256": "08aa33a33c32283a3aaed2b134d5dc2e4ca5c86878bbe9daf630f3fdb8bf34ce"
+        },
+        {
+          "path": "resources/bin/ggml-cpu-sandybridge.dll",
+          "sha256": "4e6a40568d6e6772e822c4eb864765a21d3b02f8eb8136b7500f061283c0a036"
+        },
+        {
+          "path": "resources/bin/ggml-cpu-sapphirerapids.dll",
+          "sha256": "90afc9cb33b2e4c0bebaeef3882d0c6893dc9d9281798a362bf303b36678118b"
+        },
+        {
+          "path": "resources/bin/ggml-cpu-skylakex.dll",
+          "sha256": "8d76ecf0663666cd37ac2b4a1d751c38fd99a9699d64b11eb965c4153d4beb33"
+        },
+        {
+          "path": "resources/bin/ggml-cpu-sse42.dll",
+          "sha256": "3aa9e26974c3bc85195747afc9a32153945b67671b289ddbcbc4d973ccf59e42"
+        },
+        {
+          "path": "resources/bin/ggml-cpu-x64.dll",
+          "sha256": "22896621de9ed763a6b6e87f539eb542b48b23af58966b4c6d7a2432543995f1"
+        },
+        {
+          "path": "resources/bin/ggml-cpu-zen4.dll",
+          "sha256": "6dcf6fd4038b182734f9cf14bceff19a339b7b30a014c633dbc25fb735638bd8"
+        },
+        {
+          "path": "resources/bin/ggml-rpc.dll",
+          "sha256": "b0ba15eaf5d38900a048b26ddaf65efa8ca46ce8b7599e7f367cefec7ee56045"
+        },
+        {
+          "path": "resources/bin/ggml.dll",
+          "sha256": "cffaed8d6662abc5ee6b71a3a8abe0275208142b4f82d387bda03eec232c78d9"
+        },
+        {
+          "path": "resources/bin/libomp140.x86_64.dll",
+          "sha256": "4a20c1e5c115c29771a12324513eb109badac72180f79481527ad79d996ffb33"
+        },
+        {
+          "path": "resources/bin/llama-batched-bench-impl.dll",
+          "sha256": "0cb5111973f0d49de363b956972b6cb34deea9dd4f3df3754ff08a67a375f8a6"
+        },
+        {
+          "path": "resources/bin/llama-bench-impl.dll",
+          "sha256": "b738000e1f853fdc1b54437afba6cf05adc49aa79bd30d9dce667d5e1e98528e"
+        },
+        {
+          "path": "resources/bin/llama-cli-impl.dll",
+          "sha256": "2689415e9badbda25ce139552dbd05e52d1dbe47f53e255bfc5a3c35e926bfb3"
+        },
+        {
+          "path": "resources/bin/llama-common.dll",
+          "sha256": "0d8049c8777ae1fa20d36adb1254df4c52838ff57f1794aca706eb122a076139"
+        },
+        {
+          "path": "resources/bin/llama-completion-impl.dll",
+          "sha256": "21f144c92e32d451fa98ddf62cedb0a4fa28372459ae17c1a45d1431018063a2"
+        },
+        {
+          "path": "resources/bin/llama-fit-params-impl.dll",
+          "sha256": "a3a25675d137745edf5bcc4bea63ca360af53be0af408c59b5b222fe83386210"
+        },
+        {
+          "path": "resources/bin/llama-perplexity-impl.dll",
+          "sha256": "441c23159c28f79b63d494fe577dbb16a61880b9257aae17c54ada60c007cc31"
+        },
+        {
+          "path": "resources/bin/llama-quantize-impl.dll",
+          "sha256": "6e4a0f8fbf40bcc222a81533400d8020872766b0fae2009abd3fafb8f6179fc5"
+        },
+        {
+          "path": "resources/bin/llama-server-impl.dll",
+          "sha256": "4558c6602308557a5abcafccf6befb626960ce0187fc3b902b73957e5e42db6c"
+        },
+        {
+          "path": "resources/bin/llama.dll",
+          "sha256": "ebee03c878920417e143a2dbe705850b00ff3e5f90001cfde11bdfe1321c0562"
+        },
+        {
+          "path": "resources/bin/mtmd.dll",
+          "sha256": "6bc51bef5a5aa0f7d81fde43c2b6f9f5fc010a4442a306195e95f1abcb614fd6"
+        }
+      ]
+    },
+    "preparedAt": "2026-10-31T00:56:47.280Z"
+  },
+  "incrementalRetryVerified": true
+}

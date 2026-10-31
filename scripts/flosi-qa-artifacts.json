@@ -73,14 +73,20 @@
     "sha256": "05144ee4d885a778ebaef619f79ca0b8a4edb7f017eaf70086a8781ff003815f",
     "size": 17287711,
     "binary": "llama-server-win32-x64-cpu.exe",
-    "sourceBinary": "llama-server.exe"
+    "sourceBinary": "llama-server.exe",
+    "version": "b9763",
+    "sourceRevision": "dec5ca5577d6042b4e870fadf4087c5b9b8d3a70"
   },
   "reasoning": {
-    "id": "qwen2.5-1.5b-instruct-q5_k_m",
-    "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-q5_k_m.gguf",
-    "sha256": "b46661073c18e5b56a41fa320975f866a00def1ff08feef4718e013258896f8c",
-    "size": 1285494304,
-    "fileName": "qwen2.5-1.5b-instruct-q5_k_m.gguf",
-    "license": "Apache-2.0 (phase 2 metadata; no claim for Qwen 3B)"
+    "fileName": "Qwen_Qwen3.5-2B-Q4_K_M.gguf",
+    "sha256": "57a1085840f497d764a7fc5d346922dbde961efb54cc792ea81d694fd846a1d8",
+    "size": 1396198496,
+    "license": "Apache-2.0",
+    "revision": "7d26695454df6de5fbcce2e58681e62dae06ce43",
+    "id": "qwen3.5-2b-q4_k_m",
+    "hfRepo": "bartowski/Qwen_Qwen3.5-2B-GGUF",
+    "url": "https://huggingface.co/bartowski/Qwen_Qwen3.5-2B-GGUF/resolve/7d26695454df6de5fbcce2e58681e62dae06ce43/Qwen_Qwen3.5-2B-Q4_K_M.gguf",
+    "licenseUrl": "https://huggingface.co/Qwen/Qwen3.5-2B/raw/15852e8c16360a2fea060d615a32b45270f8a8fc/LICENSE",
+    "licenseSha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a"
   }
 }

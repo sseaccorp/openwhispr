@@ -1,0 +1,66 @@
+{
+  "implementationCommit": "f82e3fe06df2b828de2c231735fd2f0d0f33de16",
+  "baseline": "a31a82182d8bda46c4aae5853098ea77185cfdba",
+  "fullSuite": {
+    "tests": 8858,
+    "suites": 8,
+    "pass": 8825,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 32,
+    "todo": 1,
+    "duration_ms": 1149520.113619
+  },
+  "initialFullSuite": {
+    "tests": 8840,
+    "suites": 8,
+    "pass": 8807,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 32,
+    "todo": 1,
+    "duration_ms": 1490206.798546
+  },
+  "finalContractsSubset": {
+    "tests": 120,
+    "suites": 0,
+    "pass": 120,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "duration_ms": 11412.366989
+  },
+  "finalCleanupGuardSubset": {
+    "tests": 18,
+    "suites": 0,
+    "pass": 18,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "duration_ms": 277.006931
+  },
+  "nativeLinuxIntegration": {
+    "tests": 1,
+    "suites": 0,
+    "pass": 1,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "duration_ms": 236502.050866
+  },
+  "windowsNativeFunctionalQa": "not_executed",
+  "ciObserved": {
+    "commit": "f82e3fe06df2b828de2c231735fd2f0d0f33de16",
+    "workflowRuns": []
+  },
+  "supervisorNote": {
+    "command": "full-regression",
+    "childExitCode": 0,
+    "toolSessionExitCode": 130,
+    "explanation": "Earlier interruption attempt did not cancel the enumerated child tests. Frozen full suite rerun uses a fresh PTY and all test files."
+  },
+  "qualityCaveat": "A passing pipeline test includes accepted cleanup and safe raw fallbacks. Qwen quality, Windows microphone/focus/paste and long sessions remain acceptance gates."
+}

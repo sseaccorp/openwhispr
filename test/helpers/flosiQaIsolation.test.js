@@ -467,7 +467,7 @@ test("QA master key uses its own service and refuses official DPAPI fallback", (
   });
   const encrypted = cryptoModule.exports.encrypt("synthetic QA credential");
   assert.equal(cryptoModule.exports.decrypt(encrypted).value, "synthetic QA credential");
-  assert.deepEqual(entries, ["Flosi-QA/qa-secrets-master-key-v1"]);
+  assert.deepEqual(entries, ["Flosi-QA-MVP-Local/qa-mvp-local-master-key-v1"]);
   assert.throws(
     () => cryptoModule.exports.decrypt(Buffer.from("official DPAPI blob")),
     /decryption failed/
@@ -769,4 +769,35 @@ test("a changed renderer asset is rejected alongside changed model artifacts", (
   preflight.verifyArtifacts(code, paths, "linux");
   fs.writeFileSync(file, "modified renderer");
   assert.throws(() => preflight.verifyArtifacts(code, paths, "linux"), /changed/);
+});
+
+test("MVP cleanup is enabled only after explicit exact-model preparation, once per new profile", () => {
+  const storage = new Map();
+  let identity = { variant: "qa", purpose: "local-dictation-mvp-v1", localCleanupModel: null };
+  const context = {
+    process: { argv: ["--flosi-qa"] },
+    localStorage: {
+      getItem: (key) => storage.get(key),
+      setItem: (key, value) => storage.set(key, value),
+    },
+    require: () => ({
+      contextBridge: { exposeInMainWorld() {} },
+      ipcRenderer: { sendSync: () => identity },
+      webUtils: {},
+    }),
+  };
+  const source = fs.readFileSync(path.join(repo, "preload.js"), "utf8");
+  vm.runInNewContext(source, { ...context });
+  assert.equal(storage.get("useCleanupModel"), "false");
+  identity.localCleanupModel = "qwen3.5-2b-q4_k_m";
+  vm.runInNewContext(source, { ...context });
+  assert.equal(storage.get("useCleanupModel"), "true");
+  assert.equal(storage.get("cleanupMode"), "local");
+  assert.equal(storage.get("cleanupProvider"), "local");
+  assert.equal(storage.get("cleanupModel"), "qwen3.5-2b-q4_k_m");
+  assert.equal(storage.get("cleanupDisableThinking"), "true");
+  assert.equal(storage.get("useDictationAgent"), "false");
+  storage.set("useCleanupModel", "false");
+  vm.runInNewContext(source, { ...context });
+  assert.equal(storage.get("useCleanupModel"), "false", "later user choices survive relaunch");
 });

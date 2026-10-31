@@ -47,6 +47,7 @@ function privateToolEnv(paths, base = process.env) {
     npm_config_cache: path.join(paths.cache, "npm"),
     npm_config_devdir: path.join(paths.cache, "node-gyp"),
     ELECTRON_CACHE: path.join(paths.cache, "electron"),
+    electron_config_cache: path.join(paths.cache, "electron"),
     ELECTRON_BUILDER_CACHE: path.join(paths.cache, "electron-builder"),
     XDG_CACHE_HOME: path.join(paths.cache, "xdg"),
     HF_HOME: path.join(paths.cache, "huggingface"),
@@ -89,18 +90,22 @@ async function installPack(pack, paths, cuda = false) {
     copyNew(library, path.join(destination, path.basename(library)));
   // Delete only the unique staging tree created by this operation.
   fs.rmSync(staging, { recursive: true });
+  return [
+    path.join(destination, pack.binary),
+    ...files.filter((f) => /\.dll$/i.test(f)).map((f) => path.join(destination, path.basename(f))),
+  ].map((file) => ({ path: path.relative(repo, file), sha256: hashFile(file) }));
 }
 
-function saveManifest(paths, sourceCommit) {
+function saveManifest(paths, sourceCommit, repository = repo) {
   const files = [
-    ...walkFiles(path.join(repo, "src", "dist")).map((file) => ({
+    ...walkFiles(path.join(repository, "src", "dist")).map((file) => ({
       area: "renderer",
-      path: path.relative(repo, file),
+      path: path.relative(repository, file),
       sha256: hashFile(file),
     })),
-    ...walkFiles(path.join(repo, "resources", "bin")).map((file) => ({
+    ...walkFiles(path.join(repository, "resources", "bin")).map((file) => ({
       area: "repo",
-      path: path.relative(repo, file),
+      path: path.relative(repository, file),
       sha256: hashFile(file),
     })),
     ...[
@@ -130,9 +135,9 @@ function saveManifest(paths, sourceCommit) {
 
 async function main() {
   const mode = process.argv[2];
-  if (!["prepare", "check", "run", "report"].includes(mode))
+  if (!["prepare", "addqwen", "check", "run", "report"].includes(mode))
     throw new Error(
-      "Usage: node scripts/flosi-qa.js prepare|check|run|report [--root PATH] [--cuda] [--local-ai]"
+      "Usage: node scripts/flosi-qa.js prepare|addqwen|check|run|report [--root PATH] [--cuda] [--local-ai]"
     );
   if (process.platform !== "win32" || process.arch !== "x64")
     throw new Error("The launcher requires Windows x64. Automated policy tests can run on Linux.");
@@ -210,7 +215,7 @@ async function main() {
         `QA preparation requires ${needed / 1024 ** 3} GiB free on data and checkout volumes`
       );
     console.log(
-      `Plan: Whisper base multilingual only (${pins.models[0].size} bytes), CPU helpers${cuda ? " + optional CUDA archive (773 MB, extracted budget reserved)" : ""}; minimum free ${needed / 1024 ** 3} GiB.${localAi ? " Optional local AI: original llama.cpp b9763 + Qwen2.5 1.5B Q5 (~1.29 GB); no model is selected automatically." : " No LLM download."} No Parakeet/all-model download.`
+      `Plan: Whisper base multilingual only (${pins.models[0].size} bytes), CPU helpers${cuda ? " + optional CUDA archive (773 MB, extracted budget reserved)" : ""}; minimum free ${needed / 1024 ** 3} GiB.${localAi ? " Optional local cleanup: original llama.cpp b9763 CPU + pinned Qwen3.5 2B Q4_K_M (1.40 GB)." : " No LLM download."} No Parakeet/all-model download.`
     );
     if (!fs.existsSync(path.join(repo, "node_modules")))
       command(process.execPath, [npmCli, "ci", "--no-audit", "--no-fund"], toolEnv, log);
@@ -226,13 +231,6 @@ async function main() {
     );
     for (const pack of pins.assets) await installPack(pack, paths);
     if (cuda) await installPack(pins.cuda, paths, true);
-    if (localAi) {
-      await installPack(pins.llama, paths);
-      await downloadPinned(
-        pins.reasoning,
-        path.join(paths.cache, "models", pins.reasoning.fileName)
-      );
-    }
     for (const model of pins.models) {
       const destination =
         model.id === "base"
@@ -243,7 +241,22 @@ async function main() {
     scanTree(path.join(repo, "resources", "bin"));
     command(process.execPath, [npmCli, "run", "build:renderer"], toolEnv, log);
     saveManifest(paths, git("rev-parse", "HEAD"));
+    if (localAi)
+      await require("./flosi-qa-qwen").addQwen(repo, paths, git("rev-parse", "HEAD"), {
+        installPack,
+        downloadPinned,
+        saveManifest,
+      });
   }
+  if (mode === "addqwen")
+    await require("./flosi-qa-qwen").addQwen(repo, paths, git("rev-parse", "HEAD"), {
+      installPack,
+      downloadPinned,
+      saveManifest,
+    });
+  const qwenReceipt = fs.existsSync(path.join(paths.root, "local-dictation.json"))
+    ? require("./flosi-qa-qwen").verifyQwen(repo, paths)
+    : null;
   verifyArtifacts(repo, paths);
   const electronPackage = require(path.join(repo, "node_modules", "electron", "package.json"));
   if (electronPackage.version !== "41.10.7")
@@ -284,6 +297,16 @@ async function main() {
     npm: npmVersion,
     electron: electronPackage.version,
     freeBytes: disk.freeBytes,
+    localCleanup: qwenReceipt
+      ? {
+          model: qwenReceipt.model.id,
+          sha256: qwenReceipt.model.sha256,
+          size: qwenReceipt.model.size,
+          runtime: qwenReceipt.runtime.version,
+          backend: "cpu",
+          prepared: true,
+        }
+      : { prepared: false },
     nativeWindowsFunctionalQA: "not_verified",
   };
   const reportFile = path.join(paths.logs, "environment.json");

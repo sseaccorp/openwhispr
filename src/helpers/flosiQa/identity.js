@@ -6,10 +6,12 @@ const os = require("node:os");
 const QA = Object.freeze({
   variant: "qa",
   name: "Flosi QA",
-  appId: "com.sseaccorp.flosi.qa",
-  credentialService: "Flosi-QA",
-  credentialAccount: "qa-secrets-master-key-v1",
-  schema: 1,
+  appId: "com.sseaccorp.flosi.qa.mvp.local",
+  credentialService: "Flosi-QA-MVP-Local",
+  credentialAccount: "qa-mvp-local-master-key-v1",
+  schema: 2,
+  purpose: "local-dictation-mvp-v1",
+  trayGuid: "a5665046-0304-4b90-a4f8-e6e7eb4060ca",
 });
 const PORTS = Object.freeze({
   whisper: [18900, 18921],
@@ -40,7 +42,7 @@ function pathsFor(root) {
 function getPaths(env = process.env) {
   if (!isQa(env)) throw new Error("Flosi QA identity is not active");
   const base = env.LOCALAPPDATA || path.join(os.homedir(), ".local", "share");
-  return pathsFor(env.FLOSI_QA_ROOT || path.join(base, "FlosiQA"));
+  return pathsFor(env.FLOSI_QA_ROOT || path.join(base, "FlosiQA-MVP-Local"));
 }
 
 function contains(root, target) {
@@ -65,6 +67,7 @@ function protectedRoots({ home, appData, localAppData, programData, systemDrive 
     ].map((name) => path.join(appData, name)),
     path.join(home, ".cache", "openwhispr"),
     path.join(home, ".openwhispr"),
+    path.join(localAppData, "FlosiQA"), // Preserve the earlier validated QA profile too.
     path.join(localAppData, "OpenWhispr"),
     path.join(localAppData, "openwhispr-updater"),
     path.join(localAppData, "open-whispr-updater"),

@@ -1,0 +1,322 @@
+[
+  {
+    "name": "npm-ci",
+    "command": "npm ci --no-audit --no-fund",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:26:12.350481+00:00",
+    "seconds": 19.83,
+    "exit_code": 254,
+    "log": "logs/npm-ci.log",
+    "logSha256": "6cb9ae1947bbf80cfef23142e0d212238b78c0a8f9a4352ab6e77156879278d9"
+  },
+  {
+    "name": "npm-ci-private-cache",
+    "command": "npm_config_cache=/workspace/work/flosi-mvp-audit/npm-cache ELECTRON_CACHE=/workspace/work/flosi-mvp-audit/electron-cache TMPDIR=/workspace/work/flosi-mvp-audit/tmp npm ci --no-audit --no-fund",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:26:49.269680+00:00",
+    "seconds": 21.94,
+    "exit_code": 1,
+    "log": "logs/npm-ci-private-cache.log",
+    "logSha256": "dad2ef088d6a2d99d2bd87fb5e2b938fcbedf5e8fa320517dbc19763a5ed8f0b"
+  },
+  {
+    "name": "npm-ci-proxy",
+    "command": "NODE_USE_ENV_PROXY=1 npm_config_cache=/workspace/work/flosi-mvp-audit/npm-cache ELECTRON_CACHE=/workspace/work/flosi-mvp-audit/electron-cache npm_config_devdir=/workspace/work/flosi-mvp-audit/node-gyp TMPDIR=/workspace/work/flosi-mvp-audit/tmp npm ci --no-audit --no-fund",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:27:40.345866+00:00",
+    "seconds": 18.77,
+    "exit_code": 1,
+    "log": "logs/npm-ci-proxy.log",
+    "logSha256": "37a8eec73363f14f41e45d35bd364d2c7f86a0ebce5b82f293c21580296741b0"
+  },
+  {
+    "name": "npm-ci-correct-electron-cache",
+    "command": "NODE_USE_ENV_PROXY=1 npm_config_cache=/workspace/work/flosi-mvp-audit/npm-cache electron_config_cache=/workspace/work/flosi-mvp-audit/electron-cache XDG_CACHE_HOME=/workspace/work/flosi-mvp-audit/xdg-cache TMPDIR=/workspace/work/flosi-mvp-audit/tmp npm ci --no-audit --no-fund",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:28:43.457820+00:00",
+    "seconds": 24.64,
+    "exit_code": 0,
+    "log": "logs/npm-ci-correct-electron-cache.log",
+    "logSha256": "7f5487694c1e274f8bd97d4c79858fab563479cb781c1885a66234bd316fcc77"
+  },
+  {
+    "name": "rebuild-node-sqlite",
+    "command": "NODE_USE_ENV_PROXY=1 npm_config_cache=/workspace/work/flosi-mvp-audit/npm-cache TMPDIR=/workspace/work/flosi-mvp-audit/tmp npm rebuild better-sqlite3",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:29:49.598822+00:00",
+    "seconds": 0.61,
+    "exit_code": 0,
+    "log": "logs/rebuild-node-sqlite.log",
+    "logSha256": "cb0bdbf88cae9c6a09ab5da6a44c771c82e93ba6907cf0702ca55a56918a3d46"
+  },
+  {
+    "name": "native-quick",
+    "command": "node /workspace/work/flosi-mvp-audit/native-quick.cjs",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:31:07.425407+00:00",
+    "seconds": 13.54,
+    "exit_code": 0,
+    "log": "logs/native-quick.log",
+    "logSha256": "c21cf7cfd09d5127b5bb31c11516a2177c407a20fb5b0f6b8328acff438211b1"
+  },
+  {
+    "name": "preparation-tests",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp node --import tsx --test --test-reporter=tap test/helpers/flosiQwenPreparation.test.js",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:32:24.652618+00:00",
+    "seconds": 0.21,
+    "exit_code": 1,
+    "log": "logs/preparation-tests.log",
+    "logSha256": "6abdfdc1a5f9d06890f44c0f155b92888c8b2cfd6a8d726ab837514a6feb7cbc"
+  },
+  {
+    "name": "preparation-tests-corrected",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp node --import tsx --test --test-reporter=tap test/helpers/flosiQwenPreparation.test.js",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:32:32.830394+00:00",
+    "seconds": 0.22,
+    "exit_code": 0,
+    "log": "logs/preparation-tests-corrected.log",
+    "logSha256": "9beef72a95d8e2075041e717ca61fd8e2845ddbd74ed3f71d65d1be02995e062"
+  },
+  {
+    "name": "focused-mvp",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp node --import tsx --test --test-concurrency=2 --test-reporter=tap test/helpers/flosiQwenPreparation.test.js test/helpers/flosiMvpDictation.test.js test/helpers/flosiQaIsolation.test.js test/helpers/localReasoningBridgeChain.test.js test/helpers/useAudioRecordingCleanupFallback.test.js test/helpers/audioManagerCancelLifecycle.test.js test/helpers/useAudioRecordingPasteRecovery.test.js",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:33:20.100008+00:00",
+    "seconds": 22.74,
+    "exit_code": 1,
+    "log": "logs/focused-mvp.log",
+    "logSha256": "f4ebda5d79896a308eddd91a351570d712de39e4bbf4aec440304a8611086d2d"
+  },
+  {
+    "name": "focused-mvp-corrected",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp node --import tsx --test --test-concurrency=2 --test-reporter=tap test/helpers/flosiQwenPreparation.test.js test/helpers/flosiMvpDictation.test.js test/helpers/flosiQaIsolation.test.js test/helpers/localReasoningBridgeChain.test.js test/helpers/useAudioRecordingCleanupFallback.test.js test/helpers/audioManagerCancelLifecycle.test.js test/helpers/useAudioRecordingPasteRecovery.test.js",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:34:02.658834+00:00",
+    "seconds": 22.92,
+    "exit_code": 0,
+    "log": "logs/focused-mvp-corrected.log",
+    "logSha256": "a610e3ccc245b85008bade5332b67237dc1b470bcefa033bf7986149b3d69448"
+  },
+  {
+    "name": "native-full",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp FLOSI_NATIVE_QA_ROOT=/workspace/work/flosi-mvp-audit/real node --import tsx --test --test-reporter=tap test/manual/flosiMvpNative.cjs",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:34:47.804727+00:00",
+    "seconds": 37.16,
+    "exit_code": 1,
+    "log": "logs/native-full.log",
+    "logSha256": "c1bee25992a9fa64854910663ffe164277811f8607f90c8eb48e3e36628e6d4c"
+  },
+  {
+    "name": "native-full-corrected",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp FLOSI_NATIVE_QA_ROOT=/workspace/work/flosi-mvp-audit/real node --import tsx --test --test-reporter=tap test/manual/flosiMvpNative.cjs",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:36:00.391197+00:00",
+    "seconds": 63.5,
+    "exit_code": 1,
+    "log": "logs/native-full-corrected.log",
+    "logSha256": "f40e26b7bbf91fa6e69d9302f2e0cbd0dbe4c80315ebfc796e5911b05fb1687b"
+  },
+  {
+    "name": "quality-initial",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp npm run quality-check",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:36:01.423949+00:00",
+    "seconds": 87.64,
+    "exit_code": 0,
+    "log": "logs/quality-initial.log",
+    "logSha256": "c860e8901f04a891c4376fd95e4712021b7b90de2748509a0196e46432400686"
+  },
+  {
+    "name": "final-focused",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp node --import tsx --test --test-concurrency=2 --test-reporter=tap test/helpers/flosiQwenPreparation.test.js test/helpers/flosiCleanupGuard.test.js test/helpers/flosiMvpDictation.test.js test/helpers/flosiQaIsolation.test.js test/helpers/localReasoningBridgeChain.test.js test/helpers/useAudioRecordingCleanupFallback.test.js test/helpers/audioManagerCancelLifecycle.test.js test/helpers/useAudioRecordingPasteRecovery.test.js",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:40:36.690257+00:00",
+    "seconds": 99.6,
+    "exit_code": 0,
+    "log": "logs/final-focused.log",
+    "logSha256": "a8bfe7b2da7e270b9fc87e434d132da61364aff5e2dd1b461dba0b5fc64a1f30"
+  },
+  {
+    "name": "native-guarded",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp FLOSI_NATIVE_QA_ROOT=/workspace/work/flosi-mvp-audit/real node --import tsx --test --test-reporter=tap test/manual/flosiMvpNative.cjs",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:40:34.142758+00:00",
+    "seconds": 200.3,
+    "exit_code": 1,
+    "log": "logs/native-guarded.log",
+    "logSha256": "5d57854911fe3c704b2710b199254e87cc700fa9b93616d23dcb08f11625d20e"
+  },
+  {
+    "name": "renderer-build",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp npm run build:renderer",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:45:09.388551+00:00",
+    "seconds": 9.96,
+    "exit_code": 0,
+    "log": "logs/renderer-build.log",
+    "logSha256": "c797a5bed242a7ec21e1715d0629f4bbe1b72cd09f4b5ecf6596bc09c2efcf99"
+  },
+  {
+    "name": "prep-final",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp node --import tsx --test --test-reporter=tap test/helpers/flosiQwenPreparation.test.js test/helpers/flosiCleanupGuard.test.js",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:47:13.803823+00:00",
+    "seconds": 2.08,
+    "exit_code": 1,
+    "log": "logs/prep-final.log",
+    "logSha256": "ecb1be7b51d441c0241fff1a944e8bbeb3b548a673d87b07e9ff603b77e4e42d"
+  },
+  {
+    "name": "prep-final-corrected",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp node --import tsx --test --test-reporter=tap test/helpers/flosiQwenPreparation.test.js test/helpers/flosiCleanupGuard.test.js",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:47:24.404033+00:00",
+    "seconds": 1.85,
+    "exit_code": 0,
+    "log": "logs/prep-final-corrected.log",
+    "logSha256": "384c4bf5de1262991aa9f6d25997eeb26cf4634cab38ccf6ac6931c4d6785887"
+  },
+  {
+    "name": "lint-qa-explicit",
+    "command": "node_modules/.bin/eslint --no-ignore src/helpers/flosiQa/identity.js src/helpers/flosiQa/preflight.js src/helpers/flosiQa/bootstrap.js src/helpers/flosiQa/localDictation.js src/helpers/flosiQa/cleanupGuard.js src/helpers/tray.js src/helpers/llamaServer.js src/helpers/modelManagerBridge.js src/services/localReasoningBridge.js scripts/flosi-qa-qwen.js scripts/flosi-qa.js preload.js test/helpers/flosiQwenPreparation.test.js test/helpers/flosiCleanupGuard.test.js test/helpers/flosiMvpDictation.test.js test/helpers/flosiQaIsolation.test.js test/helpers/localReasoningBridgeChain.test.js",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:49:15.771860+00:00",
+    "seconds": 6.82,
+    "exit_code": 0,
+    "log": "logs/lint-qa-explicit.log",
+    "logSha256": "7acdeeab357d9a8dd609e2cfc978d56e5a140bb3c233cec04a86d04cd0ad4db4"
+  },
+  {
+    "name": "native-final",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp FLOSI_NATIVE_QA_ROOT=/workspace/work/flosi-mvp-audit/real node --import tsx --test --test-reporter=tap test/manual/flosiMvpNative.cjs",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:46:10.475517+00:00",
+    "seconds": 218.03,
+    "exit_code": 0,
+    "log": "logs/native-final.log",
+    "logSha256": "76ab2b8a48d2063b6e40f2bffa82d06297795fcce531035f78934e6f7cf3a447"
+  },
+  {
+    "name": "quality-final",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp npm run quality-check",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:46:11.678752+00:00",
+    "seconds": 230.56,
+    "exit_code": 0,
+    "log": "logs/quality-final.log",
+    "logSha256": "01acbc1a01b504a298bfb057b371f00b32dfc03322c1e430b136145ba1ccab2d"
+  },
+  {
+    "name": "local-contracts-final",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp node --import tsx --test --test-concurrency=2 --test-reporter=tap test/helpers/flosiCleanupGuard.test.js test/helpers/flosiQwenPreparation.test.js test/helpers/flosiMvpDictation.test.js test/helpers/flosiQaIsolation.test.js test/helpers/localReasoningBridgeChain.test.js",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:50:49.577848+00:00",
+    "seconds": 10.61,
+    "exit_code": 0,
+    "log": "logs/local-contracts-final.log",
+    "logSha256": "2a0cd00064cd8f644a50a20182ffb7e9bde85a8e246a6d97875558a48888b687"
+  },
+  {
+    "name": "powershell-parse",
+    "command": "/workspace/work/flosi-orukeet-audit/powershell/pwsh -NoProfile -File /workspace/work/flosi-mvp-audit/parse-powershell.ps1",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:52:41.881621+00:00",
+    "seconds": 0.46,
+    "exit_code": -6,
+    "log": "logs/powershell-parse.log",
+    "logSha256": "8e52d2a59a6392b5bf41f660a7d606933e65542cd7d68f1f1062e5d543cdd8b2"
+  },
+  {
+    "name": "powershell-parse-private",
+    "command": "XDG_DATA_HOME=/workspace/work/flosi-mvp-audit/ps-data XDG_CONFIG_HOME=/workspace/work/flosi-mvp-audit/ps-config XDG_CACHE_HOME=/workspace/work/flosi-mvp-audit/ps-cache /workspace/work/flosi-orukeet-audit/powershell/pwsh -NoProfile -File /workspace/work/flosi-mvp-audit/parse-powershell.ps1",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:53:33.567833+00:00",
+    "seconds": 3.1,
+    "exit_code": 0,
+    "log": "logs/powershell-parse-private.log",
+    "logSha256": "f28a72ccf26d6fd650a6600449e73f8a2c0f81b1bc41081fd47a0b540f06b3f1"
+  },
+  {
+    "name": "native-final-time-guard",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp FLOSI_NATIVE_QA_ROOT=/workspace/work/flosi-mvp-audit/real node --import tsx --test --test-reporter=tap test/manual/flosiMvpNative.cjs",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:50:51.977382+00:00",
+    "seconds": 236.7,
+    "exit_code": 0,
+    "log": "logs/native-final-time-guard.log",
+    "logSha256": "a54870b69a43a59ba8458635ee9326f7cff409486b0e88f49a2779d732084c8c"
+  },
+  {
+    "name": "quality-frozen",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp npm run quality-check",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:52:42.453971+00:00",
+    "seconds": 220.52,
+    "exit_code": 0,
+    "log": "logs/quality-frozen.log",
+    "logSha256": "a41b490cf23f3c32941ac0c6371051f1565ec69de140ddeb6ff003e204903f23"
+  },
+  {
+    "name": "contracts-frozen",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp node --import tsx --test --test-concurrency=2 --test-reporter=tap test/helpers/flosiCleanupGuard.test.js test/helpers/flosiQwenPreparation.test.js test/helpers/flosiMvpDictation.test.js test/helpers/flosiQaIsolation.test.js test/helpers/localReasoningBridgeChain.test.js",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:56:29.850601+00:00",
+    "seconds": 11.75,
+    "exit_code": 0,
+    "log": "logs/contracts-frozen.log",
+    "logSha256": "dae2fb467186efd5907b4be1c78c4e085c74d6a8f5bb3595211114c024e56510"
+  },
+  {
+    "name": "preparation-real",
+    "command": "NODE_USE_ENV_PROXY=1 node /workspace/work/flosi-mvp-audit/prepare-real.cjs",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:56:26.684078+00:00",
+    "seconds": 38.62,
+    "exit_code": 0,
+    "log": "logs/preparation-real.log",
+    "logSha256": "48273736a513657fbd32dbac5482811ba88f5233228838c561637ac6240a258a"
+  },
+  {
+    "name": "cleanup-guard-final",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp node --test --test-reporter=tap test/helpers/flosiCleanupGuard.test.js",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T01:01:00.708189+00:00",
+    "seconds": 0.38,
+    "exit_code": 0,
+    "log": "logs/cleanup-guard-final.log",
+    "logSha256": "32cafb620e25171711d3804e98564545456d3ea4a128e7fcca343ba4ba7a24a1"
+  },
+  {
+    "name": "full-regression",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp REQUIRE_DB_TESTS=1 node --import tsx --test --test-concurrency=4 --test-reporter=tap \"test/**/*.test.js\"",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T00:37:13.009597+00:00",
+    "seconds": 1490.26,
+    "exit_code": 0,
+    "log": "logs/full-regression.log",
+    "logSha256": "5ed4e48ac0587ba2223bfbf31e920864cbdc279e87b325fd3339780b3f47e432"
+  },
+  {
+    "name": "powershell-final-parse",
+    "command": "XDG_DATA_HOME=/workspace/work/flosi-mvp-audit/ps-data XDG_CONFIG_HOME=/workspace/work/flosi-mvp-audit/ps-config XDG_CACHE_HOME=/workspace/work/flosi-mvp-audit/ps-cache /workspace/work/flosi-orukeet-audit/powershell/pwsh -NoProfile -File /workspace/work/flosi-mvp-audit/parse-powershell.ps1",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T01:07:50.144253+00:00",
+    "seconds": 0.84,
+    "exit_code": 0,
+    "log": "logs/powershell-final-parse.log",
+    "logSha256": "1eb97e98f98a86092f897b8575bfe9e0fddc2839dbe1a39850690afa8aa99145"
+  },
+  {
+    "name": "full-frozen",
+    "command": "TMPDIR=/workspace/work/flosi-mvp-audit/tmp REQUIRE_DB_TESTS=1 node --import tsx --test --test-concurrency=2 --test-reporter=tap \"test/**/*.test.js\"",
+    "cwd": "/workspace/work/flosi-mvp",
+    "started_utc": "2026-10-31T01:04:42.980056+00:00",
+    "seconds": 1149.56,
+    "exit_code": 0,
+    "log": "logs/full-frozen.log",
+    "logSha256": "1e6c165023a572599406fa3865e62e7c32499443d9ba83d9a14fdd14a05d3739"
+  }
+]

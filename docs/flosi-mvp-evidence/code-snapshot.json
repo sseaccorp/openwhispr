@@ -1,0 +1,87 @@
+{
+  "commit": "f82e3fe06df2b828de2c231735fd2f0d0f33de16",
+  "parentBaseline": "a31a82182d8bda46c4aae5853098ea77185cfdba",
+  "files": [
+    {
+      "path": "preload.js",
+      "sha256": "9f8db5e13ce6236cbb32e70857da557b9b37a7634c042e6096d7e06bffb570a1"
+    },
+    {
+      "path": "scripts/flosi-qa-artifacts.json",
+      "sha256": "594a0ceaf630718374a61b26df7b57968280eab841c9be36de4425de1c0522f1"
+    },
+    {
+      "path": "scripts/flosi-qa-qwen.js",
+      "sha256": "a3937721c9b9c489863f6fa83e4e4b27ab67d6fb538a0d2549c3eb6c1f739f20"
+    },
+    {
+      "path": "scripts/flosi-qa.js",
+      "sha256": "0235553952ff20a2dca87e1604eecad8d1a6c362196dc0e9e693879370bb5477"
+    },
+    {
+      "path": "scripts/flosi-qa.ps1",
+      "sha256": "5caba5d36e73fc4ec810cf28a07d9ca1cd91c3e6d92e969be3e6537d2a4bea43"
+    },
+    {
+      "path": "src/helpers/flosiQa/bootstrap.js",
+      "sha256": "ac9c5bbe97e8659007bc2a6c75426a64a11d5bae6a675c512d73c1a897293b20"
+    },
+    {
+      "path": "src/helpers/flosiQa/cleanupGuard.js",
+      "sha256": "aef8b4cf5396ab71c89854476935605ac9f6bb939ddfe0e7d33791c7278f7e6b"
+    },
+    {
+      "path": "src/helpers/flosiQa/identity.js",
+      "sha256": "8e05ca52f700f2b5de6b9732e07be1d6af013640fceba8eeb715cc192ff892c5"
+    },
+    {
+      "path": "src/helpers/flosiQa/localDictation.js",
+      "sha256": "ca2fb28465b284cc1e2afa68e9ec8c3b807b9cd2af022138447736daf92fbc2b"
+    },
+    {
+      "path": "src/helpers/flosiQa/preflight.js",
+      "sha256": "1b8874610a2e633a5845f709e19f2508614f99f76c25589cf2a771e58f8ddadc"
+    },
+    {
+      "path": "src/helpers/llamaServer.js",
+      "sha256": "2cfa4a511dc7028c476a1f7354cb1f5841add24c97a7e4f046e78da0d8b31cc2"
+    },
+    {
+      "path": "src/helpers/modelManagerBridge.js",
+      "sha256": "bfb4e3020e91ddd721898b44b8aec53ab1d70f0cb467e9b31c9c3f43b9d99d7c"
+    },
+    {
+      "path": "src/helpers/tray.js",
+      "sha256": "ad3870ff16d47227d761e21b7e2ef26ce67be727fe5de1ecae3b0553052cd7e3"
+    },
+    {
+      "path": "src/services/localReasoningBridge.js",
+      "sha256": "8810807260b7d277b55ea7a785541dd9f2a5d1c7642ecf0145aabd57fe471cc2"
+    },
+    {
+      "path": "test/helpers/flosiCleanupGuard.test.js",
+      "sha256": "564a8dd0f3c3650d0a28b81219e26cb92d1beef580e42148f5ac39ed45d8f7fa"
+    },
+    {
+      "path": "test/helpers/flosiMvpDictation.test.js",
+      "sha256": "8f79b1b30f5bba53b8a0b7179fae5ab4bb8548afb5db0c9bb0b2bad90c024dc5"
+    },
+    {
+      "path": "test/helpers/flosiQaIsolation.test.js",
+      "sha256": "d182cba7919ac49e139ed8b31174af131ed2051f6d835dbe3303c06472118a80"
+    },
+    {
+      "path": "test/helpers/flosiQwenPreparation.test.js",
+      "sha256": "13bbdff50e4b9f24f50e46ae9ba1d57dfffe8040159b9407efec2ac06178cfab"
+    },
+    {
+      "path": "test/helpers/localReasoningBridgeChain.test.js",
+      "sha256": "8eaf7dd98beef8fd4ea059df54640c9e91a6a51e595ea66bbcd90196aad3f93b"
+    },
+    {
+      "path": "test/manual/flosiMvpNative.cjs",
+      "sha256": "2fc8072f55dd9879b9a31b093a14a882da8b839cf5f8e038385ae58838756579"
+    }
+  ],
+  "fullSuiteConcurrency": 2
+}

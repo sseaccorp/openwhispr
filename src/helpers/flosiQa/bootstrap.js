@@ -49,6 +49,9 @@ function initialize(electron) {
   if (!process.versions.electron?.startsWith("41.10.7") || process.versions.modules !== "145")
     throw new Error("Flosi QA requires the locked Electron 41.10.7 / ABI 145");
   verifyArtifacts(repo, paths);
+  const localCleanup = fs.existsSync(path.join(paths.root, "local-dictation.json"))
+    ? require("./localDictation").verifyQwen(repo, paths)
+    : null;
   assertProcesses(windowsProcesses(), { repo });
 
   app.setName(QA.name);
@@ -98,7 +101,11 @@ function initialize(electron) {
     });
   });
   ipcMain.on("flosi-qa-config", (event) => {
-    event.returnValue = { variant: QA.variant };
+    event.returnValue = {
+      variant: QA.variant,
+      purpose: QA.purpose,
+      localCleanupModel: localCleanup?.model.id || null,
+    };
   });
   let collisionTimer;
   let collisionCheckPending = false;

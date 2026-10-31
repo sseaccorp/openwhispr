@@ -33,6 +33,25 @@ if (process.argv.includes("--flosi-qa")) {
     };
     for (const [key, value] of Object.entries(settings)) localStorage.setItem(key, value);
   }
+  // Explicit AddQwen opts this NEW private MVP profile into original cleanup.
+  // Apply once, also when the model was added after an initial Whisper-only run.
+  if (
+    identity.purpose === "local-dictation-mvp-v1" &&
+    identity.localCleanupModel === "qwen3.5-2b-q4_k_m" &&
+    !localStorage.getItem("flosiMvpCleanupConfigured")
+  ) {
+    const cleanup = {
+      useCleanupModel: "true",
+      cleanupMode: "local",
+      cleanupProvider: "local",
+      cleanupModel: identity.localCleanupModel,
+      cleanupDisableThinking: "true",
+      useDictationAgent: "false",
+      keepLocalModelLoaded: "false",
+      flosiMvpCleanupConfigured: "1",
+    };
+    for (const [key, value] of Object.entries(cleanup)) localStorage.setItem(key, value);
+  }
 }
 
 // BYOK API-key bridges, built once instead of hand-listed per key. Sandboxed

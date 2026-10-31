@@ -1,0 +1,12 @@
+{
+  "node": "v24.19.0",
+  "npm": "11.9.0",
+  "platform": "linux",
+  "arch": "x64",
+  "nodeAbi": "137",
+  "electronPackage": "41.10.7",
+  "availableParallelism": 2,
+  "memoryLimitBytes": "8589934592",
+  "cpuQuota": "200000 100000",
+  "windowsNativeQa": "not_executed"
+}

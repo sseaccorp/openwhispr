@@ -1,0 +1,75 @@
+{
+  "base": "a31a82182d8bda46c4aae5853098ea77185cfdba",
+  "files": [
+    {
+      "path": "src/helpers/whisper.js",
+      "unchanged": true,
+      "sha256": "267a62f38a5329f3316c116549bceb0a996745f24cd92ff8abf0bcae63d1c2df"
+    },
+    {
+      "path": "src/helpers/whisperServer.js",
+      "unchanged": true,
+      "sha256": "e110637e8e876a2b4848d77c2b4a0e0208179f1c5edf3bcaf1e75843cdbbe5cb"
+    },
+    {
+      "path": "src/helpers/audioManager.js",
+      "unchanged": true,
+      "sha256": "acf08e8bc423bc1f7bcff21317215bcdcf45fc43d1dbc4e95c82abb5aacb8504"
+    },
+    {
+      "path": "src/hooks/useAudioRecording.js",
+      "unchanged": true,
+      "sha256": "70387b078d7d0a75391980589fdfa9be635a9f77ff5d6a50946bff959b3acb96"
+    },
+    {
+      "path": "src/helpers/hotkeyManager.js",
+      "unchanged": true,
+      "sha256": "d9981604f49f58176b08952e42a848b5a8c5aab0e7e9d82f8289f67124f4d877"
+    },
+    {
+      "path": "src/helpers/windowsPasteTarget.js",
+      "unchanged": true,
+      "sha256": "dc710017c902366b6d45f20b5b89a0c152ddbda617890b1d816b69b43aea9648"
+    },
+    {
+      "path": "src/models/modelRegistryData.json",
+      "unchanged": true,
+      "sha256": "f6d9eabf7465e3ffd5fd0c420b460481c1fb53bf9eeeefdcd2ac0b3cac3fa25b"
+    },
+    {
+      "path": "src/config/prompts/index.ts",
+      "unchanged": true,
+      "sha256": "0afd49cc1efdea5038636965a615cdb45164ac6d43cb05238cbee5f21ef1fce0"
+    },
+    {
+      "path": "src/config/prompts/registry.ts",
+      "unchanged": true,
+      "sha256": "a6926e06190d76a6d1bc5503d688aeda3efdb7c3423f4315172a7e7955f70970"
+    },
+    {
+      "path": "src/locales/en/prompts.json",
+      "unchanged": true,
+      "sha256": "eff692aa01fd12e93375a473fbed860b6ba45a314ffbff0f500e83eaefeb75cf"
+    },
+    {
+      "path": "src/locales/es/prompts.json",
+      "unchanged": true,
+      "sha256": "b351272ec9658c135ec76020758208b6338f691c4ad0a837ebd550ed3230a6b1"
+    },
+    {
+      "path": "package.json",
+      "unchanged": true,
+      "sha256": "6e72b4e994d0706714bdeb2e2f9b7d31d5e508a2db9658b21780a4d4b8187b6c"
+    },
+    {
+      "path": "package-lock.json",
+      "unchanged": true,
+      "sha256": "9dfb56d340c4e7490ea88a0d819dd38ad273a788ea10ab0431d913369ea97a92"
+    },
+    {
+      "path": "scripts/download-llama-server.js",
+      "unchanged": true,
+      "sha256": "e79404d829e14d4901ee154ca1085ace1cf27ee92e4ce7ceb6ffd72d822f95a9"
+    }
+  ]
+}
