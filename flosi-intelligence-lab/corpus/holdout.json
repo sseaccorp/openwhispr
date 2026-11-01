@@ -1,0 +1,868 @@
+[
+  {
+    "id": "hold-es-01",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "es",
+    "tags": [
+      "self_correction",
+      "dates",
+      "numbers"
+    ],
+    "ambiguous": false,
+    "input": "El vuelo sale el 14 de junio, perdón, el 16 de julio a las 08:30",
+    "expected": [
+      "El vuelo sale el 16 de julio a las 08:30."
+    ],
+    "rubric": "Reemplazar día y mes juntos; conservar hora y formato.",
+    "checks": [
+      {
+        "dimension": "numbers",
+        "kind": "contains",
+        "values": [
+          "16 de julio"
+        ]
+      },
+      {
+        "dimension": "numbers",
+        "kind": "contains",
+        "values": [
+          "08:30"
+        ]
+      },
+      {
+        "dimension": "self_correction",
+        "kind": "absent",
+        "values": [
+          "14 de junio",
+          "perdón"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-es-02",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "es",
+    "tags": [
+      "self_correction",
+      "whole_phrase"
+    ],
+    "ambiguous": false,
+    "input": "Aprueba la propuesta de Luis, espera, rechaza la propuesta y pide una nueva versión",
+    "expected": [
+      "Rechaza la propuesta y pide una nueva versión."
+    ],
+    "rubric": "La última decisión reemplaza aprobar; conservar petición adicional.",
+    "checks": [
+      {
+        "dimension": "self_correction",
+        "kind": "contains",
+        "values": [
+          "rechaza la propuesta"
+        ]
+      },
+      {
+        "dimension": "self_correction",
+        "kind": "absent",
+        "values": [
+          "aprueba"
+        ]
+      },
+      {
+        "dimension": "meaning",
+        "kind": "contains",
+        "values": [
+          "pide una nueva versión"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-es-03",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "es",
+    "tags": [
+      "self_correction",
+      "names"
+    ],
+    "ambiguous": false,
+    "input": "El contacto es Ximena Solís, no Jimena, con equis",
+    "expected": [
+      "El contacto es Ximena Solís, con equis."
+    ],
+    "rubric": "Preservar Ximena con X y apellido; eliminar alternativa descartada.",
+    "checks": [
+      {
+        "dimension": "names",
+        "kind": "contains",
+        "values": [
+          "Ximena Solís"
+        ]
+      },
+      {
+        "dimension": "names",
+        "kind": "absent",
+        "values": [
+          "Jimena"
+        ]
+      },
+      {
+        "dimension": "meaning",
+        "kind": "contains",
+        "values": [
+          "con equis"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-es-04",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "es",
+    "tags": [
+      "self_correction",
+      "numbers"
+    ],
+    "ambiguous": false,
+    "input": "Necesitamos 1.250 euros, no, 1.520 euros, IVA incluido",
+    "expected": [
+      "Necesitamos 1.520 euros, IVA incluido."
+    ],
+    "rubric": "Conservar separador y cantidad final, sin perder IVA incluido.",
+    "checks": [
+      {
+        "dimension": "numbers",
+        "kind": "contains",
+        "values": [
+          "1.520 euros"
+        ]
+      },
+      {
+        "dimension": "numbers",
+        "kind": "absent",
+        "values": [
+          "1.250"
+        ]
+      },
+      {
+        "dimension": "meaning",
+        "kind": "contains",
+        "values": [
+          "IVA incluido"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-es-05",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "es",
+    "tags": [
+      "self_correction",
+      "negations"
+    ],
+    "ambiguous": false,
+    "input": "No borres las copias antiguas, bueno, borra solo las de enero",
+    "expected": [
+      "Borra solo las de enero."
+    ],
+    "rubric": "La autorización final se limita a enero; no extenderla a todas las copias.",
+    "checks": [
+      {
+        "dimension": "meaning",
+        "kind": "contains",
+        "values": [
+          "solo las de enero"
+        ]
+      },
+      {
+        "dimension": "self_correction",
+        "kind": "absent",
+        "values": [
+          "no borres"
+        ]
+      },
+      {
+        "dimension": "fillers",
+        "kind": "absent",
+        "values": [
+          "bueno,"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-es-06",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "es",
+    "tags": [
+      "fillers",
+      "names",
+      "numbers",
+      "technical"
+    ],
+    "ambiguous": false,
+    "input": "Mmm, o sea, necesito que Óscar traiga, eh, tres cables USB-C",
+    "expected": [
+      "Necesito que Óscar traiga tres cables USB-C."
+    ],
+    "rubric": "Quitar vacilaciones, preservar acento, cantidad y USB-C.",
+    "checks": [
+      {
+        "dimension": "fillers",
+        "kind": "absent",
+        "values": [
+          "mmm",
+          "o sea",
+          "eh,"
+        ]
+      },
+      {
+        "dimension": "names",
+        "kind": "contains",
+        "values": [
+          "Óscar"
+        ]
+      },
+      {
+        "dimension": "numbers",
+        "kind": "contains",
+        "values": [
+          "tres"
+        ]
+      },
+      {
+        "dimension": "names",
+        "kind": "contains",
+        "values": [
+          "USB-C"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-es-07",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "es",
+    "tags": [
+      "fillers",
+      "natural"
+    ],
+    "ambiguous": false,
+    "input": "Este libro es para este niño y, este, llega mañana",
+    "expected": [
+      "Este libro es para este niño y llega mañana."
+    ],
+    "rubric": "Conservar ambos demostrativos este; eliminar solo la vacilación aislada.",
+    "checks": [
+      {
+        "dimension": "meaning",
+        "kind": "contains",
+        "values": [
+          "este libro"
+        ]
+      },
+      {
+        "dimension": "meaning",
+        "kind": "contains",
+        "values": [
+          "este niño"
+        ]
+      },
+      {
+        "dimension": "fillers",
+        "kind": "absent",
+        "values": [
+          ", este,"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-es-08",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "es",
+    "tags": [
+      "negations",
+      "ambiguous"
+    ],
+    "ambiguous": true,
+    "input": "No es imposible que no venga",
+    "expected": [
+      "No es imposible que no venga."
+    ],
+    "rubric": "Conservar la doble negación y su matiz; no simplificar la lógica.",
+    "checks": [
+      {
+        "dimension": "negations",
+        "kind": "contains",
+        "values": [
+          "no es imposible"
+        ]
+      },
+      {
+        "dimension": "negations",
+        "kind": "contains",
+        "values": [
+          "no venga"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-es-09",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "es",
+    "tags": [
+      "technical",
+      "names"
+    ],
+    "ambiguous": false,
+    "input": "Guarda el archivo en C:\\Datos\\QA y usa la variable FLOSI_MODE=qa",
+    "expected": [
+      "Guarda el archivo en C:\\Datos\\QA y usa la variable FLOSI_MODE=qa."
+    ],
+    "rubric": "Conservar ruta y asignación literalmente; no modificar el sistema.",
+    "checks": [
+      {
+        "dimension": "names",
+        "kind": "contains",
+        "values": [
+          "C:\\Datos\\QA"
+        ]
+      },
+      {
+        "dimension": "names",
+        "kind": "contains",
+        "values": [
+          "FLOSI_MODE=qa"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-es-10",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "es",
+    "tags": [
+      "ambiguous",
+      "self_correction",
+      "names",
+      "dates"
+    ],
+    "ambiguous": true,
+    "input": "Lo de Pedro, no, lo de su hermana, el viernes quizá",
+    "expected": [
+      "Lo de Pedro, no, lo de su hermana, el viernes quizá."
+    ],
+    "rubric": "El referente y alcance son inciertos: conservarlos; no inventar qué ocurrió o quién es la hermana.",
+    "checks": [
+      {
+        "dimension": "names",
+        "kind": "contains",
+        "values": [
+          "Pedro"
+        ]
+      },
+      {
+        "dimension": "meaning",
+        "kind": "contains",
+        "values": [
+          "su hermana"
+        ]
+      },
+      {
+        "dimension": "meaning",
+        "kind": "contains",
+        "values": [
+          "quizá"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-en-01",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "en",
+    "tags": [
+      "self_correction",
+      "dates",
+      "numbers"
+    ],
+    "ambiguous": false,
+    "input": "The deadline is March 4, sorry, April 14 at 09:15 UTC",
+    "expected": [
+      "The deadline is April 14 at 09:15 UTC."
+    ],
+    "rubric": "Replace month and day while preserving time and timezone.",
+    "checks": [
+      {
+        "dimension": "numbers",
+        "kind": "contains",
+        "values": [
+          "April 14"
+        ]
+      },
+      {
+        "dimension": "numbers",
+        "kind": "contains",
+        "values": [
+          "09:15 UTC"
+        ]
+      },
+      {
+        "dimension": "self_correction",
+        "kind": "absent",
+        "values": [
+          "March 4",
+          "sorry"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-en-02",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "en",
+    "tags": [
+      "self_correction",
+      "whole_phrase"
+    ],
+    "ambiguous": false,
+    "input": "Accept the offer from Morgan, wait, decline the offer and ask for revised terms",
+    "expected": [
+      "Decline the offer and ask for revised terms."
+    ],
+    "rubric": "Final clause replaces acceptance; retain request for terms.",
+    "checks": [
+      {
+        "dimension": "meaning",
+        "kind": "contains",
+        "values": [
+          "decline the offer"
+        ]
+      },
+      {
+        "dimension": "meaning",
+        "kind": "contains",
+        "values": [
+          "revised terms"
+        ]
+      },
+      {
+        "dimension": "self_correction",
+        "kind": "absent",
+        "values": [
+          "accept the offer",
+          "wait"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-en-03",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "en",
+    "tags": [
+      "self_correction",
+      "names"
+    ],
+    "ambiguous": false,
+    "input": "The recipient is Aaliyah Patel, not Alia, with two a letters at the start",
+    "expected": [
+      "The recipient is Aaliyah Patel, with two a letters at the start."
+    ],
+    "rubric": "Keep final name spelling and explicit spelling hint.",
+    "checks": [
+      {
+        "dimension": "names",
+        "kind": "contains",
+        "values": [
+          "Aaliyah Patel"
+        ]
+      },
+      {
+        "dimension": "names",
+        "kind": "absent",
+        "values": [
+          "not Alia"
+        ]
+      },
+      {
+        "dimension": "meaning",
+        "kind": "contains",
+        "values": [
+          "two a letters"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-en-04",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "en",
+    "tags": [
+      "self_correction",
+      "numbers"
+    ],
+    "ambiguous": false,
+    "input": "Transfer $1,250, no, $1,520, including the service fee",
+    "expected": [
+      "Transfer $1,520, including the service fee."
+    ],
+    "rubric": "Keep final amount and fee inclusion.",
+    "checks": [
+      {
+        "dimension": "numbers",
+        "kind": "contains",
+        "values": [
+          "$1,520"
+        ]
+      },
+      {
+        "dimension": "numbers",
+        "kind": "absent",
+        "values": [
+          "$1,250"
+        ]
+      },
+      {
+        "dimension": "meaning",
+        "kind": "contains",
+        "values": [
+          "including the service fee"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-en-05",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "en",
+    "tags": [
+      "self_correction",
+      "negations",
+      "technical"
+    ],
+    "ambiguous": false,
+    "input": "Do not delete the old exports, actually, delete only the January exports",
+    "expected": [
+      "Delete only the January exports."
+    ],
+    "rubric": "Final permission is limited to January.",
+    "checks": [
+      {
+        "dimension": "meaning",
+        "kind": "contains",
+        "values": [
+          "only the January exports"
+        ]
+      },
+      {
+        "dimension": "self_correction",
+        "kind": "absent",
+        "values": [
+          "do not delete",
+          "actually"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-en-06",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "en",
+    "tags": [
+      "fillers",
+      "names",
+      "numbers",
+      "technical"
+    ],
+    "ambiguous": false,
+    "input": "Er, I mean, ask Søren to bring, um, four USB-C adapters",
+    "expected": [
+      "Ask Søren to bring four USB-C adapters."
+    ],
+    "rubric": "Remove hesitation, retain spelling, quantity, and connector.",
+    "checks": [
+      {
+        "dimension": "fillers",
+        "kind": "absent",
+        "values": [
+          "er,",
+          "i mean",
+          "um,"
+        ]
+      },
+      {
+        "dimension": "names",
+        "kind": "contains",
+        "values": [
+          "Søren"
+        ]
+      },
+      {
+        "dimension": "numbers",
+        "kind": "contains",
+        "values": [
+          "four"
+        ]
+      },
+      {
+        "dimension": "names",
+        "kind": "contains",
+        "values": [
+          "USB-C"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-en-07",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "en",
+    "tags": [
+      "fillers",
+      "natural"
+    ],
+    "ambiguous": false,
+    "input": "Well, the well is full and it works well",
+    "expected": [
+      "The well is full and it works well."
+    ],
+    "rubric": "Remove discourse marker; retain noun and adverb uses of well.",
+    "checks": [
+      {
+        "dimension": "meaning",
+        "kind": "contains",
+        "values": [
+          "the well is full"
+        ]
+      },
+      {
+        "dimension": "meaning",
+        "kind": "contains",
+        "values": [
+          "works well"
+        ]
+      },
+      {
+        "dimension": "fillers",
+        "kind": "absent",
+        "values": [
+          "well,"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-en-08",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "en",
+    "tags": [
+      "negations",
+      "ambiguous"
+    ],
+    "ambiguous": true,
+    "input": "It is not unlikely that she will not attend",
+    "expected": [
+      "It is not unlikely that she will not attend."
+    ],
+    "rubric": "Retain both negatives and uncertainty, do not simplify.",
+    "checks": [
+      {
+        "dimension": "negations",
+        "kind": "contains",
+        "values": [
+          "not unlikely"
+        ]
+      },
+      {
+        "dimension": "negations",
+        "kind": "contains",
+        "values": [
+          "will not attend"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-en-09",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "en",
+    "tags": [
+      "technical",
+      "numbers",
+      "negations"
+    ],
+    "ambiguous": false,
+    "input": "Set RETRY_COUNT=0 and save to C:\\Temp\\QA without changing prod.json",
+    "expected": [
+      "Set RETRY_COUNT=0 and save to C:\\Temp\\QA without changing prod.json."
+    ],
+    "rubric": "Keep literal assignment and path; retain restriction on production file.",
+    "checks": [
+      {
+        "dimension": "names",
+        "kind": "contains",
+        "values": [
+          "RETRY_COUNT=0"
+        ]
+      },
+      {
+        "dimension": "names",
+        "kind": "contains",
+        "values": [
+          "C:\\Temp\\QA"
+        ]
+      },
+      {
+        "dimension": "negations",
+        "kind": "contains",
+        "values": [
+          "without changing prod.json"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  },
+  {
+    "id": "hold-en-10",
+    "split": "holdout",
+    "synthetic": true,
+    "language": "en",
+    "tags": [
+      "ambiguous",
+      "self_correction",
+      "names",
+      "dates"
+    ],
+    "ambiguous": true,
+    "input": "About Alex, no, their manager, on Friday maybe",
+    "expected": [
+      "About Alex, no, their manager, on Friday maybe."
+    ],
+    "rubric": "Unclear referent and correction scope; preserve uncertainty without inventing an event.",
+    "checks": [
+      {
+        "dimension": "names",
+        "kind": "contains",
+        "values": [
+          "Alex"
+        ]
+      },
+      {
+        "dimension": "meaning",
+        "kind": "contains",
+        "values": [
+          "their manager"
+        ]
+      },
+      {
+        "dimension": "meaning",
+        "kind": "contains",
+        "values": [
+          "maybe"
+        ]
+      },
+      {
+        "dimension": "punctuation",
+        "kind": "terminal"
+      }
+    ]
+  }
+]

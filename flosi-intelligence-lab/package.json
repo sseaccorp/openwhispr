@@ -1,0 +1,13 @@
+{
+  "name": "flosi-intelligence-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Offline-first synthetic dictation cleanup benchmark; independent of Flosi QA",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --import ./test/no-network.mjs --test test/*.test.mjs",
+    "validate": "node src/cli.mjs validate",
+    "simulate": "node src/cli.mjs run --mode simulate --prompt v2 --split dev"
+  }
+}
