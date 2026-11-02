@@ -1,0 +1,27 @@
+✔ holdout requires deliberate unlock, dev is default (12.261024ms)
+✔ textual match never approves semantics or punctuation (2.388195ms)
+✔ entity, negation, filler and self-correction regressions are separate signals (4.709466ms)
+✔ request uses exact Groq model, low default, no tools/search, no reference leakage (1.525312ms)
+✔ simulation never invokes transport even when a key exists (16.324053ms)
+✔ real mode rejects absent approval, limit, budget, key and prices before fetch (7.357045ms)
+✔ strict options reject high effort and invalid limits without transport (46.299551ms)
+✔ cost uses configurable rates and all completion tokens including reasoning (0.619873ms)
+✔ successful fake HTTP request records raw response, usage, latency, prices and prompt (11.956792ms)
+✔ HTTP errors, malformed replies, timeouts and network failures never retry (103.511151ms)
+✔ unknown API cost stays unknown instead of being reported as zero (9.391494ms)
+✔ secret redaction covers raw provider output, nested structures and error bodies (9.790343ms)
+✔ output folders cannot overwrite artifacts, escape lab or follow symlinks (1.439073ms)
+✔ CSV quotes newlines and commas and neutralizes spreadsheet formulas (0.123744ms)
+✔ comparison finds deliberately planted number and negation regressions (77.710411ms)
+✔ review is bound to run, output hash, reviewer, notes and every dimension (14.093645ms)
+✔ tampering with result rows is detected (8.502739ms)
+✔ package has no dependencies or installation lifecycle scripts (0.620857ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 493.429588
+V4 offline guard: {"networkAttempts":0,"reservedAttempts":0}
