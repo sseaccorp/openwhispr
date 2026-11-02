@@ -1,0 +1,140 @@
+{
+  "dev-en-03": {
+    "inputSha256": "b55cd610b59ae92aec9b7761fc5be0688eb5b2344b0b5ccdb5de87b487bf026c",
+    "rules": [
+      {
+        "id": "repair-marker",
+        "group": "B",
+        "kind": "absent_tokens",
+        "value": "sorry",
+        "priority": "P1"
+      }
+    ]
+  },
+  "dev-es-07": {
+    "inputSha256": "1ddb58f6c81f449a622d915ad666ea01ce08cd89fd04c28fec97b1c4a4b80c91",
+    "rules": [
+      {
+        "id": "intro-bueno",
+        "group": "B",
+        "kind": "token_count",
+        "value": "bueno",
+        "priority": "P1",
+        "count": 1
+      }
+    ]
+  },
+  "dev-en-07": {
+    "inputSha256": "c776069ddf88a9d9d0328356f854ebcf32a77c2e003ba1fbea713d86be12458c",
+    "rules": [
+      {
+        "id": "intro-like",
+        "group": "B",
+        "kind": "token_count",
+        "value": "like",
+        "priority": "P1",
+        "count": 2
+      }
+    ]
+  },
+  "dev-es-09": {
+    "inputSha256": "6af66eb7704157761c614bd1ad5b7aa11452a472610a83723b9d8a7a99f98c57",
+    "rules": [
+      {
+        "id": "quantity",
+        "group": "C",
+        "kind": "exact",
+        "value": "0,5 mg",
+        "priority": "P0"
+      },
+      {
+        "id": "identifier",
+        "group": "C",
+        "kind": "exact",
+        "value": "AB-019",
+        "priority": "P0"
+      }
+    ]
+  },
+  "dev-en-09": {
+    "inputSha256": "985d20239d7ddfd697fcb19d6aa9ad426743a9ff873b0b491bfff3470bee93fe",
+    "rules": [
+      {
+        "id": "quantity",
+        "group": "C",
+        "kind": "exact",
+        "value": "0.05 volts",
+        "priority": "P0"
+      },
+      {
+        "id": "identifier",
+        "group": "C",
+        "kind": "exact",
+        "value": "ZX-007",
+        "priority": "P0"
+      }
+    ]
+  },
+  "dev-es-10": {
+    "inputSha256": "c94bb62f907ce363864cef2c882d3a8e5dfca0db3c78512f484bdfc697716580",
+    "rules": [
+      {
+        "id": "command-1",
+        "group": "C",
+        "kind": "exact",
+        "value": "git status",
+        "priority": "P0"
+      },
+      {
+        "id": "command-2",
+        "group": "C",
+        "kind": "exact",
+        "value": "git reset --hard",
+        "priority": "P0"
+      }
+    ]
+  },
+  "dev-en-10": {
+    "inputSha256": "05ad925b0ce9126f29e06f17c1c8f7d1fceda6dd633f2ddc7dff89bd0f079d25",
+    "rules": [
+      {
+        "id": "command-1",
+        "group": "C",
+        "kind": "exact",
+        "value": "npm test",
+        "priority": "P0"
+      },
+      {
+        "id": "command-2",
+        "group": "C",
+        "kind": "exact",
+        "value": "npm publish",
+        "priority": "P0"
+      }
+    ]
+  },
+  "dev-es-14": {
+    "inputSha256": "87b12aa21a9216a3047b91a3f01dfea08836eda9f215b27fa3a4db478db2b553",
+    "rules": [
+      {
+        "id": "verbatim",
+        "group": "A",
+        "kind": "tokens",
+        "value": "espera no mejor el viernes",
+        "priority": "P0"
+      }
+    ]
+  },
+  "dev-en-14": {
+    "inputSha256": "7d95f80c727fc91b2b5d77576e14f19f7327298c642fa3cbf14d194461664026",
+    "rules": [
+      {
+        "id": "verbatim",
+        "group": "A",
+        "kind": "tokens",
+        "value": "wait no make it Friday",
+        "priority": "P0"
+      }
+    ]
+  }
+}

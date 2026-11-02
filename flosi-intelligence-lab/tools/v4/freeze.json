@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "flosi-v4-freeze/1",
+  "baseCommit": "1ad9adbcb7068e3eb606bfd2075599fdeaf1ebb8",
+  "prompts": {
+    "v3": "05296a338d41f67a2f648b71180c03e952df2a685c37b55cb7ce3b7989793fc1",
+    "v4": "eea5087aac218db999328c0dd33f8ed25364c7bc7da645367a6aed7fdef60c8e"
+  },
+  "historicalCorpus": "48716d7b2af76cce3487da818b8a44d6ffef9a64921f029f0d57cda597ded3ec",
+  "historicalEvaluator": "1d5180bc080f587e6dafddd1121154c734d8c0111958c98279dd3d18844330b5",
+  "files": {
+    "dev.json": "b0729c94a1baa4ff4954c6eb6938b59e52b2625ab963c1aa401326a24643033f",
+    "historical-checks.json": "cc9089a6b12e3405ee3cd4158c2f1e4832bd6e5e70f230a76448b637e6bd3306",
+    "audit.mjs": "90416bc8906d6aaffea20a4706c4ba8fe940272dc0f43e1c71fd80347bcf96dc",
+    "core.mjs": "cbc7812ac0da5e35f7e94168d9d4763813efa622c0ee985afac605edd92464fd",
+    "run.mjs": "a84b8510b237572439df03e7c5ccb7bcdbec74caf874825ab060b934513faaf6",
+    "cli.mjs": "8d48774eeb0795b5262b4b8a2d3fa6fd262bbebafdf42608e1494f46ad132f5a",
+    "offline-guard.mjs": "2debd910c8927eff5b6197c345eaa4aec6bb2c8238d786a5ffde31d565f58a82",
+    "../recovery/provider.mjs": "2738d75d6082cbff17a0e67d7a0c876897d259c3f1bd20f401c954c3e972440a"
+  },
+  "settings": {
+    "model": "openai/gpt-oss-120b",
+    "effort": "low",
+    "maxCompletionTokens": 512,
+    "temperature": 0,
+    "seed": 42,
+    "concurrency": 1,
+    "retries": 0,
+    "timeoutMs": 30000
+  }
+}

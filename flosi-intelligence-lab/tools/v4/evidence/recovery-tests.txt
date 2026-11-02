@@ -1,0 +1,26 @@
+✔ offline preflight recognizes 17 reusable responses and exactly 13 pending from dev-en-03 (113.187551ms)
+✔ recovery preserves 17 original responses, makes only 13 calls, and is comparable with the unchanged v2 comparator (598.460097ms)
+✔ another 429 records allowlisted rate metadata, never reads its body or retries, and retains old unknown costs (99.308451ms)
+✔ a manually authorized second recovery resumes only what is still pending with full lineage (369.423466ms)
+✔ bad rows hash and tampered prompt/evaluator/corpus identities fail before any call (97.830536ms)
+✔ duplicate case, duplicate provider response, reordered rows and changed saved outputs fail even with a recomputed rows hash (145.809323ms)
+✔ wrong model, effort, request parameters, case list or unsuccessful baseline are rejected (191.17263ms)
+✔ insufficient budget, too few authorized requests, missing key/prices and missing explicit flags make no requests or output (158.183165ms)
+✔ existing output directory, overlapping source, or escaped path is never written (62.277871ms)
+✔ unknown historical valid-response cost stays null rather than being silently reconstructed (215.062634ms)
+✔ new prices are applied only to new requests, preserving historical verified prices and costs (304.02884ms)
+✔ input changes during cooldown prevent the next request (48.054521ms)
+✔ duplicate fresh provider response is billed if usage is known but stops the batch as invalid (49.119594ms)
+✔ timeout and missing usage stop without retry; their cost remains unknown (118.638787ms)
+✔ tampering with recovery accounting, lineage or ledger is rejected before a subsequent request (230.513941ms)
+✔ safe headers reject arbitrary values, cookies, authorization and secret-shaped metadata (0.564019ms)
+✔ CLI check is offline and rejects paid flags; the recover command requires explicit authorization (38.698097ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3102.051764
+V4 offline guard: {"networkAttempts":0,"reservedAttempts":0}

@@ -1,0 +1,2 @@
+Guard probe fetch: blocked before IO; expected exit status 1.
+V4 offline guard: {"networkAttempts":1,"reservedAttempts":0}

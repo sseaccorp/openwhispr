@@ -1,0 +1,35 @@
+{
+  "baseCommit": "1ad9adbcb7068e3eb606bfd2075599fdeaf1ebb8",
+  "branch": "codex/flosi-intelligence-v4-p0",
+  "originalCheckoutHead": "fc786f41c91de8177ce7d9333d2834d973cc3c19",
+  "originalCheckoutStatusBefore": "clean",
+  "originalCheckoutStatusAfter": "clean",
+  "allPreexistingTrackedFilesExceptUnreadHoldout": "git diff returned no changes before staging additions",
+  "preservedSha256": {
+    "flosi-intelligence-lab/prompts/v1.json": "7c7c6f666d8bb993a36eac10f09e6d0d09d09003b18718743aed19486de89d28",
+    "flosi-intelligence-lab/prompts/v2.json": "3dd0c55ac34140c86236c3fa94984f76be9351787911d2d8d15a2fdcf74fc635",
+    "flosi-intelligence-lab/prompts/v3.json": "05296a338d41f67a2f648b71180c03e952df2a685c37b55cb7ce3b7989793fc1",
+    "flosi-intelligence-lab/corpus/dev.json": "1e697a9f1b06c7d4c39c8f410dd13b425d3861c02174b9f0571c71d4ef58c582",
+    "flosi-intelligence-lab/corpus/manifest.json": "a24d0cf69ffb376b0327092641fa82846214d5f023d2fa287a007ca1c7886cff",
+    "flosi-intelligence-lab/tools/recovery/provider.mjs": "2738d75d6082cbff17a0e67d7a0c876897d259c3f1bd20f401c954c3e972440a"
+  },
+  "holdoutIndexMetadataUnchanged": "100644 db7d62a0f469c67cd62892a512eccbd57adf4245 0\tflosi-intelligence-lab/corpus/holdout.json",
+  "holdoutFileOpened": false,
+  "windowsArtifactsAccessed": false,
+  "qaInstallationAccessed": false,
+  "productionFilesModified": false,
+  "realGroqRequests": 0,
+  "testSuites": {
+    "v4": 16,
+    "historicalSelected": 18,
+    "recovery": 17
+  },
+  "mainGuardCounters": {
+    "networkAttempts": 0,
+    "reservedAttempts": 0
+  },
+  "deliberateGuardProbes": {
+    "networkBlockedBeforeIO": 5,
+    "syntheticReservedPathBlockedBeforeIO": 1
+  }
+}
