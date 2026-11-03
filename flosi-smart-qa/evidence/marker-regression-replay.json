@@ -1,0 +1,40 @@
+{
+  "mode": "stored_real_plan_replay_no_new_inference",
+  "sourceResponseId": "chatcmpl-zM3bnQDdptNVBknOoQ5WzWE8SC6mXrGe",
+  "originalResult": {
+    "original": "Abre la válvula, no, no la abras si la presión no ha bajado.",
+    "text": "Abre la válvula, no la abras si la presión no ha bajado.",
+    "status": "edited",
+    "reason": null,
+    "edits": [
+      {
+        "before": "Abre la válvula, no, no la abras si la presión no ha bajado.",
+        "after": "Abre la válvula, no la abras si la presión no ha bajado.",
+        "kind": "repair"
+      }
+    ],
+    "reanchored": [],
+    "provider": {
+      "status": "ok",
+      "content": "{\"uncertain\":false,\"edits\":[{\"before\":\"Abre la válvula, no, no la abras si la presión no ha bajado.\",\"after\":\"Abre la válvula, no la abras si la presión no ha bajado.\",\"kind\":\"repair\"}]}",
+      "usage": {
+        "prompt_tokens": 592,
+        "completion_tokens": 59,
+        "total_tokens": 651
+      },
+      "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+      "latencyMs": 7413.1,
+      "error": null,
+      "responseId": "chatcmpl-zM3bnQDdptNVBknOoQ5WzWE8SC6mXrGe",
+      "externalInferenceCostUsd": 0,
+      "attempt": 7,
+      "requestSha256": "96ddd38d9b03f573b64462cf1df44e66cb812ef4e4f234004bc2d7a34d992c9f"
+    }
+  },
+  "replayedResult": {
+    "status": "rejected",
+    "text": "Abre la válvula, no, no la abras si la presión no ha bajado.",
+    "reason": "repair_removed_only_markers"
+  },
+  "correctionSuccess": false
+}

@@ -1,0 +1,77 @@
+[
+  {
+    "id": "qualification-fleurs-es_419-10150624747569080019",
+    "file": "es_419-10150624747569080019.wav",
+    "language": "es",
+    "reference": "Duvall, que está casado y tiene dos hijos adultos, no causó una buena impresión a Miller, que fue a quien le relató la historia.",
+    "sourceUrl": "https://huggingface.co/datasets/google/fleurs/resolve/70bb2e84b976b7e960aa89f1c648e09c59f894dd/data/es_419/audio/test.tar.gz",
+    "archiveMember": "test/10150624747569080019.wav",
+    "sha256": "41b0e8fe385400d1d4653717d017c4b6f6666b63a21e5b13eb7e3d4d6149c3d4",
+    "license": "CC-BY-4.0",
+    "speechType": "human_read_speech",
+    "category": "new_post_freeze_negation_control",
+    "modifications": "None; archive member copied byte for byte.",
+    "independentOfLatestImplementation": true
+  },
+  {
+    "id": "qualification-fleurs-en_us-10405958125670257178",
+    "file": "en_us-10405958125670257178.wav",
+    "language": "en",
+    "reference": "Lion prides act much like packs of wolves or dogs, animals surprisingly similar to lions (but not other big cats) in behavior, and also very deadly to their prey.",
+    "sourceUrl": "https://huggingface.co/datasets/google/fleurs/resolve/70bb2e84b976b7e960aa89f1c648e09c59f894dd/data/en_us/audio/test.tar.gz",
+    "archiveMember": "test/10405958125670257178.wav",
+    "sha256": "cd878b528dca67fdf3754d07a5d43c64dc3577e2105966ba529267d35dc5968b",
+    "license": "CC-BY-4.0",
+    "speechType": "human_read_speech",
+    "category": "new_post_freeze_negation_control",
+    "modifications": "None; archive member copied byte for byte.",
+    "independentOfLatestImplementation": true
+  },
+  {
+    "id": "ami-ES2012a-D-785.35-791.77",
+    "file": "ami-ES2012a-D-785.35-791.77.wav",
+    "language": "en",
+    "reference": "especially if we try to sell , what two million of them . Oh sorry , four million of 'em ,",
+    "sha256": "1b1bcb3731a6f91522c979d05ec51d11bda635fa578a84f36c2d5c3120358324",
+    "sourceUrl": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror/amicorpus/ES2012a/audio/ES2012a.Headset-3.wav",
+    "byteRange": [
+      25131244,
+      25336683
+    ],
+    "sampleRange": [
+      12565600,
+      12668320
+    ],
+    "clipStartSeconds": 785.35,
+    "clipEndSeconds": 791.77,
+    "license": "CC-BY-4.0",
+    "speechType": "human_spontaneous_meeting",
+    "category": "known_audio_regression",
+    "referenceSource": "AMI manual annotations release 1.7 as distributed in ami_public_manual_1.6.2.zip",
+    "annotationFile": "words/ES2012a.D.words.xml",
+    "annotationsArchiveSha256": "b56e5babb2496b8795deeeda7e71178d7fbc9963f94276cf2a3f4b56ebbc9f9d",
+    "modifications": "Continuous time crop; PCM copied unchanged and WAV header rewritten. No TTS, splicing, denoising or speech editing.",
+    "independentOfLatestImplementation": false
+  },
+  {
+    "id": "ami-IS1000c-C-1165.13-1177.28",
+    "file": "ami-IS1000c-C-1165.13-1177.28.wav",
+    "language": "en",
+    "reference": "not going to be the standard remote , which is having uh which need just uh six six volt uh th sorry three volts um of D_C_ . It may need more actually",
+    "sourceUrl": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror/amicorpus/IS1000c/audio/IS1000c.Headset-2.wav",
+    "byteRange": [
+      37284204,
+      37673003
+    ],
+    "clipStartSeconds": 1165.13,
+    "clipEndSeconds": 1177.28,
+    "sha256": "bdf01414c5552a7e12c87b30430e11d791f5335430f07976a549a229b11a9437",
+    "license": "CC-BY-4.0",
+    "speechType": "human_spontaneous_meeting",
+    "category": "known_audio_regression",
+    "annotationFile": "words/IS1000c.C.words.xml",
+    "expectedMeaning": "Retain the remote description, replace six volts by three volts, and preserve that it may need more. Full wording requires review, not keyword approval.",
+    "modifications": "Continuous time crop; unchanged PCM samples; WAV header rewritten.",
+    "independentOfLatestImplementation": false
+  }
+]

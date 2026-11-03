@@ -91,3 +91,8 @@ presentes son contenido y no reinician la protección del reemplazo. Cada edici�
 protege un evento y su cadena contigua de marcadores; reparaciones entrelazadas
 o encadenadas sobre el mismo elemento pueden requerir revisión. Esta limitación
 se declara, no se contabiliza como corrección lograda.
+
+Una edición de reparación que solo suprime marcadores y conserva todo el
+contenido restante se rechaza: podría dejar juntas la orden descartada y su
+reemplazo. Las revisiones ambiguas formadas únicamente por esos marcadores
+también requieren revisión; el rechazo no cuenta como corrección lograda.

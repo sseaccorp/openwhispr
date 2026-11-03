@@ -72,6 +72,13 @@ def _validate_change(before, after, kind, left_context=''):
             any(w != 'no' for w in word_sequence(before[:m.start()]))))]
         if not evidence:
             raise InvalidPlan('missing_repair_evidence')
+        # A real failed plan removed only a repeated "no" while retaining both
+        # the abandoned command and its negative replacement. Deleting cues
+        # alone cannot establish that a repair was applied. Conservatively
+        # require a change in non-cue content; ambiguous cue-only revisions
+        # require review instead of a successful edit status.
+        if word_sequence(REPAIR.sub('', before)) == word_sequence(REPAIR.sub('', after)):
+            raise InvalidPlan('repair_removed_only_markers')
         # One source edit represents one repair event. Advance only through a
         # contiguous marker chain ("wait, no, actually"), never across retained
         # propositions to a later discourse adverb. Otherwise "may actually

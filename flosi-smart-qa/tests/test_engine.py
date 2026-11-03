@@ -61,6 +61,17 @@ class SourceEdits(unittest.TestCase):
         with self.assertRaisesRegex(InvalidPlan, 'replacement_or_withdrawal_lost'):
             apply_plan(text, plan(text, 'do not open it'))
 
+    def test_real_marker_only_plan_cannot_keep_both_decisions(self):
+        text='Abre la válvula, no, no la abras si la presión no ha bajado.'
+        after='Abre la válvula, no la abras si la presión no ha bajado.'
+        with self.assertRaisesRegex(InvalidPlan,'repair_removed_only_markers'):
+            apply_plan(text,plan(text,after))
+        self.assertEqual(apply_plan(text,plan(text,'no la abras si la presión no ha bajado.'))['text'],
+                         'No la abras si la presión no ha bajado.')
+        text='Send it today, sorry, tomorrow.'
+        with self.assertRaisesRegex(InvalidPlan,'repair_removed_only_markers'):
+            apply_plan(text,plan(text,'Send it today, tomorrow.'))
+
     def test_explicit_quote_must_survive(self):
         text = 'Ella dijo "abre, no, cierra" y salió.'
         with self.assertRaisesRegex(InvalidPlan, 'literal_quote'):

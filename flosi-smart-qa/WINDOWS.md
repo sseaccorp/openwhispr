@@ -9,7 +9,7 @@ Requisitos: Windows x64, Python 3.12 x64, Edge o Chrome actualizado, espacio lib
 de al menos 6 GB en la carpeta nueva y acceso HTTPS a PyPI, GitHub y Hugging Face
 durante la preparación. Se recomiendan 16 GB de RAM. No requiere Node, Git, una
 clave API ni modificar la configuración de Flosi QA. Las dependencias de Windows
-todavía deben verificarse en ese sistema. El ZIP incluye el código, ocho WAV
+todavía deben verificarse en ese sistema. El ZIP incluye el código, WAV
 humanos licenciados y evidencia; los modelos se descargan con hashes fijos.
 
 1. Descarga el ZIP **Flosi-Smart-QA-P0.zip** adjunto a la entrega. Conserva tu

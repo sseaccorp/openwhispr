@@ -1,0 +1,11 @@
+{
+  "authoredUtc": "2026-11-03T22:46:59Z",
+  "afterFrozenCommit": "aa3eb9ba3a9bb4654dfef1d7d53f453e97e79266",
+  "newCases": 12,
+  "purpose": "Fresh post-fix qualification, with targeted quantities/uncertainty and preservation controls.",
+  "author": "engineering agent",
+  "externalBlindHumanApproval": false,
+  "usedForTuning": false,
+  "acceptanceCriteriaUnchanged": true,
+  "priorFinalSetsNowDevelopmentOrPriorRevisionEvidence": true
+}

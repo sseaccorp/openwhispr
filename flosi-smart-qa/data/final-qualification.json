@@ -1,0 +1,130 @@
+[
+  {
+    "id": "qualification-es-01",
+    "synthetic": true,
+    "language": "es",
+    "category": "quantity_uncertainty",
+    "input": "Registra 9  kg, perdón, 7  kg; quizá necesitemos otra caja después.",
+    "expected": [
+      "Registra 7  kg; quizá necesitemos otra caja después."
+    ],
+    "technical": [
+      "7  kg"
+    ]
+  },
+  {
+    "id": "qualification-en-02",
+    "synthetic": true,
+    "language": "en",
+    "category": "quantity_uncertainty",
+    "input": "The motor takes 12 V, sorry, 9 V. It might draw more under load, actually.",
+    "expected": [
+      "The motor takes 9 V. It might draw more under load, actually."
+    ],
+    "technical": [
+      "9 V"
+    ]
+  },
+  {
+    "id": "qualification-es-03",
+    "synthetic": true,
+    "language": "es",
+    "category": "scope",
+    "input": "Enciende el riego ahora, espera, mejor mantenlo apagado mientras se repare la tubería.",
+    "expected": [
+      "Mantenlo apagado mientras se repare la tubería."
+    ]
+  },
+  {
+    "id": "qualification-en-04",
+    "synthetic": true,
+    "language": "en",
+    "category": "meaningful_discourse",
+    "input": "The archive is small, but it is complete, actually.",
+    "expected": [
+      "The archive is small, but it is complete, actually."
+    ]
+  },
+  {
+    "id": "qualification-es-05",
+    "synthetic": true,
+    "language": "es",
+    "category": "retraction",
+    "input": "Apúntame al taller, retiro mi inscripción.",
+    "expected": [
+      "Retiro mi inscripción."
+    ]
+  },
+  {
+    "id": "qualification-en-06",
+    "synthetic": true,
+    "language": "en",
+    "category": "retraction",
+    "input": "Add me as an approver, I withdraw that permission.",
+    "expected": [
+      "I withdraw that permission."
+    ]
+  },
+  {
+    "id": "qualification-es-07",
+    "synthetic": true,
+    "language": "es",
+    "category": "negation",
+    "input": "Abre la válvula, no, no la abras si la presión no ha bajado.",
+    "expected": [
+      "No la abras si la presión no ha bajado."
+    ]
+  },
+  {
+    "id": "qualification-en-08",
+    "synthetic": true,
+    "language": "en",
+    "category": "contrast",
+    "input": "Use the narrow brush, not the wide one, and keep both colors.",
+    "expected": [
+      "Use the narrow brush, not the wide one, and keep both colors."
+    ]
+  },
+  {
+    "id": "qualification-es-09",
+    "synthetic": true,
+    "language": "es",
+    "category": "literal_quote",
+    "input": "Escribe literalmente ven no espera y después detente sin resolver esas palabras.",
+    "expected": [
+      "Escribe literalmente ven no espera y después detente sin resolver esas palabras."
+    ]
+  },
+  {
+    "id": "qualification-en-10",
+    "synthetic": true,
+    "language": "en",
+    "category": "literal_quote",
+    "input": "The caption is \"no, wait, take neither\"; leave it unchanged.",
+    "expected": [
+      "The caption is \"no, wait, take neither\"; leave it unchanged."
+    ],
+    "exact": true
+  },
+  {
+    "id": "qualification-es-11",
+    "synthetic": true,
+    "language": "es",
+    "category": "cleanup_and_emphasis",
+    "input": "Eh, yo yo necesito el documento, pero no, no es una emergencia.",
+    "expected": [
+      "Yo necesito el documento, pero no, no es una emergencia."
+    ]
+  },
+  {
+    "id": "qualification-en-12",
+    "synthetic": true,
+    "language": "en",
+    "category": "technical",
+    "input": "python -m pytest --maxfail=1",
+    "expected": [
+      "python -m pytest --maxfail=1"
+    ],
+    "exact": true
+  }
+]
