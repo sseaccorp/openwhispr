@@ -1,0 +1,18 @@
+{
+  "mode": "real_human_audio_asr_comparison",
+  "referencesNeverSentToASR": true,
+  "modelLoadMs": {
+    "small": 873.3312020003723,
+    "medium": 2585.7815110002775
+  },
+  "modelPaths": {
+    "small": "/workspace/work/flosi-p0/asr",
+    "medium": "/workspace/work/flosi-p0/asr-medium"
+  },
+  "temperature": 0,
+  "beamSize": 5,
+  "threads": 3,
+  "wordTimestamps": true,
+  "computeType": "int8",
+  "device": "cpu"
+}

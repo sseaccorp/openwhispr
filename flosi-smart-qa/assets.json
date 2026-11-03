@@ -1,0 +1,21 @@
+{
+  "llamaRelease": "b12078",
+  "llamaWindowsUrl": "https://github.com/ggml-org/llama.cpp/releases/download/b12078/llama-b12078-bin-win-cpu-x64.zip",
+  "llamaWindowsSha256": "923baa2c55b45c7b312daf340e923d80f66faab36721aaf53313bb21c21baadd",
+  "llamaLinuxUrl": "https://github.com/ggml-org/llama.cpp/releases/download/b12078/llama-b12078-bin-ubuntu-x64.tar.gz",
+  "llamaLinuxSha256": "600059b6d20ece89e19a20c4e9ab8d23c54cc33e9132a692dffbcc10ed226003",
+  "llmUrl": "https://huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF/resolve/a06e946bb6b655725eafa393f4a9745d460374c9/Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+  "llmSha256": "3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597",
+  "llmFile": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+  "llmLicense": "Apache-2.0",
+  "asrRepository": "Systran/faster-whisper-medium",
+  "asrRevision": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+  "asrFiles": {
+    "config.json": "3622a2ddc41ec0e0fd4e68c13c6830f03b90c38d89aaad184de02c8c642cf807",
+    "tokenizer.json": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab",
+    "vocabulary.txt": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913",
+    "model.bin": "9b45e1009dcc4ab601eff815b61d80e60ce3fd8c74c1a14f4a282258286b51ae"
+  },
+  "asrLicense": "MIT",
+  "asrDirectory": "asr-medium"
+}

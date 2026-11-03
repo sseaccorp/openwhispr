@@ -1,0 +1,30 @@
+{
+  "selectedModel": "Qwen3-4B-Instruct-2507-Q4_K_M",
+  "selectedArchitecture": "explicit source edits with deterministic validation; one inference call",
+  "selectionBasis": "32 matched development inputs, failed free-output and bounded-reasoning/recovery comparators",
+  "productionApproval": false,
+  "groqRequests": 0,
+  "credentialsConfigured": false,
+  "windowsHardwareExecuted": false,
+  "coreHashes": {
+    "smartqa/__init__.py": "253ae5ef705bb2bc7e72aeba61473335a91a109b09854efa56385315ffdc741a",
+    "smartqa/audio.py": "dbfa04584249d59b9e3f6cc03faaf4b4d5d9fdad9ed7ef30050511b09360b9ee",
+    "smartqa/cli.py": "ba179fe900c2c9f36b2cef90e2881f875f616bbf91c00182f35b311cac516a11",
+    "smartqa/editor.txt": "7a0bde740d9685b0f27ad3fb650561bc96866b6623a84cb4bd754333a812b1fd",
+    "smartqa/engine.py": "254d59abab0747ea3b1022890280618219d729f05da710f459b5376c42867176",
+    "smartqa/evaluate.py": "8ab0959733072b96f8a17adf7d67bcf1b8399e522b7a644f2413e73b5ceb1563",
+    "smartqa/planner.txt": "1bb559c61c785ac21002fb93e296cd36176131c36aff8690518772b1668118b1",
+    "smartqa/provider.py": "bd63c0281c8bd744baf540e3da4a8b248ff047d9a8b584a3969862acfb36e07a",
+    "smartqa/server.py": "000ffd264fca363c548fd60af0e72f4de2444dd8195332f01ffdfc8505a28aa6",
+    "smartqa/source_editor.py": "9d0d00b60fb92f2b617550f8b90214b1b77a3fea9051233e77c6fb716aa66be6"
+  },
+  "selectedASR": "Systran/faster-whisper-medium",
+  "asrSelection": "paired eight-file comparison restores missing condition; some ASR errors remain",
+  "knownAcceptanceFailures": [
+    "complex negative repair in development",
+    "cleanup cases",
+    "commercial latency target",
+    "Windows physical validation pending",
+    "no Groq credentials in cloud"
+  ]
+}

@@ -1,0 +1,304 @@
+[
+  {
+    "id": "dev-es-01",
+    "language": "es",
+    "category": "word_repair",
+    "input": "Reserva la mesa para seis, perdón, para ocho personas",
+    "expected": [
+      "Reserva la mesa para ocho personas."
+    ]
+  },
+  {
+    "id": "dev-en-02",
+    "language": "en",
+    "category": "word_repair",
+    "input": "Deliver it to Martin, sorry, to Martina at reception",
+    "expected": [
+      "Deliver it to Martina at reception."
+    ]
+  },
+  {
+    "id": "dev-es-03",
+    "language": "es",
+    "category": "scope",
+    "input": "Compra los billetes esta noche, espera, mejor pide primero el permiso al director",
+    "expected": [
+      "Pide primero el permiso al director."
+    ]
+  },
+  {
+    "id": "dev-en-04",
+    "language": "en",
+    "category": "scope",
+    "input": "Delete the backups, no, archive them until the audit finishes",
+    "expected": [
+      "Archive them until the audit finishes."
+    ]
+  },
+  {
+    "id": "dev-es-05",
+    "language": "es",
+    "category": "addition",
+    "input": "Imprime las etiquetas y, además, guarda una copia si falla la impresora.",
+    "expected": [
+      "Imprime las etiquetas y, además, guarda una copia si falla la impresora."
+    ]
+  },
+  {
+    "id": "dev-en-06",
+    "language": "en",
+    "category": "addition",
+    "input": "Order the screws and also add washers if they are in stock.",
+    "expected": [
+      "Order the screws and also add washers if they are in stock."
+    ]
+  },
+  {
+    "id": "dev-es-07",
+    "language": "es",
+    "category": "retraction",
+    "input": "Publica el anuncio a mediodía, retiro esa petición",
+    "expected": [
+      "Retiro esa petición."
+    ]
+  },
+  {
+    "id": "dev-en-08",
+    "language": "en",
+    "category": "retraction",
+    "input": "Send the resignation email, I withdraw that request",
+    "expected": [
+      "I withdraw that request."
+    ]
+  },
+  {
+    "id": "dev-es-09",
+    "language": "es",
+    "category": "negation",
+    "input": "No desconectes el router salvo que haya humo.",
+    "expected": [
+      "No desconectes el router salvo que haya humo."
+    ]
+  },
+  {
+    "id": "dev-en-10",
+    "language": "en",
+    "category": "negation",
+    "input": "Open the hatch, no, do not open it while the indicator is red",
+    "expected": [
+      "Do not open it while the indicator is red."
+    ]
+  },
+  {
+    "id": "dev-es-11",
+    "language": "es",
+    "category": "contrast",
+    "input": "Prefiero té, no café, y sin azúcar.",
+    "expected": [
+      "Prefiero té, no café, y sin azúcar."
+    ]
+  },
+  {
+    "id": "dev-en-12",
+    "language": "en",
+    "category": "contrast",
+    "input": "The version is stable, not experimental, although it is slow.",
+    "expected": [
+      "The version is stable, not experimental, although it is slow."
+    ]
+  },
+  {
+    "id": "dev-es-13",
+    "language": "es",
+    "category": "uncertainty",
+    "input": "Podría venir en marzo o en abril, todavía no sé cuál.",
+    "expected": [
+      "Podría venir en marzo o en abril, todavía no sé cuál."
+    ]
+  },
+  {
+    "id": "dev-en-14",
+    "language": "en",
+    "category": "uncertainty",
+    "input": "Perhaps invite Mei or Luis; I have not decided yet.",
+    "expected": [
+      "Perhaps invite Mei or Luis; I have not decided yet."
+    ]
+  },
+  {
+    "id": "dev-es-15",
+    "language": "es",
+    "category": "literal_quote",
+    "input": "El cartel dice \"espera, no, mejor vuelve\" y debe conservarse igual.",
+    "expected": [
+      "El cartel dice \"espera, no, mejor vuelve\" y debe conservarse igual."
+    ]
+  },
+  {
+    "id": "dev-en-16",
+    "language": "en",
+    "category": "literal_quote",
+    "input": "She quoted word for word take the red one no wait take the green one and laughed.",
+    "expected": [
+      "She quoted word for word take the red one no wait take the green one and laughed."
+    ]
+  },
+  {
+    "id": "dev-es-17",
+    "language": "es",
+    "category": "filler",
+    "input": "Eh, yo necesito el mapa, pero bueno significa algo distinto aquí",
+    "expected": [
+      "Yo necesito el mapa, pero bueno significa algo distinto aquí."
+    ]
+  },
+  {
+    "id": "dev-en-18",
+    "language": "en",
+    "category": "filler",
+    "input": "Um, the well is dry and the engine runs well",
+    "expected": [
+      "The well is dry and the engine runs well."
+    ]
+  },
+  {
+    "id": "dev-es-19",
+    "language": "es",
+    "category": "repetition",
+    "input": "Yo yo quiero entrar, pero está muy muy oscuro",
+    "expected": [
+      "Yo quiero entrar, pero está muy muy oscuro."
+    ]
+  },
+  {
+    "id": "dev-en-20",
+    "language": "en",
+    "category": "repetition",
+    "input": "No, no, I will not sign this. It is very very risky.",
+    "expected": [
+      "No, no, I will not sign this. It is very very risky."
+    ]
+  },
+  {
+    "id": "dev-es-21",
+    "language": "es",
+    "category": "technical",
+    "input": "La dosis es 0,125  mg y el lote RX-903 no cambia.",
+    "expected": [
+      "La dosis es 0,125  mg y el lote RX-903 no cambia."
+    ],
+    "technical": [
+      "0,125  mg",
+      "RX-903"
+    ]
+  },
+  {
+    "id": "dev-en-22",
+    "language": "en",
+    "category": "technical",
+    "input": "Use D:\\Exports\\audit_6.tsv with --no-color and token TX-904.",
+    "expected": [
+      "Use D:\\Exports\\audit_6.tsv with --no-color and token TX-904."
+    ],
+    "technical": [
+      "D:\\Exports\\audit_6.tsv",
+      "--no-color",
+      "TX-904"
+    ]
+  },
+  {
+    "id": "dev-es-23",
+    "language": "es",
+    "category": "long",
+    "input": "Lleva dos cajas, perdón, tres cajas al almacén y conserva el recibo. Avísale a Julia, no, a Julieta cuando llegues, pero no llames si está conduciendo",
+    "expected": [
+      "Lleva tres cajas al almacén y conserva el recibo. Avísale a Julieta cuando llegues, pero no llames si está conduciendo."
+    ]
+  },
+  {
+    "id": "dev-en-24",
+    "language": "en",
+    "category": "long",
+    "input": "Book a taxi for seven, sorry, for eight and keep the receipt. Call the north office, actually, call the south office if the train is late, and do not cancel the hotel",
+    "expected": [
+      "Book a taxi for eight and keep the receipt. Call the south office if the train is late, and do not cancel the hotel."
+    ]
+  },
+  {
+    "id": "dev-es-25",
+    "language": "es",
+    "category": "negation",
+    "input": "Rechaza la propuesta, no, no la rechaces si aceptan la cláusula",
+    "expected": [
+      "No la rechaces si aceptan la cláusula."
+    ]
+  },
+  {
+    "id": "dev-en-26",
+    "language": "en",
+    "category": "literal_quote",
+    "input": "The message reads \"send it now, sorry, tomorrow\"; forward it unchanged.",
+    "expected": [
+      "The message reads \"send it now, sorry, tomorrow\"; forward it unchanged."
+    ]
+  },
+  {
+    "id": "dev-es-27",
+    "language": "es",
+    "category": "uncertainty",
+    "input": "Mejor quizá lo vemos el jueves o el viernes; no lo he confirmado.",
+    "expected": [
+      "Mejor quizá lo vemos el jueves o el viernes; no lo he confirmado."
+    ]
+  },
+  {
+    "id": "dev-en-28",
+    "language": "en",
+    "category": "addition",
+    "input": "Send the budget today; actually, also include the appendix if it is ready.",
+    "expected": [
+      "Send the budget today; actually, also include the appendix if it is ready."
+    ]
+  },
+  {
+    "id": "dev-es-29",
+    "language": "es",
+    "category": "technical_repair",
+    "input": "El voltaje es -2,5 V, perdón, -1,5 V y el puerto es COM-7",
+    "expected": [
+      "El voltaje es -1,5 V y el puerto es COM-7."
+    ],
+    "technical": [
+      "-1,5 V",
+      "COM-7"
+    ]
+  },
+  {
+    "id": "dev-en-30",
+    "language": "en",
+    "category": "technical",
+    "input": "sha256sum ./release_v7.tar.gz",
+    "expected": [
+      "sha256sum ./release_v7.tar.gz"
+    ],
+    "exact": true
+  },
+  {
+    "id": "dev-es-31",
+    "language": "es",
+    "category": "unpunctuated",
+    "input": "reserva para el martes no mejor para el jueves y no cambies el restaurante",
+    "expected": [
+      "Reserva para el jueves y no cambies el restaurante."
+    ]
+  },
+  {
+    "id": "dev-en-32",
+    "language": "en",
+    "category": "unpunctuated",
+    "input": "send four crates no make that five crates but keep the delivery address",
+    "expected": [
+      "Send five crates but keep the delivery address."
+    ]
+  }
+]

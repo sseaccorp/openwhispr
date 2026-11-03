@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "mode": "real_inference",
+  "variant": "smart",
+  "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+  "casesSha256": "8d7c2233cbfb54b8ef3c7c06d5a77762e056b2f3f1beff613d07260dbfcc8cb2",
+  "cases": "data/long-development.json",
+  "repeats": 1,
+  "startedUtc": "2026-11-03T21:27:50Z",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "temperature": 0,
+  "seed": 42,
+  "maxCompletionTokens": 768,
+  "thinking": false,
+  "reasoningBudget": 0,
+  "externalInferenceCostUsd": 0,
+  "sourceHashes": {
+    "smartqa/server.py": "053a3cabb0bc91e7d6bcdf9b840d46279720f90ea260b60794aa3dd7aab54429",
+    "smartqa/provider.py": "15082b712791219f1ea9df4df0b882cc284a267fdef4fcdb1a3df9db05afa5ba",
+    "smartqa/engine.py": "83ea2cf2d0ec9005036d68c3f254e174ffff65daef4cabe3252bffd0b656ae06",
+    "smartqa/audio.py": "04804561de226ed6407229ecf652204cb96a2a88a19ba023665238d083c445a1",
+    "smartqa/editor.txt": "7a0bde740d9685b0f27ad3fb650561bc96866b6623a84cb4bd754333a812b1fd",
+    "smartqa/__init__.py": "253ae5ef705bb2bc7e72aeba61473335a91a109b09854efa56385315ffdc741a",
+    "smartqa/cli.py": "ba179fe900c2c9f36b2cef90e2881f875f616bbf91c00182f35b311cac516a11",
+    "smartqa/planner.txt": "1bb559c61c785ac21002fb93e296cd36176131c36aff8690518772b1668118b1",
+    "smartqa/source_editor.py": "9d0d00b60fb92f2b617550f8b90214b1b77a3fea9051233e77c6fb716aa66be6",
+    "smartqa/evaluate.py": "8ab0959733072b96f8a17adf7d67bcf1b8399e522b7a644f2413e73b5ceb1563"
+  },
+  "state": "complete",
+  "systemPromptSha256": "1bb559c61c785ac21002fb93e296cd36176131c36aff8690518772b1668118b1",
+  "stopReason": null,
+  "summary": {
+    "cases": 2,
+    "annotationMatches": 0,
+    "reviewRequested": 2,
+    "technicalFailures": 0,
+    "providerSuccesses": 2,
+    "correctionP50Ms": 34768.581,
+    "correctionP95Ms": 40897.473,
+    "tokens": {
+      "prompt_tokens": 1770,
+      "completion_tokens": 481,
+      "total_tokens": 2251
+    },
+    "semanticApproval": "not_established_by_automatic_checks"
+  },
+  "attempts": 2
+}

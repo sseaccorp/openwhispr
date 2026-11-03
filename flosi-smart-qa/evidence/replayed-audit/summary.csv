@@ -1,0 +1,5 @@
+run,model,variant,cases,annotationMatches,inputChangesRequired,requiredChangesMatched,reviewRequested,extractedTechnicalCharacterFlags,mode
+evidence/dev-smart-1,Qwen3-4B-Q4_K_M,smart,32,23,16,8,7,0,replay
+evidence/dev-instruct-smart,Qwen3-4B-Instruct-2507-Q4_K_M,smart,32,27,16,12,7,0,replay
+evidence/dev-selected,Qwen3-4B-Instruct-2507-Q4_K_M,smart,32,27,16,12,6,0,replay
+evidence/long-selected,Qwen3-4B-Instruct-2507-Q4_K_M,smart,2,2,2,2,0,0,replay

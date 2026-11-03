@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "mode": "real_inference",
+  "variant": "smart",
+  "model": "Qwen3-4B-Q4_K_M",
+  "casesSha256": "2173ff4933ed1865fce20e3d30b3be4a671a46d426d349a43af27561c5db5ba6",
+  "cases": "data/development.json",
+  "repeats": 1,
+  "startedUtc": "2026-11-03T20:49:51Z",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "temperature": 0,
+  "seed": 42,
+  "maxCompletionTokens": 768,
+  "thinking": false,
+  "externalInferenceCostUsd": 0,
+  "sourceHashes": {
+    "smartqa/server.py": "77298c9dd0ace4fb474c886cf493c32c46c72e6389b1ea2e7bd366f834550f1f",
+    "smartqa/provider.py": "c2b2762542ce66b4f98f3ff24460da795bbca50154a8acfd9b76da5b0a79a80d",
+    "smartqa/engine.py": "57f26967b57a2d2a172cd8b145116cd513c56581229cfcda97e626877cf1efb6",
+    "smartqa/audio.py": "0a4ed4332ee426790006045453de9ef5a3d9aab68b89587a6783110d31237ef4",
+    "smartqa/__init__.py": "253ae5ef705bb2bc7e72aeba61473335a91a109b09854efa56385315ffdc741a",
+    "smartqa/cli.py": "5377c057a05e64a121468ec27212002ba9864054f78fc7178339d1d02daa4f44",
+    "smartqa/planner.txt": "1bb559c61c785ac21002fb93e296cd36176131c36aff8690518772b1668118b1",
+    "smartqa/evaluate.py": "2f97a66252200c4cd764867322138b7e9cce1567c8f551b08c43e4276759a185"
+  },
+  "state": "complete",
+  "systemPromptSha256": "1bb559c61c785ac21002fb93e296cd36176131c36aff8690518772b1668118b1",
+  "stopReason": null,
+  "summary": {
+    "cases": 32,
+    "annotationMatches": 20,
+    "reviewRequested": 20,
+    "technicalFailures": 0,
+    "providerSuccesses": 32,
+    "correctionP50Ms": 5269.271,
+    "correctionP95Ms": 8712.653,
+    "tokens": {
+      "prompt_tokens": 18963,
+      "completion_tokens": 1251,
+      "total_tokens": 20214
+    },
+    "semanticApproval": "not_established_by_automatic_checks"
+  },
+  "attempts": 32
+}
