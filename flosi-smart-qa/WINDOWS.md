@@ -12,7 +12,7 @@ clave API ni modificar la configuración de Flosi QA. Las dependencias de Window
 todavía deben verificarse en ese sistema. El ZIP incluye el código, WAV
 humanos licenciados y evidencia; los modelos se descargan con hashes fijos.
 
-1. Descarga el ZIP **Flosi-Smart-QA-P0.zip** adjunto a la entrega. Conserva tu
+1. Descarga el ZIP **Flosi-Smart-QA-P0.zip** desde el enlace de distribución del PR de la entrega. Conserva tu
    instalación anterior y sus carpetas de experimentos.
 2. Abre PowerShell. Comprueba Python:
 
@@ -129,3 +129,24 @@ se puede usar con una credencial ya configurada y una cuenta con cuota gratuita
 confirmada. No se hicieron peticiones a Groq en cloud y no se autoriza activar
 facturación. El adaptador registra errores y cuota de peticiones; no prueba por
 sí mismo si una cuenta externa tiene facturación habilitada.
+
+Para comprobar que el código extraído coincide con la congelación evaluada:
+
+```powershell
+.\runtime\venv\Scripts\python.exe .\freeze.py verify --file .\evidence\freeze-release.json
+```
+
+Para repetir la última batería textual, con la aplicación arrancada y sin dictar
+al mismo tiempo, desde OTRA consola situada en esta carpeta:
+
+```powershell
+$textRun = Join-Path 'runs' ('text-win-' + [guid]::NewGuid().ToString('N'))
+.\runtime\venv\Scripts\python.exe .\experiments\evaluate_via_ui.py --cases .\data\release-validation.json --out $textRun
+```
+
+Para los cuatro audios del último candidato (dos controles nuevos y dos
+regresiones conocidas), usa el mismo flujo del lote de audio cambiando
+`--manifest` por `.\data\human-release\manifest.json` y una carpeta `--out` nueva.
+Los resultados cloud de esos lotes incluyen fallos; no se espera ni se promete
+aprobación completa en Windows. El micrófono se valida con el flujo de grabación
+y datos propios nuevos, no por repetir estos archivos.

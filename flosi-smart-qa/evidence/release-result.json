@@ -1,0 +1,24 @@
+{
+  "candidateCommit": "6227942c9d498b032c627fe93aa0cbf2db5d981b",
+  "freeze": "evidence/freeze-release.json",
+  "evaluatedUtc": "2026-11-03T23:01:44Z",
+  "p0Status": "OPEN",
+  "productionApproved": false,
+  "changesAfterLastValidation": "documentation_and_evidence_only",
+  "newTextCompleteMatches": "9/12",
+  "requiredChangesCompleteMatches": "5/8",
+  "preservationControls": "4/4, one through rejection",
+  "semanticProductAcceptance": false,
+  "realHumanFilesActuallyProcessed": 12,
+  "latestFrozenHumanPipelineFiles": 4,
+  "windowsHardwareExecuted": false,
+  "groqRequests": 0,
+  "reportedMissingMeasurements": [
+    "Physical Windows installation and microphone",
+    "GPT-OSS/Groq real inference",
+    "Independent human product review",
+    "CPU/electricity monetary cost",
+    "Usage for one timeout and three initial browser-driver calls"
+  ],
+  "distributionNote": "Requested chat output path is read-only in this managed cloud runtime. Deliverables are committed to the authorized repository branch and draft PR instead."
+}

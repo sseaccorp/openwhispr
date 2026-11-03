@@ -1,0 +1,14 @@
+{
+  "base": "862dbe784072f4308d7cc467ec5eab6e5609189c",
+  "candidateCommit": "6227942c9d498b032c627fe93aa0cbf2db5d981b",
+  "originalCheckoutHead": "fc786f41c91de8177ce7d9333d2834d973cc3c19",
+  "originalCheckoutStatus": "",
+  "historicalBlobCount": 68,
+  "allHistoricalBlobsUnchanged": true,
+  "allChangesInsideNewSmartQAFolder": true,
+  "originalWindowsMachineAccessed": false,
+  "originalQAProfilesReadOrWritten": false,
+  "historicHoldoutContentsRead": false,
+  "holdoutIdentityComparedAsGitBlobHashOnly": true,
+  "noMergeOrDeployment": true
+}

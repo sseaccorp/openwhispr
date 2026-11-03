@@ -1,0 +1,18 @@
+{
+  "capturedUtc": "2026-11-03T22:56:36Z",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "visibleCpuCount": 3,
+  "cgroupCpuMax": "200000 100000",
+  "cgroupMemoryMax": "8589934592",
+  "disk": {
+    "total": 8417406976,
+    "used": 6541602816,
+    "free": 1429532672
+  },
+  "selectedThreads": 3,
+  "gpuUsed": false,
+  "inferenceSecretsPresent": false,
+  "paidServicesActivated": false,
+  "note": "Resource limits at report capture, not a hardware specification of the user Windows machine."
+}

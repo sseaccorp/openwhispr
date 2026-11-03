@@ -1,0 +1,9 @@
+{
+  "authoredUtc": "2026-11-03T22:53:13Z",
+  "afterFrozenCommit": "6227942c9d498b032c627fe93aa0cbf2db5d981b",
+  "cases": 12,
+  "author": "engineering agent",
+  "usedForTuning": false,
+  "externalBlindHumanApproval": false,
+  "acceptanceCriteriaUnchanged": true
+}

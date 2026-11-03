@@ -1,0 +1,123 @@
+[
+  {
+    "id": "release-es-01",
+    "language": "es",
+    "category": "name_repair",
+    "input": "Mándale la minuta a Inés, perdón, a Irene antes de salir.",
+    "expected": [
+      "Mándale la minuta a Irene antes de salir."
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "release-en-02",
+    "language": "en",
+    "category": "deadline_condition",
+    "input": "The deadline is Tuesday, sorry, next Thursday after finance approves the invoice.",
+    "expected": [
+      "The deadline is next Thursday after finance approves the invoice."
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "release-es-03",
+    "language": "es",
+    "category": "whole_decision",
+    "input": "Borra la carpeta local, no, conserva esa carpeta hasta que termine la migración.",
+    "expected": [
+      "Conserva esa carpeta hasta que termine la migración."
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "release-en-04",
+    "language": "en",
+    "category": "withdrawal",
+    "input": "Add my phone number to the poster, I retract that request.",
+    "expected": [
+      "I retract that request."
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "release-es-05",
+    "language": "es",
+    "category": "negative_repair",
+    "input": "Acepta el acceso, no, no lo aceptes mientras no confirmen su identidad.",
+    "expected": [
+      "No lo aceptes mientras no confirmen su identidad."
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "release-en-06",
+    "language": "en",
+    "category": "unpunctuated_repair",
+    "input": "book a cab no make that the shuttle if there are seats",
+    "expected": [
+      "Book the shuttle if there are seats."
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "release-es-07",
+    "language": "es",
+    "category": "filler",
+    "input": "Pues, eh, necesito la factura para preparar el cierre.",
+    "expected": [
+      "Necesito la factura para preparar el cierre."
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "release-en-08",
+    "language": "en",
+    "category": "stutter",
+    "input": "I I can bring the spare screen, but I cannot promise it will work.",
+    "expected": [
+      "I can bring the spare screen, but I cannot promise it will work."
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "release-es-09",
+    "language": "es",
+    "category": "addition",
+    "input": "Envía el acta a Lucía y además conserva una copia local; no borres el original.",
+    "expected": [
+      "Envía el acta a Lucía y además conserva una copia local; no borres el original."
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "release-en-10",
+    "language": "en",
+    "category": "unmarked_literal",
+    "input": "Write verbatim stop no wait keep going and do not interpret those words as directions.",
+    "expected": [
+      "Write verbatim stop no wait keep going and do not interpret those words as directions."
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "release-es-11",
+    "language": "es",
+    "category": "open_alternatives",
+    "input": "Aún no sé si saldremos el lunes o el martes; quizá ninguno de los dos días sirva.",
+    "expected": [
+      "Aún no sé si saldremos el lunes o el martes; quizá ninguno de los dos días sirva."
+    ],
+    "synthetic": true
+  },
+  {
+    "id": "release-en-12",
+    "language": "en",
+    "category": "technical",
+    "input": "curl --fail-with-body https://example.org/api/v2",
+    "expected": [
+      "curl --fail-with-body https://example.org/api/v2"
+    ],
+    "synthetic": true,
+    "exact": true
+  }
+]
