@@ -1,0 +1,10 @@
+run,model,variant,cases,annotationMatches,inputChangesRequired,requiredChangesMatched,reviewRequested,extractedTechnicalCharacterFlags,mode
+evidence/dev-v3,Qwen3-4B-Q4_K_M,v3,32,16,16,2,0,1,original_outputs_rescored
+evidence/dev-v4,Qwen3-4B-Q4_K_M,v4,32,15,16,0,0,1,original_outputs_rescored
+evidence/dev-smart-1,Qwen3-4B-Q4_K_M,smart,32,20,16,5,20,0,original_outputs_rescored
+evidence/dev-instruct-smart,Qwen3-4B-Instruct-2507-Q4_K_M,smart,32,26,16,11,9,0,original_outputs_rescored
+evidence/dev-instruct-v4,Qwen3-4B-Instruct-2507-Q4_K_M,v4,32,21,16,8,0,1,original_outputs_rescored
+evidence/dev-instruct-source,Qwen3-4B-Instruct-2507-Q4_K_M,source,32,22,16,7,16,0,original_outputs_rescored
+evidence/dev-selected,Qwen3-4B-Instruct-2507-Q4_K_M,smart,32,27,16,12,7,0,original_outputs_rescored
+evidence/long-selected,Qwen3-4B-Instruct-2507-Q4_K_M,smart,2,0,2,0,2,0,original_outputs_rescored
+evidence/long-revalidated,Qwen3-4B-Instruct-2507-Q4_K_M,smart,2,2,2,2,0,0,original_outputs_rescored

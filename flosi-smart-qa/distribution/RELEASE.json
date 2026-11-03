@@ -1,0 +1,16 @@
+{
+  "name": "Flosi Smart QA P0",
+  "status": "experimental_P0_open_not_production",
+  "branch": "codex/flosi-smart-qa-p0",
+  "packageSourceCommit": "eba412025d4327f0f0c043f1dd494db72983adb0",
+  "candidateCommit": "6227942c9d498b032c627fe93aa0cbf2db5d981b",
+  "baseCommit": "862dbe784072f4308d7cc467ec5eab6e5609189c",
+  "frozenSourceFile": "evidence/freeze-release.json",
+  "frozenSourceSha256": "03ab0a1116da56ca02e7132847f895dd6d50473a865e4227a2450602ada29218",
+  "windowsPhysicalExecuted": false,
+  "groqRequests": 0,
+  "modelsIncluded": false,
+  "notice": "The ZIP source commit predates only its distribution wrapper commit. Runtime files must verify against freeze-release.json. No acceptance gate is waived.",
+  "zipSha256": "f1d9618c9ad012740fb90bb44cc662e74c71143c91a067c0b13108b9c9b8ff13",
+  "zipBytes": 8088734
+}

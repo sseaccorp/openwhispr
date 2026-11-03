@@ -1,0 +1,10 @@
+{
+  "selectedUtc": "2026-11-03T22:53:24Z",
+  "frozenCommit": "6227942c9d498b032c627fe93aa0cbf2db5d981b",
+  "selectedBeforeInference": true,
+  "usedForTuning": false,
+  "newHumanControls": 2,
+  "knownRegressions": 2,
+  "externalReferenceAnnotations": true,
+  "independentHumanProductReview": false
+}

@@ -1,0 +1,200 @@
+[
+  {
+    "cases": 32,
+    "annotationMatches": 16,
+    "reviewRequested": 0,
+    "technicalFailures": 2,
+    "providerSuccesses": 32,
+    "correctionP50Ms": 2556.865,
+    "correctionP95Ms": 5994.122,
+    "tokens": {
+      "prompt_tokens": 13458,
+      "completion_tokens": 591,
+      "total_tokens": 14049
+    },
+    "semanticApproval": "not_established_by_automatic_checks",
+    "run": "evidence/dev-v3",
+    "model": "Qwen3-4B-Q4_K_M",
+    "variant": "v3",
+    "inputChangesRequired": 16,
+    "requiredChangesMatched": 2,
+    "extractedTechnicalCharacterFlags": 1,
+    "mode": "original_outputs_rescored"
+  },
+  {
+    "cases": 32,
+    "annotationMatches": 15,
+    "reviewRequested": 0,
+    "technicalFailures": 2,
+    "providerSuccesses": 32,
+    "correctionP50Ms": 2717.596,
+    "correctionP95Ms": 7013.273,
+    "tokens": {
+      "prompt_tokens": 14386,
+      "completion_tokens": 610,
+      "total_tokens": 14996
+    },
+    "semanticApproval": "not_established_by_automatic_checks",
+    "run": "evidence/dev-v4",
+    "model": "Qwen3-4B-Q4_K_M",
+    "variant": "v4",
+    "inputChangesRequired": 16,
+    "requiredChangesMatched": 0,
+    "extractedTechnicalCharacterFlags": 1,
+    "mode": "original_outputs_rescored"
+  },
+  {
+    "cases": 32,
+    "annotationMatches": 20,
+    "reviewRequested": 20,
+    "technicalFailures": 0,
+    "providerSuccesses": 32,
+    "correctionP50Ms": 5269.271,
+    "correctionP95Ms": 8712.653,
+    "tokens": {
+      "prompt_tokens": 18963,
+      "completion_tokens": 1251,
+      "total_tokens": 20214
+    },
+    "semanticApproval": "not_established_by_automatic_checks",
+    "run": "evidence/dev-smart-1",
+    "model": "Qwen3-4B-Q4_K_M",
+    "variant": "smart",
+    "inputChangesRequired": 16,
+    "requiredChangesMatched": 5,
+    "extractedTechnicalCharacterFlags": 0,
+    "mode": "original_outputs_rescored"
+  },
+  {
+    "cases": 32,
+    "annotationMatches": 26,
+    "reviewRequested": 9,
+    "technicalFailures": 0,
+    "providerSuccesses": 32,
+    "correctionP50Ms": 4891.075,
+    "correctionP95Ms": 8593.237,
+    "tokens": {
+      "prompt_tokens": 18835,
+      "completion_tokens": 1112,
+      "total_tokens": 19947
+    },
+    "semanticApproval": "not_established_by_automatic_checks",
+    "run": "evidence/dev-instruct-smart",
+    "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+    "variant": "smart",
+    "inputChangesRequired": 16,
+    "requiredChangesMatched": 11,
+    "extractedTechnicalCharacterFlags": 0,
+    "mode": "original_outputs_rescored"
+  },
+  {
+    "cases": 32,
+    "annotationMatches": 21,
+    "reviewRequested": 0,
+    "technicalFailures": 1,
+    "providerSuccesses": 32,
+    "correctionP50Ms": 2408.897,
+    "correctionP95Ms": 6169.423,
+    "tokens": {
+      "prompt_tokens": 14258,
+      "completion_tokens": 555,
+      "total_tokens": 14813
+    },
+    "semanticApproval": "not_established_by_automatic_checks",
+    "run": "evidence/dev-instruct-v4",
+    "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+    "variant": "v4",
+    "inputChangesRequired": 16,
+    "requiredChangesMatched": 8,
+    "extractedTechnicalCharacterFlags": 1,
+    "mode": "original_outputs_rescored"
+  },
+  {
+    "cases": 32,
+    "annotationMatches": 22,
+    "reviewRequested": 16,
+    "technicalFailures": 1,
+    "providerSuccesses": 32,
+    "correctionP50Ms": 2228.056,
+    "correctionP95Ms": 5559.487,
+    "tokens": {
+      "prompt_tokens": 11826,
+      "completion_tokens": 523,
+      "total_tokens": 12349
+    },
+    "semanticApproval": "not_established_by_automatic_checks",
+    "run": "evidence/dev-instruct-source",
+    "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+    "variant": "source",
+    "inputChangesRequired": 16,
+    "requiredChangesMatched": 7,
+    "extractedTechnicalCharacterFlags": 0,
+    "mode": "original_outputs_rescored"
+  },
+  {
+    "cases": 32,
+    "annotationMatches": 27,
+    "reviewRequested": 7,
+    "technicalFailures": 0,
+    "providerSuccesses": 32,
+    "correctionP50Ms": 5104.853,
+    "correctionP95Ms": 8795.478,
+    "tokens": {
+      "prompt_tokens": 18835,
+      "completion_tokens": 1135,
+      "total_tokens": 19970
+    },
+    "semanticApproval": "not_established_by_automatic_checks",
+    "run": "evidence/dev-selected",
+    "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+    "variant": "smart",
+    "inputChangesRequired": 16,
+    "requiredChangesMatched": 12,
+    "extractedTechnicalCharacterFlags": 0,
+    "mode": "original_outputs_rescored"
+  },
+  {
+    "cases": 2,
+    "annotationMatches": 0,
+    "reviewRequested": 2,
+    "technicalFailures": 0,
+    "providerSuccesses": 2,
+    "correctionP50Ms": 34768.581,
+    "correctionP95Ms": 40897.473,
+    "tokens": {
+      "prompt_tokens": 1770,
+      "completion_tokens": 481,
+      "total_tokens": 2251
+    },
+    "semanticApproval": "not_established_by_automatic_checks",
+    "run": "evidence/long-selected",
+    "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+    "variant": "smart",
+    "inputChangesRequired": 2,
+    "requiredChangesMatched": 0,
+    "extractedTechnicalCharacterFlags": 0,
+    "mode": "original_outputs_rescored"
+  },
+  {
+    "cases": 2,
+    "annotationMatches": 2,
+    "reviewRequested": 0,
+    "technicalFailures": 0,
+    "providerSuccesses": 2,
+    "correctionP50Ms": 36142.888,
+    "correctionP95Ms": 43759.36,
+    "tokens": {
+      "prompt_tokens": 1770,
+      "completion_tokens": 481,
+      "total_tokens": 2251
+    },
+    "semanticApproval": "not_established_by_automatic_checks",
+    "run": "evidence/long-revalidated",
+    "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+    "variant": "smart",
+    "inputChangesRequired": 2,
+    "requiredChangesMatched": 2,
+    "extractedTechnicalCharacterFlags": 0,
+    "mode": "original_outputs_rescored"
+  }
+]

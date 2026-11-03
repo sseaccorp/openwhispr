@@ -1,0 +1,26 @@
+✔ offline preflight recognizes 17 reusable responses and exactly 13 pending from dev-en-03 (26.417775ms)
+✔ recovery preserves 17 original responses, makes only 13 calls, and is comparable with the unchanged v2 comparator (155.391844ms)
+✔ another 429 records allowlisted rate metadata, never reads its body or retries, and retains old unknown costs (26.811449ms)
+✔ a manually authorized second recovery resumes only what is still pending with full lineage (128.435717ms)
+✔ bad rows hash and tampered prompt/evaluator/corpus identities fail before any call (30.817301ms)
+✔ duplicate case, duplicate provider response, reordered rows and changed saved outputs fail even with a recomputed rows hash (50.289976ms)
+✔ wrong model, effort, request parameters, case list or unsuccessful baseline are rejected (85.617425ms)
+✔ insufficient budget, too few authorized requests, missing key/prices and missing explicit flags make no requests or output (71.884311ms)
+✔ existing output directory, overlapping source, or escaped path is never written (32.69987ms)
+✔ unknown historical valid-response cost stays null rather than being silently reconstructed (105.831112ms)
+✔ new prices are applied only to new requests, preserving historical verified prices and costs (158.461033ms)
+✔ input changes during cooldown prevent the next request (32.186377ms)
+✔ duplicate fresh provider response is billed if usage is known but stops the batch as invalid (29.361416ms)
+✔ timeout and missing usage stop without retry; their cost remains unknown (58.063866ms)
+✔ tampering with recovery accounting, lineage or ledger is rejected before a subsequent request (113.962557ms)
+✔ safe headers reject arbitrary values, cookies, authorization and secret-shaped metadata (0.499814ms)
+✔ CLI check is offline and rejects paid flags; the recover command requires explicit authorization (22.029045ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1201.25619
+V4 offline guard: {"networkAttempts":0,"reservedAttempts":0}

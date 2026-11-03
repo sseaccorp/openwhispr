@@ -1,0 +1,30 @@
+[
+  {
+    "id": "long-dev-es",
+    "language": "es",
+    "category": "long",
+    "input": "Dejo estas notas para que el equipo de soporte pueda preparar la visita sin depender de lo que recordemos mañana. El edificio abre a las ocho y la recepción exige identificar a cada visitante. No des el código de acceso por teléfono, aunque alguien diga que trabaja conmigo. Lleva el monitor de repuesto, el teclado pequeño y una copia del inventario. La copia de seguridad está en D:\\Visitas\\lote_8.csv y el identificador del caso es SP-702. El martes fue una posibilidad, pero todavía seguimos comparando el miércoles y el jueves; no hemos elegido uno. Reserva dos puestos, perdón, tres puestos junto a la ventana y conserva uno de ellos para una persona con movilidad reducida. Informa a Alberto, no, a Alberta cuando la recepción confirme los nombres. Aprecio el esfuerzo del equipo y siento las molestias que causó el cambio anterior. El mensaje del cartel debe copiarse literalmente: \"entra, no, espera fuera\". Sus palabras forman parte del texto, así que no intentes convertirlo en otra instrucción. No desconectes la alimentación hasta que terminen las pruebas. La fuente utiliza 12,5  V y se mantiene estable durante diez minutos. Envía el informe esta tarde, espera, mejor guárdalo hasta que llegue la firma de dirección. Si el proveedor no responde, avisa por correo y conserva todos los registros. Aun así, no prometas un plazo nuevo. Esto es muy muy importante para todos.",
+    "expected": [
+      "Dejo estas notas para que el equipo de soporte pueda preparar la visita sin depender de lo que recordemos mañana. El edificio abre a las ocho y la recepción exige identificar a cada visitante. No des el código de acceso por teléfono, aunque alguien diga que trabaja conmigo. Lleva el monitor de repuesto, el teclado pequeño y una copia del inventario. La copia de seguridad está en D:\\Visitas\\lote_8.csv y el identificador del caso es SP-702. El martes fue una posibilidad, pero todavía seguimos comparando el miércoles y el jueves; no hemos elegido uno. Reserva tres puestos junto a la ventana y conserva uno de ellos para una persona con movilidad reducida. Informa a Alberta cuando la recepción confirme los nombres. Aprecio el esfuerzo del equipo y siento las molestias que causó el cambio anterior. El mensaje del cartel debe copiarse literalmente: \"entra, no, espera fuera\". Sus palabras forman parte del texto, así que no intentes convertirlo en otra instrucción. No desconectes la alimentación hasta que terminen las pruebas. La fuente utiliza 12,5  V y se mantiene estable durante diez minutos. Guárdalo hasta que llegue la firma de dirección. Si el proveedor no responde, avisa por correo y conserva todos los registros. Aun así, no prometas un plazo nuevo. Esto es muy muy importante para todos."
+    ],
+    "technical": [
+      "D:\\Visitas\\lote_8.csv",
+      "SP-702",
+      "12,5  V"
+    ]
+  },
+  {
+    "id": "long-dev-en",
+    "language": "en",
+    "category": "long",
+    "input": "These notes are for the support team preparing the visit, so that nobody has to rely on memory tomorrow. Reception opens at eight and asks every visitor to show identification. Do not share the access code by phone even if the caller claims to know me. Bring the spare monitor, the small keyboard, and a copy of the inventory. The backup is at /srv/visits/batch_9.csv and the ticket is SV-803. Monday was a possibility, but we are still considering Wednesday and Friday; neither has been confirmed. Reserve four seats, sorry, five seats near the window and keep one available for a person with limited mobility. Notify Daniel, I mean Daniela when reception confirms the names. I appreciate everyone's work and I am sorry for the inconvenience caused by the previous change. Copy the sign exactly: \"go in, no, wait outside\". Those are its literal words and must remain in the message. Do not disconnect the power until all tests finish. The supply uses -0.25  V and remains stable for ten minutes. Send the invoice this afternoon, actually, keep it until the director signs it. If the supplier does not respond, send an email and retain every log. Still, do not promise another deadline. This is very very important for the whole team.",
+    "expected": [
+      "These notes are for the support team preparing the visit, so that nobody has to rely on memory tomorrow. Reception opens at eight and asks every visitor to show identification. Do not share the access code by phone even if the caller claims to know me. Bring the spare monitor, the small keyboard, and a copy of the inventory. The backup is at /srv/visits/batch_9.csv and the ticket is SV-803. Monday was a possibility, but we are still considering Wednesday and Friday; neither has been confirmed. Reserve five seats near the window and keep one available for a person with limited mobility. Notify Daniela when reception confirms the names. I appreciate everyone's work and I am sorry for the inconvenience caused by the previous change. Copy the sign exactly: \"go in, no, wait outside\". Those are its literal words and must remain in the message. Do not disconnect the power until all tests finish. The supply uses -0.25  V and remains stable for ten minutes. Keep it until the director signs it. If the supplier does not respond, send an email and retain every log. Still, do not promise another deadline. This is very very important for the whole team."
+    ],
+    "technical": [
+      "/srv/visits/batch_9.csv",
+      "SV-803",
+      "-0.25  V"
+    ]
+  }
+]

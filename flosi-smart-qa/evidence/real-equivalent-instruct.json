@@ -1,0 +1,30 @@
+{
+  "original": "Voy a enviarle el contrato hoy, espera, no, mejor mañana después de revisarlo",
+  "text": "Voy a enviarle el contrato mañana después de revisarlo.",
+  "status": "edited",
+  "reason": null,
+  "edits": [
+    {
+      "before": "Voy a enviarle el contrato hoy, espera, no, mejor mañana después de revisarlo",
+      "after": "Voy a enviarle el contrato mañana después de revisarlo",
+      "kind": "repair"
+    }
+  ],
+  "reanchored": [],
+  "provider": {
+    "status": "ok",
+    "content": "{\"uncertain\":false,\"edits\":[{\"before\":\"Voy a enviarle el contrato hoy, espera, no, mejor mañana después de revisarlo\",\"after\":\"Voy a enviarle el contrato mañana después de revisarlo\",\"kind\":\"repair\"}]}",
+    "usage": {
+      "prompt_tokens": 590,
+      "completion_tokens": 52,
+      "total_tokens": 642
+    },
+    "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+    "latencyMs": 22473.652,
+    "error": null,
+    "responseId": "chatcmpl-VUFSCrQytjYoFkKoy75twH0OZ7pjwghH",
+    "externalInferenceCostUsd": 0,
+    "attempt": 1,
+    "requestSha256": "3928739173f69c520a1e71a4bf9f1013c4307a6db34e6172f2c3f178a09eee85"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "browser": "Chromium headless 141 / Playwright 1.56.0",
+  "javascriptErrors": [],
+  "physicalWindowsExecuted": false,
+  "modelAuthentication": "direct model endpoint separately verified 401; backend authorized inferences succeeded",
+  "tests": [
+    {
+      "test": "illustrative_contract",
+      "mode": "real_text_inference_through_browser",
+      "result": {
+        "original": "Voy a enviarle el contrato hoy, espera, no, mejor mañana después de revisarlo",
+        "text": "Voy a enviarle el contrato mañana después de revisarlo.",
+        "status": "edited",
+        "reason": null,
+        "edits": [
+          {
+            "before": "Voy a enviarle el contrato hoy, espera, no, mejor mañana después de revisarlo",
+            "after": "Voy a enviarle el contrato mañana después de revisarlo",
+            "kind": "repair"
+          }
+        ],
+        "reanchored": [],
+        "provider": {
+          "status": "ok",
+          "content": "{\"uncertain\":false,\"edits\":[{\"before\":\"Voy a enviarle el contrato hoy, espera, no, mejor mañana después de revisarlo\",\"after\":\"Voy a enviarle el contrato mañana después de revisarlo\",\"kind\":\"repair\"}]}",
+          "usage": {
+            "prompt_tokens": 590,
+            "completion_tokens": 52,
+            "total_tokens": 642
+          },
+          "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+          "latencyMs": 7028.297,
+          "error": null,
+          "responseId": "chatcmpl-3iUjCwqpbJ9BY8xZFxo21a5NtDROMjys",
+          "externalInferenceCostUsd": 0,
+          "attempt": 4,
+          "requestSha256": "3928739173f69c520a1e71a4bf9f1013c4307a6db34e6172f2c3f178a09eee85"
+        }
+      }
+    },
+    {
+      "test": "literal_and_negation",
+      "mode": "real_text_inference_through_browser",
+      "result": {
+        "original": "La nota dice literalmente \"no, espera, mejor vuelve\" y no autoriza a nadie a entrar.",
+        "text": "La nota dice literalmente \"no, espera, mejor vuelve\" y no autoriza a nadie a entrar.",
+        "status": "rejected",
+        "reason": "literal_quote_edit",
+        "edits": [],
+        "provider": {
+          "status": "ok",
+          "content": "{\"uncertain\":false,\"edits\":[{\"before\":\"no, espera, mejor vuelve\",\"after\":\"mejor vuelve\",\"kind\":\"repair\"}]}",
+          "usage": {
+            "prompt_tokens": 595,
+            "completion_tokens": 33,
+            "total_tokens": 628
+          },
+          "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+          "latencyMs": 4570.756,
+          "error": null,
+          "responseId": "chatcmpl-Kt44kOitnM4JMs5p8jXx97wkezVLkZcX",
+          "externalInferenceCostUsd": 0,
+          "attempt": 5,
+          "requestSha256": "cf3cf99b71cd4ec4cc47f6da8442d872ec35bd6e43d4bd86680b15ea1706038c"
+        }
+      }
+    },
+    {
+      "test": "licensed_human_wav_upload",
+      "mode": "real_human_file_browser_asr_correction",
+      "result": {
+        "schemaVersion": 1,
+        "mode": "real_audio",
+        "audioSha256": "1b1bcb3731a6f91522c979d05ec51d11bda635fa578a84f36c2d5c3120358324",
+        "audioDurationSeconds": 6.42,
+        "reference": "especially if we try to sell , what two million of them . Oh sorry , four million of 'em ,",
+        "asrText": "Especially if we try to sell 2 million of them, oh sorry, 4 million of them.",
+        "asrModel": "Systran/faster-whisper-medium",
+        "asrRevision": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+        "asrComputeType": "int8",
+        "asrLanguage": "en",
+        "asrLanguageProbability": 1,
+        "asrMs": 6034.471,
+        "asrRealTimeFactor": 0.9399487482866542,
+        "correction": {
+          "original": "Especially if we try to sell 2 million of them, oh sorry, 4 million of them.",
+          "text": "Especially if we try to sell 4 million of them.",
+          "status": "edited",
+          "reason": null,
+          "edits": [
+            {
+              "before": "Especially if we try to sell 2 million of them, oh sorry, 4 million of them",
+              "after": "Especially if we try to sell 4 million of them",
+              "kind": "repair"
+            }
+          ],
+          "reanchored": [],
+          "provider": {
+            "status": "ok",
+            "content": "{\"uncertain\":false,\"edits\":[{\"before\":\"Especially if we try to sell 2 million of them, oh sorry, 4 million of them\",\"after\":\"Especially if we try to sell 4 million of them\",\"kind\":\"repair\"}]}",
+            "usage": {
+              "prompt_tokens": 593,
+              "completion_tokens": 54,
+              "total_tokens": 647
+            },
+            "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+            "latencyMs": 6642.222,
+            "error": null,
+            "responseId": "chatcmpl-QGFSnnIaFB0f6R4Vm89t9KexZOKpzCZ0",
+            "externalInferenceCostUsd": 0,
+            "attempt": 6,
+            "requestSha256": "c052867cc63c22542c574fe7bae4d5419f94fd62cbbc42dcbfa65d42cee9b0d3"
+          }
+        },
+        "totalMs": 12677.178,
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 6.32,
+            "text": " Especially if we try to sell 2 million of them, oh sorry, 4 million of them.",
+            "avgLogProbability": -0.5617166242816232,
+            "noSpeechProbability": 0.17930711805820465,
+            "temperature": 0
+          }
+        ],
+        "asrReferenceComparison": {
+          "wordEdits": 4,
+          "referenceWords": 17,
+          "wer": 0.23529411764705882
+        },
+        "finalReferenceComparison": {
+          "wordEdits": 8,
+          "referenceWords": 17,
+          "wer": 0.47058823529411764
+        },
+        "referenceComparisonMeaning": "WER against what was spoken; intentional repairs require a separate corrected reference",
+        "qualityReview": "pending"
+      }
+    },
+    {
+      "test": "microphone_unavailable",
+      "status": "No se pudo abrir el micrófono: Requested device not found",
+      "physicalMicrophoneValidated": false
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+run,model,variant,cases,annotationMatches,inputChangesRequired,requiredChangesMatched,reviewRequested,extractedTechnicalCharacterFlags,mode
+evidence/dev-selected,Qwen3-4B-Instruct-2507-Q4_K_M,smart,32,28,16,12,7,0,replay
+evidence/long-revalidated,Qwen3-4B-Instruct-2507-Q4_K_M,smart,2,2,2,2,0,0,replay
+evidence/final-round2,Qwen3-4B-Instruct-2507-Q4_K_M,smart,24,19,12,7,7,0,replay
+evidence/final-qualification,Qwen3-4B-Instruct-2507-Q4_K_M,smart,12,10,7,5,3,0,replay

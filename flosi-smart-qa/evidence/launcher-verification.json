@@ -1,0 +1,9 @@
+{
+  "platform": "Linux x64",
+  "runtime": "new isolated directory with verified reusable assets and preinstalled task venv",
+  "dependencyInstallInThisLauncherRun": false,
+  "modelEndpointWithoutTokenHttpStatus": 401,
+  "backendAuthorizedTextAndHumanWav": true,
+  "physicalWindowsExecuted": false,
+  "originalQAStarted": false
+}

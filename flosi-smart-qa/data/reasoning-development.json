@@ -1,0 +1,114 @@
+[
+  {
+    "id": "dev-es-01",
+    "language": "es",
+    "category": "word_repair",
+    "input": "Reserva la mesa para seis, perdón, para ocho personas",
+    "expected": [
+      "Reserva la mesa para ocho personas."
+    ]
+  },
+  {
+    "id": "dev-en-02",
+    "language": "en",
+    "category": "word_repair",
+    "input": "Deliver it to Martin, sorry, to Martina at reception",
+    "expected": [
+      "Deliver it to Martina at reception."
+    ]
+  },
+  {
+    "id": "dev-es-03",
+    "language": "es",
+    "category": "scope",
+    "input": "Compra los billetes esta noche, espera, mejor pide primero el permiso al director",
+    "expected": [
+      "Pide primero el permiso al director."
+    ]
+  },
+  {
+    "id": "dev-en-04",
+    "language": "en",
+    "category": "scope",
+    "input": "Delete the backups, no, archive them until the audit finishes",
+    "expected": [
+      "Archive them until the audit finishes."
+    ]
+  },
+  {
+    "id": "dev-es-05",
+    "language": "es",
+    "category": "addition",
+    "input": "Imprime las etiquetas y, además, guarda una copia si falla la impresora.",
+    "expected": [
+      "Imprime las etiquetas y, además, guarda una copia si falla la impresora."
+    ]
+  },
+  {
+    "id": "dev-es-07",
+    "language": "es",
+    "category": "retraction",
+    "input": "Publica el anuncio a mediodía, retiro esa petición",
+    "expected": [
+      "Retiro esa petición."
+    ]
+  },
+  {
+    "id": "dev-en-10",
+    "language": "en",
+    "category": "negation",
+    "input": "Open the hatch, no, do not open it while the indicator is red",
+    "expected": [
+      "Do not open it while the indicator is red."
+    ]
+  },
+  {
+    "id": "dev-en-16",
+    "language": "en",
+    "category": "literal_quote",
+    "input": "She quoted word for word take the red one no wait take the green one and laughed.",
+    "expected": [
+      "She quoted word for word take the red one no wait take the green one and laughed."
+    ]
+  },
+  {
+    "id": "dev-es-21",
+    "language": "es",
+    "category": "technical",
+    "input": "La dosis es 0,125  mg y el lote RX-903 no cambia.",
+    "expected": [
+      "La dosis es 0,125  mg y el lote RX-903 no cambia."
+    ],
+    "technical": [
+      "0,125  mg",
+      "RX-903"
+    ]
+  },
+  {
+    "id": "dev-en-24",
+    "language": "en",
+    "category": "long",
+    "input": "Book a taxi for seven, sorry, for eight and keep the receipt. Call the north office, actually, call the south office if the train is late, and do not cancel the hotel",
+    "expected": [
+      "Book a taxi for eight and keep the receipt. Call the south office if the train is late, and do not cancel the hotel."
+    ]
+  },
+  {
+    "id": "dev-es-25",
+    "language": "es",
+    "category": "negation",
+    "input": "Rechaza la propuesta, no, no la rechaces si aceptan la cláusula",
+    "expected": [
+      "No la rechaces si aceptan la cláusula."
+    ]
+  },
+  {
+    "id": "dev-en-28",
+    "language": "en",
+    "category": "addition",
+    "input": "Send the budget today; actually, also include the appendix if it is ready.",
+    "expected": [
+      "Send the budget today; actually, also include the appendix if it is ready."
+    ]
+  }
+]

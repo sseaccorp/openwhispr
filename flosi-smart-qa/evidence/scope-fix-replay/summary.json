@@ -1,0 +1,38 @@
+[
+  {
+    "cases": 32,
+    "annotationMatches": 27,
+    "reviewRequested": 6,
+    "run": "evidence/dev-selected",
+    "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+    "variant": "smart",
+    "inputChangesRequired": 16,
+    "requiredChangesMatched": 12,
+    "extractedTechnicalCharacterFlags": 0,
+    "mode": "replay"
+  },
+  {
+    "cases": 2,
+    "annotationMatches": 2,
+    "reviewRequested": 0,
+    "run": "evidence/long-revalidated",
+    "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+    "variant": "smart",
+    "inputChangesRequired": 2,
+    "requiredChangesMatched": 2,
+    "extractedTechnicalCharacterFlags": 0,
+    "mode": "replay"
+  },
+  {
+    "cases": 24,
+    "annotationMatches": 19,
+    "reviewRequested": 7,
+    "run": "evidence/final-round2",
+    "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+    "variant": "smart",
+    "inputChangesRequired": 12,
+    "requiredChangesMatched": 7,
+    "extractedTechnicalCharacterFlags": 0,
+    "mode": "replay"
+  }
+]

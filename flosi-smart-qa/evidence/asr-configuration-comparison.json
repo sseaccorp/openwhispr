@@ -1,0 +1,34 @@
+[
+  {
+    "sourceId": "ami-ES2012a-D-785.35-791.77",
+    "wordTimestamps": false,
+    "temperature": 0,
+    "text": "especially we try to sell two million of them oh sorry four million of them",
+    "asrMs": 2074.6518010000727,
+    "reference": "especially if we try to sell , what two million of them . Oh sorry , four million of 'em ,"
+  },
+  {
+    "sourceId": "ami-ES2012a-D-785.35-791.77",
+    "wordTimestamps": true,
+    "temperature": 0,
+    "text": "especially we try to sell two million of them oh sorry four million of them",
+    "asrMs": 2136.8868999998085,
+    "reference": "especially if we try to sell , what two million of them . Oh sorry , four million of 'em ,"
+  },
+  {
+    "sourceId": "ami-ES2004a-D-968.95-972.10",
+    "wordTimestamps": false,
+    "temperature": 0,
+    "text": "Sorry, I'm chatting on your territory guys",
+    "asrMs": 1830.860400000347,
+    "reference": ". Sorry I'm treading on your territory guys"
+  },
+  {
+    "sourceId": "ami-ES2004a-D-968.95-972.10",
+    "wordTimestamps": true,
+    "temperature": 0,
+    "text": "Sorry, I'm chatting on your territory guys",
+    "asrMs": 1910.5763409997962,
+    "reference": ". Sorry I'm treading on your territory guys"
+  }
+]

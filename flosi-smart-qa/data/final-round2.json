@@ -1,0 +1,259 @@
+[
+  {
+    "id": "round2-es-01",
+    "synthetic": true,
+    "language": "es",
+    "category": "word_repair",
+    "input": "Busca el expediente de Cárdenas, perdón, de Cáceres y conserva el sobre original.",
+    "expected": [
+      "Busca el expediente de Cáceres y conserva el sobre original."
+    ]
+  },
+  {
+    "id": "round2-en-02",
+    "synthetic": true,
+    "language": "en",
+    "category": "number_repair",
+    "input": "Set the interval to 1.25  ms, sorry, 1.75  ms, and keep timer TM-51.",
+    "expected": [
+      "Set the interval to 1.75  ms, and keep timer TM-51."
+    ],
+    "technical": [
+      "1.75  ms",
+      "TM-51"
+    ]
+  },
+  {
+    "id": "round2-es-03",
+    "synthetic": true,
+    "language": "es",
+    "category": "scope",
+    "input": "Paga la reserva, espera, mejor solicita el reembolso cuando llegue la confirmación.",
+    "expected": [
+      "Solicita el reembolso cuando llegue la confirmación."
+    ]
+  },
+  {
+    "id": "round2-en-04",
+    "synthetic": true,
+    "language": "en",
+    "category": "scope",
+    "input": "Turn the heating off, actually, leave it on until the repair team finishes the inspection.",
+    "expected": [
+      "Leave it on until the repair team finishes the inspection."
+    ]
+  },
+  {
+    "id": "round2-es-05",
+    "synthetic": true,
+    "language": "es",
+    "category": "addition",
+    "input": "No olvides el comprobante y también avisa al conductor si el vuelo cambia de puerta.",
+    "expected": [
+      "No olvides el comprobante y también avisa al conductor si el vuelo cambia de puerta."
+    ]
+  },
+  {
+    "id": "round2-en-06",
+    "synthetic": true,
+    "language": "en",
+    "category": "addition",
+    "input": "Keep my seat and, in addition, order a vegetarian meal unless the kitchen is closed.",
+    "expected": [
+      "Keep my seat and, in addition, order a vegetarian meal unless the kitchen is closed."
+    ]
+  },
+  {
+    "id": "round2-es-07",
+    "synthetic": true,
+    "language": "es",
+    "category": "retraction",
+    "input": "Envía mis datos a la asociación, anulo esa solicitud.",
+    "expected": [
+      "Anulo esa solicitud."
+    ]
+  },
+  {
+    "id": "round2-en-08",
+    "synthetic": true,
+    "language": "en",
+    "category": "retraction",
+    "input": "Subscribe me to the mailing list, I rescind that request.",
+    "expected": [
+      "I rescind that request."
+    ]
+  },
+  {
+    "id": "round2-es-09",
+    "synthetic": true,
+    "language": "es",
+    "category": "negation",
+    "input": "Desactiva el filtro, no, no lo desactives si la alarma sigue encendida.",
+    "expected": [
+      "No lo desactives si la alarma sigue encendida."
+    ]
+  },
+  {
+    "id": "round2-en-10",
+    "synthetic": true,
+    "language": "en",
+    "category": "negation",
+    "input": "No, keep the door closed; I did not ask you to open it.",
+    "expected": [
+      "No, keep the door closed; I did not ask you to open it."
+    ],
+    "exact": true
+  },
+  {
+    "id": "round2-es-11",
+    "synthetic": true,
+    "language": "es",
+    "category": "contrast",
+    "input": "Son instrucciones opcionales, no obligatorias, y el plazo continúa siendo flexible.",
+    "expected": [
+      "Son instrucciones opcionales, no obligatorias, y el plazo continúa siendo flexible."
+    ]
+  },
+  {
+    "id": "round2-en-12",
+    "synthetic": true,
+    "language": "en",
+    "category": "contrast",
+    "input": "The sample is uncommon, not impossible to find, and both suppliers can help.",
+    "expected": [
+      "The sample is uncommon, not impossible to find, and both suppliers can help."
+    ]
+  },
+  {
+    "id": "round2-es-13",
+    "synthetic": true,
+    "language": "es",
+    "category": "uncertainty",
+    "input": "Quizá lo haga esta semana o la próxima; todavía estoy valorando el riesgo.",
+    "expected": [
+      "Quizá lo haga esta semana o la próxima; todavía estoy valorando el riesgo."
+    ]
+  },
+  {
+    "id": "round2-en-14",
+    "synthetic": true,
+    "language": "en",
+    "category": "uncertainty",
+    "input": "Either the rehearsal or the soundcheck could move, but we have not decided which one.",
+    "expected": [
+      "Either the rehearsal or the soundcheck could move, but we have not decided which one."
+    ]
+  },
+  {
+    "id": "round2-es-15",
+    "synthetic": true,
+    "language": "es",
+    "category": "literal_quote",
+    "input": "La traducción conserva exactamente estas palabras entra no espera afuera y cierra la puerta al terminar.",
+    "expected": [
+      "La traducción conserva exactamente estas palabras entra no espera afuera y cierra la puerta al terminar."
+    ]
+  },
+  {
+    "id": "round2-en-16",
+    "synthetic": true,
+    "language": "en",
+    "category": "literal_quote",
+    "input": "Read \"we can, no, we cannot proceed\" without changing the words.",
+    "expected": [
+      "Read \"we can, no, we cannot proceed\" without changing the words."
+    ],
+    "exact": true
+  },
+  {
+    "id": "round2-es-17",
+    "synthetic": true,
+    "language": "es",
+    "category": "filler",
+    "input": "Pues, necesito que funcione bien; la palabra pues une las dos partes de esa explicación.",
+    "expected": [
+      "Necesito que funcione bien; la palabra pues une las dos partes de esa explicación."
+    ]
+  },
+  {
+    "id": "round2-en-18",
+    "synthetic": true,
+    "language": "en",
+    "category": "filler",
+    "input": "Uh, I'm sorry the route was confusing; I like the view and would like to stay.",
+    "expected": [
+      "I'm sorry the route was confusing; I like the view and would like to stay."
+    ]
+  },
+  {
+    "id": "round2-es-19",
+    "synthetic": true,
+    "language": "es",
+    "category": "repetition",
+    "input": "Yo yo ya lo comprobé; no, no me he confundido de archivo.",
+    "expected": [
+      "Yo ya lo comprobé; no, no me he confundido de archivo."
+    ]
+  },
+  {
+    "id": "round2-en-20",
+    "synthetic": true,
+    "language": "en",
+    "category": "repetition",
+    "input": "It is so so much better now.",
+    "expected": [
+      "It is so so much better now."
+    ],
+    "exact": true
+  },
+  {
+    "id": "round2-es-21",
+    "synthetic": true,
+    "language": "es",
+    "category": "technical",
+    "input": "La lectura es -3,125  mL y la referencia es tx_9_b; conserva ambos valores.",
+    "expected": [
+      "La lectura es -3,125  mL y la referencia es tx_9_b; conserva ambos valores."
+    ],
+    "technical": [
+      "-3,125  mL",
+      "tx_9_b"
+    ],
+    "exact": true
+  },
+  {
+    "id": "round2-en-22",
+    "synthetic": true,
+    "language": "en",
+    "category": "technical",
+    "input": "ffprobe -v error -show_streams sample.wav",
+    "expected": [
+      "ffprobe -v error -show_streams sample.wav"
+    ],
+    "exact": true
+  },
+  {
+    "id": "round2-es-23",
+    "synthetic": true,
+    "language": "es",
+    "category": "long",
+    "input": "Estas son las notas para el equipo de radio que estará en el estudio durante el fin de semana. La primera emisión empieza al amanecer y no debe publicarse ninguna grabación sin el permiso de las personas que intervienen. Deja a mano el esquema de conexiones, una libreta y los números del personal de guardia. El inventario está en /srv/radio/turnos_6.csv y el transmisor lleva la etiqueta RD-509. Necesitamos tres pilas, perdón, cuatro pilas para las unidades de respaldo y dos linternas para el pasillo de acceso. Avisa a Marcos, no, a Marco cuando hayas terminado la comprobación de los auriculares. Si el nivel de ruido aumenta, conserva una copia de la señal original y no cambies la ganancia hasta consultar con la técnica. La frase que aparece en el guion es \"habla, no, espera mi señal\" y sus palabras deben conservarse sin modificaciones. Todavía estamos pensando en una entrevista o en una mesa redonda, así que ninguna opción está cerrada. Borra los audios de ayer, no, consérvalos hasta terminar la revisión. Cuando llegue el grupo de invitados, pide que dejen los teléfonos en silencio y no prometas enviarles una copia durante la emisión. Agradezco muchísimo el trabajo de todos y quiero que quede muy muy claro que el consentimiento se puede retirar en cualquier momento.",
+    "expected": [
+      "Estas son las notas para el equipo de radio que estará en el estudio durante el fin de semana. La primera emisión empieza al amanecer y no debe publicarse ninguna grabación sin el permiso de las personas que intervienen. Deja a mano el esquema de conexiones, una libreta y los números del personal de guardia. El inventario está en /srv/radio/turnos_6.csv y el transmisor lleva la etiqueta RD-509. Necesitamos cuatro pilas para las unidades de respaldo y dos linternas para el pasillo de acceso. Avisa a Marco cuando hayas terminado la comprobación de los auriculares. Si el nivel de ruido aumenta, conserva una copia de la señal original y no cambies la ganancia hasta consultar con la técnica. La frase que aparece en el guion es \"habla, no, espera mi señal\" y sus palabras deben conservarse sin modificaciones. Todavía estamos pensando en una entrevista o en una mesa redonda, así que ninguna opción está cerrada. Consérvalos hasta terminar la revisión. Cuando llegue el grupo de invitados, pide que dejen los teléfonos en silencio y no prometas enviarles una copia durante la emisión. Agradezco muchísimo el trabajo de todos y quiero que quede muy muy claro que el consentimiento se puede retirar en cualquier momento."
+    ],
+    "technical": [
+      "/srv/radio/turnos_6.csv",
+      "RD-509"
+    ]
+  },
+  {
+    "id": "round2-en-24",
+    "synthetic": true,
+    "language": "en",
+    "category": "imperfect_asr",
+    "input": "lets go by ferry no by train as long as the last connection is running and keep the hotel booking",
+    "expected": [
+      "Lets go by train as long as the last connection is running and keep the hotel booking."
+    ]
+  }
+]

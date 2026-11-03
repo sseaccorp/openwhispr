@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "mode": "real_inference_through_QA",
+  "variant": "smart",
+  "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+  "cases": "data/repeat-cases.json",
+  "casesSha256": "5bf4c46b3a05280e8adf7adc88dcb85644629eae7ad0c06960d0a35cc61a324a",
+  "syntheticInputs": true,
+  "repeats": 3,
+  "startedUtc": "2026-11-03T22:31:06Z",
+  "qaStatus": {
+    "name": "Flosi Smart QA",
+    "experimental": true,
+    "audio": true,
+    "provider": "local",
+    "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+    "originalQAAccess": false,
+    "asrSource": {
+      "repository": "Systran/faster-whisper-medium",
+      "revision": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+      "files": {
+        "config.json": "3622a2ddc41ec0e0fd4e68c13c6830f03b90c38d89aaad184de02c8c642cf807",
+        "tokenizer.json": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab",
+        "vocabulary.txt": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913",
+        "model.bin": "9b45e1009dcc4ab601eff815b61d80e60ce3fd8c74c1a14f4a282258286b51ae"
+      }
+    },
+    "asrLoadMs": 2680.124
+  },
+  "state": "complete",
+  "plannedCases": 9,
+  "criterion": "Complete ordered output annotations plus exact technical/quote checks; human semantic review still required",
+  "attempts": 9,
+  "summary": {
+    "cases": 9,
+    "annotationMatches": 6,
+    "reviewRequested": 3,
+    "technicalFailures": 0,
+    "providerSuccesses": 9,
+    "correctionP50Ms": 6790.181,
+    "correctionP95Ms": 21705.417,
+    "tokens": {
+      "prompt_tokens": 5319,
+      "completion_tokens": 495,
+      "total_tokens": 5814
+    },
+    "semanticApproval": "not_established_by_automatic_checks"
+  }
+}

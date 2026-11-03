@@ -1,0 +1,8 @@
+{
+  "selectedUtc": "2026-11-03T22:12:48Z",
+  "afterFrozenCommit": "25cac16901be23a94c78bea8b854c475c6d7ab8b",
+  "sourcesExternallyAnnotated": true,
+  "usedForTuning": false,
+  "selectionBeforeInference": true,
+  "discardedCandidateBeforeInference": "TS3010d numeric words had 44-second gap; lexical neighbors are not evidence of a repair. No response selected for success."
+}

@@ -1,0 +1,15 @@
+{
+  "candidateCommit": "25cac16901be23a94c78bea8b854c475c6d7ab8b",
+  "annotationMatches": 17,
+  "cases": 24,
+  "acceptance": "FAIL",
+  "dataRoleAfterReview": "development_adversarial_round_1",
+  "usedToFixCandidateAfterObservation": true,
+  "fixedIssue": "Known withdrawal family take back was blocked by source guard despite a correct model plan.",
+  "otherFailuresRemain": [
+    "filler/stutter plans",
+    "repair marker cleanup",
+    "unpunctuated no requires review"
+  ],
+  "notBlindEvidenceForNextCandidate": true
+}

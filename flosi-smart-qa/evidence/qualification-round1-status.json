@@ -1,0 +1,11 @@
+{
+  "status": "development_after_discovery",
+  "sourceFreeze": "freeze-current.json",
+  "cases": 12,
+  "annotationMatches": 10,
+  "acceptedCriticalFailure": "qualification-es-07 retained abandoned positive command after removing one no",
+  "newGuard": "Reject repair plans that remove only repair markers, retaining all non-marker content. This rejects the bad output but is not a successful correction.",
+  "usedForTuning": true,
+  "originalProvenancePreserved": true,
+  "timestampUtc": "2026-11-03T22:52:22Z"
+}

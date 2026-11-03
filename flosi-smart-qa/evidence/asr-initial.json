@@ -1,0 +1,58 @@
+[
+  {
+    "id": "fleurs-es_419-1001146817223348054",
+    "reference": "Se recomienda enfáticamente a los viajeros que se informen sobre cualquier riesgo de clima extremo en el área que visitan, dado que ello puede afectar sus planes de viaje.",
+    "asr": "Se recomienda enfáticamente a los viajeros que se informen sobre cualquier riesgo del clima extremo en el área que visitan, dado que ello puede afectar sus planes de viaje.",
+    "latencyMs": 3189.567209000188,
+    "duration": 12.84
+  },
+  {
+    "id": "fleurs-es_419-1008205615316519958",
+    "reference": "Fue tanta la cantidad de gente que se concentró, que no todos pudieron acceder al funeral en la Plaza de San Pedro.",
+    "asr": "Fue tanta la cantidad de gente que se concentró que no todos pudieron acceder al funeral en la plaza de San Pedro.",
+    "latencyMs": 2607.4473589999343,
+    "duration": 9.72
+  },
+  {
+    "id": "fleurs-es_419-10084850086754329587",
+    "reference": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+    "asr": "Esto parece tener sentido, ya que en la tierra no se percibe su movimiento, ¿cierto?",
+    "latencyMs": 3172.540702999868,
+    "duration": 8.58
+  },
+  {
+    "id": "fleurs-en_us-1003119935936341070",
+    "reference": "However, due to the slow communication channels, styles in the west could lag behind by 25 to 30 year.",
+    "asr": "However, due to the slow communication channels, styles in the West could lag behind by 25 to 30 years.",
+    "latencyMs": 3031.8173329999354,
+    "duration": 10.56
+  },
+  {
+    "id": "fleurs-en_us-10323357556845456822",
+    "reference": "The Northern Marianas emergency management office said that there were no damages reported in the nation.",
+    "asr": "The Northern Mariana's Emergency Management Office said that there were no damages reported in the nation.",
+    "latencyMs": 2002.3265849999916,
+    "duration": 10.8
+  },
+  {
+    "id": "fleurs-en_us-1036771894648013441",
+    "reference": "As light pollution in their heyday was not the kind of problem it is today, they are usually located in cities or at campuses, easier to reach than those built in modern times.",
+    "asr": "As light pollution in their heyday was not the kind of problem it is today, they are usually located in cities or at campuses, easier to reach than those built in modern times.",
+    "latencyMs": 2552.98216999995,
+    "duration": 9.9
+  },
+  {
+    "id": "ami-ES2012a-D-785.35-791.80",
+    "reference": "especially if we try to sell , what two million of them . Oh sorry , four million of 'em , but",
+    "asr": "Especially if we try to sell 2 million of them. Oh, sorry. 4 million of them.",
+    "latencyMs": 2312.368919999926,
+    "duration": 6.45
+  },
+  {
+    "id": "ami-ES2004a-D-968.95-972.10",
+    "reference": ". Sorry I'm treading on your territory guys",
+    "asr": "Sorry, I'm chatting on your territory guys",
+    "latencyMs": 1982.0093610001095,
+    "duration": 3.15
+  }
+]

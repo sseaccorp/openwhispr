@@ -1,0 +1,12 @@
+{
+  "reason": "Sequential client received 409 because response body was delivered before processing lock release.",
+  "semanticEngineUnchanged": true,
+  "changedFrozenFiles": [
+    "smartqa/server.py",
+    "tests/test_service.py"
+  ],
+  "failedRepeatRun": "evidence/repeated-final",
+  "originalResponsesPreserved": true,
+  "modelPromptAndParametersUnchanged": true,
+  "finalRound2NotUsedForSemanticTuning": true
+}
