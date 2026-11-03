@@ -45,6 +45,9 @@ def _subsequence(needle, haystack):
     iterator = iter(haystack)
     return all(any(v == item for v in iterator) for item in needle)
 
+def _sequence_count(words, phrase):
+    return sum(words[i:i+len(phrase)] == phrase for i in range(len(words)-len(phrase)+1))
+
 def _technical(text):
     return [m.group().rstrip('.,;!?') for m in TECH.finditer(text)]
 
@@ -59,13 +62,25 @@ def _validate_change(before, after, kind, left_context=''):
     if before == after or not after.strip():
         raise InvalidPlan('empty_or_noop_edit')
     if kind == 'repair':
-        evidence = [m for m in REPAIR.finditer(before) if (m.start() > 0 or WITHDRAWAL.fullmatch(m.group())) and (m.group().casefold() != 'no' or (
+        old_words, kept_words = word_sequence(before), word_sequence(after)
+        evidence = [m for m in REPAIR.finditer(before) if m.start() > 0
+            and (WITHDRAWAL.fullmatch(m.group()) or (word_sequence(before[m.end():]) and
+                 _sequence_count(old_words,word_sequence(m.group())) > _sequence_count(kept_words,word_sequence(m.group()))))
+            and (m.group().casefold() != 'no' or (
             m.start() > 0 and re.search(r',\s*$', before[:m.start()]) and
             (re.match(r'\s*,', before[m.end():]) or not before[m.end():].strip(' ,.;')) and
             any(w != 'no' for w in word_sequence(before[:m.start()]))))]
         if not evidence:
             raise InvalidPlan('missing_repair_evidence')
-        final_marker = evidence[-1]
+        # One source edit represents one repair event. Advance only through a
+        # contiguous marker chain ("wait, no, actually"), never across retained
+        # propositions to a later discourse adverb. Otherwise "may actually
+        # need more" could wrongly authorize deleting the corrected quantity.
+        final_marker = evidence[0]
+        for following in evidence[1:]:
+            if word_sequence(before[final_marker.end():following.start()]):
+                break
+            final_marker = following
         # The final replacement is an assertion to retain, not disposable repair
         # language. This catches the observed inversion that kept the canceled
         # instruction while deleting its withdrawal. It also protects a final
@@ -178,12 +193,17 @@ def apply_plan(text, plan):
             # Extend ONLY to a unique exact later suffix, never invent a word,
             # choose between duplicate matches or cross a protected quote.
             old_atoms, new_atoms = list(ATOMS.finditer(before)), list(ATOMS.finditer(after))
+            markers = list(REPAIR.finditer(before))
+            if markers and word_sequence(before[markers[-1].end():]):
+                raise InvalidPlan('completed_repair_span_cannot_expand')
             common = 0
             while common < min(len(old_atoms), len(new_atoms)) and old_atoms[common].group() == new_atoms[common].group():
                 common += 1
             tail = after[new_atoms[common].start():] if common < len(new_atoms) else ''
             target = text.find(tail, end) if tail else -1
             if target != -1 and text.find(tail, target+1) == -1:
+                if re.search(r'[.!?](?:\s|$)',text[end:target+len(tail)]):
+                    raise InvalidPlan('repair_expansion_crosses_sentence')
                 expanded = text[start:target+len(tail)]
                 if REPAIR.search(expanded) and _subsequence(ATOMS.findall(after), ATOMS.findall(expanded)):
                     reanchored.append({'before': before, 'expandedBefore': expanded})

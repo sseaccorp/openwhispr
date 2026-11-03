@@ -1,0 +1,8 @@
+{
+  "dataRoleNow": "development_discovery_of_accepted_critical_error",
+  "criticalError": "Corrected 3-volts fact was deleted in an accepted output.",
+  "source": "evidence/human-postfreeze/rows.jsonl",
+  "usedForGuardFix": true,
+  "blindEvidenceForFinalRevision": false,
+  "fix": "No forward expansion from a completed repair; no sentence-boundary expansion; retained markers do not authorize deletion; later discourse words cannot reset the first repair scope."
+}

@@ -1,0 +1,9 @@
+{
+  "mode": "actual_response_replay_no_new_inference",
+  "source": "evidence/human-postfreeze/rows.jsonl",
+  "originalAcceptedText": "It's not going to be the standard remote, which is having, which may need more actually.",
+  "newDecision": "rejected",
+  "newReason": "completed_repair_span_cannot_expand",
+  "preservedASR": "It's not going to be the standard remote, which is having, which need just 6 volt, sorry, 3 volts DC. It may need more actually.",
+  "note": "Original ASR contains six and three; preserving it is a FAILED correction requiring review, not semantic success."
+}

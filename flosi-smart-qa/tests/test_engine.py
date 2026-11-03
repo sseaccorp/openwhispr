@@ -132,6 +132,30 @@ class SourceEdits(unittest.TestCase):
         with self.assertRaises(InvalidPlan):
             apply_plan('Send A, sorry, quote "B"', plan('Send A', 'B'))
 
+    def test_real_human_voltage_plan_cannot_expand_over_final_quantity(self):
+        text="It's not going to be the standard remote, which is having, which need just 6 volt, sorry, 3 volts DC. It may need more actually."
+        p=plan('which need just 6 volt, sorry, 3 volts DC','which may need more actually')
+        with self.assertRaisesRegex(InvalidPlan,'completed_repair_span_cannot_expand'):
+            apply_plan(text,p)
+
+    def test_retained_discourse_word_does_not_reset_repair_scope(self):
+        text='It needs 6 volts, sorry, 3 volts DC. It may actually need more.'
+        with self.assertRaisesRegex(InvalidPlan,'replacement_or_withdrawal_lost'):
+            apply_plan(text,plan(text,'It may actually need more.'))
+        with self.assertRaisesRegex(InvalidPlan,'replacement_or_withdrawal_lost'):
+            apply_plan(text,plan(text,'It may need more.'))
+        result=apply_plan(text,plan(text,'It needs 3 volts DC. It may actually need more.'))
+        self.assertEqual(result['text'],'It needs 3 volts DC. It may actually need more.')
+
+    def test_initial_cancel_action_can_itself_be_replaced(self):
+        text='Cancel the reservation, actually, keep it until noon'
+        self.assertEqual(apply_plan(text,plan(text,'keep it until noon'))['text'],'Keep it until noon.')
+
+    def test_incomplete_anchor_cannot_jump_to_another_sentence(self):
+        text='Send the draft. Sorry, the signed copy is on another desk.'
+        with self.assertRaisesRegex(InvalidPlan,'repair_expansion_crosses_sentence'):
+            apply_plan(text,plan('Send the draft','Send the signed copy'))
+
     def test_model_noop_is_ignored_and_unsolved_repair_is_review(self):
         text='No changes are needed.'
         self.assertEqual(apply_plan(text, plan(text, text))['status'],'unchanged')

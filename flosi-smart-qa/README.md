@@ -84,3 +84,10 @@ con puntuación material usan `exact=true`, y todos requieren revisión de conte
 Para repetir una evaluación textual usando la aplicación ya arrancada (sin leer
 su token privado), el runner `experiments/evaluate_via_ui.py` envía solo el texto
 al backend. Las referencias permanecen fuera de las peticiones.
+
+Una corrección de alcance ya completado no se extiende a otra oración para
+justificar palabras nuevas del plan. Las palabras de reparación que siguen
+presentes son contenido y no reinician la protección del reemplazo. Cada edición
+protege un evento y su cadena contigua de marcadores; reparaciones entrelazadas
+o encadenadas sobre el mismo elemento pueden requerir revisión. Esta limitación
+se declara, no se contabiliza como corrección lograda.
