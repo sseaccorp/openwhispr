@@ -1,0 +1,36 @@
+[
+  {
+    "id": "ami-IS1000c-C-1165.13-1177.28",
+    "file": "ami-IS1000c-C-1165.13-1177.28.wav",
+    "language": "en",
+    "reference": "not going to be the standard remote , which is having uh which need just uh six six volt uh th sorry three volts um of D_C_ . It may need more actually",
+    "sourceUrl": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror/amicorpus/IS1000c/audio/IS1000c.Headset-2.wav",
+    "byteRange": [
+      37284204,
+      37673003
+    ],
+    "clipStartSeconds": 1165.13,
+    "clipEndSeconds": 1177.28,
+    "sha256": "bdf01414c5552a7e12c87b30430e11d791f5335430f07976a549a229b11a9437",
+    "license": "CC-BY-4.0",
+    "speechType": "human_spontaneous_meeting",
+    "category": "voltage_repair_with_open_uncertainty",
+    "annotationFile": "words/IS1000c.C.words.xml",
+    "expectedMeaning": "Retain the remote description, replace six volts by three volts, and preserve that it may need more. Full wording requires review, not keyword approval.",
+    "modifications": "Continuous time crop; unchanged PCM samples; WAV header rewritten."
+  },
+  {
+    "id": "held-fleurs-es-1013662909103347734",
+    "file": "es_419-1013662909103347734.wav",
+    "language": "es",
+    "reference": "Hoy en día, las personas escriben mensajes en las pantallas de sus computadoras. No tienen la necesidad de, siquiera, aproximarse a un sacapuntas.",
+    "sourceUrl": "https://huggingface.co/datasets/google/fleurs/resolve/70bb2e84b976b7e960aa89f1c648e09c59f894dd/data/es_419/audio/test.tar.gz",
+    "archiveMember": "test/1013662909103347734.wav",
+    "sha256": "27c060cfd8abfffe6f31dc41b3e1fb8ab0adef25ac8347a038c6ef1e536077f8",
+    "license": "CC-BY-4.0",
+    "speechType": "human_read_speech",
+    "category": "negation_preservation",
+    "expectedMeaning": "Preserve the complete reference proposition and its negation. This is not spontaneous repair.",
+    "modifications": "None; archive member copied byte for byte."
+  }
+]

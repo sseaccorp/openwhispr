@@ -19,8 +19,9 @@ SCHEMA = {
 WORDS = re.compile(r"[^\W_]+(?:['’][^\W_]+)*", re.UNICODE)
 ATOMS = re.compile(r"\w+(?:['’]\w+)*|[^\w\s]", re.UNICODE)
 QUOTE = re.compile(r'"(?:\\.|[^"\\])*"|«[^»]*»|“[^”]*”|(?<!\w)\x27[^\x27\n]+\x27(?!\w)')
-REPAIR = re.compile(r'\b(?:espera|perd[oó]n|mejor|rectifico|retiro|cancela|cancelo|olvida|olvid[aá]lo|no|sorry|actually|instead|rather|wait|cancel|withdraw|scratch|correction|I mean|make that)\b', re.I)
-WITHDRAWAL = re.compile(r'\b(?:retiro|cancela|cancelo|olvida|olvid[aá]lo|withdraw|cancel|scratch)\b', re.I)
+WITHDRAWAL_PATTERN = r'(?:retiro|me retracto|anula|anulo|descarta|descarto|cancela|cancelo|olvida|olvid[aá]lo|take back|never mind|forget that|withdraw(?:n|s|ing)?|withdrew|cancel(?:l?ed|l?ing|s)?|retract(?:ed|ing|s)?|rescind(?:ed|ing|s)?|scratch)'
+REPAIR = re.compile(r'\b(?:'+WITHDRAWAL_PATTERN+r'|espera|perd[oó]n|mejor|rectifico|no|sorry|actually|instead|rather|wait|correction|I mean|make that)\b', re.I)
+WITHDRAWAL = re.compile(r'\b'+WITHDRAWAL_PATTERN+r'\b', re.I)
 RESIDUAL = re.compile(r'\b(?:espera\s*[,;]?\s*(?:no|mejor)|no\s*[,;]?\s*mejor|perd[oó]n(?=\s*[,;])|sorry(?=\s*[,;.])|scratch that|I mean(?=\s*[,;])|wait\s*[,;]?\s*no)\b', re.I)
 LITERAL = re.compile(r'\b(?:literalmente|palabra por palabra|tal cual|verbatim|word for word|quote exactly|copy exactly|copia exactamente)\b', re.I)
 COMMAND = re.compile(r'^(?:git|npm|npx|node|python|python3|pip|curl|wget|printf|echo|sha256sum|shasum|ls|cd|cat|grep|rg|ffmpeg|kubectl|docker|pwsh|powershell|Get-[A-Za-z]+|Set-[A-Za-z]+)(?:\s|$)')

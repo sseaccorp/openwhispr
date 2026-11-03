@@ -1,0 +1,255 @@
+[
+  {
+    "id": "final-es-01",
+    "synthetic": true,
+    "language": "es",
+    "category": "word_repair",
+    "input": "Necesito un traductor, perdón, un intérprete para la videollamada del viernes.",
+    "expected": [
+      "Necesito un intérprete para la videollamada del viernes."
+    ]
+  },
+  {
+    "id": "final-en-02",
+    "synthetic": true,
+    "language": "en",
+    "category": "word_repair",
+    "input": "Address the parcel to Noor, sorry, to Nour Haddad, and keep the tracking slip.",
+    "expected": [
+      "Address the parcel to Nour Haddad, and keep the tracking slip."
+    ]
+  },
+  {
+    "id": "final-es-03",
+    "synthetic": true,
+    "language": "es",
+    "category": "scope",
+    "input": "Reinicia el servidor ahora, espera, mejor deja el proceso abierto hasta que termine la exportación.",
+    "expected": [
+      "Deja el proceso abierto hasta que termine la exportación."
+    ]
+  },
+  {
+    "id": "final-en-04",
+    "synthetic": true,
+    "language": "en",
+    "category": "scope",
+    "input": "Buy the annual plan, actually, stay on the monthly plan until finance confirms the headcount.",
+    "expected": [
+      "Stay on the monthly plan until finance confirms the headcount."
+    ]
+  },
+  {
+    "id": "final-es-05",
+    "synthetic": true,
+    "language": "es",
+    "category": "addition",
+    "input": "Prepara la habitación y además deja agua en la mesa, aunque yo llegue más tarde.",
+    "expected": [
+      "Prepara la habitación y además deja agua en la mesa, aunque yo llegue más tarde."
+    ]
+  },
+  {
+    "id": "final-en-06",
+    "synthetic": true,
+    "language": "en",
+    "category": "addition",
+    "input": "Bring the printed map and also text me the coordinates if the road is closed.",
+    "expected": [
+      "Bring the printed map and also text me the coordinates if the road is closed."
+    ]
+  },
+  {
+    "id": "final-es-07",
+    "synthetic": true,
+    "language": "es",
+    "category": "retraction",
+    "input": "Añade mi tarjeta como forma de pago, cancelo esa autorización.",
+    "expected": [
+      "Cancelo esa autorización."
+    ]
+  },
+  {
+    "id": "final-en-08",
+    "synthetic": true,
+    "language": "en",
+    "category": "retraction",
+    "input": "Approve the refund, I take back that instruction.",
+    "expected": [
+      "I take back that instruction."
+    ]
+  },
+  {
+    "id": "final-es-09",
+    "synthetic": true,
+    "language": "es",
+    "category": "negation",
+    "input": "Autoriza la entrada, no, no la autorices mientras falte la credencial.",
+    "expected": [
+      "No la autorices mientras falte la credencial."
+    ]
+  },
+  {
+    "id": "final-en-10",
+    "synthetic": true,
+    "language": "en",
+    "category": "negation",
+    "input": "No, I want the window open.",
+    "expected": [
+      "No, I want the window open."
+    ],
+    "exact": true
+  },
+  {
+    "id": "final-es-11",
+    "synthetic": true,
+    "language": "es",
+    "category": "contrast",
+    "input": "El agua está fría, no congelada, y todavía se puede beber.",
+    "expected": [
+      "El agua está fría, no congelada, y todavía se puede beber."
+    ]
+  },
+  {
+    "id": "final-en-12",
+    "synthetic": true,
+    "language": "en",
+    "category": "contrast",
+    "input": "It is a loan, not a gift; the balance is still due.",
+    "expected": [
+      "It is a loan, not a gift; the balance is still due."
+    ]
+  },
+  {
+    "id": "final-es-13",
+    "synthetic": true,
+    "language": "es",
+    "category": "uncertainty",
+    "input": "Tal vez compre la bicicleta roja o la gris; aún no he decidido cuánto gastar.",
+    "expected": [
+      "Tal vez compre la bicicleta roja o la gris; aún no he decidido cuánto gastar."
+    ]
+  },
+  {
+    "id": "final-en-14",
+    "synthetic": true,
+    "language": "en",
+    "category": "uncertainty",
+    "input": "We might rent a studio or a workshop, but neither option is confirmed.",
+    "expected": [
+      "We might rent a studio or a workshop, but neither option is confirmed."
+    ]
+  },
+  {
+    "id": "final-es-15",
+    "synthetic": true,
+    "language": "es",
+    "category": "literal_quote",
+    "input": "El doblaje repite palabra por palabra salta no espera baja por la escalera antes del ruido final.",
+    "expected": [
+      "El doblaje repite palabra por palabra salta no espera baja por la escalera antes del ruido final."
+    ]
+  },
+  {
+    "id": "final-en-16",
+    "synthetic": true,
+    "language": "en",
+    "category": "literal_quote",
+    "input": "Leave the note \"don't wait, no, wait here\" exactly as written.",
+    "expected": [
+      "Leave the note \"don't wait, no, wait here\" exactly as written."
+    ],
+    "exact": true
+  },
+  {
+    "id": "final-es-17",
+    "synthetic": true,
+    "language": "es",
+    "category": "filler",
+    "input": "Eh, necesito la llave azul; la palabra eh aparece en el rótulo.",
+    "expected": [
+      "Necesito la llave azul; la palabra eh aparece en el rótulo."
+    ]
+  },
+  {
+    "id": "final-en-18",
+    "synthetic": true,
+    "language": "en",
+    "category": "filler",
+    "input": "Well, I don't know whether the well was inspected; the manual says well means a water source.",
+    "expected": [
+      "I don't know whether the well was inspected; the manual says well means a water source."
+    ]
+  },
+  {
+    "id": "final-es-19",
+    "synthetic": true,
+    "language": "es",
+    "category": "repetition",
+    "input": "La la factura ya está enviada; estoy muy muy seguro.",
+    "expected": [
+      "La factura ya está enviada; estoy muy muy seguro."
+    ]
+  },
+  {
+    "id": "final-en-20",
+    "synthetic": true,
+    "language": "en",
+    "category": "repetition",
+    "input": "We need it now, now, not next week.",
+    "expected": [
+      "We need it now, now, not next week."
+    ],
+    "exact": true
+  },
+  {
+    "id": "final-es-21",
+    "synthetic": true,
+    "language": "es",
+    "category": "technical",
+    "input": "El límite es -0,0625  A y la etiqueta es ZE-608; no cambies ninguno de los dos.",
+    "expected": [
+      "El límite es -0,0625  A y la etiqueta es ZE-608; no cambies ninguno de los dos."
+    ],
+    "technical": [
+      "-0,0625  A",
+      "ZE-608"
+    ],
+    "exact": true
+  },
+  {
+    "id": "final-en-22",
+    "synthetic": true,
+    "language": "en",
+    "category": "technical",
+    "input": "cargo test --locked",
+    "expected": [
+      "cargo test --locked"
+    ],
+    "exact": true
+  },
+  {
+    "id": "final-es-23",
+    "synthetic": true,
+    "language": "es",
+    "category": "long",
+    "input": "Quiero dejar estas instrucciones para el archivo del museo porque el sábado habrá varios grupos y nadie debe depender de una llamada de última hora. La sala pequeña necesita ventilación y las ventanas deben permanecer cerradas si empieza a llover. Guarda una copia del calendario y no publiques los nombres de las personas que han pedido confidencialidad. El registro está en /srv/museo/visitas_4.csv y el lote de entradas es MU-407. Imprime cuarenta tarjetas, perdón, cincuenta tarjetas para la sesión de la mañana y conserva diez sobres vacíos para las incidencias. Avísale a Celia, no, a Cecilia cuando termine el recuento. Todavía no sabemos si la charla será en julio o en agosto, así que no anuncies ninguna fecha concreta. La frase del panel es \"ven, no, espera al guía\" y debe quedar exactamente así. Agradezco mucho el trabajo del equipo y siento los inconvenientes de ayer. No retires las etiquetas hasta que todos los visitantes hayan salido. Publica las fotografías esta noche, espera, mejor mantenlas privadas hasta que cada familia dé su consentimiento. Si alguien solicita una copia, anota la petición y revisa los permisos antes de enviarla. Esto es muy muy importante y quiero conservar también las observaciones del personal de seguridad.",
+    "expected": [
+      "Quiero dejar estas instrucciones para el archivo del museo porque el sábado habrá varios grupos y nadie debe depender de una llamada de última hora. La sala pequeña necesita ventilación y las ventanas deben permanecer cerradas si empieza a llover. Guarda una copia del calendario y no publiques los nombres de las personas que han pedido confidencialidad. El registro está en /srv/museo/visitas_4.csv y el lote de entradas es MU-407. Imprime cincuenta tarjetas para la sesión de la mañana y conserva diez sobres vacíos para las incidencias. Avísale a Cecilia cuando termine el recuento. Todavía no sabemos si la charla será en julio o en agosto, así que no anuncies ninguna fecha concreta. La frase del panel es \"ven, no, espera al guía\" y debe quedar exactamente así. Agradezco mucho el trabajo del equipo y siento los inconvenientes de ayer. No retires las etiquetas hasta que todos los visitantes hayan salido. Mantenlas privadas hasta que cada familia dé su consentimiento. Si alguien solicita una copia, anota la petición y revisa los permisos antes de enviarla. Esto es muy muy importante y quiero conservar también las observaciones del personal de seguridad."
+    ],
+    "technical": [
+      "/srv/museo/visitas_4.csv",
+      "MU-407"
+    ]
+  },
+  {
+    "id": "final-en-24",
+    "synthetic": true,
+    "language": "en",
+    "category": "imperfect_asr",
+    "input": "i was gonna post it before lunch no after lunch if maya okays it and dont touch the screenshots",
+    "expected": [
+      "I was gonna post it after lunch if maya okays it and dont touch the screenshots."
+    ]
+  }
+]

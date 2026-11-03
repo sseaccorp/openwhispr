@@ -47,6 +47,15 @@ class SourceEdits(unittest.TestCase):
             apply_plan(text, plan(text, 'Publica el anuncio a mediodía'))
         self.assertEqual(apply_plan(text, plan(text, 'retiro esa petición'))['text'], 'Retiro esa petición.')
 
+    def test_explicit_withdrawal_families_keep_withdrawal_and_scope(self):
+        for source, after in [('Approve the refund, I take back that instruction.','I take back that instruction.'),
+                              ('Confirm the order, I retract that request.','I retract that request.'),
+                              ('Registra mi dirección, me retracto de esa petición.','me retracto de esa petición.')]:
+            result=apply_plan(source,plan(source,after))
+            self.assertEqual(result['text'].casefold(),after.casefold())
+            with self.assertRaises(InvalidPlan):
+                apply_plan(source,plan(source,source.split(',')[0]))
+
     def test_final_replacement_condition_cannot_be_dropped(self):
         text='Open it, no, do not open it unless the supervisor is present'
         with self.assertRaisesRegex(InvalidPlan, 'replacement_or_withdrawal_lost'):

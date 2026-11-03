@@ -1,0 +1,9 @@
+{
+  "authoredUtc": "2026-11-03T22:08:25Z",
+  "afterFrozenCommit": "25cac16901be23a94c78bea8b854c475c6d7ab8b",
+  "caseCount": 24,
+  "author": "engineering agent",
+  "independentExternalHumanAuthor": false,
+  "finalDataUsedForTuning": false,
+  "description": "New post-freeze textual cases; not historic holdout and not a blinded external product study. No final responses were examined while authoring."
+}

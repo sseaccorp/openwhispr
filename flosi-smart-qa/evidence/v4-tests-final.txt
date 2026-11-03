@@ -1,0 +1,25 @@
+✔ v4 loads with frozen hash/version; 32 balanced original development cases and no reference leakage (25.633332ms)
+✔ 124 payloads use identical provider settings and only system + original input (26.486329ms)
+✔ preparation writes new request artifacts offline and rejects unknown or duplicate selections (26.26849ms)
+✔ supplement detects known EN-03, EN-14, ES-07 and exact Unicode quantity failures using fabricated outputs (5.273774ms)
+✔ quote word checks tolerate punctuation but reject deletion, reordering, or lost negation (4.301939ms)
+✔ technical matching rejects sign, decimal, case, hyphen, extension and partial identifier changes (0.183948ms)
+✔ semantic and cleanup signals stay separate; meaningful apologies and filler-like words are counterexamples (5.632525ms)
+✔ run gates reject missing authorization, key, verified prices, cap, budget and pacing before fake transport (26.386038ms)
+✔ fake HTTP is paced, single-call per case, no reference leakage; simulated API metrics remain null (25.363385ms)
+✔ 429, timeout, invalid JSON, missing usage, truncation and wrong model stop without retry (54.057203ms)
+✔ duplicate provider response is recorded as invalid and stops the batch (24.633343ms)
+✔ freeze changes during pacing prevent any send and preserve interrupted evidence (10.045401ms)
+✔ comparison separates A/B/C and rejects mismatched corpus, selection, provenance and altered rows/accounting (95.263975ms)
+✔ fabricated comparison exposes a new meaning regression even when cleanup and technical signals improve (66.563035ms)
+✔ output protection rejects source paths, traversal, existing artifacts and symlinks (0.757022ms)
+✔ CLI offline verify works; paid flags on preparation, unknown flags, holdout and incomplete run opt-in are rejected (4.012201ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 451.187694
+V4 offline guard: {"networkAttempts":0,"reservedAttempts":0}

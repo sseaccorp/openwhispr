@@ -1,0 +1,155 @@
+{
+  "mode": "real_human_audio",
+  "viaRunningQA": true,
+  "asrLoadMs": 2737.544,
+  "timestampUtc": "2026-11-03T22:01:22Z",
+  "sources": [
+    {
+      "id": "fleurs-es_419-1001146817223348054",
+      "language": "es",
+      "file": "es_419-1001146817223348054.wav",
+      "reference": "Se recomienda enfáticamente a los viajeros que se informen sobre cualquier riesgo de clima extremo en el área que visitan, dado que ello puede afectar sus planes de viaje.",
+      "sha256": "861ceedc4d50fbe52fc89b6d0c0fa740b9cd6fa668388e754064847386af0faf",
+      "sourceUrl": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/es_419/audio/test.tar.gz",
+      "archiveMember": "test/1001146817223348054.wav",
+      "license": "CC-BY-4.0",
+      "speechType": "human_read_speech",
+      "referenceSource": "FLEURS test.tsv",
+      "category": "preservation"
+    },
+    {
+      "id": "fleurs-es_419-1008205615316519958",
+      "language": "es",
+      "file": "es_419-1008205615316519958.wav",
+      "reference": "Fue tanta la cantidad de gente que se concentró, que no todos pudieron acceder al funeral en la Plaza de San Pedro.",
+      "sha256": "0576e73da35ef17b6ce6396d31b32830b7ab19cea98f9f5db68de3756dc3d4fc",
+      "sourceUrl": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/es_419/audio/test.tar.gz",
+      "archiveMember": "test/1008205615316519958.wav",
+      "license": "CC-BY-4.0",
+      "speechType": "human_read_speech",
+      "referenceSource": "FLEURS test.tsv",
+      "category": "negation_preservation"
+    },
+    {
+      "id": "fleurs-es_419-10084850086754329587",
+      "language": "es",
+      "file": "es_419-10084850086754329587.wav",
+      "reference": "Esto parece tener sentido, ya que en la Tierra no se percibe su movimiento, ¿cierto?",
+      "sha256": "275d5d9dcbfb7099b9aac08ea81fc7383b94e085a683d127ce4d8ff742cb3961",
+      "sourceUrl": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/es_419/audio/test.tar.gz",
+      "archiveMember": "test/10084850086754329587.wav",
+      "license": "CC-BY-4.0",
+      "speechType": "human_read_speech",
+      "referenceSource": "FLEURS test.tsv",
+      "category": "negation_preservation"
+    },
+    {
+      "id": "fleurs-en_us-1003119935936341070",
+      "language": "en",
+      "file": "en_us-1003119935936341070.wav",
+      "reference": "However, due to the slow communication channels, styles in the west could lag behind by 25 to 30 year.",
+      "sha256": "33aca50159ec2e3cbcc894eb26faa916d6badb1b49fb75994973561540a7f012",
+      "sourceUrl": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/en_us/audio/test.tar.gz",
+      "archiveMember": "test/1003119935936341070.wav",
+      "license": "CC-BY-4.0",
+      "speechType": "human_read_speech",
+      "referenceSource": "FLEURS test.tsv",
+      "category": "preservation"
+    },
+    {
+      "id": "fleurs-en_us-10323357556845456822",
+      "language": "en",
+      "file": "en_us-10323357556845456822.wav",
+      "reference": "The Northern Marianas emergency management office said that there were no damages reported in the nation.",
+      "sha256": "6b3081a29a5bb6fc6434e8525690edc26b23844841e119c916183f4ba1863372",
+      "sourceUrl": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/en_us/audio/test.tar.gz",
+      "archiveMember": "test/10323357556845456822.wav",
+      "license": "CC-BY-4.0",
+      "speechType": "human_read_speech",
+      "referenceSource": "FLEURS test.tsv",
+      "category": "negation_preservation"
+    },
+    {
+      "id": "fleurs-en_us-1036771894648013441",
+      "language": "en",
+      "file": "en_us-1036771894648013441.wav",
+      "reference": "As light pollution in their heyday was not the kind of problem it is today, they are usually located in cities or at campuses, easier to reach than those built in modern times.",
+      "sha256": "9514bffb9e0bd3397f2cf90041eff51b87e68293335f7ff904515a19f8d416e3",
+      "sourceUrl": "https://huggingface.co/datasets/google/fleurs/resolve/main/data/en_us/audio/test.tar.gz",
+      "archiveMember": "test/1036771894648013441.wav",
+      "license": "CC-BY-4.0",
+      "speechType": "human_read_speech",
+      "referenceSource": "FLEURS test.tsv",
+      "category": "negation_preservation"
+    },
+    {
+      "id": "ami-ES2012a-D-785.35-791.77",
+      "file": "ami-ES2012a-D-785.35-791.77.wav",
+      "language": "en",
+      "reference": "especially if we try to sell , what two million of them . Oh sorry , four million of 'em ,",
+      "sha256": "1b1bcb3731a6f91522c979d05ec51d11bda635fa578a84f36c2d5c3120358324",
+      "sourceUrl": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror/amicorpus/ES2012a/audio/ES2012a.Headset-3.wav",
+      "byteRange": [
+        25131244,
+        25336683
+      ],
+      "sampleRange": [
+        12565600,
+        12668320
+      ],
+      "clipStartSeconds": 785.35,
+      "clipEndSeconds": 791.77,
+      "license": "CC-BY-4.0",
+      "speechType": "human_spontaneous_meeting",
+      "category": "spontaneous_quantity_repair",
+      "referenceSource": "AMI manual annotations release 1.7 as distributed in ami_public_manual_1.6.2.zip",
+      "annotationFile": "words/ES2012a.D.words.xml",
+      "annotationsArchiveSha256": "b56e5babb2496b8795deeeda7e71178d7fbc9963f94276cf2a3f4b56ebbc9f9d",
+      "modifications": "Continuous time crop; PCM copied unchanged and WAV header rewritten. No TTS, splicing, denoising or speech editing."
+    },
+    {
+      "id": "ami-ES2004a-D-968.95-972.10",
+      "file": "ami-ES2004a-D-968.95-972.10.wav",
+      "language": "en",
+      "reference": ". Sorry I'm treading on your territory guys",
+      "sha256": "b0e93f7870286e4e6d696480272f423284c4e8bb86a966639590c02db2c29349",
+      "sourceUrl": "https://groups.inf.ed.ac.uk/ami/AMICorpusMirror/amicorpus/ES2004a/audio/ES2004a.Headset-3.wav",
+      "byteRange": [
+        31006444,
+        31107243
+      ],
+      "sampleRange": [
+        15503200,
+        15553600
+      ],
+      "clipStartSeconds": 968.95,
+      "clipEndSeconds": 972.1,
+      "license": "CC-BY-4.0",
+      "speechType": "human_spontaneous_meeting",
+      "category": "genuine_apology_preservation",
+      "referenceSource": "AMI manual annotations release 1.7 as distributed in ami_public_manual_1.6.2.zip",
+      "annotationFile": "words/ES2004a.D.words.xml",
+      "annotationsArchiveSha256": "b56e5babb2496b8795deeeda7e71178d7fbc9963f94276cf2a3f4b56ebbc9f9d",
+      "modifications": "Continuous time crop; PCM copied unchanged and WAV header rewritten. No TTS, splicing, denoising or speech editing."
+    }
+  ],
+  "asrModel": {
+    "repository": "Systran/faster-whisper-medium",
+    "revision": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+    "files": {
+      "config.json": "3622a2ddc41ec0e0fd4e68c13c6830f03b90c38d89aaad184de02c8c642cf807",
+      "tokenizer.json": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab",
+      "vocabulary.txt": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913",
+      "model.bin": "9b45e1009dcc4ab601eff815b61d80e60ce3fd8c74c1a14f4a282258286b51ae"
+    }
+  },
+  "asrConfig": {
+    "beamSize": 5,
+    "conditionOnPreviousText": false,
+    "vadFilter": false,
+    "device": "cpu",
+    "threads": 3,
+    "temperature": 0
+  },
+  "microphoneExecuted": false
+}
