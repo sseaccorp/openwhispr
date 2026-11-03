@@ -1,0 +1,8 @@
+{
+  "state": "interrupted",
+  "httpStatus": 409,
+  "completedRows": 6,
+  "cause": "response write preceded processing-lock release",
+  "notACompleteStabilityEvaluation": true,
+  "modelRetries": 0
+}

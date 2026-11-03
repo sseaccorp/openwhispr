@@ -63,6 +63,14 @@ def make_handler(provider, pipeline, runtime, port):
                 return self.send(400, {'error': 'invalid_length'})
             if not gate.acquire(blocking=False):
                 return self.send(409, {'error': 'processing_in_progress'})
+            owns_gate = True
+            def finish(status, payload):
+                # A delivered response must mean the processing slot is free.
+                # Releasing after socket write races a client's next request.
+                nonlocal owns_gate
+                if owns_gate:
+                    gate.release(); owns_gate = False
+                return self.send(status, payload)
             tmp = None
             try:
                 body = json.loads(self.rfile.read(size))
@@ -72,15 +80,15 @@ def make_handler(provider, pipeline, runtime, port):
                     record = correct(body.get('text'), provider)
                 else:
                     if pipeline is None:
-                        return self.send(503, {'error': 'asr_model_not_loaded'})
+                        return finish(503, {'error': 'asr_model_not_loaded'})
                     if body.get('language') not in ('es', 'en', None):
                         raise ValueError()
                     raw = base64.b64decode(body['audioBase64'], validate=True)
                     # Browser capture is PCM WAV; uploads deliberately require WAV.
                     if len(raw) < 44 or raw[:4] != b'RIFF' or raw[8:12] != b'WAVE':
-                        return self.send(415, {'error': 'wav_required'})
+                        return finish(415, {'error': 'wav_required'})
                     if len(raw) > 25*1024*1024:
-                        return self.send(413, {'error': 'audio_max_25MiB'})
+                        return finish(413, {'error': 'audio_max_25MiB'})
                     with tempfile.NamedTemporaryFile(dir=runtime, suffix='.wav', delete=False) as f:
                         tmp = Path(f.name); f.write(raw)
                     record = pipeline.process(tmp, body.get('language'), body.get('reference') or None)
@@ -91,15 +99,16 @@ def make_handler(provider, pipeline, runtime, port):
                     if tmp:
                         (directory/'audio.wav').write_bytes(tmp.read_bytes())
                     record['savedEvidence'] = str(directory)
-                self.send(200, record)
+                finish(200, record)
             except (ValueError, TypeError, KeyError):
-                self.send(400, {'error': 'invalid_input'})
+                finish(400, {'error': 'invalid_input'})
             except Exception:
-                self.send(500, {'error': 'processing_failed_original_not_replaced'})
+                finish(500, {'error': 'processing_failed_original_not_replaced'})
             finally:
                 if tmp:
                     tmp.unlink(missing_ok=True)
-                gate.release()
+                if owns_gate:
+                    gate.release()
     return Handler
 
 def main():

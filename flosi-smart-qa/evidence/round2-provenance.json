@@ -1,0 +1,11 @@
+{
+  "authoredUtc": "2026-11-03T22:21:35Z",
+  "afterFrozenCommit": "aa0a8f03f91234a949f5bec482f06de4faddd111",
+  "criteriaUnchanged": true,
+  "author": "engineering agent",
+  "independentExternalHumanAuthor": false,
+  "newInputs": 24,
+  "usedForTuning": false,
+  "oldRound1IsDevelopment": true,
+  "blindExternalProductApproval": false
+}

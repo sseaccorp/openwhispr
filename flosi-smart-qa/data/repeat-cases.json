@@ -1,0 +1,37 @@
+[
+  {
+    "id": "repeat-contract",
+    "language": "es",
+    "category": "repeat_repair",
+    "synthetic": true,
+    "input": "Voy a enviarle el contrato hoy, espera, no, mejor mañana después de revisarlo",
+    "expected": [
+      "Voy a enviarle el contrato mañana después de revisarlo."
+    ]
+  },
+  {
+    "id": "repeat-negation",
+    "language": "es",
+    "category": "repeat_hard_negation",
+    "synthetic": true,
+    "input": "Rechaza la propuesta, no, no la rechaces si aceptan la cláusula",
+    "expected": [
+      "No la rechaces si aceptan la cláusula."
+    ]
+  },
+  {
+    "id": "repeat-technical",
+    "language": "es",
+    "category": "repeat_technical",
+    "synthetic": true,
+    "input": "Usa 0,75  mL en el lote CX-804.",
+    "expected": [
+      "Usa 0,75  mL en el lote CX-804."
+    ],
+    "technical": [
+      "0,75  mL",
+      "CX-804"
+    ],
+    "exact": true
+  }
+]

@@ -84,6 +84,23 @@ class LocalBoundary(unittest.TestCase):
         self.assertTrue((Path(body['savedEvidence'])/'result.json').is_file())
         self.assertEqual(len(list(Path(self.directory.name).rglob('result.json'))),1)
 
+    def test_response_delivery_releases_slot_before_next_request(self):
+        delivered=threading.Event();allow_return=threading.Event()
+        handler=self.server.RequestHandlerClass;original=handler.send
+        def delayed_send(instance,status,payload,mime='application/json'):
+            original(instance,status,payload,mime)
+            if status==200 and instance.path=='/api/correct' and not delivered.is_set():
+                delivered.set();allow_return.wait(timeout=3)
+        handler.send=delayed_send
+        def request():
+            return urllib.request.Request(self.url+'/api/correct',data=b'{"text":"test"}',headers={'Content-Type':'application/json','Origin':self.url})
+        try:
+            with self.opener.open(request()) as response:self.assertEqual(response.status,200);response.read()
+            self.assertTrue(delivered.wait(timeout=1))
+            with self.opener.open(request()) as response:self.assertEqual(response.status,200);response.read()
+        finally:
+            allow_return.set();handler.send=original
+
     def test_oversized_body_is_rejected_before_inference(self):
         request=urllib.request.Request(self.url+'/api/correct',data=b'{}',headers={'Content-Type':'application/json','Origin':self.url,'Content-Length':str(41*1024*1024)})
         with self.assertRaises(urllib.error.HTTPError) as error:self.opener.open(request)
